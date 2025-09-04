@@ -109,6 +109,8 @@ nav:
           - "Why Most Document Parsing Sucks (Adit, Reducto)": "talks/reducto-docs-adit.md"
           - "Encoder Stacking and Multi-Modal Retrieval (Daniel, Superlinked)": "talks/superlinked-encoder-stacking.md"
           - "How Extend Achieves 95%+ Document Automation (Eli Badgio)": "talks/extend-document-automation.md"
+  - "Technical Documentation":
+      - "Hooks System": "hooks.md"
 
 # --- Enhancements for mkdocs.yml ---
 # 1. Add recommended plugins for better UX, SEO, and maintainability
