@@ -3524,10 +3524,12 @@
 <p>All of this content comes from my <a href="https://maven.com/applied-llms/rag-playbook?promoCode=EBOOK">Systematically Improving RAG Applications</a> course. Readers get <strong>20% off</strong> with code EBOOK. Join 500+ engineers who've transformed their RAG systems from demos to production-ready applications.</p>
 </div>
 <h2 id="introduction-building-better-user-experience">Introduction: Building Better User Experience</h2>
-<p>In the previous chapters, we covered feedback collection (Chapter 3.1) and techniques to overcome latency (Chapter 3.2). Now we'll address practical improvements that significantly enhance user experience.</p>
+<p>Building on our feedback collection from Chapter 3.1 and streaming from Chapter 3.2, let's talk about the finishing touches that make RAG systems actually usable in production.</p>
 <p>These "quality of life" improvements often make the difference between systems that are occasionally useful and those that become daily tools. They build trust through transparency, improve reasoning through explicit thinking processes, and prevent errors before they reach users.</p>
+<p><strong>From Real Production Systems:</strong></p>
 <blockquote>
-<p>"These quality of life improvements represent significant missed opportunities for many RAG teams. Implementing chain of thought in ways that matter to your business has been one of the highest-impact changes we've seen, consistently producing a 10% bump in performance. That's often the difference between something that's usable and something that's impossible to deploy in production."</p>
+<p>Chain of thought gives you a <strong>10% performance bump</strong> - often the difference between "unusable" and "production-ready." With O1 and R1, we're seeing this become standard practice. But even without those models, implementing CoT in business-relevant ways is consistently one of the highest-impact changes.</p>
+<p><strong>Key insight</strong>: Only about <strong>20% of companies</strong> I work with implement streaming well, but it's become table stakes. Users expect instant responses.</p>
 </blockquote>
 <p>In this chapter, we'll explore three categories of improvements:</p>
 <ol>
@@ -3565,9 +3567,11 @@
     style B fill:#f9d77e,stroke:#333,stroke-width:2px
 </code></pre></div>
 <p>A legal research team implemented this approach for their in-house attorneys. Each response included interactive citations linked to specific case law or statutes. Attorneys could click to see full context and mark citations as relevant or irrelevant. When marked irrelevant, the system would regenerate without that source.</p>
-<p><strong>Results after 3 months:</strong>
-- Collected over 50,000 labeled examples for fine-tuning
-- User satisfaction increased from 67% to 89% (+22%)
+<p><strong>Measured Results:</strong>
+- <strong>50,000+ labeled examples</strong> collected for fine-tuning (remember that data flywheel from Chapter 2?)
+- <strong>User satisfaction: 67% → 89%</strong> (+22 percentage points)
+- <strong>Citation accuracy improved from 73% to 91%</strong> through feedback loops
+- <strong>90% of follow-up emails accepted without edits</strong> (from transcript data)
 - <strong>90% of follow-up emails were accepted without any edits needed</strong>
 - Citation accuracy improved from 73% to 91% through user feedback
 - Attorney trust scores increased by 45%</p>

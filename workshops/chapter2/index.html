@@ -3814,7 +3814,15 @@
 <div class="admonition success">
 <p class="admonition-title">Fine-Tuning Cost Reality Check</p>
 </div>
-<p><strong>Embedding Model Fine-Tuning:</strong> - Cost: ~$1.50 for 6,000 examples - Time: 40 minutes on a laptop - Infrastructure: Consumer GPU or cloud notebook - Improvement: 6-10% better performance</p>
+<p><strong>Real Numbers from Production:</strong>
+    - <strong>Just 6,000 examples = 6-10% improvement</strong> (Sentence Transformers team validated)
+    - <strong>Cost: Hundreds of dollars in API calls</strong> (vs tens of thousands for data labeling previously)
+    - <strong>Time: 40 minutes training on your laptop</strong> 
+    - <strong>Systems at 70% can reach 85-90%</strong> - remember that 50% to 90% recall jump from Chapter 1? That's exactly this kind of improvement
+    - <strong>Companies see 14% accuracy boost over baseline</strong> just from fine-tuning cross-encoders
+    - <strong>12% increase in exact match</strong> by training better passage encoders
+    - <strong>20% improvement in response accuracy</strong> with rerankers
+    - <strong>30% reduction in irrelevant documents</strong> with proper fine-tuning</p>
 <div class="highlight"><pre><span></span><code>**Language Model Fine-Tuning:**
 - Cost: $100-1000s depending on model size
 - Time: Hours to days
@@ -3824,13 +3832,11 @@
 This dramatic difference explains why embedding fine-tuning should be your first focus.
 </code></pre></div>
 <h2 id="introduction">Introduction</h2>
-<p>In the previous chapter, we set up evaluation and generated synthetic data to benchmark our RAG system. Now let's talk about how to actually use that data to improve things.</p>
-<p><strong>Prerequisites from Previous Chapters:</strong>
-- <strong><a href="../chapter0/">Chapter 0</a></strong>: Understanding the improvement flywheel concept
-- <strong><a href="../chapter1/">Chapter 1</a></strong>: Creating evaluation datasets with synthetic data</p>
-<p>The evaluation examples from Chapter 1 become your training data in this chapter.</p>
+<p>Remember in Chapter 1 where we talked about that $100M company with only 30 evaluation examples? Well, here's the good news: once you have those evaluation examples, you can multiply their value. The synthetic data and evaluation framework from Chapter 1 becomes your training data in this chapter.</p>
+<p><strong>Building on Chapter 1's Foundation:</strong>
+Your evaluation examples (synthetic questions + ground truth) now become few-shot examples and training data. We're turning that evaluation flywheel into a fine-tuning flywheel.</p>
 <p>Here's the thing: the data you collect for evaluation shouldn't just sit there. Every question, every relevance judgment, every piece of feedback—it can all be used to improve your system. That's what we'll cover here.</p>
-<p><strong>Key Philosophy:</strong> "Every evaluation example is a potential training example. The data flywheel transforms what begins as a handful of evaluation examples into few-shot prompts, then into training datasets for fine-tuning embedding models and re-rankers."</p>
+<p><strong>Key Philosophy:</strong> "This is the "wax on, wax off" moment: 20 examples become evals (Chapter 1), 30 examples become few-shot prompts, 1,000 examples let you start fine-tuning. Remember that $100M company with 30 evals? Once you have that data, this is how you turn it into actual improvements. It's never done, just gets better."</p>
 <p>The process is straightforward: you start with evaluation examples, turn them into few-shot prompts, then eventually use them to fine-tune your embedding models and re-rankers. Each step builds on the last.</p>
 <h2 id="why-generic-embeddings-fall-short">Why Generic Embeddings Fall Short</h2>
 <p>Let me start with something that trips up a lot of teams: generic embeddings from providers like OpenAI often don't work great for specialized applications. They're good models, don't get me wrong. But they're built to handle everything, which means they don't handle your specific thing particularly well.</p>
@@ -3846,7 +3852,7 @@ This dramatic difference explains why embedding fine-tuning should be your first
 <p>Embedding models seem simple enough: they turn text into numbers, and similar text should end up with similar numbers. Measure the distance between vectors and you know how similar things are.</p>
 <p><strong>Domain-Specific Similarity Example:</strong> In e-commerce, what makes two products "similar"? Are they substitutes (different brands of red shirts) or complements (a shirt and matching pants)? Depends on what you're trying to do.</p>
 <p>Take music recommendations. Songs might be similar because they're the same genre, or because they show up in the same playlists, or because the same people like them. If you're adding songs to a playlist, you want one kind of similarity. If you're building Spotify's Discovery Weekly, you want something else entirely.</p>
-<p>My favorite example is from dating apps. Should "I love coffee" and "I hate coffee" be similar? Linguistically, they're opposites. But both people care about coffee enough to mention it. Maybe opposites don't attract when it comes to beverages. Or maybe they do if one person likes tea and the other likes coffee.</p>
+<p>Take dating apps - should "I love coffee" and "I hate coffee" be similar? Linguistically opposite, but both care enough about coffee to mention it. Generic embeddings see them as opposites. But for matching people? Maybe that matters more than word similarity. This is exactly the kind of nuance you miss without domain-specific fine-tuning.</p>
 <p>Here's the thing: <strong>What actually matters for a dating app is whether two people will like each other</strong>, not whether their profiles use similar words. Generic embeddings trained on web text have no idea about this.</p>
 <p>The problem is that "similarity" means different things in different contexts. There's no universal right answer—it depends on what you're trying to do.</p>
 <h3 id="the-hidden-assumptions-in-provider-models">The Hidden Assumptions in Provider Models</h3>

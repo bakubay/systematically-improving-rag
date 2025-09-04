@@ -3686,19 +3686,19 @@
 <p>All of this content comes from my <a href="https://maven.com/applied-llms/rag-playbook?promoCode=EBOOK">Systematically Improving RAG Applications</a> course. Readers get <strong>20% off</strong> with code EBOOK. Join 500+ engineers who've transformed their RAG systems from demos to production-ready applications.</p>
 </div>
 <h2 id="introduction">Introduction</h2>
-<p>So you deployed your RAG system and added feedback collection. Great. Now you've got thousands of queries, ratings, and signals. Your manager asks "What should we improve next?" and you realize you have no idea.</p>
-<p>This happened to me. We had tons of data but no systematic way to find patterns. Looking at individual bad ratings wasn't helping - we needed to see the bigger picture.</p>
-<p>The solution? Topic modeling and clustering. Instead of reading through feedback one by one, you group similar queries and look for patterns. This lets you find the real problems worth fixing.</p>
-<p><strong>Building on Previous Chapters:</strong>
-- <strong><a href="../chapter1/">Chapter 1</a></strong>: Evaluation metrics to measure each segment's performance
-- <strong><a href="../chapter2/">Chapter 2</a></strong>: Training data generation from identified patterns
-- <strong><a href="../chapter3-1/">Chapter 3</a></strong>: Feedback collection that feeds this analysis</p>
+<p>Remember that feedback collection from Chapter 3? You've got all this data - thousands of queries, ratings, signals. Your manager asks "What should we improve next?" and suddenly you realize you have no idea.</p>
+<p>I've been there. We had tons of data but no systematic way to find patterns. Remember that $100M company with 30 evals from Chapter 1? This is what happens next - you collect the feedback, but then you need to make sense of it.</p>
+<p><strong>Where We've Been:</strong>
+- <strong>Chapter 1</strong>: Built evaluation framework (your baseline)
+- <strong>Chapter 2</strong>: Turned evals into training data (the flywheel) 
+- <strong>Chapter 3</strong>: Collected real user feedback (the fuel)</p>
+<p><strong>Now What?</strong> Topic modeling and clustering. Instead of reading feedback one by one, you group similar queries and find the real problems worth fixing.</p>
 <p>Here's the thing: not all improvements matter equally. Some query types affect 80% of your users. Others might be rare but critical for your biggest customers. You need to know the difference.</p>
 <h2 id="why-segmentation-beats-random-improvements">Why Segmentation Beats Random Improvements</h2>
 <p>Let me share an analogy from marketing that really drives this home. Imagine you're selling a product and sales jump 80%. Sounds great, right? But you don't know why. Was it the Super Bowl ad? The new packaging? Pure luck?</p>
 <p>Without segmentation, you're flying blind. But if you segment your data, you might discover that 60% of the increase came from 30-45 year old women in the Midwest. Now you know exactly where to double down.</p>
 <h3 id="the-marketing-parallel">The Marketing Parallel</h3>
-<p>This exact approach worked at Stitch Fix. When their sales jumped 80%, they didn't just celebrate—they segmented the data and discovered that 60% of the increase came from 30-45 year old women in the Midwest. This insight was worth millions in targeted marketing spend.</p>
+<p>This is exactly what we did at Stitch Fix. Sales jumped 80% and we didn't just celebrate - we segmented everything. Found that 60% came from 30-45 year old women in the Midwest. That insight was worth millions in targeted spend.</p>
 <div class="highlight"><pre><span></span><code>graph TD
     A[Total Sales +80%] --&gt; B[Segment Analysis]
     B --&gt; C[Midwest Women 30-45: +60%]
@@ -3712,11 +3712,12 @@
     style C fill:#90EE90,stroke:#006400,stroke-width:2px
     style F fill:#FFD700,stroke:#B8860B,stroke-width:2px
 </code></pre></div>
-<p>Same principle applies to RAG queries. Without segmentation, you see "70% satisfaction" and think you're doing okay. With segmentation, you discover:
-- Document search: 85% satisfaction (great!)
-- Schedule queries: 35% satisfaction (disaster!)
-- Comparison queries: 60% satisfaction (needs work)</p>
-<p>Now you know exactly what to fix first.</p>
+<p>Same with RAG queries. Without segmentation: "70% satisfaction, we're doing okay." </p>
+<p>With segmentation? You discover:
+- Document search: 85% satisfaction (crushing it!)
+- Schedule queries: 35% satisfaction (yikes!)
+- Comparison queries: 60% satisfaction (fixable)</p>
+<p>Now you know where to focus. Remember from Chapter 2 - systems at 70% can reach 85-90%. But you need to know which 70% to focus on first.</p>
 <h2 id="the-core-formula-for-decision-making">The Core Formula for Decision Making</h2>
 <p>Every improvement decision should be based on this formula:</p>
 <p><strong>Expected Value = Impact × Query Volume % × Probability of Success</strong></p>

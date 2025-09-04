@@ -850,24 +850,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#implementation-strategies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Implementation Strategies
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#streaming-and-perceived-performance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Streaming and Perceived Performance
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#enterprise-feedback-collection-with-slack-integration" class="md-nav__link">
     <span class="md-ellipsis">
       Enterprise Feedback Collection with Slack Integration
@@ -3219,24 +3201,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#implementation-strategies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Implementation Strategies
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#streaming-and-perceived-performance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Streaming and Perceived Performance
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#enterprise-feedback-collection-with-slack-integration" class="md-nav__link">
     <span class="md-ellipsis">
       Enterprise Feedback Collection with Slack Integration
@@ -3479,22 +3443,28 @@
 </div>
 <h2 id="introduction">Introduction</h2>
 <p>RAG systems improve most when they collect feedback effectively. Many implementations focus exclusively on the technical details of retrieval and generation while neglecting the infrastructure needed to collect and utilize user feedback.</p>
-<p><strong>Building on Previous Chapters:</strong>
-- <strong><a href="../chapter1/">Chapter 1</a></strong>: The evaluation framework you built provides the baseline
-- <strong><a href="../chapter2/">Chapter 2</a></strong>: The fine-tuning techniques need feedback data to be effective</p>
-<p>This chapter shows you how to collect the data that powers continuous improvement.</p>
+<p><strong>Building on What We've Done:</strong>
+- <strong>Chapter 1</strong>: Remember that evaluation framework? Your synthetic data baseline? Now we make it real with user feedback
+- <strong>Chapter 2</strong>: Those fine-tuning techniques need feedback data to work - this chapter shows you how to collect it</p>
+<p>Remember that $100M company with 30 evals? Here's how you go from 30 examples to thousands through smart feedback collection.</p>
 <p>In this chapter, we'll explore how to build effective feedback mechanisms that turn your RAG application from a static implementation into a continuously improving system. This approach creates a feedback loop where user interactions provide the data needed to make the system better.</p>
 <h3 id="the-invisible-feedback-problem">The Invisible Feedback Problem</h3>
 <p>Many RAG implementations hide feedback mechanisms in obscure UI locations or use generic "thumbs up/down" buttons that provide minimal insight. Users interact with these minimal feedback options less than 0.1% of the time, providing insufficient data for meaningful improvements.</p>
-<p>In my consulting practice, I've seen that simply changing the copy from generic "How did we do?" to specific "Did we answer your question?" can increase feedback rates by <strong>5x</strong> (from 0.1% to 0.5% response rates). Well-designed feedback mechanisms don't just collect more data—they accelerate your entire improvement cycle, allowing you to fine-tune 5x faster and deploy with greater confidence.</p>
-<p><strong>Real-World Impact:</strong>
-- One client saw feedback increase from 10 responses per day to 40+ responses per day with just copy changes
-- Another improved their follow-up email acceptance rate to <strong>90% without any edits needed</strong>
-- A customer support team reduced their escalation rate by 35% after implementing specific feedback prompts</p>
+<p>I keep seeing this in consulting: changing "How did we do?" to "Did we answer your question?" increases feedback rates by <strong>5x</strong> (0.1% to 0.5%). That's not just more data - it's the difference between flying blind and seeing clearly.</p>
+<p><strong>Real Numbers from Clients:</strong>
+- <strong>10 to 40+ responses per day</strong> just from better copy 
+- <strong>90% follow-up email acceptance without edits</strong> (from transcript: clients using structured feedback)
+- <strong>35% reduction in escalation rates</strong> when feedback gets specific
+- <strong>Only 20% of companies</strong> I work with actually implement streaming well - but the ones that do see massive UX improvements</p>
 <div class="admonition success">
 <p class="admonition-title">Effective Feedback Copy</p>
 </div>
-<p><strong>5x Better Feedback Rates:</strong> - ✅ "Did we answer your question?" - ✅ "Was this information helpful?" - ✅ "Did we take the correct actions?" (for action-oriented systems) - ❌ "How did we do?" - ❌ "Rate your experience"</p>
+<p><strong>Copy That Actually Works:</strong>
+    - ✅ "Did we answer your question?" 
+    - ✅ "Was this information helpful?"
+    - ✅ "Did we take the correct actions?"
+    - ❌ "How did we do?" (generic and useless)
+    - ❌ "Rate your experience" (nobody cares about your experience)</p>
 <div class="highlight"><pre><span></span><code>**Context-Specific Examples:**
 - For coding assistants: &quot;Did this code solve your problem?&quot;
 - For customer support: &quot;Did we resolve your issue?&quot;
@@ -3513,51 +3483,51 @@ The key is focusing on the core value proposition rather than generic satisfacti
 <h2 id="feedback-visibility-make-it-impossible-to-miss">Feedback Visibility: Make It Impossible to Miss</h2>
 <p>The first principle of effective feedback collection is visibility. Your feedback mechanisms should be prominent and engaging, not hidden in dropdown menus or settings pages. Users should encounter feedback options naturally as part of their interaction flow.</p>
 <h3 id="high-visibility-feedback-ui">High-Visibility Feedback UI</h3>
-<p>Consider the difference between these two approaches:</p>
-<div class="highlight"><pre><span></span><code>**Low Visibility:** A small thumbs up/down icon in the corner of the response
-
-**High Visibility:**
-
-After receiving an answer, users see:
-
-&quot;Was this answer helpful? [Yes] [Somewhat] [No]&quot;
-
-If they click &quot;Somewhat&quot; or &quot;No&quot;:
-
-&quot;What could be improved?&quot;
+<p>Here's what I see working vs. what doesn't:</p>
+<p><strong>What Doesn't Work:</strong> 
+Tiny thumbs up/down hidden in corner (0.1% response rate)</p>
+<p><strong>What Actually Works:</strong></p>
+<p>"Did we answer your question? [Yes] [Somewhat] [No]"</p>
+<p>If "Somewhat" or "No":
+"What was missing?"
 - [ ] More detailed explanation
-- [ ] More relevant information
-- [ ] Incorrect information
+- [ ] Different information needed<br />
+- [ ] Information was wrong</p>
+<p>Remember: users perceive animated progress bars as <strong>11% faster</strong> even when wait times are identical. Good UX matters for feedback collection too.
 - [ ] Better formatting
-- [ ] Other: ____________
-</code></pre></div>
-<p>The second approach not only makes feedback impossible to miss but also structures it in a way that provides more actionable insights. Data shows that visible feedback mechanisms can increase feedback rates from less than 1% to over 30%.</p>
-<h3 id="implementation-strategies">Implementation Strategies</h3>
-<p>Here are several patterns for implementing high-visibility feedback mechanisms:</p>
-<ol>
-<li><strong>Inline Feedback:</strong> Place feedback options directly beneath each response</li>
-<li><strong>Modal Prompts:</strong> Show a feedback modal after a certain number of interactions</li>
-<li><strong>Follow-up Questions:</strong> Include feedback collection as part of conversational flow</li>
-<li><strong>Email Follow-ups:</strong> Send follow-up emails asking for feedback on recent sessions</li>
-</ol>
-<p>Each approach has advantages for different use cases. The key is to make feedback collection a natural part of the user experience rather than an afterthought.</p>
-<h3 id="streaming-and-perceived-performance">Streaming and Perceived Performance</h3>
-<p><strong>The Claude Progress Counter Effect:</strong></p>
-<p>Claude's implementation of progress counters during response generation serves multiple purposes:
-- Shows "thinking" progress (e.g., "Analyzing document 3 of 5...")
+- [ ] Other: <strong><em>_</em></strong>_____
+<div class="highlight"><pre><span></span><code>The second approach not only makes feedback impossible to miss but also structures it in a way that provides more actionable insights. Data shows that visible feedback mechanisms can increase feedback rates from less than 1% to over 30%.
+
+### Implementation Strategies
+
+Here are several patterns for implementing high-visibility feedback mechanisms:
+
+1. **Inline Feedback:** Place feedback options directly beneath each response
+1. **Modal Prompts:** Show a feedback modal after a certain number of interactions
+1. **Follow-up Questions:** Include feedback collection as part of conversational flow
+1. **Email Follow-ups:** Send follow-up emails asking for feedback on recent sessions
+
+Each approach has advantages for different use cases. The key is to make feedback collection a natural part of the user experience rather than an afterthought.
+
+### Streaming and Perceived Performance
+
+**The Claude Progress Counter Effect:**
+
+Claude&#39;s implementation of progress counters during response generation serves multiple purposes:
+- Shows &quot;thinking&quot; progress (e.g., &quot;Analyzing document 3 of 5...&quot;)
 - Reduces perceived latency by up to 45%
 - Gives users confidence the system is working
-- Creates natural moments for feedback collection</p>
-<p><strong>Implementation Pattern:</strong>
-<div class="highlight"><pre><span></span><code>Searching documents... [████░░░░░░] 40%
+- Creates natural moments for feedback collection
+
+**Implementation Pattern:**
+</code></pre></div>
+Searching documents... [████░░░░░░] 40%
 Found 5 relevant sources
 Analyzing content... [████████░░] 80%
-Generating response... [██████████] 100%
-
-[Response appears here]
-
-Did we find the right information? [Yes] [No]
-</code></pre></div></p>
+Generating response... [██████████] 100%</p>
+<p>[Response appears here]</p>
+<p>Did we find the right information? [Yes] [No]
+```</p>
 <p>This pattern makes feedback feel like a natural continuation of the interaction rather than an interruption.</p>
 <h3 id="enterprise-feedback-collection-with-slack-integration">Enterprise Feedback Collection with Slack Integration</h3>
 <p>For enterprise applications, especially when working with large customers who have dedicated customer success teams, consider implementing a Slack integration for feedback collection:</p>

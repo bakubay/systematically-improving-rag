@@ -3779,12 +3779,13 @@
 <p><strong>You can't improve what you can't measure—and you can measure before you have users.</strong> Synthetic data isn't just a stopgap until real users arrive. It's a powerful tool for establishing baselines, testing edge cases, and building the evaluation infrastructure that will power continuous improvement. Start with retrieval metrics (precision and recall), not generation quality, because they're faster, cheaper, and more objective.</p>
 <div class="admonition info">
 <p class="admonition-title">Learn the Complete RAG Playbook</p>
-<p>All of this content comes from my <a href="https://maven.com/applied-llms/rag-playbook?promoCode=EBOOK">Systematically Improving RAG Applications</a> course. Readers get <strong>20% off</strong> with code EBOOK. Join 500+ engineers who've transformed their RAG systems from demos to production-ready applications.</p>
+<p>All of this content comes from my <a href="https://maven.com/applied-llms/rag-playbook?promoCode=EBOOK">Systematically Improving RAG Applications</a> course. Readers get <strong>20% off</strong> with code EBOOK. </p>
+<p><strong>Join 500+ engineers</strong> who've transformed their RAG systems from demos to production-ready applications. Previous cohort participants work at companies like HubSpot, Zapier, and numerous AI startups - from seed stage to $100M+ valuations.</p>
 </div>
 <p>Alright, let's talk about making RAG applications actually work. Most teams I work with are stuck in this weird loop where they keep tweaking things randomly and hoping something sticks. Sound familiar?</p>
 <p>Here's what we're going to cover: how to set up evaluations that actually tell you something useful, common ways teams shoot themselves in the foot (and how to avoid them), and how to use synthetic data to test your system before you even have users.</p>
 <h2 id="common-pitfalls-in-ai-development">Common Pitfalls in AI Development</h2>
-<p>After working with dozens of companies on their RAG applications, I keep seeing the same patterns. Let me walk you through them so you don't waste months making the same mistakes.</p>
+<p>After consulting with dozens of companies - from AI startups to $100M+ companies - I keep seeing the same patterns. I've seen companies hire ML engineers only to realize they weren't logging data, then wait 3-6 months to collect it. Let me walk you through these patterns so you don't make the same mistakes.</p>
 <h3 id="the-reasoning-fallacy">The Reasoning Fallacy</h3>
 <p>I can't tell you how many times I hear "we need more complex reasoning" or "the model isn't smart enough." Nine times out of ten, that's not the problem. The real issue? You don't actually know what your users want.</p>
 <p>Think about it - when was the last time you:</p>
@@ -3796,7 +3797,7 @@
 <p>If you're like most teams, the answer is "uhh..." And that's the problem. You end up building these generic tools that don't solve any specific problem particularly well.</p>
 <h3 id="the-vague-metrics-problem">The Vague Metrics Problem</h3>
 <p>Here's another one that drives me crazy. Teams will spend weeks changing things and then evaluate success by asking "does it look better?" or "does it feel right?"</p>
-<p>I worked with a company valued at $100 million that had maybe 30 evaluation examples. Total. When something broke or improved, they had no idea what actually changed or why.</p>
+<p><strong>Real Example</strong>: I've worked with companies valued at $100 million that had less than 30 evaluation examples total. When something broke or improved, they had no idea what actually changed or why.</p>
 <p>Without concrete metrics, you get stuck in this loop:</p>
 <ol>
 <li>Make random changes based on gut feeling</li>
@@ -3843,6 +3844,7 @@
 <h3 id="the-1-leading-metric-experiment-velocity">The #1 Leading Metric: Experiment Velocity</h3>
 <p>If I had to pick one metric for early-stage RAG applications, it's this: how many experiments are you running?</p>
 <p>Instead of asking "did the last change improve things?" in standup, ask "how can we run twice as many experiments next week?" What infrastructure would help? What's blocking us from testing more ideas?</p>
+<p><strong>Real Impact</strong>: Teams that focus on experiment velocity often see 6-10% improvements in recall with just hundreds of dollars in API calls - work that previously required tens of thousands in data labeling costs.</p>
 <p>This shift from outcomes to velocity changes everything.</p>
 <h2 id="absence-blindness-and-intervention-bias">Absence Blindness and Intervention Bias</h2>
 <p>These two biases kill more RAG projects than anything else.</p>
@@ -3932,13 +3934,13 @@
 <p>A client generates reports from user research interviews. Consultants do 15-30 interviews and want AI-generated summaries.</p>
 <p><strong>Problem</strong>: Reports were missing quotes. A consultant knew 6 experts said something similar, but the report only cited 3. That 50% recall rate killed trust.</p>
 <p><strong>Solution</strong>: We built manual evaluation sets from problematic examples. Turns out, better text chunking fixed most issues.</p>
-<p><strong>Result</strong>: Recall went from 50% to 90% in a few iterations. Customers noticed immediately.</p>
+<p><strong>Result</strong>: Recall went from 50% to 90% in a few iterations - a 40 percentage point improvement that customers noticed immediately. This kind of measurable improvement builds trust and enables continued partnership.</p>
 <p><strong>Lesson</strong>: Pre-processing that matches how users query can dramatically improve retrieval.</p>
 <h3 id="case-study-2-blueprint-search-for-construction">Case Study 2: Blueprint Search for Construction</h3>
 <p>Another client needed AI search for construction blueprints - workers asking questions about building plans.</p>
 <p><strong>Problem</strong>: Only 27% recall when finding the right blueprint for questions.</p>
 <p><strong>Solution</strong>: We used a vision model to create detailed captions for blueprints, including hypothetical questions users might ask.</p>
-<p><strong>Result</strong>: Four days later, recall hit 85%. Once live, we discovered 20% of queries involved counting objects, which justified investing in bounding box models.</p>
+<p><strong>Result</strong>: Four days later, recall jumped from 27% to 85% - a 58 percentage point improvement. Once live, we discovered 20% of queries involved counting objects, which justified investing in bounding box models for those specific use cases.</p>
 <p><strong>Lesson</strong>: Test subsystems independently for rapid improvements. Synthetic data for specific use cases works great.</p>
 <p><strong>Chunk Size Best Practices:</strong></p>
 <p>Start with 800 tokens and 50% overlap. This works for most use cases.</p>
