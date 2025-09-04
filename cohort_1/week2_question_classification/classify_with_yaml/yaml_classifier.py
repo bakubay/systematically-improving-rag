@@ -4,7 +4,7 @@ from pydantic import field_validator
 from instructor import Instructor, AsyncInstructor
 from jinja2 import Template
 from textwrap import dedent
-from typing import Type, TypeVar
+from typing import Type, TypeVar, Any
 
 T = TypeVar("T", bound=BaseModel)
 
@@ -115,35 +115,51 @@ class YamlClassifier(BaseModel):
         self._client = client
 
     def predict(
-        self, query: str, model: str, response_model: Type[T], client: Instructor
+        self,
+        query: str,
+        model: str,
+        response_model: Type[T],
+        client: Instructor,
+        hooks: Any | None = None,
     ):
         system_message = self.to_system_messages()
         user_query = self.get_user_query(query)
-        return client.create(
-            model=model,
-            response_model=response_model,
-            messages=[
+        kwargs = {
+            "model": model,
+            "response_model": response_model,
+            "messages": [
                 {"role": "system", "content": system_message},
                 {"role": "user", "content": user_query},
             ],
-            validation_context={
+            "validation_context": {
                 "labels": self.get_labels(),
             },
-        )
+        }
+        if hooks is not None:
+            kwargs["hooks"] = hooks
+        return client.create(**kwargs)
 
     async def apredict(
-        self, query: str, model: str, response_model: Type[T], client: AsyncInstructor
+        self,
+        query: str,
+        model: str,
+        response_model: Type[T],
+        client: AsyncInstructor,
+        hooks: Any | None = None,
     ):
         system_message = self.to_system_messages()
         user_query = self.get_user_query(query)
-        return await client.create(
-            messages=[
+        kwargs = {
+            "messages": [
                 {"role": "system", "content": system_message},
                 {"role": "user", "content": user_query},
             ],
-            model=model,
-            response_model=response_model,
-            validation_context={
+            "model": model,
+            "response_model": response_model,
+            "validation_context": {
                 "labels": self.get_labels(),
             },
-        )
+        }
+        if hooks is not None:
+            kwargs["hooks"] = hooks
+        return await client.create(**kwargs)

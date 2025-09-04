@@ -16,6 +16,7 @@ class ConversationSummary(BaseModel):
 async def conversation_summary_v1(
     client,  # instructor-patched client
     messages: List[Dict[str, Any]],
+    hooks: Any | None = None,
 ) -> ConversationSummary:
     """
     Generate a concise summary focused on key topics and searchable terms.
@@ -61,12 +62,15 @@ async def conversation_summary_v1(
     Generate a concise, searchable summary of this conversation.
     """
 
-    response = await client.chat.completions.create(
-        response_model=ConversationSummary,
-        messages=[{"role": "user", "content": prompt}],
-        context={"messages": messages},
-        max_retries=3,
-    )
+    kwargs = {
+        "response_model": ConversationSummary,
+        "messages": [{"role": "user", "content": prompt}],
+        "context": {"messages": messages},
+        "max_retries": 3,
+    }
+    if hooks is not None:
+        kwargs["hooks"] = hooks
+    response = await client.chat.completions.create(**kwargs)
 
     return response
 
@@ -74,6 +78,7 @@ async def conversation_summary_v1(
 async def conversation_summary_v2(
     client,  # instructor-patched client
     messages: List[Dict[str, Any]],
+    hooks: Any | None = None,
 ) -> ConversationSummary:
     """
     Generate a comprehensive summary that captures conversation patterns, themes, and user interaction dynamics.
@@ -278,18 +283,21 @@ Please provide your summary based on the conversation so far, following this str
 {% endfor %}
     """
 
-    response = await client.chat.completions.create(
-        response_model=ConversationSummary,
-        messages=[
+    kwargs = {
+        "response_model": ConversationSummary,
+        "messages": [
             {
                 "role": "system",
                 "content": "You are an expert at analyzing and categorizing human-AI conversations, focusing on patterns, themes, interaction characteristics, and user experience dynamics across all types of conversations.",
             },
             {"role": "user", "content": prompt},
         ],
-        context={"messages": messages},
-        max_retries=3,
-    )
+        "context": {"messages": messages},
+        "max_retries": 3,
+    }
+    if hooks is not None:
+        kwargs["hooks"] = hooks
+    response = await client.chat.completions.create(**kwargs)
 
     return response
 
@@ -297,6 +305,7 @@ Please provide your summary based on the conversation so far, following this str
 async def conversation_summary_v3(
     client,  # instructor-patched client
     messages: List[Dict[str, Any]],
+    hooks: Any | None = None,
 ) -> ConversationSummary:
     """
     Generate a concise pattern-focused summary that bridges content and patterns.
@@ -361,18 +370,21 @@ Focus on creating a summary that works for BOTH content searches AND pattern sea
 Generate a concise, pattern-aware summary that balances content and conversation dynamics.
     """
 
-    response = await client.chat.completions.create(
-        response_model=ConversationSummary,
-        messages=[
+    kwargs = {
+        "response_model": ConversationSummary,
+        "messages": [
             {
                 "role": "system",
                 "content": "You are an expert at creating concise summaries that capture both what was discussed and how the conversation unfolded. Balance pattern recognition with content summary.",
             },
             {"role": "user", "content": prompt},
         ],
-        context={"messages": messages},
-        max_retries=3,
-    )
+        "context": {"messages": messages},
+        "max_retries": 3,
+    }
+    if hooks is not None:
+        kwargs["hooks"] = hooks
+    response = await client.chat.completions.create(**kwargs)
 
     return response
 
@@ -380,6 +392,7 @@ Generate a concise, pattern-aware summary that balances content and conversation
 async def conversation_summary_v4(
     client,  # instructor-patched client
     messages: List[Dict[str, Any]],
+    hooks: Any | None = None,
 ) -> ConversationSummary:
     """
     Generate a pattern-focused summary optimized for v2-style queries.
@@ -461,18 +474,21 @@ Remember: Focus on HOW the conversation unfolds and WHAT TYPE it represents, not
 Generate a pattern-focused summary that would be discoverable by researchers looking for specific conversation types and interaction patterns.
 """
 
-    response = await client.chat.completions.create(
-        response_model=ConversationSummary,
-        messages=[
+    kwargs = {
+        "response_model": ConversationSummary,
+        "messages": [
             {
                 "role": "system",
                 "content": "You are an expert at categorizing conversations by their patterns, types, and interaction dynamics. Focus on creating summaries that match how researchers search for conversation patterns rather than specific content.",
             },
             {"role": "user", "content": prompt},
         ],
-        context={"messages": messages},
-        max_retries=3,
-    )
+        "context": {"messages": messages},
+        "max_retries": 3,
+    }
+    if hooks is not None:
+        kwargs["hooks"] = hooks
+    response = await client.chat.completions.create(**kwargs)
 
     return response
 
@@ -480,6 +496,7 @@ Generate a pattern-focused summary that would be discoverable by researchers loo
 async def conversation_summary_v5(
     client,  # instructor-patched client
     messages: List[Dict[str, Any]],
+    hooks: Any | None = None,
 ) -> ConversationSummary:
     """
     Generate summaries optimized for AI agent failure analysis and improvement identification.
@@ -539,17 +556,20 @@ async def conversation_summary_v5(
     Generate a balanced summary optimized for both pattern and content queries.
     """
 
-    response = await client.chat.completions.create(
-        response_model=ConversationSummary,
-        messages=[
+    kwargs = {
+        "response_model": ConversationSummary,
+        "messages": [
             {
                 "role": "system",
                 "content": "You are an expert at analyzing AI conversations for system improvement. Focus on identifying failure patterns, root causes, and specific opportunities for enhancement. Your summaries should enable data-driven decisions about where to invest development effort.",
             },
             {"role": "user", "content": prompt},
         ],
-        context={"messages": messages},
-        max_retries=3,
-    )
+        "context": {"messages": messages},
+        "max_retries": 3,
+    }
+    if hooks is not None:
+        kwargs["hooks"] = hooks
+    response = await client.chat.completions.create(**kwargs)
 
     return response
