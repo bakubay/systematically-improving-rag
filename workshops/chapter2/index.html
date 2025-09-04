@@ -3968,15 +3968,16 @@
 
 <h1 id="converting-evaluations-into-training-data-for-fine-tuning">Converting Evaluations into Training Data for Fine-Tuning</h1>
 <h2 id="learning-objectives">Learning Objectives</h2>
-<p>By the end of this chapter, you will:</p>
-<ul>
-<li>Understand why off-the-shelf embeddings fail for specialized applications</li>
-<li>Learn the fundamentals of similarity and objective functions in embedding models</li>
-<li>Build custom embeddings using synthetic data and evaluation frameworks</li>
-<li>Master contrastive learning techniques for retrieval systems  </li>
-<li>Implement fine-tuning workflows for embeddings and re-rankers</li>
-<li>Start logging relevancy data for continuous improvement</li>
-</ul>
+<p>By the end of this chapter, you will be able to:</p>
+<ol>
+<li><strong>Understand why off-the-shelf embeddings fail for specialized applications</strong> - Recognize the limitations of generic models and the hidden assumptions that prevent them from handling domain-specific similarity requirements</li>
+<li><strong>Master the fundamentals of similarity and objective functions</strong> - Define what "similarity" means in your specific context and design training objectives that capture these relationships  </li>
+<li><strong>Build custom embeddings using synthetic data and evaluation frameworks</strong> - Transform your Chapter 1 evaluation examples into training data for fine-tuning embedding models</li>
+<li><strong>Apply contrastive learning techniques for retrieval systems</strong> - Implement triplet structures with hard negatives to improve domain-specific retrieval accuracy by 6-10%</li>
+<li><strong>Design and implement fine-tuning workflows</strong> - Execute complete embedding and re-ranker training processes that cost hundreds of dollars rather than thousands</li>
+<li><strong>Create continuous data collection systems</strong> - Start logging relevancy signals now to build the training datasets that will power future improvements</li>
+</ol>
+<p>These objectives build directly on the evaluation foundation from Chapter 1 and prepare you for the feedback collection mechanisms in Chapter 3.</p>
 <h3 id="key-insight">Key Insight</h3>
 <p><strong>If you're not fine-tuning, you're Blockbuster, not Netflix.</strong> The goal isn't to fine-tune language models (which are expensive and complex), but to fine-tune embedding models that move toward your specific data distributions and improve retrieval, not generation.</p>
 <div class="admonition info">

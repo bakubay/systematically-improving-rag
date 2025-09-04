@@ -821,11 +821,26 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Learning Objectives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#key-insight" class="md-nav__link">
     <span class="md-ellipsis">
       Key Insight
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3179,11 +3194,26 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Learning Objectives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#key-insight" class="md-nav__link">
     <span class="md-ellipsis">
       Key Insight
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3495,6 +3525,17 @@
 
 
 <h1 id="overcoming-latency-streaming-and-interstitials">Overcoming Latency: Streaming and Interstitials</h1>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter, you will be able to:</p>
+<ol>
+<li><strong>Implement streaming responses for better perceived performance</strong> - Build token-by-token response streaming that makes users perceive systems as 11% faster even with identical wait times</li>
+<li><strong>Design meaningful interstitials and progress indicators</strong> - Create domain-specific loading messages that reduce perceived latency by up to 40% compared to generic spinners</li>
+<li><strong>Master skeleton screen techniques</strong> - Apply Facebook's research on skeleton screens to create the illusion of progress and improve user retention during loading</li>
+<li><strong>Build platform-specific streaming solutions</strong> - Implement streaming patterns for web applications and adapt techniques for Slack bots using emoji reactions and threaded updates</li>
+<li><strong>Optimize actual performance alongside perceived performance</strong> - Apply caching, progressive loading, and parallel processing techniques to reduce real latency while maintaining responsive user experiences</li>
+<li><strong>Create feedback collection opportunities through streaming</strong> - Use streaming interfaces to increase feedback collection rates by 30-40% compared to traditional wait-and-display approaches</li>
+</ol>
+<p>These objectives build directly on the feedback collection mechanisms from Chapter 3.1 and prepare you for the quality-of-life improvements in Chapter 3.3.</p>
 <h3 id="key-insight">Key Insight</h3>
 <p><strong>Perceived performance beats actual performance—users will wait 8 seconds with progress bars but abandon after 3 seconds of silence.</strong> Streaming isn't just about showing text faster. It's about maintaining user engagement through the entire retrieval-generation pipeline. Implement streaming early because retrofitting it later adds weeks to your development cycle.</p>
 <div class="admonition info">

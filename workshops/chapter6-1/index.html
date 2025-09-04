@@ -1145,6 +1145,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Learning Objectives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#key-insight" class="md-nav__link">
     <span class="md-ellipsis">
       Key Insight
@@ -1152,9 +1162,14 @@
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#learning-objectives" class="md-nav__link">
+  <a href="#learning-objectives_1" class="md-nav__link">
     <span class="md-ellipsis">
       Learning Objectives
     </span>
@@ -3042,6 +3057,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Learning Objectives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#key-insight" class="md-nav__link">
     <span class="md-ellipsis">
       Key Insight
@@ -3049,9 +3074,14 @@
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#learning-objectives" class="md-nav__link">
+  <a href="#learning-objectives_1" class="md-nav__link">
     <span class="md-ellipsis">
       Learning Objectives
     </span>
@@ -3223,13 +3253,24 @@
 
 
 <h1 id="query-routing-foundations-building-a-cohesive-rag-system">Query Routing Foundations: Building a Cohesive RAG System</h1>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter, you will be able to:</p>
+<ol>
+<li><strong>Understand the query routing problem</strong> - Recognize why even excellent specialized retrievers become useless without proper routing and how to design systems where P(success) = P(right retriever) × P(finding data | right retriever)</li>
+<li><strong>Master the tools-as-APIs pattern</strong> - Design clean interfaces between routing logic, tool implementations, and team boundaries that enable parallel development</li>
+<li><strong>Organize teams for scalable development</strong> - Structure Interface, Implementation, Router, and Evaluation teams with clear ownership and coordination through well-defined APIs</li>
+<li><strong>Design migration strategies</strong> - Move systematically from monolithic to modular RAG systems with clear recognition, separation, interface, and orchestration phases</li>
+<li><strong>Apply microservice principles</strong> - Build RAG systems that feel like distributed microservices where specialized services handle specific information retrieval tasks</li>
+<li><strong>Implement two-level performance measurement</strong> - Track both routing accuracy and individual retriever performance to identify bottlenecks systematically</li>
+</ol>
+<p>These objectives build directly on the specialized retrieval capabilities from Chapter 5 and prepare you for the concrete implementation techniques in Chapter 6.2.</p>
 <h3 id="key-insight">Key Insight</h3>
 <p><strong>The best retriever is multiple retrievers—success = P(selecting right retriever) × P(retriever finding data).</strong> Query routing isn't about choosing one perfect system. It's about building a portfolio of specialized tools and letting a smart router decide. Start simple with few-shot classification, then evolve to fine-tuned models as you collect routing decisions.</p>
 <div class="admonition info">
 <p class="admonition-title">Learn the Complete RAG Playbook</p>
 <p>All of this content comes from my <a href="https://maven.com/applied-llms/rag-playbook?promoCode=EBOOK">Systematically Improving RAG Applications</a> course. Readers get <strong>20% off</strong> with code EBOOK. Join 500+ engineers who've transformed their RAG systems from demos to production-ready applications.</p>
 </div>
-<h2 id="learning-objectives">Learning Objectives</h2>
+<h2 id="learning-objectives_1">Learning Objectives</h2>
 <p>By the end of this chapter, you will:</p>
 <ol>
 <li><strong>Understand the query routing problem</strong> - Recognize why even excellent specialized retrievers become useless without proper routing and how to design systems where P(success) = P(right retriever) × P(finding data | right retriever)</li>

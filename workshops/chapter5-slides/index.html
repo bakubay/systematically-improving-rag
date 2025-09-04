@@ -3181,6 +3181,90 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#sql-generation-beyond-simple-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQL Generation: Beyond Simple Queries
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SQL Generation: Beyond Simple Queries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reframe-using-our-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reframe Using Our Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-month-over-month-revenue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: "Month over Month Revenue"
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table-retrieval-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table Retrieval Strategy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Table Retrieval Strategy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-table-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Table Discovery
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-sql-snippet-retrieval" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: SQL Snippet Retrieval
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-co-occurrence-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Co-occurrence Patterns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-recursive-playbook-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Recursive Playbook Pattern
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#session-5-homework" class="md-nav__link">
     <span class="md-ellipsis">
       Session 5 Homework
@@ -3304,6 +3388,13 @@
 <blockquote>
 <p>"Instead of one search index, split the problem space and solve each locally"</p>
 </blockquote>
+<p><strong>Real-World Reference:</strong> Google has been doing this for years
+- Google Maps (location queries)
+- Google Photos (image searches) 
+- YouTube (video content)
+- Web (general text)
+- Shopping (product searches)</p>
+<p>Google's router decides which tool to show based on your search intent</p>
 <hr />
 <h2 id="real-world-example-hardware-store-search">Real-World Example: Hardware Store Search</h2>
 <p><strong>Three Different Search Needs:</strong></p>
@@ -3370,6 +3461,14 @@ Spec queries need text-to-SQL over manufacturer data</p>
 <p><strong>Debugging Strategy:</strong>
 - If routing fails → Better prompts, examples<br />
 - If retrieval fails → Better embeddings, filtering</p>
+<p><strong>The Process:</strong>
+1. Test retrieval in global sense
+2. Once happy, figure out clusters through segmentation
+3. Prioritize segments by impact, volume, probability of success
+4. Build specialized retrievers
+5. Measure if retriever finds right data (precision/recall)
+6. Measure if LM chooses right tools</p>
+<p><strong>Result:</strong> Always know what to prioritize tomorrow</p>
 <hr />
 <h2 id="two-classes-of-rag-improvements">Two Classes of RAG Improvements</h2>
 <h3 id="class-1-extract-more-metadata">Class 1: Extract More Metadata</h3>
@@ -3432,6 +3531,10 @@ Spec queries need text-to-SQL over manufacturer data</p>
 1. <strong>Structure:</strong> Raw text → Extracted data → Database queries
 2. <strong>Rewrite:</strong> Raw content → Optimized summaries → Vector search</p>
 <p><strong>Both approaches:</strong> Transform data into more searchable formats using AI</p>
+<p><strong>Key Insight:</strong> This is the most important concept to remember from today's session
+- You're not just building search indices
+- You're creating AI-enhanced views of your existing data
+- Either by extracting structure or by rewriting for better recall</p>
 <hr />
 <h2 id="metrics-same-principles-new-applications">Metrics: Same Principles, New Applications</h2>
 <p><strong>Global Index (Session 1):</strong> Choose best text chunk from single search
@@ -3561,7 +3664,16 @@ Spec queries need text-to-SQL over manufacturer data</p>
 <li>Given correct tool, finding right answer?</li>
 <li>Need better embeddings/filtering?</li>
 </ol>
+<p><strong>Systematic Approach:</strong> Just numbers multiplied together
+- Find the lowest number in your probability chain
+- Improve that specific component
+- Re-measure and repeat</p>
 <p><strong>Result:</strong> Always know what to improve next</p>
+<p><strong>Reality Check:</strong> After doing this for a while, it becomes very boring
+- All the work is collecting these data points
+- But you'll always know what to do tomorrow
+- Simple numbers multiplied together - find the lowest and improve it
+- <strong>Why simple metrics matter:</strong> LLMs across the whole process won't tell you what to fix</p>
 <hr />
 <h2 id="organizational-benefits">Organizational Benefits</h2>
 <p><strong>Team Structure for Multiple Indices:</strong></p>
@@ -3583,6 +3695,68 @@ Spec queries need text-to-SQL over manufacturer data</p>
 <li>Performance monitoring</li>
 <li>Cross-system optimization</li>
 </ul>
+<h2 id="sql-generation-beyond-simple-queries">SQL Generation: Beyond Simple Queries</h2>
+<p><strong>The Business Reality:</strong> Multiple correct answers, complex schemas</p>
+<h3 id="reframe-using-our-tools">Reframe Using Our Tools</h3>
+<ol>
+<li><strong>Inventory:</strong> Do we have right tables? Right columns? Can we retrieve them?</li>
+<li><strong>Capabilities:</strong> Can we demonstrate understanding from historical queries?</li>
+<li><strong>Business Logic:</strong> Revenue isn't always just SUM(sales)</li>
+</ol>
+<h3 id="example-month-over-month-revenue">Example: "Month over Month Revenue"</h3>
+<p><strong>The Problem:</strong> What does this actually mean?
+<div class="highlight"><pre><span></span><code><span class="c1">-- Option 1: 30-day rolling window</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">revenue</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="nb">date</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="k">CURRENT_DATE</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="k">DAY</span>
+
+<span class="c1">-- Option 2: Calendar month</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">revenue</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="k">MONTH</span><span class="p">(</span><span class="nb">date</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">MONTH</span><span class="p">(</span><span class="k">CURRENT_DATE</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">MONTH</span><span class="p">)</span>
+
+<span class="c1">-- Option 3: 28-day rolling average</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">revenue</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">revenue</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="nb">date</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="k">CURRENT_DATE</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="mi">28</span><span class="w"> </span><span class="k">DAY</span>
+</code></pre></div></p>
+<p><strong>Solution:</strong> Golden SQL snippets that capture business definitions
+- Create UI to let users "star" correct SQL statements
+- Build inventory of business-specific calculation patterns
+- Use these as few-shot examples</p>
+<hr />
+<h2 id="table-retrieval-strategy">Table Retrieval Strategy</h2>
+<h3 id="step-1-table-discovery">Step 1: Table Discovery</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Test: &quot;How many users generated $10k+ revenue?&quot;</span>
+<span class="c1"># Should retrieve: users_table + finance_table</span>
+<span class="n">expected_tables</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;users&quot;</span><span class="p">,</span> <span class="s2">&quot;finance&quot;</span><span class="p">]</span>
+<span class="n">retrieved_tables</span> <span class="o">=</span> <span class="n">table_retriever</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+<span class="k">assert</span> <span class="nb">all</span><span class="p">(</span><span class="n">table</span> <span class="ow">in</span> <span class="n">retrieved_tables</span> <span class="k">for</span> <span class="n">table</span> <span class="ow">in</span> <span class="n">expected_tables</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="step-2-sql-snippet-retrieval">Step 2: SQL Snippet Retrieval</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Test: &quot;Show month over month growth&quot;</span>
+<span class="c1"># Should retrieve: business-specific MoM calculation</span>
+<span class="n">expected_snippets</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;month_over_month_revenue&quot;</span><span class="p">]</span>
+<span class="n">retrieved_snippets</span> <span class="o">=</span> <span class="n">snippet_retriever</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">relevant_snippet</span> <span class="ow">in</span> <span class="n">retrieved_snippets</span>
+</code></pre></div>
+<h3 id="step-3-co-occurrence-patterns">Step 3: Co-occurrence Patterns</h3>
+<ul>
+<li>Track which tables are used together</li>
+<li>If queries use users + finance, maybe also include orders</li>
+<li>Trade-off between precision and recall</li>
+</ul>
+<hr />
+<h2 id="the-recursive-playbook-pattern">The Recursive Playbook Pattern</h2>
+<p><strong>Universal Application:</strong>
+- <strong>Documents:</strong> Extract → Structure → Query
+- <strong>Images:</strong> Describe → Embed → Retrieve<br />
+- <strong>Tables:</strong> Discover → Pattern → Execute
+- <strong>Text-to-SQL:</strong> Inventory + Capabilities framework</p>
+<p><strong>Key Insight:</strong> Same playbook recursively applies to every subsystem
+1. Define synthetic data and evals
+2. Measure precision/recall (proxy for success probability)
+3. Segment to identify problems
+4. Split monolithic retriever into specialized ones
+5. Improve each retriever individually</p>
+<p><strong>Reality:</strong> None of these systems are "fire and forget"
+- Continuous monitoring required
+- Always iterating on processes
+- You're responsible for retrieval, no matter how good AI gets</p>
 <hr />
 <h2 id="session-5-homework">Session 5 Homework</h2>
 <p><strong>Apply These Concepts:</strong></p>
@@ -3593,7 +3767,12 @@ Spec queries need text-to-SQL over manufacturer data</p>
 <li><strong>Measure Performance:</strong> Before/after recall metrics</li>
 <li><strong>Plan Integration:</strong> How will this connect to routing system?</li>
 </ol>
-<p><strong>Key Question:</strong> What metadata exists that could make search simpler?</p>
+<p><strong>Key Questions:</strong>
+- What metadata exists that could make search simpler?
+- Should you extract structured data or generate synthetic summaries?
+- What business-specific logic needs to be captured in examples?
+- Where are you applying the recursive playbook pattern?</p>
+<p><strong>Challenge:</strong> Try to identify whether your problem is inventory (missing data) or capabilities (missing examples)</p>
 <hr />
 <h2 id="next-session-preview-apply">Next Session Preview: Apply</h2>
 <p><strong>Session 6: Function Calling Done Right</strong></p>
@@ -3605,6 +3784,12 @@ Spec queries need text-to-SQL over manufacturer data</p>
 <li>Complete RAG improvement methodology</li>
 </ul>
 <p><strong>Goal:</strong> Transform individual tools into cohesive application</p>
+<p><strong>Pattern Recognition:</strong> This is how machine learning evolves
+1. <strong>Start:</strong> Small specialized models
+2. <strong>Scale:</strong> Bigger monolithic models
+3. <strong>Specialize:</strong> Mixture of experts when can't scale further
+4. <strong>Consolidate:</strong> Eventually bigger monolithic model again</p>
+<p><strong>Next week:</strong> Build mixture of retrievers, combine with router</p>
 <hr />
 <h2 id="key-takeaways">Key Takeaways</h2>
 <h3 id="technical-insights">Technical Insights</h3>
@@ -3620,6 +3805,8 @@ Spec queries need text-to-SQL over manufacturer data</p>
 <li><strong>Systematic debugging:</strong> Formula tells you what to fix</li>
 <li><strong>User-driven design:</strong> Optimize for actual search patterns</li>
 <li><strong>Data quality matters:</strong> Synthetic data must improve metrics</li>
+<li><strong>Boring is good:</strong> Repetitive process means you know what to do next</li>
+<li><strong>Recursive patterns:</strong> Same playbook applies to every specialized component</li>
 </ol>
 <hr />
 <h2 id="remember-the-fundamentals">Remember the Fundamentals</h2>

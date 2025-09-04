@@ -3202,9 +3202,13 @@
 <h1 id="chapter-1-slides">Chapter 1 Slides</h1>
 <h2 id="jxnlco">jxnl.co</h2>
 <p>@jxnlco</p>
+<!-- Welcome to the first actual lecture for Systematically Improving RAG Applications. This week is all about giving you the tools to kickstart the data flywheel, and in particular thinking about evaluations, the mistakes people make, and then ultimately thinking about synthetic data as a way of addressing a lot of these concerns before you even have users. -->
+
 <h2 id="systematically-improving-rag-applications">Systematically Improving RAG Applications</h2>
 <p><strong>Session 1:</strong> Kickstart the Data Flywheel: Fake it Till You Make It</p>
 <p>Jason Liu</p>
+<!-- Today we're covering the common pitfalls that most AI developers make and the vicious cycle I see in every consulting engagement that I go into. We'll talk about how we over emphasize lagging metrics and how many of us fall victim to absence blindness and intervention bias. -->
+
 <hr />
 <h2 id="todays-goals">Today's Goals</h2>
 <p><strong>Break the Vicious Cycle of RAG Development</strong></p>
@@ -3216,6 +3220,8 @@
 <li>Start the data flywheel before you have users</li>
 </ul>
 <p><strong>Focus: Measurements before features</strong></p>
+<!-- This is the key mindset shift I want you to take away today. We need to fundamentally restructure how we think about stand-up meetings and team priorities. Instead of focusing on features, we need to focus on the velocity of learning through experiments. -->
+
 <hr />
 <h2 id="the-challenge-we-need-complex-reasoning">The Challenge: "We Need Complex Reasoning"</h2>
 <blockquote>
@@ -3231,6 +3237,8 @@
 - When was the last time we read that feedback?
 - When was the last time we asked for that feedback?</p>
 <p><strong>Solution:</strong> Build high-specificity tooling that users actually care about</p>
+<!-- My first question is, how often do we hear things like "we need more complex reasoning"? My hot take here is that it's often going to be a case of a lack of user empathy. When you hear something like this, I would really challenge you to figure out when was the last time we looked at data from customers and figured out what they want, what they really cared about. This is a general result of a lack of specificity in the tools that we actually build for our customers. -->
+
 <hr />
 <h2 id="common-rag-developer-pitfalls">Common RAG Developer Pitfalls</h2>
 <h3 id="the-vicious-cycle">The Vicious Cycle</h3>
@@ -3261,6 +3269,8 @@
 <li>No roadmap for improvements</li>
 <li>Feedback not actionable - doesn't identify what's next</li>
 </ol>
+<!-- This is how we enter the vicious cycle. These developers unknowingly sabotage their applications because they define very vague metrics. We think things like "does it look better" or "does it feel right?" And ultimately you're sabotaging not only your product but your team and yourself if you don't define these clear metrics. You would be surprised at how pervasive these problems are - there have been companies I've worked with with 100 million dollar valuations with less than 30 evals. -->
+
 <hr />
 <h2 id="the-100m-problem">The $100M Problem</h2>
 <blockquote>
@@ -3274,6 +3284,8 @@
 - Products that nobody uses
 - Endless feature churn</p>
 <p><strong>The Solution:</strong> Focus on metrics and experiments, not just features</p>
+<!-- When something changes, you have no way of understanding what is actually moving the needle. This leads to disappointed leadership and very sad developers. After looking at data, you're supposed to take action. But this won't be you. If you're in this class, I really challenge you to spend the next couple of weeks thinking about how we can fundamentally shift our mindsets into making our teams focus on metrics and running experiments rather than just features. -->
+
 <hr />
 <h2 id="lagging-vs-leading-metrics">Lagging vs Leading Metrics</h2>
 <h3 id="lagging-metrics-easy-to-measure-hard-to-improve">Lagging Metrics: Easy to Measure, Hard to Improve</h3>
@@ -3289,6 +3301,8 @@
 <li><strong>Power:</strong> Provides feedback on when and where to intervene</li>
 </ul>
 <p><strong>Key Insight:</strong> Control the inputs to influence the outputs</p>
+<!-- If you're a product scientist or data scientist, this might be very obvious to you, but for everyone else, let's define what these metrics really mean. This was really profound to me when I was working at Facebook. A lagging metric is difficult to improve, but very easy to measure. A good example might be being stronger or losing weight - we can always test how strong we are or weigh ourselves, but we can't do much about it at the time. Leading metrics are easy to change but much harder to measure - like counting calories and working out. -->
+
 <hr />
 <h2 id="the-only-leading-metric-that-matters">The Only Leading Metric That Matters</h2>
 <p><strong>For RAG Development: Number of Experiments</strong></p>
@@ -3308,6 +3322,8 @@
 - What infrastructure investments improve velocity?
 - How can we brainstorm better experiment designs?
 - Build stronger intuition through continual experimentation</p>
+<!-- The simple example I want you to think about most in the upcoming weeks is just how many experiments are we running. A simple analogy is counting calories and burning calories and working out. On any given moment of any given day, you can count up how many calories you've eaten. If you want to gain weight, check if you've eaten enough. If you want to lose weight, check if you've eaten too much. If you want to control your weight, the only thing that matters is calories in and calories out. This is going to be way more boring than you think - doing the obvious thing over and over again - but that is often what success looks like. -->
+
 <hr />
 <h2 id="absence-blindness-you-dont-fix-what-you-cant-see">Absence Blindness: You Don't Fix What You Can't See</h2>
 <p><strong>Common Pattern:</strong>
@@ -3322,6 +3338,8 @@
 - Are representations and text chunks working?</p>
 <p><strong>Reality Check:</strong> People always talk about generation and latency, but no one has ever really looked at whether the retrieval is good or bad</p>
 <p><strong>Solution:</strong> Measure retrieval before generation</p>
+<!-- You don't fix what you can't see. I see this every day with almost every client. People are always talking about generation and latency, and no one has ever really looked at whether the retrieval is good or bad, whether the representations and the text chunks are bad, or even if the data has been extracted correctly. Too many of us focus on what you can see - the generation and latency - and not the retrieval itself. This is why a lot of the focus of today's lecture is around thinking about precision and recall. -->
+
 <hr />
 <h2 id="intervention-bias-action-without-purpose">Intervention Bias: Action Without Purpose</h2>
 <p><strong>The Pattern:</strong>
@@ -3337,6 +3355,8 @@
 - Pay consultants just to hear what you hope to hear
 - But the answer is always: "it depends on your data, your evaluations, and your benchmarks"</p>
 <p><strong>Better Approach:</strong> Specific interventions against specific metrics</p>
+<!-- Something else that we do too often is we just try to do things in order to feel control. We'll just switch between different models and add a couple of lines of prompts everywhere and we just want to see if anything gets better. A lot of people pay me just to tell them what they hope to hear, but that's usually not how things work. Things are very empirical. If you send me an email and pay me a couple dollars to ask whether this thing or that thing is going to work, the answer is always going to be: it depends on your data, your evaluations, and your benchmarks. It's one thing to do something because you want to feel like you're in control, versus taking specific interventions against specific metrics. -->
+
 <hr />
 <h2 id="the-rag-flywheel">The RAG Flywheel</h2>
 <p><strong>Core Principle:</strong> Everything from search applies to RAG</p>
@@ -3349,6 +3369,8 @@
 <h3 id="step-4-real-world-data">Step 4: Real-World Data</h3>
 <p>Collect actual user queries and feedback</p>
 <p><strong>Goal:</strong> Build intuition through continuous experimentation</p>
+<!-- The basic principle here is that everything that we've applied in search is incredibly relevant to how we want to do retrieval. Many of you already have a basic RAG setup, and the only thing to do next is to think about how we can bring in synthetic questions that test the system's ability to do retrieval. Then we can conduct very fast unit tests like evaluations that assess basic retrieval capabilities like precision and recall. -->
+
 <hr />
 <h2 id="why-retrieval-evals-beat-generation-evals">Why Retrieval Evals Beat Generation Evals</h2>
 <h3 id="generation-evals-too-subjective">Generation Evals: Too Subjective</h3>
@@ -3358,6 +3380,8 @@ A2: &quot;The powerhouse of the cell is the mitochondria, which...&quot;
 A3: &quot;Mitochondria are organelles that...&quot;
 </code></pre></div>
 <strong>Problem:</strong> Which answer is "correct"? Too subjective.</p>
+<!-- For every company that I worked with that did not come from a machine learning background, they started focusing on things like subjective generation evals way too early. In the long term, language models are going to improve their ability to synthesize new data in context, but it's our responsibility to be improving things like our search and retrieval evals. If we focus on generation evals, things like factuality become very subjective and confusing. -->
+
 <h3 id="retrieval-evals-objective-and-clear">Retrieval Evals: Objective and Clear</h3>
 <div class="highlight"><pre><span></span><code>Q: &quot;What is the powerhouse of the cell?&quot;
 Expected pages: [6, 9, 13]
@@ -3365,6 +3389,8 @@ Retrieved pages: [6, 8, 9, 13, 15]
 Recall: 3/3 = 100% ✓
 Precision: 3/5 = 60%
 </code></pre></div>
+<!-- If we start committing to improving precision and recall directly, now we can test things like whether lexical search, semantic search, or re-rankers can help us improve our retrieval. Instead of running tests that take minutes or hours to run, you can run tests that take seconds. They're also going to be much cheaper, and we're not going to run into issues where we wake up one Monday morning and realize an engineer has spent $1,000 on OpenAI credits to run your factuality evals. -->
+
 <hr />
 <h2 id="retrieval-eval-benefits">Retrieval Eval Benefits</h2>
 <p><strong>Speed &amp; Cost</strong>
@@ -3379,6 +3405,8 @@ Precision: 3/5 = 60%
 - Test lexical vs semantic search
 - Evaluate reranker impact
 - Measure chunk extraction quality</p>
+<!-- As they get more expensive and take longer, we tend to run them more infrequently, and now we lose the ability to run more experiments in a shorter amount of time. As you scale to having hundreds or even thousands of tests, retrieval evals scale incredibly well, whereas generation evals and using LLM as a judge too early in the process can result in much more difficult test cycles. -->
+
 <hr />
 <h2 id="precision-and-recall-fundamentals">Precision and Recall Fundamentals</h2>
 <h3 id="recall-percentage-of-relevant-documents-found">Recall: Percentage of relevant documents found</h3>
@@ -3395,6 +3423,8 @@ Precision = 2/10 = 20%
 </code></pre></div>
 <strong>High precision:</strong> System avoids irrelevant results
 <strong>Critical when:</strong> Too much noise confuses the model</p>
+<!-- So recall is the percentage of relevant documents that are successfully retrieved. If there are 10 correct documents and we find the top five and four of them are in there, then recall is four out of 10. High recall means that the system is able to find most of the relevant documents. This is particularly important where facts are hard to find across many documents. Precision is the percentage of retrieved documents that are relevant to the query. High precision means that the system retrieves mostly relevant documents. This is important because dumber models might be more confused with irrelevant context. -->
+
 <hr />
 <h2 id="case-study-1-research-interview-reports">Case Study 1: Research Interview Reports</h2>
 <p><strong>Problem:</strong> Consultants losing trust in AI-generated reports
@@ -3412,6 +3442,8 @@ Precision = 2/10 = 20%
 4. Improved recall from 50% to 90%
 5. Rebuilt customer trust through data-driven examples</p>
 <p><strong>Key Lesson:</strong> Specific goals enable rapid experimentation and customer-driven test suites. Preprocessing aligned with anticipated customer queries.</p>
+<!-- I work with a company that does report generation for user interviews. These consultants do about 15 to 30 research interviews with experts. These consulting teams then request an AI generated report and what they found was that only a subset of the quotes were being found. The consultant says, "I know I asked 15 people and six of them said they really like the product. But when this report was generated, only three of them said so. I know there were six. There's something wrong." And now I don't trust the system. We had a three out of six recall. We manually built out a question chunk dataset and found that a lot of the work could be done in preprocessing. By doing three or four experiments on preprocessing text chunks before ingestion, we improved recall from 50% to 90%. -->
+
 <hr />
 <h2 id="case-study-2-construction-blueprint-search">Case Study 2: Construction Blueprint Search</h2>
 <p><strong>Problem:</strong> Workers couldn't find relevant blueprints
@@ -3429,6 +3461,8 @@ Precision = 2/10 = 20%
 - Justified investment in bounding box models
 - Applied technique to tables, documents, other artifacts</p>
 <p><strong>Key Lesson:</strong> Highly specific prompts for synthetic summary generation + domain expertise</p>
+<!-- Another example was around using AI for multimodal search and in particular searching blueprints at a construction company. Construction workers want to ask questions regarding blueprints. When we took some examples of questions, we found that we only had a 27% recall for even finding the correct image, the correct blueprint. We found that we might be able to do better if we had better image summaries. Our approach was using a visual language model to create captions and descriptions over these blueprints. In just four days of experimenting, maybe about 12 prompts and trying three models, we went from 27% recall to 85%. Once we looked at those queries, we found that 20% were around counting objects in blueprints, which justified investment in bounding box models. -->
+
 <hr />
 <h2 id="the-synthetic-data-strategy">The Synthetic Data Strategy</h2>
 <p><strong>Before Users:</strong> Create synthetic questions to test systems</p>
@@ -3450,6 +3484,8 @@ Precision = 2/10 = 20%
 4. Review weak labels to get correct labels
 5. Test precision and recall (correlated with real performance)</p>
 <p><strong>Key Question:</strong> Given what I know about user data, what questions could I NOT answer with current infrastructure?</p>
+<!-- Everyone talks about synthetic data, but it's not as simple as just asking an LLM for more data. The questions here revolve around how do you make an LLM create diverse and interesting datasets that reflect production traffic. If you have no query data, the simplest thing you can do is just take a random text chunk, ask a language model to generate a question that this text chunk answers, and just verify that when you do retrieval, that text chunk is recovered when you search the question that was generated. Here, recall is a very binary metric. -->
+
 <hr />
 <h2 id="building-your-first-evaluation-set">Building Your First Evaluation Set</h2>
 <p><strong>Start Simple:</strong>
@@ -3493,6 +3529,8 @@ Bake in domain knowledge about:
 - Business-specific terminology
 </code></pre></div></p>
 <p><strong>Note:</strong> In sessions 4-5, we'll use topic modeling and segmentation to understand core capabilities and question types.</p>
+<!-- We want to try to bake as much information as possible in the domain knowledge of these prompts. We want to change these prompts based on things like document types or other information. This prompt in particular is about trying to create questions that would retrieve certain products. We might want to give it a product description, some other context around the text data, and maybe some example questions. In sessions four and five, we're going to talk about using topic modeling and segmentation to really understand the core capabilities and the core questions people are asking. -->
+
 <hr />
 <h2 id="common-pitfalls-to-avoid">Common Pitfalls to Avoid</h2>
 <p><strong>1. Oversimplification</strong>
@@ -3506,6 +3544,8 @@ Bake in domain knowledge about:
 - Ensure search implementations match production exactly
 - No misalignment in configuration or specifications
 - Test what you actually ship</p>
+<!-- The first pitfall is oversimplification. You don't actually want 100% recall, because it probably means that your test cases are too simple. I want you to think about defining dynamic datasets versus static datasets. As your scores get higher, it means your models are getting better, so add more complex examples into your dataset. If you have real data, don't neglect it - make sure it's included. Also make sure that the search implementations you're using and testing are the same ones in production. Make sure there are no misalignments in how things are being configured. -->
+
 <hr />
 <h2 id="this-weeks-homework">This Week's Homework</h2>
 <p><strong>Step 1: Audit Current State</strong>
@@ -3528,6 +3568,8 @@ Bake in domain knowledge about:
 - Test different top-k values (10, 20, 30)
 - Compare latency vs retrieval quality tradeoffs</p>
 <p><strong>Important:</strong> If experiments don't improve metrics, do nothing. Choose to do nothing rather than add tech debt.</p>
+<!-- Don't hesitate to ask me any questions during office hours or on Slack. This is what we're here to do. We can just deep dive into the problems of your application and what you're struggling with. I really want you to start thinking about creating evaluation datasets by leveraging synthetic data. If you're using something like LanceDB or ChromaDB, also check if something like BM25 and full text search can improve these systems. Review these generated questions with subject matter experts. Ask them, are these questions even relevant for the use cases? -->
+
 <hr />
 <h2 id="next-week-preview-fine-tuning">Next Week Preview: Fine-tuning</h2>
 <p><strong>Session 2 Focus:</strong>
@@ -3536,6 +3578,8 @@ Bake in domain knowledge about:
 - Moving beyond off-the-shelf solutions
 - Creating custom models for your domain</p>
 <p><strong>Goal:</strong> Once you know what relevancy is, build it yourself</p>
+<!-- The focus for next week is thinking about taking this synthetic dataset, and exploring things like fine tuning, representations, and embeddings, and ultimately training re-ranker models to just give you that extra boost in precision and recall. -->
+
 <hr />
 <h2 id="key-takeaways">Key Takeaways</h2>
 <h3 id="mindset-shifts">Mindset Shifts</h3>
@@ -3552,6 +3596,8 @@ Bake in domain knowledge about:
 <li><strong>Focus on recall first</strong> - can you find the right documents?</li>
 <li><strong>Measure everything</strong> - absence blindness kills RAG systems</li>
 </ol>
+<!-- These are the fundamental mindset shifts I want you to take away. We need to focus on experiments over features - measure the velocity of learning. Leading over lagging metrics - control inputs, not just outputs. Retrieval over generation - fix what you can't see first. Specific over generic - build superpowers, not generic tools. Count your experiments - how many can you run this week? Build synthetic data before you have real users. Focus on recall first - can you find the right documents? -->
+
 <hr />
 <h2 id="remember-fake-it-till-you-make-it">Remember: Fake It Till You Make It</h2>
 <p><strong>The Data Flywheel:</strong>
@@ -3568,6 +3614,8 @@ Bake in domain knowledge about:
 - Review generated questions with subject matter experts
 - Ask: "Are these questions even relevant for our use cases?"</p>
 <p><strong>Data Collection Mindset:</strong> Log everything. Track questions. Create evals from every interaction.</p>
+<!-- The data flywheel is: synthetic data leads to fast evaluations, which leads to better intuition, which leads to more experiments, which leads to better product. Your success metrics should be: number of experiments run per week, precision and recall improvements, and customer trust and satisfaction growth. Build the evaluation infrastructure that will guide all future improvements. Start simple with Google Sheets for valuable labels. Every demo, user interview, thumbs up/down is gold data. Later use tools like Braintrust for programmatic collection. -->
+
 <hr />
 <h2 id="thank-you">Thank You</h2>
 <p><strong>Questions for office hours:</strong>
@@ -3576,6 +3624,7 @@ Bake in domain knowledge about:
 - How to convince leadership to invest in metrics?</p>
 <p><strong>Next week:</strong> From measuring relevancy to building it</p>
 <p><em>maven.com/applied-llms/rag-playbook</em></p>
+<!-- We're still learning who you are. As we learn everyone's technical levels, we'll be able to dig deeper in these office hours and calibrate to everyone's level. So make sure to ask questions on Slack. Remember, we're trying to establish baselines. With this, we'll be able to use the techniques we learn in sessions four, five, and six, and really start testing different interventions and seeing which ones make a real difference in our metrics. Most importantly, by using these benchmarks, we can also reject interventions - we don't have to add superstitious interventions that become tech debt too quickly. -->
 
 
 
