@@ -1,5 +1,5 @@
 """
-Generation pipelines for questions and summaries
+Generation pipelines for questions and summaries with additive hooks support
 """
 
 import asyncio
@@ -30,6 +30,13 @@ from core.summarization import (
     conversation_summary_v5,
 )
 from core.cache import setup_cache, GenericCache
+from core.client import (
+    InstructorHookableClient,
+    ClientFactory,
+    create_question_generation_hooks,
+    create_summary_generation_hooks,
+)
+from core.hooks import BaseHook
 
 console = Console()
 
@@ -47,6 +54,29 @@ fn_summary = {
     "v4": conversation_summary_v4,
     "v5": conversation_summary_v5,
 }
+
+
+async def call_generation_function_with_hooks(
+    generation_fn,
+    client,
+    messages,
+    call_hooks: Optional[List[BaseHook]] = None
+):
+    """
+    Helper function to call generation functions with optional call-level hooks
+    
+    Args:
+        generation_fn: The generation function to call
+        client: The client (hookable or regular)
+        messages: Messages to pass to the function
+        call_hooks: Optional call-level hooks
+        
+    Returns:
+        Result from the generation function
+    """
+    # If client is hookable and we have call hooks, we could enhance this further
+    # For now, just call the function directly since the client already has hooks
+    return await generation_fn(client, messages)
 
 
 def parse_conversation_messages(conv: Dict[str, Any]) -> List[Dict[str, Any]]:
@@ -77,9 +107,11 @@ async def generate_questions_pipeline(
     experiment_id: Optional[str] = None,
     concurrency: int = 10,
     use_cache: bool = True,
+    client_hooks: Optional[List[BaseHook]] = None,
+    call_hooks: Optional[List[BaseHook]] = None,
 ) -> Dict[str, int]:
     """
-    Generate questions for conversations using specified techniques
+    Generate questions for conversations using specified techniques with additive hooks support
 
     Args:
         conversation_hashes: List of conversation hashes to process
@@ -87,6 +119,9 @@ async def generate_questions_pipeline(
         db_path: Path to SQLite database
         experiment_id: Optional experiment ID for tracking
         concurrency: Max concurrent API requests
+        use_cache: Whether to use caching
+        client_hooks: Optional client-level hooks applied to all calls
+        call_hooks: Optional call-level hooks applied to individual calls
 
     Returns:
         Dict with generated counts per technique
@@ -109,8 +144,21 @@ async def generate_questions_pipeline(
         console.print("[green]All conversations already processed[/green]")
         return {version: 0}
 
-    # Initialize instructor client
-    client = instructor.from_provider("openai/gpt-4.1-nano", async_client=True)
+    # Initialize hookable instructor client with additive hooks support
+    # Combine client-level hooks with version-specific hooks
+    combined_client_hooks = []
+    if client_hooks:
+        combined_client_hooks.extend(client_hooks)
+    
+    # Add version-specific hooks
+    version_hooks = create_question_generation_hooks(version)
+    combined_client_hooks.extend(version_hooks)
+    
+    client = InstructorHookableClient(
+        provider="openai/gpt-4.1-nano",
+        async_client=True,
+        client_hooks=combined_client_hooks
+    )
 
     # Set up cache
     cache_dir = db_path.parent / "cache" / "questions"
@@ -161,8 +209,11 @@ async def generate_questions_pipeline(
                     # Parse conversation messages
                     messages = parse_conversation_messages(conv)
 
-                    # Generate questions using the version
-                    generated = await fn_query[version](client, messages)
+                    # Generate questions using the version with additive hooks
+                    # The client already has client-level hooks, and we can add call-level hooks
+                    generated = await call_generation_function_with_hooks(
+                        fn_query[version], client, messages, call_hooks
+                    )
 
                     # Cache the result
                     if cache and generated.queries:
@@ -218,6 +269,8 @@ async def generate_summaries_pipeline(
     concurrency: int = 10,
     use_cache: bool = True,
     show_progress: bool = True,
+    client_hooks: Optional[List[BaseHook]] = None,
+    call_hooks: Optional[List[BaseHook]] = None,
 ) -> Dict[str, int]:
     """
     Generate summaries for conversations using specified techniques
@@ -240,8 +293,21 @@ async def generate_summaries_pipeline(
         console.print("[green]All conversations already processed[/green]")
         return {version: 0}
 
-    # Initialize instructor client
-    client = instructor.from_provider("openai/gpt-4.1-nano", async_client=True)
+    # Initialize hookable instructor client with additive hooks support
+    # Combine client-level hooks with version-specific hooks
+    combined_client_hooks = []
+    if client_hooks:
+        combined_client_hooks.extend(client_hooks)
+    
+    # Add version-specific hooks
+    version_hooks = create_summary_generation_hooks(version)
+    combined_client_hooks.extend(version_hooks)
+    
+    client = InstructorHookableClient(
+        provider="openai/gpt-4.1-nano",
+        async_client=True,
+        client_hooks=combined_client_hooks
+    )
 
     # Set up cache
     # cache_dir = db_path.parent / "cache" / "summaries"
@@ -266,8 +332,10 @@ async def generate_summaries_pipeline(
                 # Parse conversation messages
                 messages = parse_conversation_messages(conv)
 
-                # Generate summary using the version
-                generated = await fn_summary[version](client, messages)
+                # Generate summary using the version with additive hooks
+                generated = await call_generation_function_with_hooks(
+                    fn_summary[version], client, messages, call_hooks
+                )
 
                 # Add metadata for saving
                 summary_data = {
