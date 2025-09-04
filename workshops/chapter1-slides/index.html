@@ -18,7 +18,7 @@
     
     
       
-        <title>Chapter1 Slides - Systematically Improving RAG Applications</title>
+        <title>Chapter 1 Slides - Systematically Improving RAG Applications</title>
       
     
     
@@ -65,7 +65,7 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Chapter1 Slides - Systematically Improving RAG Applications" >
+        <meta  property="og:title"  content="Chapter 1 Slides - Systematically Improving RAG Applications" >
       
         <meta  property="og:description"  content="None" >
       
@@ -81,7 +81,7 @@
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Chapter1 Slides - Systematically Improving RAG Applications" >
+        <meta  name="twitter:title"  content="Chapter 1 Slides - Systematically Improving RAG Applications" >
       
         <meta  name="twitter:description"  content="None" >
       
@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter1-slides" class="md-skip">
+        <a href="#chapter-1-slides" class="md-skip">
           Skip to content
         </a>
       
@@ -169,7 +169,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chapter1 Slides
+              Chapter 1 Slides
             
           </span>
         </div>
@@ -2824,333 +2824,111 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#common-pitfalls-made-by-rag-developers" class="md-nav__link">
+  <a href="#todays-goals" class="md-nav__link">
     <span class="md-ellipsis">
-      Common pitfalls made by RAG developers
+      Today's Goals
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#we-need-to-build-high-specificity-tooling-that-users-care-about" class="md-nav__link">
+  <a href="#the-challenge-we-need-complex-reasoning" class="md-nav__link">
     <span class="md-ellipsis">
-      We need to build high-specificity tooling that users care about
+      The Challenge: "We Need Complex Reasoning"
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#common-pitfalls-made-by-rag-developers_1" class="md-nav__link">
+  <a href="#common-rag-developer-pitfalls" class="md-nav__link">
     <span class="md-ellipsis">
-      Common pitfalls made by RAG developers
+      Common RAG Developer Pitfalls
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common RAG Developer Pitfalls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-vicious-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Vicious Cycle
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-100m-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      The $100M Problem
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#enter-into-a-vicious-cycle" class="md-nav__link">
+  <a href="#lagging-vs-leading-metrics" class="md-nav__link">
     <span class="md-ellipsis">
-      Enter into a vicious cycle
+      Lagging vs Leading Metrics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lagging vs Leading Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lagging-metrics-easy-to-measure-hard-to-improve" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lagging Metrics: Easy to Measure, Hard to Improve
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leading-metrics-hard-to-measure-easy-to-improve" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leading Metrics: Hard to Measure, Easy to Improve
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-only-leading-metric-that-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Only Leading Metric That Matters
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#rag-developers-unknowingly-sabotage-their-own-applications" class="md-nav__link">
+  <a href="#absence-blindness-you-dont-fix-what-you-cant-see" class="md-nav__link">
     <span class="md-ellipsis">
-      RAG developers unknowingly sabotage their own applications
+      Absence Blindness: You Don't Fix What You Can't See
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#vague-metrics" class="md-nav__link">
+  <a href="#intervention-bias-action-without-purpose" class="md-nav__link">
     <span class="md-ellipsis">
-      Vague Metrics
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rag-developers-unknowingly-sabotage-their-own-applications_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      RAG developers unknowingly sabotage their own applications
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vague-metrics_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Vague Metrics
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#no-superpowers" class="md-nav__link">
-    <span class="md-ellipsis">
-      No superpowers
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rag-developers-unknowingly-sabotage-their-own-applications_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      RAG developers unknowingly sabotage their own applications
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vague-metrics_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Vague Metrics
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#no-superpowers_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      No superpowers
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#unactionable-feedback" class="md-nav__link">
-    <span class="md-ellipsis">
-      Unactionable Feedback
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#this-leads-to-a-disappointed-leadership-and-sad-developers" class="md-nav__link">
-    <span class="md-ellipsis">
-      This leads to a disappointed leadership and sad developers
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-pitfalls-made-by-rag-developers_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common pitfalls made by RAG developers
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#overemphasize-lagging-metrics" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overemphasize lagging metrics
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#difference-between-leading-and-lagging-metrics" class="md-nav__link">
-    <span class="md-ellipsis">
-      Difference between leading and lagging metrics
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#leading" class="md-nav__link">
-    <span class="md-ellipsis">
-      Leading
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#easy-to-improve" class="md-nav__link">
-    <span class="md-ellipsis">
-      Easy to improve
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#easy-analogy" class="md-nav__link">
-    <span class="md-ellipsis">
-      Easy Analogy:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#difficult-to-improve" class="md-nav__link">
-    <span class="md-ellipsis">
-      Difficult to improve
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#easy-analogy_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Easy Analogy:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#difference-between-leading-and-lagging-metrics_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Difference between leading and lagging metrics
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#leading_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Leading
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#easy-to-improve_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Easy to improve
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#set-concrete-goals-for-leading-metrics" class="md-nav__link">
-    <span class="md-ellipsis">
-      Set concrete goals for leading metrics
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-pitfalls-made-by-rag-developers_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common pitfalls made by RAG developers
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fall-victim-to-absence-blindness-and-intervention-bias" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fall victim to absence blindness and intervention bias
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#absence-blindness" class="md-nav__link">
-    <span class="md-ellipsis">
-      Absence blindness:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#you-dont-fix-what-you-cant-see" class="md-nav__link">
-    <span class="md-ellipsis">
-      You don't fix what you can't see
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#everyone-sees" class="md-nav__link">
-    <span class="md-ellipsis">
-      Everyone sees:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#intervention-bias" class="md-nav__link">
-    <span class="md-ellipsis">
-      Intervention bias:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-pitfalls-made-by-rag-developers_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common pitfalls made by RAG developers
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-4-initial-implementation-focus-on-retrieval-metrics" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 1-4: Initial implementation: focus on retrieval metrics
+      Intervention Bias: Action Without Purpose
     </span>
   </a>
   
@@ -3163,219 +2941,156 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="The RAG Flywheel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-basic-rag-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Basic RAG Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-synthetic-data-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Synthetic Data Generation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-fast-evaluations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Fast Evaluations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-real-world-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Real-World Data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#fundamental-mindset-shift-stop-using-lgtmk-looks-good-to-me" class="md-nav__link">
+  <a href="#why-retrieval-evals-beat-generation-evals" class="md-nav__link">
     <span class="md-ellipsis">
-      Fundamental mindset shift: Stop using LGTM@K ('Looks good to me')
+      Why Retrieval Evals Beat Generation Evals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Why Retrieval Evals Beat Generation Evals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generation-evals-too-subjective" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generation Evals: Too Subjective
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieval-evals-objective-and-clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieval Evals: Objective and Clear
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieval-eval-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieval Eval Benefits
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-is-the-difference-between-a-generation-and-retrieval-eval" class="md-nav__link">
+  <a href="#precision-and-recall-fundamentals" class="md-nav__link">
     <span class="md-ellipsis">
-      What is the difference between a generation and retrieval eval?
+      Precision and Recall Fundamentals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Precision and Recall Fundamentals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recall-percentage-of-relevant-documents-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recall: Percentage of relevant documents found
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#precision-percentage-of-retrieved-documents-that-are-relevant" class="md-nav__link">
+    <span class="md-ellipsis">
+      Precision: Percentage of retrieved documents that are relevant
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-study-1-research-interview-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case Study 1: Research Interview Reports
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#when-we-use-generation-evals-we-assume-there-are-no-issues-in-the-retrieval-steps" class="md-nav__link">
+  <a href="#case-study-2-construction-blueprint-search" class="md-nav__link">
     <span class="md-ellipsis">
-      When we use generation evals, we assume there are no issues in the retrieval steps
+      Case Study 2: Construction Blueprint Search
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#precision-and-recall-are-key-metrics-for-evaluating-retrieval" class="md-nav__link">
+  <a href="#the-synthetic-data-strategy" class="md-nav__link">
     <span class="md-ellipsis">
-      Precision and recall are key metrics for evaluating Retrieval
+      The Synthetic Data Strategy
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#case-study-ai-generated-reports-for-consultants" class="md-nav__link">
+  <a href="#building-your-first-evaluation-set" class="md-nav__link">
     <span class="md-ellipsis">
-      Case study: AI-generated reports for consultants
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#situation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Situation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#complication" class="md-nav__link">
-    <span class="md-ellipsis">
-      Complication
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-takeaway" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key takeaway:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#jxnlco-jxnlco" class="md-nav__link">
-    <span class="md-ellipsis">
-      @jxnlco @jxnlco
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#approach" class="md-nav__link">
-    <span class="md-ellipsis">
-      Approach
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#impact" class="md-nav__link">
-    <span class="md-ellipsis">
-      Impact
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#case-study-ai-for-blueprint-search-at-construction-company" class="md-nav__link">
-    <span class="md-ellipsis">
-      Case study: AI for blueprint search at construction company
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#situation_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Situation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#complication_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Complication
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#approach_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Approach
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-takeaway_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key takeaway:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#impact_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Impact
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-deep-dive-synthetic-data-generation-fast-testing-review-processes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 2 Deep dive: Synthetic data generation: fast testing &amp; review processes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fake-it-until-you-make-it" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fake it until you make it
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-rag-flywheel_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      The RAG Flywheel
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#procedure-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Procedure overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#if-you-have-no-user-query-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      If you have no user query data…
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#if-you-have-some-user-query-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      If you have some user query data…
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#collect-everything-and-track-the-questions-and-create-evals" class="md-nav__link">
-    <span class="md-ellipsis">
-      Collect everything and track the questions and create evals
+      Building Your First Evaluation Set
     </span>
   </a>
   
@@ -3384,70 +3099,7 @@
         <li class="md-nav__item">
   <a href="#example-prompt-for-question-generation" class="md-nav__link">
     <span class="md-ellipsis">
-      Example prompt for question generation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-prompt-for-ranking-generation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example prompt for ranking generation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-does-this-help-me" class="md-nav__link">
-    <span class="md-ellipsis">
-      How does this help me?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#homework-for-this-session" class="md-nav__link">
-    <span class="md-ellipsis">
-      Homework for this session
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#homework" class="md-nav__link">
-    <span class="md-ellipsis">
-      Homework
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#establish-a-baseline-to-run-experiments-on" class="md-nav__link">
-    <span class="md-ellipsis">
-      Establish a baseline to run experiments on
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#homework-if-you-already-have-advanced-automations-in-production" class="md-nav__link">
-    <span class="md-ellipsis">
-      Homework if you already have advanced automations in production:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#experiments-to-run" class="md-nav__link">
-    <span class="md-ellipsis">
-      Experiments to run
+      Example Prompt for Question Generation
     </span>
   </a>
   
@@ -3456,34 +3108,76 @@
         <li class="md-nav__item">
   <a href="#common-pitfalls-to-avoid" class="md-nav__link">
     <span class="md-ellipsis">
-      Common pitfalls to avoid
+      Common Pitfalls to Avoid
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sneak-peek-for-next-week" class="md-nav__link">
+  <a href="#this-weeks-homework" class="md-nav__link">
     <span class="md-ellipsis">
-      Sneak peek for next week
+      This Week's Homework
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#focus-for-this-week" class="md-nav__link">
+  <a href="#next-week-preview-fine-tuning" class="md-nav__link">
     <span class="md-ellipsis">
-      · Focus for this week:
+      Next Week Preview: Fine-tuning
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#focus-for-next-week" class="md-nav__link">
+  <a href="#key-takeaways" class="md-nav__link">
     <span class="md-ellipsis">
-      · Focus for next week:
+      Key Takeaways
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Takeaways">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mindset-shifts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mindset Shifts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#action-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      Action Items
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remember-fake-it-till-you-make-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remember: Fake It Till You Make It
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thank-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thank You
     </span>
   </a>
   
@@ -3505,794 +3199,383 @@
 
 
 
-<h1 id="chapter1-slides">Chapter1 Slides</h1>
-<p><em>Extracted from PDF slides using docling</em></p>
-<hr />
+<h1 id="chapter-1-slides">Chapter 1 Slides</h1>
 <h2 id="jxnlco">jxnl.co</h2>
 <p>@jxnlco</p>
 <h2 id="systematically-improving-rag-applications">Systematically Improving RAG Applications</h2>
-<p>Session 1</p>
-<p>Kickstart the Data Flywheel: Fake it till you make it</p>
+<p><strong>Session 1:</strong> Kickstart the Data Flywheel: Fake it Till You Make It</p>
 <p>Jason Liu</p>
-<!-- image -->
-
-<!-- image -->
-
-<!-- image -->
-
-<h2 id="common-pitfalls-made-by-rag-developers">Common pitfalls made by RAG developers</h2>
-<p>Enter into a vicious cycle</p>
-<p>The RAG playbook</p>
-<p>Enter into a vicious cycle</p>
-<p>Overemphasize lagging metrics</p>
-<p>Overemphasize lagging metrics</p>
-<p>Fall victim to absence blindness and intervention bias</p>
-<p>Fall victim to absence blindness and intervention bias</p>
-<p>The RAG playbook</p>
-<p>Homework for this week</p>
-<p>Homework for this week</p>
-<p>Sneak peak for next week</p>
-<p>Sneak peak for next week</p>
-<!-- image -->
-
-<h2 id="we-need-to-build-high-specificity-tooling-that-users-care-about">We need to build high-specificity tooling that users care about</h2>
-<p>Often when I hear "we need complex reasoning" it often comes from lack of user empathy and not knowing what the user wants.</p>
-<!-- image -->
-
-<!-- image -->
-
-<p>Common pitfalls made by RAG developers</p>
-<h2 id="common-pitfalls-made-by-rag-developers_1">Common pitfalls made by RAG developers</h2>
-<h2 id="enter-into-a-vicious-cycle">Enter into a vicious cycle</h2>
-<p>Overemphasize lagging metrics</p>
-<p>The RAG playbook</p>
-<p>Overemphasize lagging metrics</p>
-<p>Fall victim to absence blindness and intervention bias</p>
-<p>Fall victim to absence blindness and intervention bias</p>
-<p>The RAG playbook</p>
-<p>Homework for this week</p>
-<p>Homework for this week</p>
-<p>Sneak peak for next week</p>
-<p>Sneak peak for next week</p>
-<h2 id="rag-developers-unknowingly-sabotage-their-own-applications">RAG developers unknowingly sabotage their own applications</h2>
-<h2 id="vague-metrics">Vague Metrics</h2>
+<hr />
+<h2 id="todays-goals">Today's Goals</h2>
+<p><strong>Break the Vicious Cycle of RAG Development</strong></p>
 <ul>
-<li>· Thinks "Look better?"</li>
-<li>· Thinks "Don't feel right"</li>
+<li>Identify common pitfalls that sabotage RAG applications</li>
+<li>Understand the difference between lagging and leading metrics</li>
+<li>Combat absence blindness and intervention bias</li>
+<li>Build the foundation: synthetic data and evaluations</li>
+<li>Start the data flywheel before you have users</li>
 </ul>
-<!-- image -->
-
-<!-- image -->
-
-<h2 id="rag-developers-unknowingly-sabotage-their-own-applications_1">RAG developers unknowingly sabotage their own applications</h2>
-<h2 id="vague-metrics_1">Vague Metrics</h2>
-<h2 id="no-superpowers">No superpowers</h2>
+<p><strong>Focus: Measurements before features</strong></p>
+<hr />
+<h2 id="the-challenge-we-need-complex-reasoning">The Challenge: "We Need Complex Reasoning"</h2>
+<blockquote>
+<p>"Often when I hear 'we need complex reasoning' it comes from lack of user empathy"</p>
+</blockquote>
+<p><strong>Hot Take:</strong> This usually means:
+- Haven't looked at customer data in months
+- Never asked for specific feedback<br />
+- Building generic solutions for broad problems
+- Focusing on features instead of outcomes</p>
+<p><strong>Key Questions to Ask:</strong>
+- When was the last time we looked at data from customers?
+- When was the last time we read that feedback?
+- When was the last time we asked for that feedback?</p>
+<p><strong>Solution:</strong> Build high-specificity tooling that users actually care about</p>
+<hr />
+<h2 id="common-rag-developer-pitfalls">Common RAG Developer Pitfalls</h2>
+<h3 id="the-vicious-cycle">The Vicious Cycle</h3>
+<p><strong>Developers unknowingly sabotage their applications through:</strong></p>
+<ol>
+<li><strong>Vague Metrics</strong></li>
+<li>"Does it look better?"</li>
+<li>"Doesn't feel right"</li>
+<li>No clear success criteria</li>
+<li>
+<p>You're sabotaging not only your product but your team and yourself</p>
+</li>
+<li>
+<p><strong>No Superpowers</strong></p>
+</li>
+<li>Generic solutions for broad problems</li>
+<li>30-40% churn rates</li>
+<li>Too scared to fully launch</li>
+<li>Focus on features rather than outcomes</li>
+<li>
+<p>Mandate too broad, overpromised</p>
+</li>
+<li>
+<p><strong>Poor Feedback Loops</strong></p>
+</li>
+<li>LLM-based feedback only</li>
+<li>No actionable insights</li>
+<li>No roadmap for improvements</li>
+<li>Feedback not actionable - doesn't identify what's next</li>
+</ol>
+<hr />
+<h2 id="the-100m-problem">The $100M Problem</h2>
+<blockquote>
+<p>"Companies with $100M valuations operating with less than 30 evaluations"</p>
+</blockquote>
+<p><strong>When something changes, you have no way to understand what moves the needle</strong></p>
+<p><strong>Real Impact:</strong> I've worked with companies with $100M+ valuations that have fewer than 30 evaluations total</p>
+<p><strong>The Result:</strong>
+- Disappointed leadership
+- Frustrated developers
+- Products that nobody uses
+- Endless feature churn</p>
+<p><strong>The Solution:</strong> Focus on metrics and experiments, not just features</p>
+<hr />
+<h2 id="lagging-vs-leading-metrics">Lagging vs Leading Metrics</h2>
+<h3 id="lagging-metrics-easy-to-measure-hard-to-improve">Lagging Metrics: Easy to Measure, Hard to Improve</h3>
 <ul>
-<li>· Thinks "Look better?"</li>
-<li>· Thinks "Don't feel right"</li>
-<li>· Build generic solutions for broad problems (e.g., search all personal data) instead of on specific tasks (e.g., meeting preparation tool)</li>
-<li>· Outcomes not features</li>
+<li><strong>What:</strong> Past outcomes (weight, strength, churn, satisfaction)</li>
+<li><strong>Characteristics:</strong> Unresponsive, measures outputs</li>
+<li><strong>Problem:</strong> Shows results after it's too late to act</li>
 </ul>
-<!-- image -->
-
-<!-- image -->
-
-<h2 id="rag-developers-unknowingly-sabotage-their-own-applications_2">RAG developers unknowingly sabotage their own applications</h2>
-<h2 id="vague-metrics_2">Vague Metrics</h2>
-<h2 id="no-superpowers_1">No superpowers</h2>
+<h3 id="leading-metrics-hard-to-measure-easy-to-improve">Leading Metrics: Hard to Measure, Easy to Improve</h3>
 <ul>
-<li>· Thinks "Look better?"</li>
-<li>· Thinks "Don't feel right"</li>
-<li>· Build generic solutions for broad problems (e.g., search all personal data) instead of on specific tasks (e.g., meeting preparation tool)</li>
-<li>· Outcomes not features</li>
+<li><strong>What:</strong> Future predictors (calories, workouts, experiments)</li>
+<li><strong>Characteristics:</strong> Actionable, measures inputs</li>
+<li><strong>Power:</strong> Provides feedback on when and where to intervene</li>
 </ul>
-<!-- image -->
-
-<!-- image -->
-
-<h2 id="unactionable-feedback">Unactionable Feedback</h2>
-<ul>
-<li>· Reviews focused on generation before establishing search evals</li>
-<li>· Looking at data does not result in recommendations for next time</li>
-<li>· Vibes translation is generally unsolved</li>
-</ul>
-<h2 id="this-leads-to-a-disappointed-leadership-and-sad-developers">This leads to a disappointed leadership and sad developers</h2>
-<p>After looking at the data, you're supposed to then take action</p>
-<!-- image -->
-
-<!-- image -->
-
-<!-- image -->
-
-<!-- image -->
-
-<p>Common pitfalls made by RAG developers</p>
-<h2 id="common-pitfalls-made-by-rag-developers_2">Common pitfalls made by RAG developers</h2>
-<p>Enter into a vicious cycle</p>
-<p>Enter into a vicious cycle</p>
-<h2 id="overemphasize-lagging-metrics">Overemphasize lagging metrics</h2>
-<p>Fall victim to absence blindness and intervention bias</p>
-<p>Fall victim to absence blindness and intervention bias</p>
-<p>The RAG playbook</p>
-<p>The RAG playbook</p>
-<p>Notebook exercises</p>
-<p>Notebook exercises</p>
-<p>Homework for this week</p>
-<p>Homework for this week</p>
-<p>Sneak peak for next week</p>
-<p>Sneak peak for next week</p>
-<h2 id="difference-between-leading-and-lagging-metrics">Difference between leading and lagging metrics</h2>
-<h2 id="leading">Leading</h2>
-<!-- image -->
-
-<!-- image -->
-
-<h2 id="easy-to-improve">Easy to improve</h2>
-<ul>
-<li>· Track and predict future performance</li>
-<li>· Provide feedback on when and where to intervene</li>
-<li>· Often Inputs to a system</li>
-</ul>
-<h2 id="example">Example</h2>
-<p>Number of experiments run</p>
-<h2 id="easy-analogy">Easy Analogy:</h2>
-<p>Counting Calories, Burning Calories, Working out</p>
-<!-- image -->
-
-<h2 id="difficult-to-improve">Difficult to improve</h2>
-<ul>
-<li>· Measure past outcomes</li>
-<li>· Often unresponsive and hard to change</li>
-<li>· Often Outputs of a system</li>
-</ul>
-<h2 id="example_1">Example</h2>
-<p>Application quality, Churn, Satisfaction</p>
-<h2 id="easy-analogy_1">Easy Analogy:</h2>
-<p>"Be strong, lose weight"</p>
-<h2 id="difference-between-leading-and-lagging-metrics_1">Difference between leading and lagging metrics</h2>
-<h2 id="leading_1">Leading</h2>
-<!-- image -->
-
-<h2 id="easy-to-improve_1">Easy to improve</h2>
-<ul>
-<li>· Track and predict future performance</li>
-<li>· Provide feedback on when and where to intervene</li>
-<li>· Often Inputs to a system</li>
-</ul>
-<h2 id="example_2">Example</h2>
-<p>Number of experiments run</p>
-<!-- image -->
-
-<h2 id="set-concrete-goals-for-leading-metrics">Set concrete goals for leading metrics</h2>
-<ul>
-<li>· Focus on increasing the number of hypotheses tested per week</li>
-<li>· Through continual experimentation, build a stronger intuition for better retrieval methods or indices</li>
-<li>· It's going to be way more boring, like counting calories</li>
-</ul>
-<p>maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
-<!-- image -->
-
-<!-- image -->
-
-<p>Common pitfalls made by RAG developers</p>
-<h2 id="common-pitfalls-made-by-rag-developers_3">Common pitfalls made by RAG developers</h2>
-<p>Enter into a vicious cycle</p>
-<p>Enter into a vicious cycle</p>
-<p>Overemphasize lagging metrics</p>
-<p>Overemphasize lagging metrics</p>
-<h2 id="fall-victim-to-absence-blindness-and-intervention-bias">Fall victim to absence blindness and intervention bias</h2>
-<p>The RAG playbook</p>
-<p>The RAG playbook</p>
-<p>Homework for this session</p>
-<p>Homework for this session</p>
-<p>Sneak peak for next session</p>
-<p>Sneak peak for next session</p>
-<!-- image -->
-
-<!-- image -->
-
-<h2 id="absence-blindness">Absence blindness:</h2>
-<h2 id="you-dont-fix-what-you-cant-see">You don't fix what you can't see</h2>
-<h2 id="everyone-sees">Everyone sees:</h2>
-<p>Generation, Latency</p>
-<p>Not everyone sees:</p>
-<p>Poor Retrieval</p>
-<p>Bad Representations</p>
-<p>Bad Chunks</p>
-<p>Bad Extraction</p>
-<!-- image -->
-
-<h2 id="intervention-bias">Intervention bias:</h2>
-<p>You try to do things to feel in control</p>
-<p>People keep trying to change generation and apply techniques to feel in control</p>
-<!-- image -->
-
-<!-- image -->
-
-<p>Common pitfalls made by RAG developers</p>
-<h2 id="common-pitfalls-made-by-rag-developers_4">Common pitfalls made by RAG developers</h2>
-<p>The RAG playbook</p>
-<p>The RAG playbook</p>
-<h2 id="step-1-4-initial-implementation-focus-on-retrieval-metrics">Step 1-4: Initial implementation: focus on retrieval metrics</h2>
-<p>Step 2 Deep dive: Synthetic data generation: fast testing  review processes</p>
-<p>Step 2 Deep dive: Synthetic data generation: fast testing &amp; review processes</p>
-<p>Homework for this session</p>
-<p>Homework for this session</p>
-<p>Sneak peak for next session</p>
-<p>Sneak peak for next session</p>
+<p><strong>Key Insight:</strong> Control the inputs to influence the outputs</p>
+<hr />
+<h2 id="the-only-leading-metric-that-matters">The Only Leading Metric That Matters</h2>
+<p><strong>For RAG Development: Number of Experiments</strong></p>
+<blockquote>
+<p>"If you're feeling lost, plan to do a couple more experiments"</p>
+</blockquote>
+<p><strong>Focus Areas:</strong>
+- How many experiments are we running?
+- What infrastructure investments improve velocity?
+- How can we brainstorm better experiment designs?</p>
+<p><strong>Success Pattern:</strong> Doing the obvious thing over and over again
+- Like counting calories in vs calories out
+- Boring but effective
+- Way more boring than you think, but that's what success looks like</p>
+<p><strong>In Practice:</strong>
+- Focus on how many experiments we're running
+- What infrastructure investments improve velocity?
+- How can we brainstorm better experiment designs?
+- Build stronger intuition through continual experimentation</p>
+<hr />
+<h2 id="absence-blindness-you-dont-fix-what-you-cant-see">Absence Blindness: You Don't Fix What You Can't See</h2>
+<p><strong>Common Pattern:</strong>
+- Everyone talks about generation quality and latency
+- Nobody checks if retrieval actually works
+- Focus on visible problems, ignore hidden ones</p>
+<p><strong>Hidden Issues We Miss:</strong>
+- Is retrieval finding relevant documents?
+- Are text chunks properly extracted?
+- Do embeddings match query semantics?
+- Has data been extracted correctly?
+- Are representations and text chunks working?</p>
+<p><strong>Reality Check:</strong> People always talk about generation and latency, but no one has ever really looked at whether the retrieval is good or bad</p>
+<p><strong>Solution:</strong> Measure retrieval before generation</p>
+<hr />
+<h2 id="intervention-bias-action-without-purpose">Intervention Bias: Action Without Purpose</h2>
+<p><strong>The Pattern:</strong>
+- Switch between models randomly
+- Add prompt tweaks everywhere
+- Do things just to feel in control</p>
+<p><strong>Why This Fails:</strong>
+- No specific hypothesis being tested
+- No metrics to validate improvements
+- "It depends on your data" - always
+- Trying to feel in control vs. being in control</p>
+<p><strong>The Reality:</strong>
+- Pay consultants just to hear what you hope to hear
+- But the answer is always: "it depends on your data, your evaluations, and your benchmarks"</p>
+<p><strong>Better Approach:</strong> Specific interventions against specific metrics</p>
+<hr />
 <h2 id="the-rag-flywheel">The RAG Flywheel</h2>
-<p>Thesis: The principles we've applied in search are highly relevant to what we want to do with RAG</p>
-<!-- image -->
+<p><strong>Core Principle:</strong> Everything from search applies to RAG</p>
+<h3 id="step-1-basic-rag-setup">Step 1: Basic RAG Setup</h3>
+<p>Start with existing system</p>
+<h3 id="step-2-synthetic-data-generation">Step 2: Synthetic Data Generation</h3>
+<p>Create test questions for retrieval abilities</p>
+<h3 id="step-3-fast-evaluations">Step 3: Fast Evaluations</h3>
+<p>Unit-test-like assessments (precision, recall)</p>
+<h3 id="step-4-real-world-data">Step 4: Real-World Data</h3>
+<p>Collect actual user queries and feedback</p>
+<p><strong>Goal:</strong> Build intuition through continuous experimentation</p>
+<hr />
+<h2 id="why-retrieval-evals-beat-generation-evals">Why Retrieval Evals Beat Generation Evals</h2>
+<h3 id="generation-evals-too-subjective">Generation Evals: Too Subjective</h3>
+<p><div class="highlight"><pre><span></span><code>Q: &quot;What is the powerhouse of the cell?&quot;
+A1: &quot;Mitochondria [1]&quot;
+A2: &quot;The powerhouse of the cell is the mitochondria, which...&quot;
+A3: &quot;Mitochondria are organelles that...&quot;
+</code></pre></div>
+<strong>Problem:</strong> Which answer is "correct"? Too subjective.</p>
+<h3 id="retrieval-evals-objective-and-clear">Retrieval Evals: Objective and Clear</h3>
+<div class="highlight"><pre><span></span><code>Q: &quot;What is the powerhouse of the cell?&quot;
+Expected pages: [6, 9, 13]
+Retrieved pages: [6, 8, 9, 13, 15]
+Recall: 3/3 = 100% ✓
+Precision: 3/5 = 60%
+</code></pre></div>
+<hr />
+<h2 id="retrieval-eval-benefits">Retrieval Eval Benefits</h2>
+<p><strong>Speed &amp; Cost</strong>
+- Seconds vs minutes/hours
+- Cheap vs expensive (no LLM judge needed)
+- Can run frequently vs infrequently</p>
+<p><strong>Scalability</strong>
+- Hundreds/thousands of tests
+- Clear pass/fail criteria
+- No subjective interpretation</p>
+<p><strong>Actionability</strong>
+- Test lexical vs semantic search
+- Evaluate reranker impact
+- Measure chunk extraction quality</p>
+<hr />
+<h2 id="precision-and-recall-fundamentals">Precision and Recall Fundamentals</h2>
+<h3 id="recall-percentage-of-relevant-documents-found">Recall: Percentage of relevant documents found</h3>
+<p><div class="highlight"><pre><span></span><code>10 correct documents exist
+Retrieved 5, found 4 correct ones
+Recall = 4/10 = 40%
+</code></pre></div>
+<strong>High recall:</strong> System finds most relevant documents
+<strong>Critical when:</strong> Facts scattered across many documents</p>
+<h3 id="precision-percentage-of-retrieved-documents-that-are-relevant">Precision: Percentage of retrieved documents that are relevant</h3>
+<p><div class="highlight"><pre><span></span><code>Retrieved 10 documents
+2 are actually relevant
+Precision = 2/10 = 20%
+</code></pre></div>
+<strong>High precision:</strong> System avoids irrelevant results
+<strong>Critical when:</strong> Too much noise confuses the model</p>
+<hr />
+<h2 id="case-study-1-research-interview-reports">Case Study 1: Research Interview Reports</h2>
+<p><strong>Problem:</strong> Consultants losing trust in AI-generated reports
+- "I know 6 people liked the product, but only 3 quotes showed up"
+- <strong>Recall:</strong> 3/6 = 50%</p>
+<p><strong>The Problem in Detail:</strong>
+- Consultants do 15-30 research interviews with experts
+- AI generates reports from interview data
+- Customer: "I know 6 people liked the product, but only 3 quotes showed up"
+- <strong>Trust broken:</strong> "I know there were 6. There's something wrong."</p>
+<p><strong>Solution Process:</strong>
+1. Manual question-chunk dataset creation
+2. Focused on preprocessing experiments (our hypothesis)
+3. 3-4 experiments on preprocessing text chunks before ingestion
+4. Improved recall from 50% to 90%
+5. Rebuilt customer trust through data-driven examples</p>
+<p><strong>Key Lesson:</strong> Specific goals enable rapid experimentation and customer-driven test suites. Preprocessing aligned with anticipated customer queries.</p>
+<hr />
+<h2 id="case-study-2-construction-blueprint-search">Case Study 2: Construction Blueprint Search</h2>
+<p><strong>Problem:</strong> Workers couldn't find relevant blueprints
+- <strong>Recall:</strong> 27% for finding correct images
+- Critical documents going unfound</p>
+<p><strong>The Detailed Process:</strong>
+1. Built synthetic dataset of blueprint queries
+2. <strong>Hypothesis:</strong> Better image summaries and captions needed
+3. Used visual language models to create captions and descriptions
+4. Applied chain of thought reasoning about blueprints
+5. Generated hypothetical questions for each blueprint
+6. Tested ability to recall correct document and answer questions</p>
+<p><strong>Results:</strong> 4 days, ~12 prompts, 3 models → 27% to 85% recall</p>
+<p><strong>Bonus Discovery:</strong> 20% of queries were about counting objects in blueprints
+- Justified investment in bounding box models
+- Applied technique to tables, documents, other artifacts</p>
+<p><strong>Key Lesson:</strong> Highly specific prompts for synthetic summary generation + domain expertise</p>
+<hr />
+<h2 id="the-synthetic-data-strategy">The Synthetic Data Strategy</h2>
+<p><strong>Before Users:</strong> Create synthetic questions to test systems</p>
+<p><strong>Benefits:</strong>
+- Test edge cases before they happen
+- Build confidence in system capabilities
+- Establish baseline performance metrics
+- Enable rapid iteration cycles</p>
+<p><strong>Simple Starting Process:</strong>
+1. Take a random text chunk
+2. Ask LLM to generate a question this chunk answers
+3. Verify that retrieval finds this chunk when searching the generated question
+4. Now you have synthetic dataset testing chunk retrieval
+5. Recall becomes a very binary metric</p>
+<p><strong>Advanced Process (with user data):</strong>
+1. Use user queries as few-shot examples for generation
+2. Generate chunks from queries and test retrievability
+3. Use LLM as ranker to produce weak ranking labels
+4. Review weak labels to get correct labels
+5. Test precision and recall (correlated with real performance)</p>
+<p><strong>Key Question:</strong> Given what I know about user data, what questions could I NOT answer with current infrastructure?</p>
+<hr />
+<h2 id="building-your-first-evaluation-set">Building Your First Evaluation Set</h2>
+<p><strong>Start Simple:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">test_cases</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;How to contact Jason?&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;expected_chunks&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;contact_info_page_1&quot;</span><span class="p">,</span> <span class="s2">&quot;about_page_3&quot;</span><span class="p">]</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;What is the powerhouse of the cell?&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;expected_chunks&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;biology_chapter_6&quot;</span><span class="p">,</span> <span class="s2">&quot;cell_structure_page_9&quot;</span><span class="p">]</span> 
+    <span class="p">}</span>
+<span class="p">]</span>
 
-<table>
-<thead>
-<tr>
-<th>Step</th>
-<th></th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Initial implementation</td>
-<td>Start with a basic RAG system setup</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Synthetic data generation</td>
-<td>Create synthetic questions to test the system's retrieval abilities</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Build fast evaluations</td>
-<td>Conduct quick, unit test-like evaluations to assess basic retrieval capabilities (e.g., precision, recall, mean reciprocal rank), and explain why each matters</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Real-world data collection</td>
-<td>Gather real user queries and interactions. Ensure feedback is aligned with business outcomes or correlated with important qualities that predict customer satisfaction</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Classification and analysis</td>
-<td>Categorize and analyze user questions to identify patterns and gaps</td>
-</tr>
-<tr>
-<td>6</td>
-<td>System improvements</td>
-<td>Based on analysis, make targeted improvements to the system</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Production monitoring</td>
-<td>Implement ongoing monitoring to track system performance</td>
-</tr>
-<tr>
-<td>@jxnlco 8</td>
-<td>@jxnlco User feedback integration</td>
-<td>maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook Continuously incorporate user feedback into the system</td>
-</tr>
-</tbody>
-</table>
-<!-- image -->
+<span class="k">def</span><span class="w"> </span><span class="nf">evaluate_retrieval</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">expected_chunks</span><span class="p">):</span>
+    <span class="n">retrieved</span> <span class="o">=</span> <span class="n">retrieval_system</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">top_k</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">retrieved_ids</span> <span class="o">=</span> <span class="p">[</span><span class="n">chunk</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">retrieved</span><span class="p">]</span>
 
-<!-- image -->
+    <span class="n">hits</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">expected_chunks</span><span class="p">)</span> <span class="o">&amp;</span> <span class="nb">set</span><span class="p">(</span><span class="n">retrieved_ids</span><span class="p">))</span>
+    <span class="n">recall</span> <span class="o">=</span> <span class="n">hits</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">expected_chunks</span><span class="p">)</span>
+    <span class="n">precision</span> <span class="o">=</span> <span class="n">hits</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">retrieved_ids</span><span class="p">)</span>
 
-<!-- image -->
+    <span class="k">return</span> <span class="n">recall</span><span class="p">,</span> <span class="n">precision</span>
+</code></pre></div></p>
+<h2 id="example-prompt-for-question-generation">Example Prompt for Question Generation</h2>
+<p><strong>Domain-Specific Product Search Example:</strong>
+<div class="highlight"><pre><span></span><code>You are generating questions for product search.
+Given this product description: [PRODUCT_DESCRIPTION]
+Context: [OTHER_CONTEXT_ABOUT_TEXT_DATA]
 
-<!-- image -->
+Generate questions that would retrieve this product, such as:
+- Comparison questions
+- Pattern recognition questions  
+- Feature-specific questions
 
-<!-- image -->
+Example questions: [FEW_SHOT_EXAMPLES]
 
-<h2 id="fundamental-mindset-shift-stop-using-lgtmk-looks-good-to-me">Fundamental mindset shift: Stop using LGTM@K ('Looks good to me')</h2>
-<p>In the long term, LLMs are going to improve their ability to synthesize information in context (ICL -in-context learning)    It 's our responsibility to own improving search/retrieval</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Generation evals</th>
-<th>Retrieval evals</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Testing for…</td>
-<td>Factuality Team lead : 'Looks better now' (based on made up evaluations that don't capture usage behavior)</td>
-<td>Recall, precision@K Lexical search, semantic search, re-rankers</td>
-</tr>
-<tr>
-<td>Speed of tests</td>
-<td>Slow ~1s to 10s per test</td>
-<td>Fast ~10ms to 800ms per test</td>
-</tr>
-<tr>
-<td>Cost of tests</td>
-<td>$100s per run Team lead : 'who spent $1000 on OpenAI credits yesterday?'</td>
-<td>Negligible per run</td>
-</tr>
-<tr>
-<td>Frequency of tests</td>
-<td>Infrequent</td>
-<td>Frequent</td>
-</tr>
-<tr>
-<td>Speed of test iterations</td>
-<td>Slow iterations (tests that could take minutes take hours)</td>
-<td>Fast iterations</td>
-</tr>
-<tr>
-<td>Ease of test scalability</td>
-<td>Difficult</td>
-<td>Easy</td>
-</tr>
-</tbody>
-</table>
-<h2 id="what-is-the-difference-between-a-generation-and-retrieval-eval">What is the difference between a generation and retrieval eval?</h2>
-<h2 id="when-we-use-generation-evals-we-assume-there-are-no-issues-in-the-retrieval-steps">When we use generation evals, we assume there are no issues in the retrieval steps</h2>
-<table>
-<thead>
-<tr>
-<th>Examples</th>
-<th>Generation eval (test for generation and factuality)</th>
-<th>Retrieval eval (test for recall and precision)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Textbook analogy</td>
-<td> Question: 'What is the powerhouse of the cell?'  Potential desired answers: • 'Mitochondria[6,9,13]' • 'The powerhouse of the cell is mitochondria from pages 6, 9, 13' • Definition of mitochondria + Paragraph</td>
-<td>• Question : 'What page(s) can I find the answer to 'what is the powerhouse of the cell?'' • Answer : '6, 9, 13'</td>
-</tr>
-<tr>
-<td>Contact information</td>
-<td> Question : 'How do I contact Jason?  Answer: • 'Jason's email is jason@jxnl.co ' • 'Phone number: (408) -555- 8796' • 'You can contact Jason on X @jxnlco</td>
-<td> Question : 'What document has the contact information for Jason?'  Answer : 'teamcontacts.docx'</td>
-</tr>
-</tbody>
-</table>
-<p>Data sets for creating generation evals are expensive to build and verify, so many retrieval issues may go unnoticed</p>
-<p>Developers don't realize that building out retrieval may be powerful enough for several initial use cases to start gathering feedback on (and do generation afterwards)</p>
-<p>maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
-<!-- image -->
-
-<h2 id="precision-and-recall-are-key-metrics-for-evaluating-retrieval">Precision and recall are key metrics for evaluating Retrieval</h2>
-<p>relevant elements</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Recall</th>
-<th>Precision</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Definition</td>
-<td>% of relevant documents that are successfully retrieved (Relevant retrieved documents) (Total relevant documents)</td>
-<td>% of retrieved documents relevant to the query (Relevant retrieved documents) (Total retrieved documents)</td>
-</tr>
-<tr>
-<td>Why is this important to measure?</td>
-<td> High recall means the system finds most of the relevant documents  This is especially important in cases where facts are hard to find across many documents</td>
-<td> High precision means the system retrieves mostly relevant documents  Dumber models might get more confused with irrelevant context</td>
-</tr>
-</tbody>
-</table>
-<!-- image -->
-
-<p>@jxnlco</p>
-<p>@jxnlco</p>
-<h2 id="case-study-ai-generated-reports-for-consultants">Case study: AI-generated reports for consultants</h2>
-<p>Personal anecdote about the importance of the recall metric</p>
-<h2 id="situation">Situation</h2>
-<h2 id="complication">Complication</h2>
-<ul>
-<li>· Consultants do 15-30 research interviews with experts</li>
-<li>· The consultants know which experts had specific perspectives about the products</li>
-<li>· The consulting team requested an AI-generated report</li>
-<li>· For certain fields, only found 3 out of 6 people quoted</li>
-<li>· The consulting team expected the AI report to retrieve 6 quotes</li>
-<li>· As a result, the team lost confidence in the system</li>
-</ul>
-<h2 id="key-takeaway">Key takeaway:</h2>
-<ul>
-<li>· It's essential that the pre -processing that is done aligns with the anticipated queries to improve recall</li>
-<li>· Leverage customer interactions to motivate your test suites</li>
-</ul>
-<h2 id="jxnlco-jxnlco">@jxnlco @jxnlco</h2>
-<h2 id="approach">Approach</h2>
-<ul>
-<li>· Shifted focus to ensure 100% of recall of all correct citations</li>
-<li>· Manually built Question &gt; chunk datasets for relevance</li>
-</ul>
-<h2 id="impact">Impact</h2>
-<p>90%+ recall from 50% by doing significant pre-processing work</p>
-<ul>
-<li>· Continues the sales processed by building trust and customer specific evaluations</li>
-</ul>
-<h2 id="case-study-ai-for-blueprint-search-at-construction-company">Case study: AI for blueprint search at construction company</h2>
-<p>Personal anecdote about the importance of pre-processing based on unique data sets</p>
-<h2 id="situation_1">Situation</h2>
-<h2 id="complication_1">Complication</h2>
-<h2 id="approach_1">Approach</h2>
-<ul>
-<li>· Construction workers want to ask questions regarding blueprints</li>
-<li>· We used VLLM labeled data we got ~27% recall@75 for image specific search tool</li>
-<li>· We need better image summary prompts to be able to recover descriptions beyond image captioning</li>
-<li>· Tested VLLM captioning and search over descriptions</li>
-<li>· Used Chain of Thought (CoT) and asked language model to reason about the blue print before describing it</li>
-<li>· 'How many rooms…'</li>
-<li>· 'Describe the rooms…'</li>
-<li>· 'How big was the room...'</li>
-</ul>
-<h2 id="key-takeaway_1">Key takeaway:</h2>
-<ul>
-<li>· Testing the ability of a single subsystem becomes very fast if we have the right baselines to test against</li>
-<li>· Experimenting with high-specificity prompts for synthetic summary generation goes a long way in improving recall of images, tables, documents and any other artifacts</li>
-</ul>
-<!-- image -->
-
-<h2 id="impact_1">Impact</h2>
-<p>85%+ recall from ~27% through preprocessing of blueprint data sets</p>
-<p>4 days only were spent on iterating on summarization prompts</p>
-<ul>
-<li> 12 prompts and 3 models included</li>
-<li>· Presented to design partners to obtain real user data with this level of recall</li>
-<li>· ~20% of queries were related to counting objects in blueprints</li>
-<li>· Justified an investment to run bounding box models to attempt to count images</li>
-</ul>
-<!-- image -->
-
-<!-- image -->
-
-<p>Common pitfalls made by RAG developers</p>
-<p>Common pitfalls made by RAG developers</p>
-<p>The RAG playbook</p>
-<p>The RAG playbook</p>
-<p>Step 1-4: Initial implementation: focus on retrieval metrics</p>
-<p>Step 1-4: Initial implementation: focus on retrieval metrics</p>
-<h2 id="step-2-deep-dive-synthetic-data-generation-fast-testing-review-processes">Step 2 Deep dive: Synthetic data generation: fast testing &amp; review processes</h2>
-<p>Homework for this session</p>
-<p>Homework for this session</p>
-<p>Sneak peak for next session</p>
-<p>Sneak peak for next session</p>
-<!-- image -->
-
-<h2 id="fake-it-until-you-make-it">Fake it until you make it</h2>
-<p>make it ≡ get users</p>
-<h2 id="the-rag-flywheel_1">The RAG Flywheel</h2>
-<p>Thesis: The principles we've applied in search are highly relevant to what we want to do with RAG</p>
-<!-- image -->
-
-<!-- image -->
-
-<!-- image -->
-
-<!-- image -->
-
-<!-- image -->
-
-<!-- image -->
-
-<!-- image -->
-
-<!-- image -->
-
-<!-- image -->
-
-<table>
-<thead>
-<tr>
-<th>Step</th>
-<th></th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Initial implementation</td>
-<td>Start with a basic RAG system setup</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Synthetic data generation</td>
-<td>Create synthetic questions to test the system's retrieval abilities</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Fast evaluations</td>
-<td>Conduct quick, unit test-like evaluations to assess basic retrieval capabilities (e.g., precision, recall, mean reciprocal rank), and explain why each matters</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Real-world data collection</td>
-<td>Gather real user queries and interactions. Ensure feedback is aligned with business outcomes or correlated with important qualities that predict customer satisfaction</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Classification and analysis</td>
-<td>Categorize and analyze user questions to identify patterns and gaps</td>
-</tr>
-<tr>
-<td>6</td>
-<td>System improvements</td>
-<td>Based on analysis, make targeted improvements to the system</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Production monitoring</td>
-<td>Implement ongoing monitoring to track system performance</td>
-</tr>
-<tr>
-<td>8</td>
-<td>User feedback integration</td>
-<td>Continuously incorporate user feedback into the system</td>
-</tr>
-<tr>
-<td>@jxnlco @jxnlco maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</td>
-<td>@jxnlco @jxnlco maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</td>
-<td>@jxnlco @jxnlco maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</td>
-</tr>
-</tbody>
-</table>
-<!-- image -->
-
-<p>Deep dive</p>
-<h2 id="procedure-overview">Procedure overview</h2>
-<h2 id="if-you-have-no-user-query-data">If you have no user query data…</h2>
-<ul>
-<li>· Use existing data to generate evals to get a benchmark for precision and recall</li>
-<li>· question</li>
-<li>· answer</li>
-<li>· chunk_id</li>
-<li>· Can be as simple as:</li>
-</ul>
-<p>assert eval.chunk_id in search(eval.question, limit=k).chunk_ids</p>
-<h2 id="if-you-have-some-user-query-data">If you have some user query data…</h2>
-<ul>
-<li>· Use query data as few shot examples for generation</li>
-<li>· You can even generate chunks from queries and test if they can be retrieved</li>
-<li>· Use LLM as a Ranker to produce Weak Ranking labels</li>
-<li>▪ Review the weak labels to get correct labels</li>
-<li>▪ Continue to test Precision / Recall metrics, or even ranking metrics</li>
-<li>· Ask yourself: given what I know about the user data, what kinds of questions could I not answer with this method?</li>
-</ul>
-<h2 id="collect-everything-and-track-the-questions-and-create-evals">Collect everything and track the questions and create evals</h2>
-<ul>
-<li>· Every demo, every user interview</li>
-<li>· Collect thumbs up ratings, allow users to delete sources</li>
-<li>maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook · Put it in a google sheet, just collect it, those labels are the gold.</li>
-</ul>
-<h2 id="example-prompt-for-question-generation">Example prompt for question generation</h2>
-<p>Try to bake as much domain knowledge into these prompts, change prompts based on document types, be specific</p>
-<p>You are tasked with generating relevant questions that a user of a search product might ask. This task is crucial for understanding user needs and improving the product's functionality.</p>
-<p>To generate relevant questions:</p>
-<ul>
-<li>
+Bake in domain knowledge about:
+- Document types you&#39;re working with
+- Common user query patterns
+- Business-specific terminology
+</code></pre></div></p>
+<p><strong>Note:</strong> In sessions 4-5, we'll use topic modeling and segmentation to understand core capabilities and question types.</p>
+<hr />
+<h2 id="common-pitfalls-to-avoid">Common Pitfalls to Avoid</h2>
+<p><strong>1. Oversimplification</strong>
+- Don't aim for 100% recall - probably means test cases too simple
+- Define dynamic datasets vs static datasets
+- As scores improve, add more complex examples</p>
+<p><strong>2. Neglecting Real Data</strong>
+- If you have real user data, don't neglect it
+- Include it in your dataset for higher quality testing</p>
+<p><strong>3. Production Misalignment</strong> 
+- Ensure search implementations match production exactly
+- No misalignment in configuration or specifications
+- Test what you actually ship</p>
+<hr />
+<h2 id="this-weeks-homework">This Week's Homework</h2>
+<p><strong>Step 1: Audit Current State</strong>
+- How many evaluations do you currently have?
+- What metrics are you tracking?
+- Are they leading or lagging metrics?</p>
+<p><strong>Step 2: Create Your First Eval Set</strong>
+- 10-20 query/expected-chunk pairs
+- Focus on your most common use cases
+- Test current retrieval performance</p>
+<p><strong>Step 3: Run Your First Experiment</strong>
+- Change one thing (chunk size, embedding model, etc.)
+- Measure before and after performance
+- Document what you learned</p>
+<p><strong>Experiment Ideas:</strong>
+- Try BM25 and full-text search (if using LanceDB/ChromaDB)
+- Test different embedding models
+- Experiment with chunking strategies
+- Try different re-rankers (e.g., Cohere)
+- Test different top-k values (10, 20, 30)
+- Compare latency vs retrieval quality tradeoffs</p>
+<p><strong>Important:</strong> If experiments don't improve metrics, do nothing. Choose to do nothing rather than add tech debt.</p>
+<hr />
+<h2 id="next-week-preview-fine-tuning">Next Week Preview: Fine-tuning</h2>
+<p><strong>Session 2 Focus:</strong>
+- When and how to fine-tune embedding models
+- Building relevancy into your representations
+- Moving beyond off-the-shelf solutions
+- Creating custom models for your domain</p>
+<p><strong>Goal:</strong> Once you know what relevancy is, build it yourself</p>
+<hr />
+<h2 id="key-takeaways">Key Takeaways</h2>
+<h3 id="mindset-shifts">Mindset Shifts</h3>
 <ol>
-<li>Analyze the product description to understand its purpose and target users.</li>
+<li><strong>Experiments over features</strong> - measure velocity of learning</li>
+<li><strong>Leading over lagging metrics</strong> - control inputs, not just outputs  </li>
+<li><strong>Retrieval over generation</strong> - fix what you can't see first</li>
+<li><strong>Specific over generic</strong> - build superpowers, not generic tools</li>
 </ol>
-</li>
-<li>
+<h3 id="action-items">Action Items</h3>
 <ol>
-<li>Examine the example text data to identify key information, patterns, or insights it might contain.</li>
+<li><strong>Count your experiments</strong> - how many can you run this week?</li>
+<li><strong>Build synthetic data</strong> - before you have real users</li>
+<li><strong>Focus on recall first</strong> - can you find the right documents?</li>
+<li><strong>Measure everything</strong> - absence blindness kills RAG systems</li>
 </ol>
-</li>
-<li>
-<ol>
-<li>Consider the types of questions users might ask to extract valuable insight from the product.</li>
-</ol>
-</li>
-<li>
-<ol>
-<li>Generate a diverse set of questions that cover different aspects of the data and product functionality.</li>
-</ol>
-</li>
-</ul>
-<p>When formulating questions, consider the following:</p>
-<ul>
-<li>
-<ul>
-<li>Information extraction: What specific data points might users want to retrieve?</li>
-</ul>
-</li>
-<li>
-<ul>
-<li>Pattern recognition: What trends or relationships in the data might be of interest?</li>
-</ul>
-</li>
-<li>
-<ul>
-<li>Comparative analysis: How might users want to compare different elements in the data?</li>
-</ul>
-</li>
-<li>
-<ul>
-<li>Contextual understanding: What questions might help users better understand the context of the data?</li>
-</ul>
-</li>
-</ul>
-<p>Present your generated questions in the following format:</p>
-<p>Before listing the questions, provide a brief explanation for each question, highlighting why it would be relevant and valuable to a user of this product. Present these explanations in the following format:</p>
-<p>maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
-<p>&lt;product_description&gt;</p>
-<p>{{PRODUCT_DESCRIPTION}} &lt;/product_description&gt;</p>
-<p>Now, examine the example text data:</p>
-<p>&lt;document&gt;</p>
-<p>{{DOCUMENT}}</p>
-<p>&lt;/document&gt;</p>
-<p>Here are some example of other queries users have asked:</p>
-<p>&lt;example_questions&gt;</p>
-<p>{{EXAMPLE QUESTIONS}}</p>
-<p>&lt;/example_qustions&gt;</p>
-<!-- image -->
-
-<h2 id="example-prompt-for-ranking-generation">Example prompt for ranking generation</h2>
-<p>For each chunk, you should:</p>
-<p>You are tasked with evaluating the relevance of text chunks to a given question. Your goal is to determine which chunks contain information that could be useful in answering the question, while preserving the original chunk IDs for later processing.</p>
-<p>Here is the question you will be using to evaluate the relevance of the chunks:</p>
-<p>&lt;question&gt;</p>
-<p>{{QUESTION}}</p>
-<p>&lt;/question&gt;</p>
-<p>You will be provided with a list of text chunks, each with a unique ID. The chunks will be in the following format:</p>
-<p>&lt;chunks&gt;</p>
-<p>{{CHUNKS}}</p>
-<p>&lt;/chunks&gt;</p>
-<!-- image -->
-
-<ul>
-<li>
-<ol>
-<li>Carefully read and understand its content.</li>
-</ol>
-</li>
-<li>
-<ol>
-<li>Evaluate whether the information in the chunk is relevant to answering the question.</li>
-</ol>
-</li>
-<li>
-<ol>
-<li>Provide a brief explanation of why the chunk is or is not relevant.</li>
-</ol>
-</li>
-<li>
-<ol>
-<li>Assign a relevance score from 0 to 1, where 0 is completely irrelevant and 1 is highly relevant.</li>
-</ol>
-</li>
-</ul>
-<p>Present your evaluation for each chunk in the following format:</p>
-<p>&lt;evaluation&gt;</p>
-<p>&lt;chunk_id&gt;[Insert the original chunk ID here]&lt;/chunk_id&gt;</p>
-<p>&lt;reasoning&gt;[Your explanation of relevance or irrelevance]&lt;/reasoning&gt;</p>
-<p>&lt;relevance_score&gt;[Your score from 0 to 1]&lt;/relevance_score&gt;</p>
-<p>&lt;/evaluation&gt;</p>
-<p>Important notes:</p>
-<ul>
-<li>
-<ul>
-<li>Maintain objectivity in your evaluations.</li>
-</ul>
-</li>
-<li>
-<ul>
-<li>Focus on the content's relevance to the question, not its quality or completeness.</li>
-</ul>
-</li>
-<li>
-<ul>
-<li>Be consistent in your scoring across all chunks.</li>
-</ul>
-</li>
-<li>
-<ul>
-<li>Do not modify or summarize the original chunk text.</li>
-</ul>
-</li>
-<li>
-<ul>
-<li>If a chunk contains partial relevance, explain which parts are relevant and which are not.</li>
-</ul>
-</li>
-</ul>
-<h2 id="how-does-this-help-me">How does this help me?</h2>
-<p>Troubleshoot early: By stress-testing your system with diverse synthetic queries, you can identify and address potential issues before they impact real users</p>
-<p>Iterate quickly: With a well-structured synthetic dataset, you can quickly evaluate changes to your system, enabling rapid experimentation and improvement</p>
-<p>Establish common ground: Synthetic data and its results can serve as a common reference point for discussions with team members, leadership, clients about system capabilities and goals</p>
-<!-- image -->
-
-<p>maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
-<!-- image -->
-
-<!-- image -->
-
-<p>Common pitfalls made by RAG developers</p>
-<p>Common pitfalls made by RAG developers</p>
-<p>The RAG playbook</p>
-<p>The RAG playbook</p>
-<h2 id="homework-for-this-session">Homework for this session</h2>
-<p>Sneak peak for next session</p>
-<p>Sneak peak for next session</p>
-<h2 id="homework">Homework</h2>
-<!-- image -->
-
-<p>Create an evaluation data set by leveraging synthetic and user queries to improve precision and recall</p>
-<!-- image -->
-
-<!-- image -->
-
-<h2 id="establish-a-baseline-to-run-experiments-on">Establish a baseline to run experiments on</h2>
-<ul>
-<li>· Check BM25, Embeddings, Chunkers, and Rerankers (LanceDB)</li>
-<li>· With baselines, we can 'do nothing' if experiments don't pan out</li>
-</ul>
-<p>Review generated question sets with subject matter experts</p>
-<ul>
-<li>· LOOK at questions that generate low scores</li>
-</ul>
-<!-- image -->
-
-<h2 id="homework-if-you-already-have-advanced-automations-in-production">Homework if you already have advanced automations in production:</h2>
-<!-- image -->
-
-<p>Review user queries: Sample some % of user traffic and run the LLM Ranker over retrieved text chunks and monitor questions that have low precision</p>
-<p>Ask yourself: "Could my system possibility answer these questions?"</p>
-<p>Start to build process and flywheel: Establish regular cadence to review questions or documents that get poor recall or even just low cosine or reranker scores</p>
-<!-- image -->
-
-<p>@jxnlco @jxnlco</p>
-<p>maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
-<h2 id="experiments-to-run">Experiments to run</h2>
-<p>If you anticipate common questions from users, use these questions as few-shot examples to generate more aligned questions!</p>
-<p>If you run out of ideas lets chat in #show-your-work!!!</p>
-<p>Try different embedding models</p>
-<p>Test how Rerankers improves retrieval, experiment with the top K with cosine and top N with reranker to see how to get better recall where N &lt;&lt; K</p>
-<p>Test how Hybrid search improves retrieval</p>
-<p>Check if embedding additional metadata attached to text chunks helps</p>
-<p>Compare latency trade-offs for retrieval methods</p>
-<!-- image -->
-
-<h2 id="common-pitfalls-to-avoid">Common pitfalls to avoid</h2>
-<ul>
-<li>· Oversimplification : Don't create only simple, easily answerable questions, when your recall metrics are too high (&gt; 85%), focus on blending in user data</li>
-<li>· Static datasets: Avoid treating your synthetic data as a one-time creation. It should evolve with your system as you continue to learn about your user needs</li>
-<li>· Neglecting synthetic or real data : As you accumulate real user data, don't abandon synthetic data. Instead, use both in complementary ways</li>
-<li>· Misalignment: Make sure that the search implementation you are testing are the same ones in production, and that there is no misalignment in how things are configured or specified</li>
-</ul>
-<!-- image -->
-
-<!-- image -->
-
-<!-- image -->
-
-<p>Common pitfalls made by RAG developers</p>
-<p>Common pitfalls made by RAG developers</p>
-<p>The RAG playbook</p>
-<p>The RAG playbook</p>
-<p>Homework for this session</p>
-<p>Homework for this session</p>
-<p>Sneak peak for next sessions</p>
-<h2 id="sneak-peek-for-next-week">Sneak peek for next week</h2>
-<h2 id="focus-for-this-week">· Focus for this week:</h2>
-<ul>
-<li>· Generate a single evaluation set and review the questions line by line, potentially with subject matter experts</li>
-<li>· Start logging user queries so we can use them to augment synthetic data generation</li>
-<li>· Eventually, we will run into limitations with this method. As we get more data, more opinions, and more diverse users, we will need to be able to 'see the forest from the trees'…</li>
-</ul>
-<h2 id="focus-for-next-week">· Focus for next week:</h2>
-<ul>
-<li>· Finetuning, Embeddings, and Representations</li>
-<li>· We're still learning who you are!</li>
-<li>· As we learn everyone's technical level we'll dig deeper during office hours and calibrate office hours to everyone's level</li>
-<li>· Remember:</li>
-<li>· In this session, we're just trying to establish baselines to have a null hypothesis. With this, we can start testing differen t interventions to see which make a real difference in our metrics</li>
-<li>· By using benchmarks, we can also reject interventions. We don't have to just add superstitious interventions that become tech debt</li>
-<li>· As you collect more data, you can slowly transition your evals dataset to a training / fine-tuning dataset</li>
-</ul>
-<!-- image -->
+<hr />
+<h2 id="remember-fake-it-till-you-make-it">Remember: Fake It Till You Make It</h2>
+<p><strong>The Data Flywheel:</strong>
+- Synthetic data → Fast evaluations → Better intuition → More experiments → Better product</p>
+<p><strong>Success Metrics:</strong>
+- Number of experiments run per week
+- Precision and recall improvements<br />
+- Customer trust and satisfaction growth</p>
+<p><strong>Foundation First:</strong> Build the evaluation infrastructure that will guide all future improvements</p>
+<p><strong>Collection Strategy:</strong>
+- Start simple: Google Sheets for valuable labels
+- Every demo, user interview, thumbs up/down = gold data
+- Later: Use tools like Braintrust for programmatic collection
+- Review generated questions with subject matter experts
+- Ask: "Are these questions even relevant for our use cases?"</p>
+<p><strong>Data Collection Mindset:</strong> Log everything. Track questions. Create evals from every interaction.</p>
+<hr />
+<h2 id="thank-you">Thank You</h2>
+<p><strong>Questions for office hours:</strong>
+- How to generate synthetic data for your domain?
+- What's a good starting number of evaluations?
+- How to convince leadership to invest in metrics?</p>
+<p><strong>Next week:</strong> From measuring relevancy to building it</p>
+<p><em>maven.com/applied-llms/rag-playbook</em></p>
 
 
 

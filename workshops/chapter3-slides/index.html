@@ -18,7 +18,7 @@
     
     
       
-        <title>Chapter3 Slides - Systematically Improving RAG Applications</title>
+        <title>Chapter 3 Slides - Systematically Improving RAG Applications</title>
       
     
     
@@ -65,7 +65,7 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Chapter3 Slides - Systematically Improving RAG Applications" >
+        <meta  property="og:title"  content="Chapter 3 Slides - Systematically Improving RAG Applications" >
       
         <meta  property="og:description"  content="None" >
       
@@ -81,7 +81,7 @@
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Chapter3 Slides - Systematically Improving RAG Applications" >
+        <meta  name="twitter:title"  content="Chapter 3 Slides - Systematically Improving RAG Applications" >
       
         <meta  name="twitter:description"  content="None" >
       
@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter3-slides" class="md-skip">
+        <a href="#chapter-3-slides" class="md-skip">
           Skip to content
         </a>
       
@@ -169,7 +169,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chapter3 Slides
+              Chapter 3 Slides
             
           </span>
         </div>
@@ -2824,648 +2824,792 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#todays-goals" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      Today's Goals
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#three-goals-for-today" class="md-nav__link">
+  <a href="#course-context-building-the-data-flywheel" class="md-nav__link">
     <span class="md-ellipsis">
-      Three goals for today
+      Course Context: Building the Data Flywheel
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#collecting-more-feedback" class="md-nav__link">
+    <nav class="md-nav" aria-label="Course Context: Building the Data Flywheel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sessions-1-2-foundation" class="md-nav__link">
     <span class="md-ellipsis">
-      Collecting more feedback
+      Sessions 1-2: Foundation
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#look-at-your-data" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#session-3-the-bridge-today" class="md-nav__link">
     <span class="md-ellipsis">
-      Look at your data
+      Session 3: The Bridge ← Today
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#dont-be-subtle" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#sessions-4-6-data-driven-optimization" class="md-nav__link">
     <span class="md-ellipsis">
-      Don't be subtle
+      Sessions 4-6: Data-Driven Optimization
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dont-be-subtle_1" class="md-nav__link">
+  <a href="#the-feedback-collection-hierarchy" class="md-nav__link">
     <span class="md-ellipsis">
-      Don't be subtle
+      The Feedback Collection Hierarchy
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dont-be-subtle_2" class="md-nav__link">
+  <a href="#bad-vs-good-feedback-design" class="md-nav__link">
     <span class="md-ellipsis">
-      Don't be subtle
+      Bad vs Good Feedback Design
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#question" class="md-nav__link">
+    <nav class="md-nav" aria-label="Bad vs Good Feedback Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bad-design-subtle-and-generic" class="md-nav__link">
     <span class="md-ellipsis">
-      Question:
+      Bad Design: Subtle and Generic
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#feedback-from-enterprise-customers" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#good-design-prominent-and-specific" class="md-nav__link">
     <span class="md-ellipsis">
-      Feedback from enterprise customers
+      Good Design: Prominent and Specific
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#recall-from-our-fine-tune-section-the-notion-of-triplets" class="md-nav__link">
+  <a href="#the-power-of-specific-copy" class="md-nav__link">
     <span class="md-ellipsis">
-      Recall from our fine tune section the notion of triplets
+      The Power of Specific Copy
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#so-what-happens-when-we-finetune" class="md-nav__link">
+    <nav class="md-nav" aria-label="The Power of Specific Copy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generic-useless" class="md-nav__link">
     <span class="md-ellipsis">
-      So what happens when we finetune?
+      Generic (Useless)
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#before-fine-tuning" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#specific-actionable" class="md-nav__link">
     <span class="md-ellipsis">
-      Before fine-tuning
+      Specific (Actionable)
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#after-fine-tuning" class="md-nav__link">
+  <a href="#follow-up-questions-for-rich-data" class="md-nav__link">
     <span class="md-ellipsis">
-      After fine-tuning
+      Follow-Up Questions for Rich Data
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#finding-hard-negatives" class="md-nav__link">
+    <nav class="md-nav" aria-label="Follow-Up Questions for Rich Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-user-says-no" class="md-nav__link">
     <span class="md-ellipsis">
-      Finding Hard Negatives
+      When User Says "No"
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#finding-hard-negatives_1" class="md-nav__link">
+  <a href="#enterprise-feedback-the-slack-integration" class="md-nav__link">
     <span class="md-ellipsis">
-      Finding Hard Negatives
+      Enterprise Feedback: The Slack Integration
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#building-citations-to-improve-trust" class="md-nav__link">
+    <nav class="md-nav" aria-label="Enterprise Feedback: The Slack Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consumer-pattern" class="md-nav__link">
     <span class="md-ellipsis">
-      Building Citations To Improve Trust
+      Consumer Pattern
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#building-citations" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#enterprise-pattern" class="md-nav__link">
     <span class="md-ellipsis">
-      Building Citations :
+      Enterprise Pattern
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#building-citations-to-improve-trust_1" class="md-nav__link">
+  <a href="#mining-hard-negatives-through-ux" class="md-nav__link">
     <span class="md-ellipsis">
-      Building Citations To Improve Trust
+      Mining Hard Negatives Through UX
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#generate-citations-to-build-satisfaction-and-trust-contd" class="md-nav__link">
+    <nav class="md-nav" aria-label="Mining Hard Negatives Through UX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#traditional-approach" class="md-nav__link">
     <span class="md-ellipsis">
-      Generate citations to build satisfaction and trust (cont'd)
+      Traditional Approach
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#task" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#ux-driven-approach-citation-deletion" class="md-nav__link">
     <span class="md-ellipsis">
-      &lt;task&gt;
+      UX-Driven Approach: Citation Deletion
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#negative-examples-generate-citations-to-build-satisfaction-and-trust-contd" class="md-nav__link">
+  <a href="#facebook-style-feedback-collection" class="md-nav__link">
     <span class="md-ellipsis">
-      Negative examples: generate citations to build satisfaction and trust (cont'd)
+      Facebook-Style Feedback Collection
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#task_1" class="md-nav__link">
+    <nav class="md-nav" aria-label="Facebook-Style Feedback Collection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#infinite-scroll-pattern" class="md-nav__link">
     <span class="md-ellipsis">
-      &lt;task&gt;
+      Infinite Scroll Pattern
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#streaming-for-better-user-satisfaction" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#limited-options-pattern" class="md-nav__link">
     <span class="md-ellipsis">
-      Streaming for better user satisfaction
+      Limited Options Pattern
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#streaming-overview" class="md-nav__link">
+  <a href="#the-dating-app-secret" class="md-nav__link">
     <span class="md-ellipsis">
-      Streaming Overview
+      The Dating App Secret
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#streaming-overview_1" class="md-nav__link">
+  <a href="#citations-trust-training-data" class="md-nav__link">
     <span class="md-ellipsis">
-      Streaming overview
+      Citations: Trust + Training Data
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-we-should-stream" class="md-nav__link">
+    <nav class="md-nav" aria-label="Citations: Trust + Training Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-citations-matter" class="md-nav__link">
     <span class="md-ellipsis">
-      Why we should stream:
+      Why Citations Matter
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#lower-perceived-wait-time" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#simple-citation-implementation" class="md-nav__link">
     <span class="md-ellipsis">
-      Lower perceived wait time
+      Simple Citation Implementation
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#reduce-user-churn-disengagement" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#advanced-bounding-box-citations" class="md-nav__link">
     <span class="md-ellipsis">
-      Reduce user churn / disengagement
+      Advanced: Bounding Box Citations
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#increase-satisfaction-and-trust" class="md-nav__link">
+  <a href="#streaming-the-table-stakes-feature" class="md-nav__link">
     <span class="md-ellipsis">
-      Increase satisfaction and trust
+      Streaming: The Table Stakes Feature
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#streaming-overview_2" class="md-nav__link">
+    <nav class="md-nav" aria-label="Streaming: The Table Stakes Feature">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-streaming-matters" class="md-nav__link">
     <span class="md-ellipsis">
-      Streaming overview
+      Why Streaming Matters
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#why-we-should-stream_1" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#what-to-stream" class="md-nav__link">
     <span class="md-ellipsis">
-      Why we should stream:
+      What to Stream
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#lower-perceived-wait-time_1" class="md-nav__link">
+  <a href="#streaming-implementation-strategy" class="md-nav__link">
     <span class="md-ellipsis">
-      Lower perceived wait time
+      Streaming Implementation Strategy
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reduce-user-churn-disengagement_1" class="md-nav__link">
+    <nav class="md-nav" aria-label="Streaming Implementation Strategy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-migration-problem" class="md-nav__link">
     <span class="md-ellipsis">
-      Reduce user churn / disengagement
+      The Migration Problem
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#increase-satisfaction-and-trust_1" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#technical-approach" class="md-nav__link">
     <span class="md-ellipsis">
-      Increase satisfaction and trust
+      Technical Approach
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-we-can-stream" class="md-nav__link">
+  <a href="#structured-streaming-with-citations" class="md-nav__link">
     <span class="md-ellipsis">
-      What we can stream:
+      Structured Streaming with Citations
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#we-should-assess" class="md-nav__link">
+    <nav class="md-nav" aria-label="Structured Streaming with Citations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#traditional-response" class="md-nav__link">
     <span class="md-ellipsis">
-      We should assess:
+      Traditional Response
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#stream-and-parse-the-response-and-other-attributes-follow-up-actions-in-real-time" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#structured-streaming-response" class="md-nav__link">
     <span class="md-ellipsis">
-      Stream and parse the response and other attributes (follow-up actions) in real time
+      Structured Streaming Response
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#interstitials-for-explainability" class="md-nav__link">
+  <a href="#slack-bot-feedback-patterns" class="md-nav__link">
     <span class="md-ellipsis">
-      Interstitials for explainability
+      Slack Bot Feedback Patterns
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#interstitials-for-explainability_1" class="md-nav__link">
+    <nav class="md-nav" aria-label="Slack Bot Feedback Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-acknowledgment" class="md-nav__link">
     <span class="md-ellipsis">
-      Interstitials for explainability
+      Basic Acknowledgment
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#use-webhooks-server-sent-events-or-a-generator-to-stream" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#pre-seeded-feedback" class="md-nav__link">
     <span class="md-ellipsis">
-      Use webhooks, server-sent events, or a generator to stream
+      Pre-seeded Feedback
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#stream-tool-arguments-and-render-in-ui" class="md-nav__link">
+  <a href="#prompting-the-user-not-just-the-ai" class="md-nav__link">
     <span class="md-ellipsis">
-      Stream tool arguments and render in UI
+      Prompting the User, Not Just the AI
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stream-tool-arguments-and-render-in-ui_1" class="md-nav__link">
+    <nav class="md-nav" aria-label="Prompting the User, Not Just the AI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bad-approach" class="md-nav__link">
     <span class="md-ellipsis">
-      Stream tool arguments and render in UI
+      Bad Approach
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#benefits" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#good-approach" class="md-nav__link">
     <span class="md-ellipsis">
-      Benefits
+      Good Approach
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#simple-example-slack-bots" class="md-nav__link">
+  <a href="#chain-of-thought-the-hidden-performance-booster" class="md-nav__link">
     <span class="md-ellipsis">
-      Simple Example: Slack Bots
+      Chain of Thought: The Hidden Performance Booster
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#simple-example-slack-bots_1" class="md-nav__link">
+    <nav class="md-nav" aria-label="Chain of Thought: The Hidden Performance Booster">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance-impact" class="md-nav__link">
     <span class="md-ellipsis">
-      Simple Example: Slack Bots
+      Performance Impact
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#simple-example-slack-bots_2" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#modern-implementation" class="md-nav__link">
     <span class="md-ellipsis">
-      Simple Example: Slack Bots
+      Modern Implementation
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prompting-and-chain-of-thought" class="md-nav__link">
+  <a href="#chain-of-thought-for-complex-tasks" class="md-nav__link">
     <span class="md-ellipsis">
-      Prompting and Chain of Thought
+      Chain of Thought for Complex Tasks
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prompting-showcase-capabilities" class="md-nav__link">
+    <nav class="md-nav" aria-label="Chain of Thought for Complex Tasks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-case-saas-pricing-quotes" class="md-nav__link">
     <span class="md-ellipsis">
-      Prompting: Showcase capabilities
+      Use Case: SaaS Pricing Quotes
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#provide-example-and-related-queries" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
     <span class="md-ellipsis">
-      Provide example and related queries
+      Results
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#provide-example-and-related-queries_1" class="md-nav__link">
+  <a href="#the-long-context-chain-of-thought-pattern" class="md-nav__link">
     <span class="md-ellipsis">
-      Provide example and related queries
+      The Long Context + Chain of Thought Pattern
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#jxnlco-jxnlco" class="md-nav__link">
+    <nav class="md-nav" aria-label="The Long Context + Chain of Thought Pattern">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#traditional-rag-approach" class="md-nav__link">
     <span class="md-ellipsis">
-      @jxnlco @jxnlco
+      Traditional RAG Approach
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#prompting-reject-work" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#long-context-cot-approach" class="md-nav__link">
     <span class="md-ellipsis">
-      Prompting: Reject Work
+      Long Context + CoT Approach
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#reject-work" class="md-nav__link">
+  <a href="#validation-the-hidden-quality-multiplier" class="md-nav__link">
     <span class="md-ellipsis">
-      Reject work.
+      Validation: The Hidden Quality Multiplier
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#monologues-and-chain-of-thought" class="md-nav__link">
+    <nav class="md-nav" aria-label="Validation: The Hidden Quality Multiplier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#validation-pattern" class="md-nav__link">
     <span class="md-ellipsis">
-      Monologues and Chain of Thought
+      Validation Pattern
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#monologues-and-chain-of-thought_1" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#real-results" class="md-nav__link">
     <span class="md-ellipsis">
-      Monologues and Chain of Thought
+      Real Results
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#overview_1" class="md-nav__link">
+  <a href="#ui-components-that-collect-data" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview:
+      UI Components That Collect Data
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#re-reading-improves-reasoning-in-large-language-models" class="md-nav__link">
+    <nav class="md-nav" aria-label="UI Components That Collect Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#follow-up-questions" class="md-nav__link">
     <span class="md-ellipsis">
-      Re-Reading Improves Reasoning in Large Language Models
+      Follow-Up Questions
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#jxnlco-jxnlco_1" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#source-interaction" class="md-nav__link">
     <span class="md-ellipsis">
-      @jxnlco @jxnlco
+      Source Interaction
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#case-study-generating-quotes-for-saas-pricing" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#sharesave-buttons" class="md-nav__link">
     <span class="md-ellipsis">
-      Case study: Generating Quotes for SaaS Pricing
+      Share/Save Buttons
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#monologues-and-chain-of-thought_2" class="md-nav__link">
+  <a href="#data-collection-everywhere" class="md-nav__link">
     <span class="md-ellipsis">
-      Monologues and Chain of Thought
+      Data Collection Everywhere
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#monologues-and-chain-of-thought_3" class="md-nav__link">
+    <nav class="md-nav" aria-label="Data Collection Everywhere">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#perplexity-patterns" class="md-nav__link">
     <span class="md-ellipsis">
-      Monologues and Chain of Thought
+      Perplexity Patterns
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#reiterate-the-relevant-instructions-here" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#chatgpt-patterns" class="md-nav__link">
     <span class="md-ellipsis">
-      [Reiterate the relevant instructions here]
+      ChatGPT Patterns
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#your-answer-to-the-query-goes-here" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#the-universal-truth" class="md-nav__link">
     <span class="md-ellipsis">
-      [Your answer to the query goes here]
+      The Universal Truth
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#incorporating-validators" class="md-nav__link">
+  <a href="#this-weeks-implementation-checklist" class="md-nav__link">
     <span class="md-ellipsis">
-      Incorporating validators
+      This Week's Implementation Checklist
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="This Week&#39;s Implementation Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#immediate-day-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Immediate (Day 1)
+    </span>
+  </a>
+  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#jxnlco-jxnlco_2" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#short-term-this-week" class="md-nav__link">
     <span class="md-ellipsis">
-      @jxnlco @jxnlco
+      Short-term (This Week)
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#incorporating-validators-referencing-content-without-hallucinations" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#medium-term-next-month" class="md-nav__link">
     <span class="md-ellipsis">
-      Incorporating validators: Referencing Content without Hallucinations
+      Medium-term (Next Month)
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#problem" class="md-nav__link">
+  <a href="#next-week-preview-data-analysis" class="md-nav__link">
     <span class="md-ellipsis">
-      Problem:
+      Next Week Preview: Data Analysis
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#incorporating-validators-referencing-content-without-hallucinations_1" class="md-nav__link">
+  <a href="#key-takeaways" class="md-nav__link">
     <span class="md-ellipsis">
-      Incorporating validators: Referencing Content without Hallucinations
+      Key Takeaways
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Key Takeaways">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#design-insights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Insights
+    </span>
+  </a>
+  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#solution" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#technical-insights" class="md-nav__link">
     <span class="md-ellipsis">
-      Solution:
+      Technical Insights
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#food-for-thought-try-this-at-work-or-in-your-own-projects" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#strategic-insights" class="md-nav__link">
     <span class="md-ellipsis">
-      Food for thought: try this at work or in your own projects
+      Strategic Insights
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#work-on-food-for-thought-from-last-few-sessions" class="md-nav__link">
+  <a href="#remember-every-user-interaction-is-an-opportunity" class="md-nav__link">
     <span class="md-ellipsis">
-      Work on food for thought from last few sessions
+      Remember: Every User Interaction is an Opportunity
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#questions-to-ask-yourself" class="md-nav__link">
+  <a href="#thank-you" class="md-nav__link">
     <span class="md-ellipsis">
-      Questions to ask yourself
+      Thank You
     </span>
   </a>
   
@@ -3487,619 +3631,539 @@
 
 
 
-<h1 id="chapter3-slides">Chapter3 Slides</h1>
-<p><em>Extracted from PDF slides using docling</em></p>
-<hr />
+<h1 id="chapter-3-slides">Chapter 3 Slides</h1>
 <h2 id="jxnlco">jxnl.co</h2>
 <p>@jxnlco</p>
 <h2 id="systematically-improving-rag-applications">Systematically Improving RAG Applications</h2>
-<p>Session 3</p>
-<p>The Art of RAG UX: Turning Design into Data</p>
+<p><strong>Session 3:</strong> The Art of RAG UX: Turning Design into Data</p>
 <p>Jason Liu</p>
-<!-- image -->
-
-<h2 id="overview">Overview</h2>
-<h2 id="three-goals-for-today">Three goals for today</h2>
+<hr />
+<h2 id="todays-goals">Today's Goals</h2>
+<p><strong>From Synthetic Data to Real User Feedback</strong></p>
 <ul>
-<li>
+<li>Design systems that collect high-quality user feedback</li>
+<li>Master streaming techniques for better user experience</li>
+<li>Learn prompting and Chain of Thought best practices</li>
+<li>Turn every user interaction into training data</li>
+<li>Bridge the gap between synthetic and real-world data</li>
+</ul>
+<p><strong>Focus: Small UX changes = 5-10x more feedback</strong></p>
+<hr />
+<h2 id="course-context-building-the-data-flywheel">Course Context: Building the Data Flywheel</h2>
+<h3 id="sessions-1-2-foundation">Sessions 1-2: Foundation</h3>
+<ul>
+<li><strong>Session 1:</strong> Synthetic data and evaluations (faking it)</li>
+<li><strong>Session 2:</strong> Fine-tuning on synthetic data (making it)</li>
+</ul>
+<h3 id="session-3-the-bridge-today">Session 3: The Bridge ← Today</h3>
+<ul>
+<li><strong>Goal:</strong> Collect real user data to supplement synthetic work</li>
+<li><strong>Challenge:</strong> How to get users to give us quality feedback</li>
+<li><strong>Opportunity:</strong> Design choices that 5-10x feedback volume</li>
+</ul>
+<h3 id="sessions-4-6-data-driven-optimization">Sessions 4-6: Data-Driven Optimization</h3>
+<ul>
+<li>Use real feedback for segmentation and improvement</li>
+</ul>
+<hr />
+<h2 id="the-feedback-collection-hierarchy">The Feedback Collection Hierarchy</h2>
+<p><strong>Most Important:</strong> Looking at your input data<br />
+<strong>Second Most Important:</strong> Getting user feedback</p>
+<p><strong>The Problem:</strong> Most systems collect terrible feedback
+- Vague thumbs up/down with no context
+- Hidden or hard-to-find feedback buttons
+- No follow-up questions to understand failures
+- Feedback that doesn't correlate with actual problems</p>
+<p><strong>The Opportunity:</strong> Small design changes → massive data improvements</p>
+<hr />
+<h2 id="bad-vs-good-feedback-design">Bad vs Good Feedback Design</h2>
+<h3 id="bad-design-subtle-and-generic">Bad Design: Subtle and Generic</h3>
+<div class="highlight"><pre><span></span><code>[Answer displayed]
+
+                    👍  👎
+                 (tiny buttons, bottom right)
+</code></pre></div>
+<h3 id="good-design-prominent-and-specific">Good Design: Prominent and Specific</h3>
+<div class="highlight"><pre><span></span><code>[Answer displayed]
+
+Did we answer your question today?
+┌─────────────────┬─────────────────┐
+│     👍 YES      │      👎 NO      │
+│   (large btn)   │   (large btn)   │
+└─────────────────┴─────────────────┘
+</code></pre></div>
+<p><strong>Result:</strong> 5x more feedback with better design</p>
+<hr />
+<h2 id="the-power-of-specific-copy">The Power of Specific Copy</h2>
+<h3 id="generic-useless">Generic (Useless)</h3>
+<p><div class="highlight"><pre><span></span><code>👍 Good    👎 Bad
+</code></pre></div>
+<strong>Problem:</strong> "Bad" could mean slow, wrong, too long, confusing, etc.</p>
+<h3 id="specific-actionable">Specific (Actionable)</h3>
+<div class="highlight"><pre><span></span><code>Did we successfully complete your task?
+┌─────────────────────────────────────┐
+│            👍 YES, DONE             │
+└─────────────────────────────────────┘
+┌─────────────────────────────────────┐
+│         👎 NO, DIDN&#39;T HELP          │
+└─────────────────────────────────────┘
+</code></pre></div>
+<p><strong>Benefits:</strong> 
+- Clear success criteria alignment
+- Actionable labels for data analysis
+- Better correlation with business outcomes</p>
+<hr />
+<h2 id="follow-up-questions-for-rich-data">Follow-Up Questions for Rich Data</h2>
+<h3 id="when-user-says-no">When User Says "No"</h3>
+<div class="highlight"><pre><span></span><code>Why wasn&#39;t your question answered?
+
+□ Too slow
+□ Called wrong functions  
+□ Bad response format
+□ Misinterpreted my request
+□ Missing information
+□ Other: ___________
+</code></pre></div>
+<p><strong>Impact:</strong>
+- Segment failure modes
+- Identify specific improvement areas
+- Create targeted evaluation datasets
+- Debug system bottlenecks systematically</p>
+<hr />
+<h2 id="enterprise-feedback-the-slack-integration">Enterprise Feedback: The Slack Integration</h2>
+<h3 id="consumer-pattern">Consumer Pattern</h3>
+<ul>
+<li>Small feedback buttons</li>
+<li>Passive collection</li>
+<li>Volume-based insights</li>
+</ul>
+<h3 id="enterprise-pattern">Enterprise Pattern</h3>
+<ul>
+<li><strong>Direct Slack integration:</strong> Negative feedback → Customer success channel</li>
+<li><strong>Human review:</strong> Manual assessment of each failure</li>
+<li><strong>Eval integration:</strong> Add examples to test suites</li>
+<li><strong>Customer loop:</strong> Report back on improvements in meetings</li>
+<li><strong>Critical:</strong> Let customers know their feedback will improve the product</li>
+<li><strong>Behavior:</strong> Customers need to see feedback leads to action</li>
+</ul>
+<p><strong>Result:</strong> 5x more feedback + stronger customer relationships
+- <strong>Speed:</strong> Fine-tune 5x faster with more data
+- <strong>Trust:</strong> Build trust while collecting data and building evals</p>
+<hr />
+<h2 id="mining-hard-negatives-through-ux">Mining Hard Negatives Through UX</h2>
+<p><strong>The Challenge:</strong> Finding good negative examples for fine-tuning</p>
+<h3 id="traditional-approach">Traditional Approach</h3>
+<div class="highlight"><pre><span></span><code>Anchor: &quot;How to deploy?&quot;
+Positive: deployment_guide.md
+Negative: ??? (random documents)
+</code></pre></div>
+<h3 id="ux-driven-approach-citation-deletion">UX-Driven Approach: Citation Deletion</h3>
+<div class="highlight"><pre><span></span><code>[Generated Answer with Citations]
+📄 deployment_guide.md    [×] Delete
+📄 security_setup.md     [×] Delete  
+📄 api_reference.md      [×] Delete
+
+When user deletes → Hard negative example!
+</code></pre></div>
+<p><strong>Benefit:</strong> User-validated irrelevant content = perfect training data</p>
+<hr />
+<h2 id="facebook-style-feedback-collection">Facebook-Style Feedback Collection</h2>
+<h3 id="infinite-scroll-pattern">Infinite Scroll Pattern</h3>
+<div class="highlight"><pre><span></span><code>People You May Know:
+┌─────────────────┬─────────────────┐
+│  User 1  [Add]  │  User 2  [Add]  │
+└─────────────────┴─────────────────┘
+┌─────────────────┬─────────────────┐
+│  User 3  [Add]  │  User 4  [Add]  │  
+└─────────────────┴─────────────────┘
+                  ...
+</code></pre></div>
+<h3 id="limited-options-pattern">Limited Options Pattern</h3>
+<div class="highlight"><pre><span></span><code>Top 5 Suggestions:
+┌─────────────────────────────────────┐
+│  User A  [Add]              [Skip]  │
+│  User B  [Add]              [Skip]  │
+│  User C  [Add]              [Skip]  │
+└─────────────────────────────────────┘
+</code></pre></div>
+<p><strong>RAG Application:</strong> Show top documents, let users add/remove = training data</p>
+<hr />
+<h2 id="the-dating-app-secret">The Dating App Secret</h2>
+<p><strong>Why Tinder/Hinge Have Great Models:</strong></p>
 <ol>
-<li>Makes sure we're taking actions to collect feedback</li>
+<li><strong>High Volume:</strong> Millions of interactions daily</li>
+<li><strong>Clear Positive/Negative:</strong> Swipe right/left  </li>
+<li><strong>Simple Objective:</strong> Match prediction</li>
+<li><strong>Continuous Feedback:</strong> Every interaction is a label</li>
 </ol>
-</li>
-<li>
+<p><strong>RAG Lesson:</strong> Design interactions that naturally generate training labels</p>
+<p><strong>Examples:</strong>
+- Citation deletion = negative examples
+- Follow-up clicks = positive examples<br />
+- Query refinement = preference learning</p>
+<hr />
+<h2 id="citations-trust-training-data">Citations: Trust + Training Data</h2>
+<h3 id="why-citations-matter">Why Citations Matter</h3>
+<ul>
+<li><strong>User Trust:</strong> "Where did this come from?"</li>
+<li><strong>Verification:</strong> Users can check sources</li>
+<li><strong>Training Data:</strong> Click patterns = relevance signals</li>
+<li><strong>Customer Questions:</strong> "How does AI get this info?" "How do I know it's accurate?"</li>
+<li><strong>Beat them to the punch:</strong> Include citations proactively</li>
+<li><strong>Preview functionality:</strong> Show what data is being used</li>
+</ul>
+<h3 id="simple-citation-implementation">Simple Citation Implementation</h3>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Response</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">content</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">citations</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Citation</span><span class="p">]</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Citation</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">text</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">source_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">title</span><span class="p">:</span> <span class="nb">str</span>
+</code></pre></div>
+<h3 id="advanced-bounding-box-citations">Advanced: Bounding Box Citations</h3>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">BoundingBoxCitation</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">text</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">pdf_path</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">page_number</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">bbox</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span>  <span class="c1"># [x1, y1, x2, y2]</span>
+</code></pre></div>
+<p><strong>Recent Innovation:</strong> Cite bounding boxes of parsed data
+- <strong>Beyond text chunks:</strong> Cite actual PDF locations
+- <strong>Visual citations:</strong> Show boxes over original document
+- <strong>High fidelity:</strong> Reference specific tables, titles, sections
+- <strong>Better trust:</strong> Users see exact source location</p>
+<hr />
+<h2 id="streaming-the-table-stakes-feature">Streaming: The Table Stakes Feature</h2>
+<p><strong>Reality Check:</strong> Only 20% of companies implement streaming well</p>
+<h3 id="why-streaming-matters">Why Streaming Matters</h3>
+<ul>
+<li><strong>User Expectation:</strong> Instant response feeling</li>
+<li><strong>Perceived Performance:</strong> 11% faster with animated progress (same wait time!)</li>
+<li><strong>Retention:</strong> Users tolerate 8 seconds with visual feedback vs instant abandonment</li>
+<li><strong>Abandonment:</strong> Reduces dropout rates significantly</li>
+<li><strong>Trust:</strong> Applications with engaging loading screens report higher satisfaction</li>
+<li><strong>Real Examples:</strong> Facebook's skeleton screens reduced perceived load times</li>
+</ul>
+<h3 id="what-to-stream">What to Stream</h3>
 <ol>
-<li>Expand on what is possible with streaming</li>
+<li><strong>Response Text:</strong> Token by token</li>
+<li><strong>Tool Calls:</strong> Show function execution  </li>
+<li><strong>Interstitials:</strong> "Searching documents...", "Analyzing results..."</li>
+<li><strong>UI Components:</strong> Citations, follow-ups as they're ready</li>
 </ol>
-</li>
-<li>
+<hr />
+<h2 id="streaming-implementation-strategy">Streaming Implementation Strategy</h2>
+<h3 id="the-migration-problem">The Migration Problem</h3>
+<blockquote>
+<p>"Migrating from non-streaming to streaming is a pain in the ass"</p>
+</blockquote>
+<p><strong>Recommendation:</strong> Build streaming from day one
+- <strong>Reality:</strong> Will take weeks out of your dev cycle to upgrade later
+- <strong>Streaming is table stakes:</strong> Users expect it in LLM applications
+- <strong>Build it now:</strong> Much easier than retrofitting later</p>
+<h3 id="technical-approach">Technical Approach</h3>
+<div class="highlight"><pre><span></span><code><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/chat&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">chat_stream</span><span class="p">():</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">generate</span><span class="p">():</span>
+        <span class="c1"># Stream interstitials</span>
+        <span class="k">yield</span> <span class="sa">f</span><span class="s2">&quot;data: </span><span class="si">{</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s1">&#39;type&#39;</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;status&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;message&#39;</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;Searching...&#39;</span><span class="p">})</span><span class="si">}</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+
+        <span class="c1"># Stream tool calls</span>
+        <span class="k">for</span> <span class="n">tool_result</span> <span class="ow">in</span> <span class="n">execute_tools</span><span class="p">():</span>
+            <span class="k">yield</span> <span class="sa">f</span><span class="s2">&quot;data: </span><span class="si">{</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s1">&#39;type&#39;</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;tool&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;data&#39;</span><span class="p">:</span><span class="w"> </span><span class="n">tool_result</span><span class="p">})</span><span class="si">}</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+
+        <span class="c1"># Stream response</span>
+        <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">llm_stream</span><span class="p">():</span>
+            <span class="k">yield</span> <span class="sa">f</span><span class="s2">&quot;data: </span><span class="si">{</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s1">&#39;type&#39;</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;token&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;data&#39;</span><span class="p">:</span><span class="w"> </span><span class="n">token</span><span class="p">})</span><span class="si">}</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+
+    <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">generate</span><span class="p">(),</span> <span class="n">mimetype</span><span class="o">=</span><span class="s1">&#39;text/plain&#39;</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="structured-streaming-with-citations">Structured Streaming with Citations</h2>
+<h3 id="traditional-response">Traditional Response</h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;answer&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The deployment process involves three steps...&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;done&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="structured-streaming-response">Structured Streaming Response</h3>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">StreamingResponse</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">content</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">citations</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Citation</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">follow_ups</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">status</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;generating&quot;</span>
+
+<span class="c1"># Stream updates to each field</span>
+<span class="k">for</span> <span class="n">update</span> <span class="ow">in</span> <span class="n">llm_stream</span><span class="p">():</span>
+    <span class="n">response</span><span class="o">.</span><span class="n">content</span> <span class="o">+=</span> <span class="n">update</span><span class="o">.</span><span class="n">token</span>
+    <span class="k">if</span> <span class="n">update</span><span class="o">.</span><span class="n">citation</span><span class="p">:</span>
+        <span class="n">response</span><span class="o">.</span><span class="n">citations</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">update</span><span class="o">.</span><span class="n">citation</span><span class="p">)</span>
+    <span class="k">yield</span> <span class="n">response</span><span class="o">.</span><span class="n">model_dump</span><span class="p">()</span>
+</code></pre></div>
+<p><strong>Advanced Pattern:</strong> Stream different UI components separately
+- <strong>Content:</strong> Streams token by token
+- <strong>Citations:</strong> Added as they're identified
+- <strong>Follow-ups:</strong> Generated and streamed at the end
+- <strong>Status:</strong> Updates throughout the process</p>
+<p><strong>Result:</strong> Users see progress on multiple fronts, better perceived performance</p>
+<hr />
+<h2 id="slack-bot-feedback-patterns">Slack Bot Feedback Patterns</h2>
+<h3 id="basic-acknowledgment">Basic Acknowledgment</h3>
+<div class="highlight"><pre><span></span><code>User: &quot;How do I deploy the app?&quot;
+Bot: 👀 (eyes reaction - received)
+
+     [Processing...]
+
+     ✅ (checkmark - completed)
+     Response: &quot;To deploy the app...&quot;
+</code></pre></div>
+<h3 id="pre-seeded-feedback">Pre-seeded Feedback</h3>
+<div class="highlight"><pre><span></span><code>Bot Response: &quot;To deploy the app, run...&quot;
+
+👍 👎 ⭐ (auto-added reactions)
+</code></pre></div>
+<p><strong>Impact:</strong> Pre-seeded reactions dramatically increase feedback rates</p>
+<p><strong>Key Insight:</strong> If reactions aren't there, users won't think to give feedback
+- <strong>Behavioral psychology:</strong> Prompt the action you want
+- <strong>"How did I do?"</strong> + pre-seeded reactions = 5-10x more feedback
+- <strong>Simple implementation:</strong> Auto-add emoji reactions to responses</p>
+<p><strong>Data Collection:</strong> Track reaction patterns for continuous improvement
+- <strong>Cache:</strong> Save question-answer pairs as few-shot examples
+- <strong>Analytics:</strong> Monitor which responses get what reactions</p>
+<hr />
+<h2 id="prompting-the-user-not-just-the-ai">Prompting the User, Not Just the AI</h2>
+<p><strong>Insight:</strong> People are lazy and don't know what they want</p>
+<h3 id="bad-approach">Bad Approach</h3>
+<div class="highlight"><pre><span></span><code>[Empty text box]
+&quot;What would you like to know?&quot;
+</code></pre></div>
+<h3 id="good-approach">Good Approach</h3>
+<div class="highlight"><pre><span></span><code>Try asking:
+• &quot;How do I deploy to production?&quot;
+• &quot;What are the security requirements?&quot;
+• &quot;Show me the API documentation&quot;
+• &quot;Help me troubleshoot connection issues&quot;
+</code></pre></div>
+<p><strong>Benefits:</strong>
+- Shows capabilities users didn't know existed
+- Reduces empty/vague queries
+- Generates higher-quality training data
+- <strong>Key insight:</strong> People are lazy and don't know what they want
+- <strong>Discovery:</strong> Show features users wouldn't have thought about
+- <strong>Session 4 preview:</strong> Discover these through conversation data analysis</p>
+<hr />
+<h2 id="chain-of-thought-the-hidden-performance-booster">Chain of Thought: The Hidden Performance Booster</h2>
+<p><strong>Reality:</strong> Massively underutilized by most teams</p>
+<h3 id="performance-impact">Performance Impact</h3>
+<ul>
+<li><strong>10% improvement</strong> in most tasks</li>
+<li><strong>Make or break</strong> difference for production deployment</li>
+<li><strong>Loading interstitial</strong> opportunity with streaming</li>
+<li><strong>Game changer:</strong> With O1/R1 models, reasoning becomes visible</li>
+<li><strong>Multiple purposes:</strong> Better reasoning + loading indicator</li>
+</ul>
+<h3 id="modern-implementation">Modern Implementation</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># With O1/R1 models</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;o1-preview&quot;</span><span class="p">,</span>
+    <span class="n">messages</span><span class="o">=</span><span class="p">[{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">prompt</span><span class="p">}]</span>
+<span class="p">)</span>
+
+<span class="c1"># Stream the reasoning</span>
+<span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">response</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">chunk</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;reasoning&quot;</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;thinking&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">chunk</span><span class="o">.</span><span class="n">content</span><span class="p">}</span>
+    <span class="k">elif</span> <span class="n">chunk</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;response&quot;</span><span class="p">:</span>  
+        <span class="k">yield</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;answer&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">chunk</span><span class="o">.</span><span class="n">content</span><span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="chain-of-thought-for-complex-tasks">Chain of Thought for Complex Tasks</h2>
+<h3 id="use-case-saas-pricing-quotes">Use Case: SaaS Pricing Quotes</h3>
+<div class="highlight"><pre><span></span><code>Context: 15-page pricing document + 1-hour transcript
+Goal: Generate pricing proposal email
+
+Chain of Thought Prompt:
+1. &quot;First, reiterate the key pricing variables from our document&quot;
+2. &quot;Next, identify parts of transcript that mention pricing&quot;  
+3. &quot;Then, find relevant sections of pricing document&quot;
+4. &quot;Finally, reason through the appropriate pricing options&quot;
+</code></pre></div>
+<h3 id="results">Results</h3>
+<ul>
+<li><strong>90% acceptance rate</strong> for generated quotes</li>
+<li><strong>Single prompt</strong> replaces complex multi-agent system</li>
+<li><strong>Easy verification</strong> with structured reasoning</li>
+<li><strong>Rich training data</strong> from sales rep feedback</li>
+</ul>
+<hr />
+<h2 id="the-long-context-chain-of-thought-pattern">The Long Context + Chain of Thought Pattern</h2>
+<h3 id="traditional-rag-approach">Traditional RAG Approach</h3>
+<div class="highlight"><pre><span></span><code>Query → Retrieve chunks → Stuff context → Generate
+</code></pre></div>
+<h3 id="long-context-cot-approach">Long Context + CoT Approach</h3>
+<div class="highlight"><pre><span></span><code><span class="n">system_prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">Context: </span><span class="si">{</span><span class="n">full_pricing_document</span><span class="si">}</span>
+
+<span class="s2">For each query:</span>
+<span class="s2">1. Reiterate relevant pricing variables</span>
+<span class="s2">2. Extract pricing mentions from transcript  </span>
+<span class="s2">3. Reference applicable document sections</span>
+<span class="s2">4. Reason through recommendation</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">user_prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">Transcript: </span><span class="si">{</span><span class="n">full_transcript</span><span class="si">}</span>
+<span class="s2">Generate pricing proposal email.</span>
+<span class="s2">&quot;&quot;&quot;</span>
+</code></pre></div>
+<p><strong>Benefits:</strong> Better reasoning, verifiable citations, simpler architecture</p>
+<hr />
+<h2 id="validation-the-hidden-quality-multiplier">Validation: The Hidden Quality Multiplier</h2>
+<p><strong>The Problem:</strong> Single-step generation isn't enough for high-quality answers</p>
+<h3 id="validation-pattern">Validation Pattern</h3>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">EmailResponse</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">subject</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">body</span><span class="p">:</span> <span class="nb">str</span>
+
+    <span class="nd">@validator</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">validate_urls</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
+        <span class="n">urls</span> <span class="o">=</span> <span class="n">extract_urls</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">urls</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">is_allowed_domain</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid URL domain: </span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">url_exists</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>  <span class="c1"># GET request check</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;URL not found: </span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">v</span>
+</code></pre></div>
+<h3 id="real-results">Real Results</h3>
+<ul>
+<li><strong>Before validation:</strong> 4% failure rate (invalid URLs)</li>
+<li><strong>After validation:</strong> 0% failure rate with retry loop</li>
+<li><strong>After fine-tuning:</strong> Validators never triggered again</li>
+<li><strong>Implementation time:</strong> 3 days to build</li>
+</ul>
+<p><strong>Key Insight:</strong> Validators become evals in production, improving both user experience and model training</p>
+<hr />
+<h2 id="ui-components-that-collect-data">UI Components That Collect Data</h2>
+<h3 id="follow-up-questions">Follow-Up Questions</h3>
+<p><div class="highlight"><pre><span></span><code>[Generated Response]
+
+Continue with:
+• &quot;Tell me more about deployment&quot;
+• &quot;What about security considerations?&quot;  
+• &quot;Show me code examples&quot;
+</code></pre></div>
+<strong>Data:</strong> Track click patterns → improve suggestions</p>
+<h3 id="source-interaction">Source Interaction</h3>
+<p><div class="highlight"><pre><span></span><code>[Response with hoverable citations]
+📄 deployment.md ← Click to preview
+📄 security.md   ← Click to preview
+</code></pre></div>
+<strong>Data:</strong> Preview clicks = relevance signals</p>
+<h3 id="sharesave-buttons">Share/Save Buttons</h3>
+<div class="highlight"><pre><span></span><code>[Response] 
+├── 📋 Copy   ← Usage signal
+├── ⭐ Save   ← High quality signal  
+└── 🔗 Share  ← Validation signal
+</code></pre></div>
+<hr />
+<h2 id="data-collection-everywhere">Data Collection Everywhere</h2>
+<p><strong>Once you start looking, you'll see feedback opportunities everywhere:</strong></p>
+<h3 id="perplexity-patterns">Perplexity Patterns</h3>
+<ul>
+<li>Related questions</li>
+<li>Source hover interactions</li>
+<li>Follow-up suggestions</li>
+<li>Share/copy behaviors</li>
+</ul>
+<h3 id="chatgpt-patterns">ChatGPT Patterns</h3>
+<ul>
+<li>Regeneration requests</li>
+<li>Edit suggestions</li>
+<li>Conversation ratings</li>
+<li>Feature usage tracking</li>
+</ul>
+<p><strong>Exercise:</strong> Audit your favorite AI tools for data collection patterns</p>
+<h3 id="the-universal-truth">The Universal Truth</h3>
+<p><strong>Once you start looking for feedback collection, you'll see it everywhere:</strong>
+- Perplexity: Related questions, source hovers, follow-up suggestions
+- ChatGPT: Regeneration, edit suggestions, conversation ratings
+- Every tool: Multiple touchpoints for data collection</p>
+<p><strong>Your mission:</strong> Identify 5 feedback opportunities in your current application</p>
+<hr />
+<h2 id="this-weeks-implementation-checklist">This Week's Implementation Checklist</h2>
+<h3 id="immediate-day-1">Immediate (Day 1)</h3>
 <ol>
-<li>Give you a small set of prompting and UX tips to improve satisfaction and quality</li>
+<li><strong>Redesign feedback buttons:</strong> Make them large and specific</li>
+<li><strong>Add follow-up questions:</strong> When users give negative feedback  </li>
+<li><strong>Implement basic streaming:</strong> At minimum, token-by-token response</li>
 </ol>
-</li>
-</ul>
-<p>Consider this mostly a survey of other techniques that I apply. This does not fit neatly into the other sections this course.</p>
-<p>The past two sessions have been around: faking data, creating synthetic data, in hopes that one day user data will supplement the work that we're doing. ''</p>
-<p>This session, the goal is to figure out how we can collect that user data and how can we give the users a good experience?</p>
-<!-- image -->
-
-<!-- image -->
-
-<h2 id="collecting-more-feedback">Collecting more feedback</h2>
-<p>Streaming for better user satisfaction</p>
-<p>Streaming for better user satisfaction</p>
-<p>Prompting and Chain of Thought</p>
-<p>Prompting and Chain of Thought</p>
-<h2 id="look-at-your-data">Look at your data</h2>
-<!-- image -->
-
-<!-- image -->
-
-<p>Getting user feedback is the second most important thing you can be doing after looking at your input data</p>
-<!-- image -->
-
-<p>https://claude.site/artifacts/d57936fe-03c1-4815-8511cbdb507d6d9c</p>
-<!-- image -->
-
-<h2 id="dont-be-subtle">Don't be subtle</h2>
-<p>https://claude.site/artifacts/d57936fe-03c1-4815-8511cbdb507d6d9c</p>
-<!-- image -->
-
-<p>@jxnlco @jxnlco</p>
-<p>maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
-<!-- image -->
-
-<h2 id="dont-be-subtle_1">Don't be subtle</h2>
-<p>https://claude.site/artifacts/d57936fe-03c1-4815-8511cbdb507d6d9c</p>
-<!-- image -->
-
-<p>@jxnlco @jxnlco</p>
-<p>maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
-<!-- image -->
-
-<h2 id="dont-be-subtle_2">Don't be subtle</h2>
-<p>https://claude.site/artifacts/d57936fe-03c1-4815-8511-cbdb507d6d9c</p>
-<!-- image -->
-
-<!-- image -->
-
-<p>All this feedback can be used as part of your segmentation and exploration.</p>
-<h2 id="question">Question:</h2>
-<ul>
-<li>· Are there certain question segments that fall victim to these failure modes?</li>
-<li>· Could we predict if a question might lead to a failure mode?</li>
-</ul>
-<h2 id="feedback-from-enterprise-customers">Feedback from enterprise customers</h2>
-<p>All of this works well for consumer cases. For enterprise, we'll have to try a lot harder</p>
-<!-- image -->
-
-<!-- image -->
-
-<p>We need to hear about your negative feedback. It's essential in order for us to improve our application</p>
-<p>What you share with us will be discussed:</p>
-<ul>
-<li>· In a shared channel with Customer Success</li>
-<li>· At our weekly/bi-weekly syncs</li>
-</ul>
-<p>We'll bring up this negative feedback, add it to our evaluation framework (set), and report back to you how much they have improved over time</p>
-<p>This is how we can drive the volume of feedback for our customers while building trust, collecting data, and building evals</p>
-<!-- image -->
-
-<p>we can also use feedback it to improve our re-rankers and our embedding models (session 2).</p>
-<p>For example, re-labeling data if the feedback is about relevance</p>
-<!-- image -->
-
-<h2 id="recall-from-our-fine-tune-section-the-notion-of-triplets">Recall from our fine tune section the notion of triplets</h2>
-<h2 id="so-what-happens-when-we-finetune">So what happens when we finetune?</h2>
-<p>Create triplet examples (anchor and positive have same label, negative has different label)</p>
-<h2 id="before-fine-tuning">Before fine-tuning</h2>
-<h2 id="after-fine-tuning">After fine-tuning</h2>
-<!-- image -->
-
-<!-- image -->
-
-<p>The hardest part of this task is actually about finding the negative examples.</p>
-<h2 id="finding-hard-negatives">Finding Hard Negatives</h2>
-<p>Consider Facebook's people you may know  feature</p>
-<!-- image -->
-
-<p>@jxnlco @jxnlco https://claude.site/artifacts/8bf394073a66-46be-84ff-a042a4161485</p>
-<p>maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
-<h2 id="finding-hard-negatives_1">Finding Hard Negatives</h2>
-<p>Consider Facebook's people you may know  feature</p>
-<!-- image -->
-
-<p>@jxnlco @jxnlco https://claude.site/artifacts/8bf394073a66-46be-84ff-a042a4161485</p>
-<p>maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
-<!-- image -->
-
-<p>There will be numerous ways to collect positive and negative examples.</p>
-<p>I firmly believe that the success of Tinder and Hinge is rooted in the volume of data they collect and their ability to obtain negatives.</p>
-<ul>
-<li>
-<ul>
-<li>Lightweight Interaction (Swipe)</li>
-</ul>
-</li>
-<li>
-<ul>
-<li>Positive and Negative interactions (Like, Dislike)</li>
-</ul>
-</li>
-<li>
-<ul>
-<li>Simple objective (Match)</li>
-</ul>
-</li>
-</ul>
-<p>I believe I can do the same thing with citations, allowing us to collect data, while also building more trust in our system</p>
-<h2 id="building-citations-to-improve-trust">Building Citations To Improve Trust</h2>
-<p>https://claude.site/artifacts/14cbd428-0382-44b8-9353-1c06d830b8dc</p>
-<!-- image -->
-
-<!-- image -->
-
-<h2 id="building-citations">Building Citations :</h2>
-<ul>
-<li>· Allow Preview of Citation text</li>
-<li>· Allow Delete/Regenerate in order to give negative feedback</li>
-</ul>
-<p>maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
-<h2 id="building-citations-to-improve-trust_1">Building Citations To Improve Trust</h2>
-<!-- image -->
-
-<!-- image -->
-
-<p>Provide a prompt</p>
-<h2 id="generate-citations-to-build-satisfaction-and-trust-contd">Generate citations to build satisfaction and trust (cont'd)</h2>
-<h2 id="task">&lt;task&gt;</h2>
-<p>Your task is to provide a summary of the user schedule and important messages , with citations to the original sources . Use the following format for citations: (cited text) [citation number].</p>
-<p>&lt;ltask&gt;</p>
-<p>&lt;given_information&gt;</p>
-<ul>
-<li>[2] The user received an email from jasonacompany.com with the subject "Quarterly Report Due" &lt;litem&gt;</li>
-<li>[1] The user has a calendar event: "Marketing Team Meeting" at 2 PM today.&lt;/item&gt;</li>
-</ul>
-<p>Generate a brief summary that mentions both the meeting and the email, us citations ing</p>
-<!-- image -->
-
-<p>Your response should be in JSON format with a "body" field for the main text and a "citations" array for the citation details.&lt;/stepz</p>
-<!-- image -->
-
-<h2 id="negative-examples-generate-citations-to-build-satisfaction-and-trust-contd">Negative examples: generate citations to build satisfaction and trust (cont'd)</h2>
-<h2 id="task_1">&lt;task&gt;</h2>
-<p>Your task is to provide a summary of the user schedule and important messages , with citations to the original sources . Use the following format for citations: (cited text) [citation number]. &lt;ltask&gt;</p>
-<p>&lt;given_information&gt;</p>
-<ul>
-<li>[2] The user received an email from jasonacompany.com with the subject "Quarterly Report Due" .&lt;/item&gt;</li>
-<li>[1] The user has a calendar event: "Marketing Team Meeting" at 2 PM today.&lt;/item&gt;</li>
-</ul>
-<p>&lt;Igiven_information&gt;</p>
-<p>Generate a brief summary that mentions both the meeting and the email, us citations ing</p>
-<p>Your response should be in JSON format with a "body" field for the main text and a "citations" array for the citation details. &lt;Istepz</p>
-<!-- image -->
-
-<!-- image -->
-
-<p>Use consistent formatting for links and employ IDs as pointers maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
-<table>
-<thead>
-<tr>
-<th>Price (9 May 14, USS):</th>
-<th>129.45</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Target Price (USS):</td>
-<td>170.00</td>
-</tr>
-<tr>
-<td>52-Week Price Range:</td>
-<td>55.28-174.98</td>
-</tr>
-<tr>
-<td>Market Cap. (USS m):</td>
-<td>8,196.0</td>
-</tr>
-<tr>
-<td>Enterprise Value (USS m):</td>
-<td>9,089.5</td>
-</tr>
-</tbody>
-</table>
-<!-- image -->
-
-<!-- image -->
-
-<!-- image -->
-
-<p>Collecting more feedback</p>
-<p>Collecting more feedback</p>
-<h2 id="streaming-for-better-user-satisfaction">Streaming for better user satisfaction</h2>
-<p>Prompting and Chain of Thought</p>
-<p>Prompting and Chain of Thought</p>
-<h2 id="streaming-overview">Streaming Overview</h2>
-<ul>
-<li>
+<h3 id="short-term-this-week">Short-term (This Week)</h3>
 <ol>
-<li>Stream interstitials to explain latency</li>
+<li><strong>Add citations:</strong> Basic markdown links to sources</li>
+<li><strong>Create suggestion prompts:</strong> Show example queries</li>
+<li><strong>Set up feedback logging:</strong> Store all user interactions</li>
 </ol>
-</li>
-<li>
+<h3 id="medium-term-next-month">Medium-term (Next Month)</h3>
 <ol>
-<li>Stream results and  UI</li>
+<li><strong>Slack/webhook integration:</strong> Route feedback to team channels</li>
+<li><strong>Citation deletion UI:</strong> Let users remove irrelevant sources  </li>
+<li><strong>Chain of Thought streaming:</strong> Show reasoning process</li>
 </ol>
-</li>
-<li>
+<hr />
+<h2 id="next-week-preview-data-analysis">Next Week Preview: Data Analysis</h2>
+<p><strong>Session 4 Focus:</strong>
+- Analyze all the feedback you've collected
+- Segment users and queries to find patterns
+- Identify high-impact improvement opportunities<br />
+- Build data-driven product roadmaps</p>
+<p><strong>Connection:</strong> This week's UX improvements become next week's analysis dataset</p>
+<hr />
+<h2 id="key-takeaways">Key Takeaways</h2>
+<h3 id="design-insights">Design Insights</h3>
 <ol>
-<li>Stream tool calls!</li>
+<li><strong>Small changes, big impact</strong> - 5-10x feedback improvement possible</li>
+<li><strong>Specific &gt; Generic</strong> - "Did we complete your task?" vs "Good/Bad"</li>
+<li><strong>Streaming is table stakes</strong> - Build it from day one</li>
+<li><strong>Every interaction is data</strong> - Design for continuous learning</li>
 </ol>
-</li>
-</ul>
-<!-- image -->
-
-<!-- image -->
-
-<p>@jxnlco @jxnlco</p>
-<p>maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
-<h2 id="streaming-overview_1">Streaming overview</h2>
-<h2 id="why-we-should-stream">Why we should stream:</h2>
-<h2 id="lower-perceived-wait-time">Lower perceived wait time</h2>
-<ul>
-<li>· Users perceive animated progress bars as 11% faster, even with equal wait times (Harrison et al.).</li>
-</ul>
-<h2 id="reduce-user-churn-disengagement">Reduce user churn / disengagement</h2>
-<ul>
-<li>· Users will tolerate up to 8 seconds of waiting if given visual feedback reducing abandonment (Nah).</li>
-</ul>
-<h2 id="increase-satisfaction-and-trust">Increase satisfaction and trust</h2>
-<ul>
-<li>· Applications with engaging loading screens often report higher user satisfaction scores.</li>
-<li>· Facebook discovered that skeleton screens reduced perceived load times, resulting in better user retention and engagement.</li>
-</ul>
-<p>Harrison, C., Yeo, Z., &amp; Hudson, S. E. (2010). Faster progress bars: manipulating perceived duration with visual augmentations. Proceedings of the SIGCHI Conference on Human Factors in Computing Systems.</p>
-<p>Nah, F. F. (2004). A study on tolerable waiting time: how long are Web users willing to wait?. Behaviour &amp; Information Technology.</p>
-<!-- image -->
-
-<h2 id="streaming-overview_2">Streaming overview</h2>
-<h2 id="why-we-should-stream_1">Why we should stream:</h2>
-<h2 id="lower-perceived-wait-time_1">Lower perceived wait time</h2>
-<ul>
-<li>· Users perceive animated progress bars as 11% faster, even with equal wait times (Harrison et al.).</li>
-</ul>
-<h2 id="reduce-user-churn-disengagement_1">Reduce user churn / disengagement</h2>
-<ul>
-<li>· Users will tolerate up to 8 seconds of waiting if given visual feedback reducing abandonment (Nah).</li>
-</ul>
-<h2 id="increase-satisfaction-and-trust_1">Increase satisfaction and trust</h2>
-<ul>
-<li>· Applications with engaging loading screens often report higher user satisfaction scores.</li>
-<li>· Facebook discovered that skeleton screens reduced perceived load times, resulting in better user retention and engagement.</li>
-</ul>
-<p>Harrison, C., Yeo, Z., &amp; Hudson, S. E. (2010). Faster progress bars: manipulating perceived duration with visual augmentations. Proceedings of the SIGCHI Conference on Human Factors in Computing Systems.</p>
-<p>Nah, F. F. (2004). A study on tolerable waiting time: how long are Web users willing to wait?. Behaviour &amp; Information Technology.</p>
-<!-- image -->
-
-<h2 id="what-we-can-stream">What we can stream:</h2>
-<ul>
-<li>· Responses (incl. citations or follow-up questions)</li>
-<li>· Arguments of function calls</li>
-<li>· Interstitials</li>
-</ul>
-<h2 id="we-should-assess">We should assess:</h2>
-<ul>
-<li>· Track user feedback to understand user demand</li>
-<li>· Migrating to streaming is complex and challenging</li>
-<li>· Understand how much latency matters in your application</li>
-</ul>
-<p>If you're thinking about it...</p>
-<p>Migrating from non-streaming to streaming is a pain the ass, you either have to build it from the start or it'll take weeks out of your dev cycle to 'upgrade'</p>
-<p>It's worth it.</p>
-<!-- image -->
-
-<p>Stream and parse the response and other attributes (follow-up actions) in real time</p>
-<!-- image -->
-
-<p>https://claude.site/artifacts/8644e9fc-939a-4520-8fa2-58f589f929d3</p>
-<p>@jxnlco @jxnlco maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
-<h2 id="stream-and-parse-the-response-and-other-attributes-follow-up-actions-in-real-time">Stream and parse the response and other attributes (follow-up actions) in real time</h2>
-<!-- image -->
-
-<p>https://claude.site/artifacts/8644e9fc-939a-4520-8fa2-58f589f929d3</p>
-<p>@jxnlco @jxnlco</p>
-<!-- image -->
-
-<!-- image -->
-
-<p>maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
-<p>If you build a lot of follow-up action UI, you can build datasets and again use retrieval to few-shot your prompts to take follow-up actions</p>
-<!-- image -->
-
-<h2 id="interstitials-for-explainability">Interstitials for explainability</h2>
-<!-- image -->
-
-<p>@jxnlco @jxnlco https://claude.site/artifacts/bba5efe9-1d4149ff-a43f-05d3d349e193</p>
-<p>maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
-<h2 id="interstitials-for-explainability_1">Interstitials for explainability</h2>
-<!-- image -->
-
-<p>@jxnlco @jxnlco https://claude.site/artifacts/bba5efe9-1d4149ff-a43f-05d3d349e193</p>
-<h2 id="use-webhooks-server-sent-events-or-a-generator-to-stream">Use webhooks, server-sent events, or a generator to stream</h2>
-<!-- image -->
-
-<p>maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
-<h2 id="stream-tool-arguments-and-render-in-ui">Stream tool arguments and render in UI</h2>
-<!-- image -->
-
-<!-- image -->
-
-<p>https://claude.site/artifacts/1a2a1e9a-e5d7-4511-a299211d70fdeb3b maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
-<h2 id="stream-tool-arguments-and-render-in-ui_1">Stream tool arguments and render in UI</h2>
-<!-- image -->
-
-<h2 id="benefits">Benefits</h2>
-<ul>
-<li>· Create UI that allows users to edit and rerun tools</li>
-<li>o This becomes data collection that we can leverage to create better few-shot examples or fine-tuning data.</li>
-<li>· Enables collection of better feedback data</li>
-<li>· Supports analytics on what questions have additional attributes</li>
-</ul>
-<p>https://claude.site/artifacts/1a2a1e9a-e5d7-4511-a299211d70fdeb3b maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
-<h2 id="simple-example-slack-bots">Simple Example: Slack Bots</h2>
-<p>As an interstitial, the slack integration can react with the eyes emoji to communicate it has seen the user's message</p>
-<!-- image -->
-
-<!-- image -->
-
-<h2 id="simple-example-slack-bots_1">Simple Example: Slack Bots</h2>
-<p>As an interstitial, the slack integration can react with the eyes emoji to communicate it has seen the user's message</p>
-<!-- image -->
-
-<p>Use a checkmark to communicate the bot has finished answering</p>
-<!-- image -->
-
-<p>maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
-<h2 id="simple-example-slack-bots_2">Simple Example: Slack Bots</h2>
-<p>As an interstitial, the slack integration can react with the eyes emoji to communicate it has seen the user's message</p>
-<!-- image -->
-
-<p>Use a checkmark to communicate the bot has finished answering</p>
-<!-- image -->
-
-<p>Pre-fill emoji reactions (thumbs-up, thumbs-down, star) to communicate to the user there are alternative ways to provide feedback</p>
-<!-- image -->
-
-<p>This would be saved as an approved questionanswer pair which could be used in few-shot examples maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
-<p>If you see great examples of using interstitials and streaming I would love to see them on Slack in #random</p>
-<!-- image -->
-
-<!-- image -->
-
-<!-- image -->
-
-<!-- image -->
-
-<p>Collecting more feedback</p>
-<p>Collecting more feedback</p>
-<p>Streaming for better user satisfaction</p>
-<p>Streaming for better user satisfaction</p>
-<h2 id="prompting-and-chain-of-thought">Prompting and Chain of Thought</h2>
-<h2 id="prompting-showcase-capabilities">Prompting: Showcase capabilities</h2>
-<p>Perplexity is always showing off capaibilites trying to guide the user to behavior we perform well in</p>
-<!-- image -->
-
-<p>Example queries</p>
-<p>Literally a list of capabilities, which likely have different prompts</p>
-<!-- image -->
-
-<!-- image -->
-
-<p>In session 4 we'll talk about how to discover them through data analysis maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
-<h2 id="provide-example-and-related-queries">Provide example and related queries</h2>
-<p>Focus on capabilities available and dynamically change prompting based on specific use case</p>
-<!-- image -->
-
-<p>Special UI elements for sources by type (e.g., video), related queries, etc.</p>
-<h2 id="provide-example-and-related-queries_1">Provide example and related queries</h2>
-<p>Focus on capabilities available and dynamically change prompting based on specific use case</p>
-<p>Share and Copy buttons for feedback</p>
-<!-- image -->
-
-<!-- image -->
-
-<p>Special UI elements for sources by type (e.g., video), related queries, etc.</p>
-<p>Related queries</p>
-<h2 id="jxnlco-jxnlco">@jxnlco @jxnlco</h2>
-<p>Once you start looking for interactions that help collect data, you'll see them everywhere</p>
-<h2 id="prompting-reject-work">Prompting: Reject Work</h2>
-<h2 id="reject-work">Reject work.</h2>
-<ul>
-<li>· Just like how we had to perform segmentations, I believe it's crucial to consider ways to enable the language model to reject work</li>
-<li>o Explore if few shotting works well "Here are examples of similar questions we cannot answer..."</li>
-<li>· Give it permission to say no, but follow up, and set expectations</li>
-<li>· If we model the success of this rejection system it's just another precision / recall trade off</li>
-</ul>
-<!-- image -->
-
-<!-- image -->
-
-<h2 id="monologues-and-chain-of-thought">Monologues and Chain of Thought</h2>
-<p>I still see many companies underestimate the power of Chain of Thought</p>
-<ul>
-<li>· Chain of Thought is often a 10% bump in performance</li>
-<li>· It can often make the difference between something that is usable vs. unusable</li>
-<li>· If we wrapped Chain of Thought in either XML or in streaming, we can:</li>
-<li>· Build a dynamic UI that renders the Chain of Thought as separate data</li>
-<li>· Treat the Chain of Thought as some kind of loading interstitial too!</li>
-</ul>
-<!-- image -->
-
-<!-- image -->
-
-<h2 id="monologues-and-chain-of-thought_1">Monologues and Chain of Thought</h2>
-<h2 id="overview_1">Overview:</h2>
-<ul>
-<li>· Leverage the monologue for multiple purposes</li>
-<li>· When dealing with lengthy contexts, the LLM may struggle with recall or fully process instructions</li>
-<li>· Try to prompt the model to reiterate relevant instructions and key text chunks before response generation</li>
-<li>· This is like training an intern who you'd naturally ask them to review and summarize important info</li>
-<li>· Consider including a 're -reading' prompt to improve reasoning</li>
-</ul>
-<h2 id="re-reading-improves-reasoning-in-large-language-models">Re-Reading Improves Reasoning in Large Language Models</h2>
-<p>Xiaohan Xu' Chongyang Tao? Tao Shen' Can Xu? Hongbo Xu' , Guodong Long Jian-guang Lou? 'Institute of Information Engineering; CAS, {xuxiaohan,hbxu}@iie.ac.cn</p>
-<p>2Microsoft Corporation, {chotao, caxu, jlou}@microsoft.com</p>
-<!-- image -->
-
-<h2 id="jxnlco-jxnlco_1">@jxnlco @jxnlco</h2>
-<!-- image -->
-
-<p>maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
-<h2 id="case-study-generating-quotes-for-saas-pricing">Case study: Generating Quotes for SaaS Pricing</h2>
-<p>Overview: We built a capability focused on generating pricing quotes based on a call transcript</p>
-<ul>
-<li>· Detect that a pricing quote was being requested for a call</li>
-<li>· LLM Classifier was measured w/ recall</li>
-<li>· In the prompt, we included the entire one-hour transcript and the entire pricing document</li>
-<li>· By using monologues and Chain of Thought, we asked the LLM to:</li>
-<li>· Reiterate what variables determine the quotes</li>
-<li>· Reiterate relevant parts of the transcript</li>
-<li>· Reiterate parts of the pricing document that were relevant</li>
-<li>· As a result, the LLM reasoned what pricing options might be available before generating a response. With a single prompt, we were able to get our pricing questions answered without complex multi-stage reasoning</li>
-<li>· This allow us to make sure our follow ups were A+ and we had citations for our sales reps to verify the generated quotes. (We paid them to correct quotes, more data!)</li>
-</ul>
-<!-- image -->
-
-<p>Monologues before responses dramatically improve tonality and quality, which can be fine-tuned later without monologues.</p>
-<!-- image -->
-
-<h2 id="monologues-and-chain-of-thought_2">Monologues and Chain of Thought</h2>
-<p>Try to bake as much domain knowledge into these prompts, change prompts based on document types, be specific</p>
-<p>You are an AI assistant tasked with answering queries based on given context.</p>
-<p>Before generating a response, you must use &lt;monologue&gt;&lt;/monologue&gt; tags to reiterate the relevant instructions and the relevant text chunks involved in answering the query.</p>
-<p>Here is the context you will be working with:</p>
-<p>&lt;context&gt;</p>
-<p>{{CONTEXT}}</p>
-<p>&lt;/context&gt;</p>
-<p>When answering a query, follow these steps:</p>
-<ul>
-<li>
+<h3 id="technical-insights">Technical Insights</h3>
 <ol>
-<li>Use &lt;monologue&gt;&lt;/monologue&gt; tags to:</li>
+<li><strong>Chain of Thought works</strong> - 10% performance improvement</li>
+<li><strong>Citations build trust</strong> - And provide training signals</li>
+<li><strong>Structured streaming</strong> - Better UX + richer data collection</li>
+<li><strong>Long context + CoT</strong> - Often beats complex RAG systems</li>
 </ol>
-</li>
-<li>a. Reiterate the relevant instructions under &lt;relevant_instructions&gt; tags</li>
-<li>b. Include the relevant parts of the context under &lt;relevant_context&gt; tags</li>
-<li>
+<h3 id="strategic-insights">Strategic Insights</h3>
 <ol>
-<li>After the monologue, generate your response and enclose it in &lt;response&gt;&lt;/response&gt; tags.</li>
+<li><strong>Feedback design = competitive advantage</strong> - Most teams do this poorly</li>
+<li><strong>User prompting matters</strong> - Show capabilities proactively  </li>
+<li><strong>Enterprise needs human touch</strong> - Slack integrations build relationships</li>
+<li><strong>Data compounds</strong> - Today's UX decisions become tomorrow's models</li>
 </ol>
-</li>
-</ul>
-<h2 id="monologues-and-chain-of-thought_3">Monologues and Chain of Thought</h2>
-<p>Try to bake as much domain knowledge into these prompts, change prompts based on document types, be specific</p>
-<p>You are an AI assistant tasked with answering queries based on given context.</p>
-<p>Before generating a response, you must use &lt;monologue&gt;&lt;/monologue&gt; tags to reiterate the relevant instructions and the relevant text chunks involved in answering the query.</p>
-<p>Here is the context you will be working with:</p>
-<p>&lt;context&gt;</p>
-<p>{{CONTEXT}}</p>
-<p>&lt;/context&gt;</p>
-<p>When answering a query, follow these steps:</p>
-<ul>
-<li>
-<ol>
-<li>Use &lt;monologue&gt;&lt;/monologue&gt; tags to:</li>
-</ol>
-</li>
-<li>a. Reiterate the relevant instructions under &lt;relevant_instructions&gt; tags</li>
-<li>b. Include the relevant parts of the context under &lt;relevant_context&gt; tags</li>
-<li>
-<ol>
-<li>After the monologue, generate your response and enclose it in &lt;response&gt;&lt;/response&gt; tags.</li>
-</ol>
-</li>
-</ul>
-<!-- image -->
-
-<p>Here is the query you need to answer:</p>
-<p>&lt;query&gt;</p>
-<p>{{QUERY}}</p>
-<p>&lt;/query&gt;</p>
-<p>Your output should follow this format:</p>
-<p>&lt;monologue&gt;</p>
-<p>&lt;relevant_instructions&gt;</p>
-<h2 id="reiterate-the-relevant-instructions-here">[Reiterate the relevant instructions here]</h2>
-<p>&lt;/relevant_instructions&gt;</p>
-<p>&lt;relevant_context&gt;</p>
-<p>[Include the relevant parts of the context here]</p>
-<p>&lt;/relevant_context&gt;</p>
-<p>&lt;/monologue&gt;</p>
-<p>&lt;response&gt;</p>
-<h2 id="your-answer-to-the-query-goes-here">[Your answer to the query goes here]</h2>
-<p>&lt;/response&gt;</p>
-<p>Remember to always use the monologue tags before generating your response and ensure that your answer is based on the information provided in the context.</p>
-<p>A single step is often not enough.</p>
-<p>I would consider a validation pattern before going into full-blown multi-stage agents.</p>
-<p>As our LLMS get more powerful, we're going to be able to do more and more within a single prompt. What might take an agent now might be possible with a single prompt in the future.</p>
-<!-- image -->
-
-<h2 id="incorporating-validators">Incorporating validators</h2>
-<ul>
-<li>· In latency-insensitive applications, incorporating validators can help increase user trust and satisfaction in your product</li>
-<li>· Just use evals / tests within the production workflow</li>
-<li>· When we have components like reasoning, citations, and text chunks, we can utilize them in a secondary prompt:</li>
-<li>o Use an external system to evaluate whether the reasoning, citations, and generated response effectively answer the question</li>
-<li>o If they don't, the system provides detailed feedback on what's incorrect, unreasonable, or needs revision</li>
-<li>· Note!</li>
-<li>o These tests could be language models but it could also be unit tests or calls to external APIs</li>
-</ul>
-<h2 id="jxnlco-jxnlco_2">@jxnlco @jxnlco</h2>
-<!-- image -->
-
-<h2 id="incorporating-validators-referencing-content-without-hallucinations">Incorporating validators: Referencing Content without Hallucinations</h2>
-<h2 id="problem">Problem:</h2>
-<ul>
-<li>▪ We wanted a language model to respond to emails with references to case studies and marketing material.</li>
-<li>▪ However, we wanted to ensure that every single link is from the company namespace and that there were no hallucinations or invalid links since our links included UUIDs in the URL.</li>
-</ul>
-<p>@jxnlco @jxnlco</p>
-<!-- image -->
-
-<p>maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
-<h2 id="incorporating-validators-referencing-content-without-hallucinations_1">Incorporating validators: Referencing Content without Hallucinations</h2>
-<h2 id="solution">Solution:</h2>
-<ul>
-<li>· Our validator used a regular expression to find all urls</li>
-<li>· Checked domains for our allow list</li>
-<li>· We made a GET request to each URL to verify 200 status</li>
-<li>· If there were any issues, we would send an error and request regeneration</li>
-<li>· We initially had 4% failure rate, after 1 retry, it was 0%, after finetuning gpt-4o, 0% in a single pass</li>
-</ul>
-<!-- image -->
-
-<p>maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
-<p>Even as of Feb 2025, Deep Research will include fake links to example.com/slug-1-2-3 when given the opportunity</p>
-<h2 id="food-for-thought-try-this-at-work-or-in-your-own-projects">Food for thought: try this at work or in your own projects</h2>
-<!-- image -->
-
-<h2 id="work-on-food-for-thought-from-last-few-sessions">Work on food for thought from last few sessions</h2>
-<ul>
-<li>· Generate synthetic data to test your system</li>
-<li>· Improve representations for each sub-task. Consider preparing triplet data sets, using Cohere re-rankers, or finetuning an embedding model (with sufficient data)</li>
-<li>· Implement user feedback mechanisms</li>
-</ul>
-<!-- image -->
-
-<!-- image -->
-
-<h2 id="questions-to-ask-yourself">Questions to ask yourself</h2>
-<ul>
-<li>· Am I being too subtle with collecting feedback on my product.</li>
-<li>· Could building better citations help me gain user trust and satisfaction?</li>
-<li>o Is there any way for me to leverage the citations to collect more relevancy data?</li>
-<li>· Could I implement better streaming, interstitials, and follow-up actions to make my application feel faster?</li>
-<li>· How can I better promote capabilities and reject other work</li>
-<li>· Can I include monologues and chains of thought to reiterate parts of the prompt and improve reasoning in my system.</li>
-</ul>
+<hr />
+<h2 id="remember-every-user-interaction-is-an-opportunity">Remember: Every User Interaction is an Opportunity</h2>
+<p><strong>The Flywheel:</strong>
+- Better UX → More feedback → Better training data → Better models → Better UX</p>
+<p><strong>Your Goal:</strong> Turn every user session into multiple training examples</p>
+<p><strong>Success Metric:</strong> 5-10x increase in useful feedback volume within 2 weeks</p>
+<p><strong>Reality Check:</strong> Most teams collect terrible feedback because:
+- Buttons are too small and hidden
+- Copy is vague ("good/bad" tells you nothing)
+- No follow-up questions to understand failures
+- Users don't know their feedback matters</p>
+<p><strong>The Fix:</strong> Small design changes = massive data improvements</p>
+<hr />
+<h2 id="thank-you">Thank You</h2>
+<p><strong>Questions for office hours:</strong>
+- How to implement streaming in your tech stack?
+- Best feedback patterns for your specific use case?
+- Chain of Thought prompting strategies?
+- Citation implementation approaches?</p>
+<p><strong>Next week:</strong> Analyzing all that beautiful data you'll collect</p>
+<p><em>maven.com/applied-llms/rag-playbook</em></p>
 
 
 

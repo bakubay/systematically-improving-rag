@@ -626,11 +626,26 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Learning Objectives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#key-insight" class="md-nav__link">
     <span class="md-ellipsis">
       Key Insight
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1036,6 +1051,48 @@
       Additional Resources
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#this-weeks-action-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      This Week's Action Items
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="This Week&#39;s Action Items">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#immediate-actions-start-this-week" class="md-nav__link">
+    <span class="md-ellipsis">
+      Immediate Actions (Start This Week)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategic-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strategic Planning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3318,11 +3375,26 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Learning Objectives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#key-insight" class="md-nav__link">
     <span class="md-ellipsis">
       Key Insight
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3732,6 +3804,48 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#this-weeks-action-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      This Week's Action Items
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="This Week&#39;s Action Items">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#immediate-actions-start-this-week" class="md-nav__link">
+    <span class="md-ellipsis">
+      Immediate Actions (Start This Week)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategic-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strategic Planning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reflection-questions" class="md-nav__link">
     <span class="md-ellipsis">
       Reflection Questions
@@ -3775,6 +3889,16 @@
 
 
 <h1 id="kickstarting-the-data-flywheel-with-synthetic-data">Kickstarting the Data Flywheel with Synthetic Data</h1>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter, you will:</p>
+<ul>
+<li>Understand the common pitfalls that sabotage RAG applications and how to avoid them</li>
+<li>Distinguish between leading and lagging metrics and focus on what you can control</li>
+<li>Combat absence blindness and intervention bias in your development process  </li>
+<li>Build comprehensive evaluation frameworks using synthetic data</li>
+<li>Implement retrieval-focused metrics (precision and recall) before generation quality</li>
+<li>Create your first evaluation dataset and run systematic experiments</li>
+</ul>
 <h3 id="key-insight">Key Insight</h3>
 <p><strong>You can't improve what you can't measure—and you can measure before you have users.</strong> Synthetic data isn't just a stopgap until real users arrive. It's a powerful tool for establishing baselines, testing edge cases, and building the evaluation infrastructure that will power continuous improvement. Start with retrieval metrics (precision and recall), not generation quality, because they're faster, cheaper, and more objective.</p>
 <div class="admonition info">
@@ -4332,6 +4456,69 @@ For each question, explain why it&#39;s challenging and what makes it a good tes
 <li><strong><a href="https://github.com/promptslab/prompttools">Prompttools</a></strong>: Toolkit for testing and evaluating LLM applications</li>
 <li><strong><a href="https://mlflow.org/">MLflow for Experiment Tracking</a></strong>: Open-source platform for managing ML lifecycle</li>
 </ul>
+<h2 id="this-weeks-action-items">This Week's Action Items</h2>
+<p>Based on the content covered, here are your specific tasks:</p>
+<h3 id="immediate-actions-start-this-week">Immediate Actions (Start This Week)</h3>
+<ol>
+<li><strong>Audit Current State</strong></li>
+<li>Count your existing evaluations (aim for 20+ minimum)</li>
+<li>Identify your leading vs lagging metrics</li>
+<li>
+<p>Document your current experiment velocity (how many tests per week?)</p>
+</li>
+<li>
+<p><strong>Create Your First Evaluation Set</strong></p>
+</li>
+<li>Build 10-20 query/expected-chunk pairs for your most common use cases</li>
+<li>Test current retrieval performance to establish baseline</li>
+<li>
+<p>Include easy, medium, and hard difficulty levels</p>
+</li>
+<li>
+<p><strong>Run Your First Experiment</strong></p>
+</li>
+<li>Change one variable (chunk size, embedding model, K value)</li>
+<li>Measure before and after performance with concrete metrics</li>
+<li>Document what you learned and plan next experiment</li>
+</ol>
+<h3 id="technical-implementation">Technical Implementation</h3>
+<ol>
+<li><strong>Build Evaluation Pipeline</strong></li>
+<li>Implement the basic retrieval evaluation function from this chapter</li>
+<li>Set up automated testing that runs with each significant change</li>
+<li>
+<p>Create a simple dashboard or tracking system for metrics</p>
+</li>
+<li>
+<p><strong>Generate Synthetic Data</strong></p>
+</li>
+<li>Use the prompt templates provided to create diverse questions</li>
+<li>Test different query types: factual, inferential, comparative</li>
+<li>
+<p>Validate that your system can retrieve the expected chunks</p>
+</li>
+<li>
+<p><strong>Experiment with Retrieval Settings</strong></p>
+</li>
+<li>Test different K values (3, 5, 10, 20) and measure precision/recall tradeoffs</li>
+<li>Try hybrid search if using LanceDB or similar systems</li>
+<li>Compare different embedding models or reranking approaches</li>
+</ol>
+<h3 id="strategic-planning">Strategic Planning</h3>
+<ol>
+<li><strong>Focus on Leading Metrics</strong></li>
+<li>Track experiment velocity as your primary success measure</li>
+<li>Plan infrastructure investments that increase experiment speed</li>
+<li>
+<p>Shift standup discussions from outcomes to experiment planning</p>
+</li>
+<li>
+<p><strong>Combat Biases</strong></p>
+</li>
+<li>Check retrieval quality before focusing on generation</li>
+<li>Make specific, hypothesis-driven changes rather than random tweaks</li>
+<li>Build systems to capture what you can't currently see</li>
+</ol>
 <h2 id="reflection-questions">Reflection Questions</h2>
 <p>Take a minute to think about:</p>
 <ol>

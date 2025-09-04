@@ -1025,6 +1025,75 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#this-weeks-action-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      This Week's Action Items
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="This Week&#39;s Action Items">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#critical-implementation-decision-do-this-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critical Implementation Decision (Do This First)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#immediate-actions-start-this-week" class="md-nav__link">
+    <span class="md-ellipsis">
+      Immediate Actions (Start This Week)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#platform-specific-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform-Specific Improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-experience-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Experience Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measurement-and-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measurement and Optimization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reflection-questions" class="md-nav__link">
     <span class="md-ellipsis">
       Reflection Questions
@@ -3314,6 +3383,75 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#this-weeks-action-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      This Week's Action Items
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="This Week&#39;s Action Items">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#critical-implementation-decision-do-this-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critical Implementation Decision (Do This First)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#immediate-actions-start-this-week" class="md-nav__link">
+    <span class="md-ellipsis">
+      Immediate Actions (Start This Week)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#platform-specific-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform-Specific Improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-experience-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Experience Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measurement-and-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measurement and Optimization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reflection-questions" class="md-nav__link">
     <span class="md-ellipsis">
       Reflection Questions
@@ -3745,6 +3883,115 @@ Generating response...
 </div>
 <p>If you're at the start of your RAG implementation journey, prioritize streaming first. It's much easier to integrate from the beginning than to retrofit later. Next, focus on meaningful interstitials and skeleton screens. Finally, implement platform-specific optimizations for your particular usage context (web, Slack, mobile, etc.).</p>
 <p>In the next chapter, we'll build on these foundations by exploring quality-of-life improvements like interactive citations, chain-of-thought reasoning, and validation patterns. These elements further enhance the user experience while creating additional opportunities for feedback collection.</p>
+<h2 id="this-weeks-action-items">This Week's Action Items</h2>
+<p>Based on the content covered, here are your specific tasks for overcoming latency and improving perceived performance:</p>
+<h3 id="critical-implementation-decision-do-this-first">Critical Implementation Decision (Do This First)</h3>
+<ol>
+<li><strong>Implement Streaming from Day One</strong></li>
+<li>If you haven't built your system yet: architect for streaming from the start</li>
+<li>If you have an existing system: prioritize streaming migration (it's much harder to retrofit)</li>
+<li>Remember: migrating from non-streaming to streaming can add weeks to your development cycle</li>
+</ol>
+<h3 id="immediate-actions-start-this-week">Immediate Actions (Start This Week)</h3>
+<ol>
+<li><strong>Add Basic Streaming</strong></li>
+<li>Implement token-by-token response streaming for text generation</li>
+<li>Add Server-Sent Events (SSE) or WebSocket support to your backend</li>
+<li>
+<p>Create frontend components that can handle incremental updates</p>
+</li>
+<li>
+<p><strong>Create Meaningful Interstitials</strong></p>
+</li>
+<li>Replace generic "Loading..." with specific progress messages</li>
+<li>Show what the system is doing: "Searching 382,549 documents..."</li>
+<li>
+<p>Include actual metrics when possible (number of documents, time estimates)</p>
+</li>
+<li>
+<p><strong>Implement Progress Indicators</strong></p>
+</li>
+<li>Add animated progress bars or skeleton screens</li>
+<li>Remember: users perceive animated indicators as 11% faster</li>
+<li>Use progress indicators that set clear expectations about what's loading</li>
+</ol>
+<h3 id="technical-implementation">Technical Implementation</h3>
+<ol>
+<li><strong>Stream Structured Data</strong></li>
+<li>Stream citations, follow-up questions, and UI components separately</li>
+<li>Build dynamic interfaces that render components as they become available</li>
+<li>
+<p>Use libraries like Instructor for streaming structured outputs</p>
+</li>
+<li>
+<p><strong>Add Skeleton Screens</strong></p>
+</li>
+<li>Design placeholder UI that mimics your actual content structure</li>
+<li>Show the outline of responses, citations, and follow-up questions before content loads</li>
+<li>
+<p>Research shows skeleton screens significantly reduce perceived load times</p>
+</li>
+<li>
+<p><strong>Optimize Actual Performance</strong></p>
+</li>
+<li>Implement semantic caching for similar queries</li>
+<li>Use approximate nearest neighbor search for large document collections</li>
+<li>Pre-compute and cache embeddings for your document collection</li>
+<li>Consider parallel processing for independent operations</li>
+</ol>
+<h3 id="platform-specific-improvements">Platform-Specific Improvements</h3>
+<ol>
+<li><strong>For Slack Bots</strong></li>
+<li>React with 👀 emoji immediately to acknowledge message receipt</li>
+<li>Use threaded updates to show progress: "Searching... Found 5 docs... Generating..."</li>
+<li>
+<p>Mark completion with ✅ emoji and pre-fill feedback reactions (👍 👎 ⭐)</p>
+</li>
+<li>
+<p><strong>For Web Applications</strong></p>
+</li>
+<li>Show function calls and arguments as they execute</li>
+<li>Stream interstitials that explain what's happening behind the scenes</li>
+<li>Implement "See reasoning" expandable sections for transparency</li>
+</ol>
+<h3 id="user-experience-design">User Experience Design</h3>
+<ol>
+<li>
+<p><strong>Design Engaging Waiting Experiences</strong></p>
+<ul>
+<li>Create domain-specific interstitials (legal: "Reviewing case law...", medical: "Consulting guidelines...")</li>
+<li>Use interstitials to educate users about system capabilities</li>
+<li>Turn waiting time into trust-building opportunities</li>
+</ul>
+</li>
+<li>
+<p><strong>Implement Progressive Loading</strong></p>
+<ul>
+<li>Show high-confidence content first, speculative content later</li>
+<li>Display direct answers before detailed explanations</li>
+<li>Load citations and sources after main response is visible</li>
+</ul>
+</li>
+</ol>
+<h3 id="measurement-and-optimization">Measurement and Optimization</h3>
+<ol>
+<li>
+<p><strong>Track Performance Metrics</strong></p>
+<ul>
+<li>Measure both actual and perceived performance improvements</li>
+<li>Monitor abandonment rates before and after streaming implementation</li>
+<li>Track feedback collection rates (streaming typically increases feedback by 30-40%)</li>
+</ul>
+</li>
+<li>
+<p><strong>A/B Testing for Optimization</strong></p>
+<ul>
+<li>Test different interstitial messages and progress indicators</li>
+<li>Compare skeleton screens vs traditional loading indicators</li>
+<li>Optimize the balance between information and visual appeal in progress messages</li>
+</ul>
+</li>
+</ol>
 <h2 id="reflection-questions">Reflection Questions</h2>
 <ol>
 <li>

@@ -3,7 +3,6 @@
 Script to extract text from all PDF files in the workshops directory using docling.
 """
 
-import os
 from pathlib import Path
 from docling.document_converter import DocumentConverter
 

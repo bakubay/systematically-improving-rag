@@ -850,6 +850,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#the-dating-app-secret-learning-from-high-volume-feedback-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Dating App Secret: Learning from High-Volume Feedback Systems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#enterprise-feedback-collection-with-slack-integration" class="md-nav__link">
     <span class="md-ellipsis">
       Enterprise Feedback Collection with Slack Integration
@@ -1015,6 +1024,57 @@
   <a href="#how-this-chapter-connects-forward" class="md-nav__link">
     <span class="md-ellipsis">
       How This Chapter Connects Forward
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#this-weeks-action-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      This Week's Action Items
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="This Week&#39;s Action Items">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#immediate-actions-start-today" class="md-nav__link">
+    <span class="md-ellipsis">
+      Immediate Actions (Start Today)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-implementation-this-week" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Implementation (This Week)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ux-design-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      UX Design Improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategic-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strategic Planning
     </span>
   </a>
   
@@ -3201,6 +3261,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#the-dating-app-secret-learning-from-high-volume-feedback-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Dating App Secret: Learning from High-Volume Feedback Systems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#enterprise-feedback-collection-with-slack-integration" class="md-nav__link">
     <span class="md-ellipsis">
       Enterprise Feedback Collection with Slack Integration
@@ -3377,6 +3446,57 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#this-weeks-action-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      This Week's Action Items
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="This Week&#39;s Action Items">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#immediate-actions-start-today" class="md-nav__link">
+    <span class="md-ellipsis">
+      Immediate Actions (Start Today)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-implementation-this-week" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Implementation (This Week)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ux-design-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      UX Design Improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategic-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strategic Planning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reflection-questions" class="md-nav__link">
     <span class="md-ellipsis">
       Reflection Questions
@@ -3529,8 +3649,22 @@ Generating response... [██████████] 100%</p>
 <p>Did we find the right information? [Yes] [No]
 ```</p>
 <p>This pattern makes feedback feel like a natural continuation of the interaction rather than an interruption.</p>
+<h3 id="the-dating-app-secret-learning-from-high-volume-feedback-systems">The Dating App Secret: Learning from High-Volume Feedback Systems</h3>
+<p>Before diving into enterprise patterns, let's learn from systems that excel at feedback collection. Dating apps like Tinder and Hinge have remarkably effective models because they:</p>
+<ol>
+<li><strong>Generate high volume</strong>: Millions of interactions daily create massive datasets</li>
+<li><strong>Use clear binary signals</strong>: Swipe right/left provides unambiguous positive/negative feedback</li>
+<li><strong>Have simple objectives</strong>: Match prediction is a clear, measurable goal</li>
+<li><strong>Collect continuous feedback</strong>: Every interaction becomes a training label</li>
+</ol>
+<p><strong>The RAG Application Lesson</strong>: Design interactions that naturally generate training labels:
+- Citation deletion = negative examples for retrieval
+- Follow-up clicks = positive engagement signals<br />
+- Query refinement patterns = preference learning data
+- Copy/save actions = high-quality response indicators</p>
+<p>This principle should guide all your feedback design decisions: every user interaction should potentially generate training data.</p>
 <h3 id="enterprise-feedback-collection-with-slack-integration">Enterprise Feedback Collection with Slack Integration</h3>
-<p>For enterprise applications, especially when working with large customers who have dedicated customer success teams, consider implementing a Slack integration for feedback collection:</p>
+<p>For enterprise applications, especially when working with large customers who have dedicated customer success teams, implement a Slack integration for feedback collection:</p>
 <ol>
 <li>Create a shared Slack channel with customer stakeholders</li>
 <li>Post negative feedback directly to the channel in real-time</li>
@@ -3712,6 +3846,87 @@ includes a penalty fee of $10,000&lt;/cite&gt;.
 <li><strong><a href="../chapter5-1/">Chapter 5</a></strong>: User behavior patterns reveal which specialized retrievers to build</li>
 <li><strong><a href="../chapter6-2/">Chapter 6</a></strong>: Feedback on router decisions improves tool selection</li>
 </ul>
+<h2 id="this-weeks-action-items">This Week's Action Items</h2>
+<p>Based on the content covered, here are your specific tasks for building effective feedback collection:</p>
+<h3 id="immediate-actions-start-today">Immediate Actions (Start Today)</h3>
+<ol>
+<li><strong>Redesign Your Feedback UI</strong></li>
+<li>Change generic "How did we do?" to specific "Did we answer your question?"</li>
+<li>Make feedback buttons large and prominent (not hidden in corners)</li>
+<li>
+<p>Use clear, specific copy that aligns with your success criteria</p>
+</li>
+<li>
+<p><strong>Implement Follow-Up Questions</strong></p>
+</li>
+<li>When users provide negative feedback, ask why: "Was it too slow? Wrong information? Bad format?"</li>
+<li>Create segmented feedback to identify specific failure modes</li>
+<li>
+<p>Use checkboxes for common issues rather than free text</p>
+</li>
+<li>
+<p><strong>Start Collecting Implicit Signals</strong></p>
+</li>
+<li>Track query refinements (users rephrasing immediately after getting results)</li>
+<li>Monitor abandonment patterns and session duration</li>
+<li>Log which citations users click on or hover over</li>
+</ol>
+<h3 id="technical-implementation-this-week">Technical Implementation (This Week)</h3>
+<ol>
+<li><strong>Add Basic Citations</strong></li>
+<li>Implement markdown-style citations linking to source documents</li>
+<li>Make citations interactive (expandable, clickable)</li>
+<li>
+<p>Allow users to delete irrelevant citations and regenerate responses</p>
+</li>
+<li>
+<p><strong>Set Up Feedback Logging Infrastructure</strong></p>
+</li>
+<li>Store all user interactions with timestamps and context</li>
+<li>Log the specific query, retrieved documents, and user response</li>
+<li>
+<p>Prepare data pipeline for analysis in Chapter 4</p>
+</li>
+<li>
+<p><strong>Enterprise Slack Integration</strong> (If Applicable)</p>
+</li>
+<li>Set up webhook to post negative feedback to team Slack channel</li>
+<li>Create shared channels with customer success teams</li>
+<li>Establish process for reviewing and responding to feedback</li>
+</ol>
+<h3 id="ux-design-improvements">UX Design Improvements</h3>
+<ol>
+<li><strong>Design for Data Collection</strong></li>
+<li>Add "more like this" buttons next to helpful responses</li>
+<li>Implement citation deletion UI for hard negative mining</li>
+<li>Create interactive document selection interfaces</li>
+<li>
+<p>Use Facebook-style limited options patterns</p>
+</li>
+<li>
+<p><strong>Build Trust Through Transparency</strong></p>
+</li>
+<li>Show users where information comes from with clear citations</li>
+<li>Explain how their feedback improves the system</li>
+<li>Provide examples of improvements made based on user input</li>
+</ol>
+<h3 id="strategic-planning">Strategic Planning</h3>
+<ol>
+<li><strong>Establish Feedback-Driven Roadmap Process</strong></li>
+<li>Create system for categorizing and prioritizing feedback</li>
+<li>Set up regular review cycles with engineering and product teams</li>
+<li>
+<p>Define metrics for measuring feedback quality and volume</p>
+</li>
+<li>
+<p><strong>Measure and Iterate</strong></p>
+<ul>
+<li>Track feedback collection rates before and after changes</li>
+<li>Aim for 5x improvement in feedback volume with better UI design</li>
+<li>Monitor correlation between feedback and actual system performance</li>
+</ul>
+</li>
+</ol>
 <h2 id="reflection-questions">Reflection Questions</h2>
 <ol>
 <li>
