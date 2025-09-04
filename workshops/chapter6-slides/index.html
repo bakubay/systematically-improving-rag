@@ -6,17 +6,11 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Learn the foundational concepts of creating specialized search indices for different content types">
       
       
-      
-        <link rel="canonical" href="https://567-labs.github.io/systematically-improving-rag/workshops/chapter5-1/">
-      
-      
-        <link rel="prev" href="../chapter4-2/">
+        <link rel="canonical" href="https://567-labs.github.io/systematically-improving-rag/workshops/chapter6-slides/">
       
       
-        <link rel="next" href="../chapter5-2/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +18,7 @@
     
     
       
-        <title>Understanding Specialized Retrieval - Systematically Improving RAG Applications</title>
+        <title>Chapter 6 Slides: Function Calling Done Right - Systematically Improving RAG Applications</title>
       
     
     
@@ -71,11 +65,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Understanding Specialized Retrieval - Systematically Improving RAG Applications" >
+        <meta  property="og:title"  content="Chapter 6 Slides: Function Calling Done Right - Systematically Improving RAG Applications" >
       
-        <meta  property="og:description"  content="Learn the foundational concepts of creating specialized search indices for different content types" >
+        <meta  property="og:description"  content="None" >
       
-        <meta  property="og:image"  content="https://567-labs.github.io/systematically-improving-rag/assets/images/social/workshops/chapter5-1.png" >
+        <meta  property="og:image"  content="https://567-labs.github.io/systematically-improving-rag/assets/images/social/workshops/chapter6-slides.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -83,15 +77,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://567-labs.github.io/systematically-improving-rag/workshops/chapter5-1/" >
+        <meta  property="og:url"  content="https://567-labs.github.io/systematically-improving-rag/workshops/chapter6-slides/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Understanding Specialized Retrieval - Systematically Improving RAG Applications" >
+        <meta  name="twitter:title"  content="Chapter 6 Slides: Function Calling Done Right - Systematically Improving RAG Applications" >
       
-        <meta  name="twitter:description"  content="Learn the foundational concepts of creating specialized search indices for different content types" >
+        <meta  name="twitter:description"  content="None" >
       
-        <meta  name="twitter:image"  content="https://567-labs.github.io/systematically-improving-rag/assets/images/social/workshops/chapter5-1.png" >
+        <meta  name="twitter:image"  content="https://567-labs.github.io/systematically-improving-rag/assets/images/social/workshops/chapter6-slides.png" >
       
     
     
@@ -114,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#understanding-specialized-retrieval-beyond-basic-rag" class="md-skip">
+        <a href="#chapter-6-slides-function-calling-done-right" class="md-skip">
           Skip to content
         </a>
       
@@ -175,7 +169,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Understanding Specialized Retrieval
+              Chapter 6 Slides: Function Calling Done Right
             
           </span>
         </div>
@@ -298,12 +292,10 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../" class="md-tabs__link">
           
   
@@ -421,8 +413,6 @@
       
   
   
-    
-  
   
   
     
@@ -450,19 +440,18 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -479,13 +468,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Workshops
@@ -534,13 +523,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -549,7 +535,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
         
           
-          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
             
   
   
@@ -617,13 +603,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -632,7 +615,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
         
           
-          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
             
   
   
@@ -704,13 +687,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -719,7 +699,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
         
           
-          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
             
   
   
@@ -835,13 +815,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -850,7 +827,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
         
           
-          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
             
   
   
@@ -928,10 +905,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -944,21 +919,20 @@
     
       
       
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
         
           
-          
         
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
         
           
-          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
             
   
   
@@ -971,7 +945,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_7">
             <span class="md-nav__icon md-icon"></span>
             Chapter 5: Multimodal Capabilities
@@ -982,32 +956,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Understanding
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../chapter5-1/" class="md-nav__link">
         
   
   
@@ -1018,233 +970,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#key-insight" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Insight
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Introduction">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#building-on-the-foundation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Building on the Foundation
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-specialization-works" class="md-nav__link">
-    <span class="md-ellipsis">
-      Why Specialization Works
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Why Specialization Works">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#beyond-the-monolithic-approach" class="md-nav__link">
-    <span class="md-ellipsis">
-      Beyond the Monolithic Approach
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-hardware-store-walkthrough" class="md-nav__link">
-    <span class="md-ellipsis">
-      The Hardware Store Walkthrough
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#learning-from-googles-search-evolution" class="md-nav__link">
-    <span class="md-ellipsis">
-      Learning from Google's Search Evolution
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-mathematics-of-specialization" class="md-nav__link">
-    <span class="md-ellipsis">
-      The Mathematics of Specialization
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#two-paths-to-better-retrieval" class="md-nav__link">
-    <span class="md-ellipsis">
-      Two Paths to Better Retrieval
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Two Paths to Better Retrieval">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-materialized-view-concept" class="md-nav__link">
-    <span class="md-ellipsis">
-      The "Materialized View" Concept
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#strategy-1-extracting-metadata" class="md-nav__link">
-    <span class="md-ellipsis">
-      Strategy 1: Extracting Metadata
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#strategy-2-building-synthetic-text-chunks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Strategy 2: Building Synthetic Text Chunks
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#strategy-3-raptor-for-long-documents" class="md-nav__link">
-    <span class="md-ellipsis">
-      Strategy 3: RAPTOR for Long Documents
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Strategy 3: RAPTOR for Long Documents">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-raptor-process" class="md-nav__link">
-    <span class="md-ellipsis">
-      The RAPTOR Process
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#implementation-considerations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Implementation Considerations
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#implementation-tips" class="md-nav__link">
-    <span class="md-ellipsis">
-      Implementation Tips
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Implementation Tips">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#practical-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Practical Example
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#measuring-what-matters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Measuring What Matters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Measuring What Matters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#two-level-measurement-framework" class="md-nav__link">
-    <span class="md-ellipsis">
-      Two-Level Measurement Framework
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1302,13 +1027,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -1317,7 +1039,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8" >
         
           
-          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
             
   
   
@@ -3084,79 +2806,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#key-insight" class="md-nav__link">
+  <a href="#session-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Insight
+      Session Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
+  <a href="#building-on-previous-sessions" class="md-nav__link">
     <span class="md-ellipsis">
-      Introduction
+      Building on Previous Sessions
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Introduction">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#building-on-the-foundation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Building on the Foundation
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-specialization-works" class="md-nav__link">
+  <a href="#case-study-blueprint-search-index" class="md-nav__link">
     <span class="md-ellipsis">
-      Why Specialization Works
+      Case Study: Blueprint Search Index
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Why Specialization Works">
+    <nav class="md-nav" aria-label="Case Study: Blueprint Search Index">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#beyond-the-monolithic-approach" class="md-nav__link">
+  <a href="#step-1-extract-into-index" class="md-nav__link">
     <span class="md-ellipsis">
-      Beyond the Monolithic Approach
+      Step 1: Extract into Index
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-hardware-store-walkthrough" class="md-nav__link">
+  <a href="#step-2-define-the-search-tool" class="md-nav__link">
     <span class="md-ellipsis">
-      The Hardware Store Walkthrough
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#learning-from-googles-search-evolution" class="md-nav__link">
-    <span class="md-ellipsis">
-      Learning from Google's Search Evolution
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-mathematics-of-specialization" class="md-nav__link">
-    <span class="md-ellipsis">
-      The Mathematics of Specialization
+      Step 2: Define the Search Tool
     </span>
   </a>
   
@@ -3168,96 +2857,48 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#two-paths-to-better-retrieval" class="md-nav__link">
+  <a href="#core-philosophy-you-are-a-framework-developer" class="md-nav__link">
     <span class="md-ellipsis">
-      Two Paths to Better Retrieval
+      Core Philosophy: You Are a Framework Developer
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Two Paths to Better Retrieval">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-three-layer-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Three-Layer Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Three-Layer Architecture">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-materialized-view-concept" class="md-nav__link">
+  <a href="#1-interface-layer-defining-tools" class="md-nav__link">
     <span class="md-ellipsis">
-      The "Materialized View" Concept
+      1. Interface Layer: Defining Tools
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#strategy-1-extracting-metadata" class="md-nav__link">
+  <a href="#2-implementation-layer-backend-logic" class="md-nav__link">
     <span class="md-ellipsis">
-      Strategy 1: Extracting Metadata
+      2. Implementation Layer: Backend Logic
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#strategy-2-building-synthetic-text-chunks" class="md-nav__link">
+  <a href="#3-gateway-layer-router-and-orchestration" class="md-nav__link">
     <span class="md-ellipsis">
-      Strategy 2: Building Synthetic Text Chunks
+      3. Gateway Layer: Router and Orchestration
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#strategy-3-raptor-for-long-documents" class="md-nav__link">
-    <span class="md-ellipsis">
-      Strategy 3: RAPTOR for Long Documents
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Strategy 3: RAPTOR for Long Documents">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-raptor-process" class="md-nav__link">
-    <span class="md-ellipsis">
-      The RAPTOR Process
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#implementation-considerations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Implementation Considerations
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#implementation-tips" class="md-nav__link">
-    <span class="md-ellipsis">
-      Implementation Tips
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Implementation Tips">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#practical-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Practical Example
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -3267,19 +2908,163 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#measuring-what-matters" class="md-nav__link">
+  <a href="#team-organization-benefits" class="md-nav__link">
     <span class="md-ellipsis">
-      Measuring What Matters
+      Team Organization Benefits
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Measuring What Matters">
+    <nav class="md-nav" aria-label="Team Organization Benefits">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#two-level-measurement-framework" class="md-nav__link">
+  <a href="#interface-team" class="md-nav__link">
     <span class="md-ellipsis">
-      Two-Level Measurement Framework
+      Interface Team
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Team
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gateway-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gateway Team
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leveraging-parallel-tool-calling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leveraging Parallel Tool Calling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-systematic-approach-same-process-applied-again" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Systematic Approach: Same Process, Applied Again
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Systematic Approach: Same Process, Applied Again">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-test-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Create Test Dataset
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-focus-on-recall-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Focus on Recall Metrics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-few-shot-example-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Few-Shot Example System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dynamic Few-Shot Example System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v0-hard-coded-examples-10-40-examples-per-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      V0: Hard-coded Examples (10-40 examples per tool)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-search-based-example-retrieval" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced: Search-Based Example Retrieval
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-complete-rag-improvement-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Complete RAG Improvement System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Complete RAG Improvement System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-synthetic-data-flywheel" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Synthetic Data Flywheel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-establish-recall-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Establish Recall Metrics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-iterate-on-few-shot-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Iterate on Few-Shot Examples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-build-example-search-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Build Example Search System
     </span>
   </a>
   
@@ -3306,278 +3091,435 @@
 
 
 
-<h1 id="understanding-specialized-retrieval-beyond-basic-rag">Understanding Specialized Retrieval: Beyond Basic RAG</h1>
-<h3 id="key-insight">Key Insight</h3>
-<p><strong>Different queries need different retrievers—one-size-fits-all is why most RAG systems underperform.</strong> A search for "SKU-12345" needs exact matching, "compare pricing plans" needs structured comparison, and "how do I reset my password" needs procedural knowledge. Build specialized indices for each pattern and let a router decide. This is how Google evolved: Maps for location, Images for visual, YouTube for video.</p>
-<div class="admonition info">
-<p class="admonition-title">Learn the Complete RAG Playbook</p>
-<p>All of this content comes from my <a href="https://maven.com/applied-llms/rag-playbook?promoCode=EBOOK">Systematically Improving RAG Applications</a> course. Readers get <strong>20% off</strong> with code EBOOK. Join 500+ engineers who've transformed their RAG systems from demos to production-ready applications.</p>
-</div>
-<h2 id="introduction">Introduction</h2>
-<p>We've covered the basics: the RAG playbook, synthetic data generation, fine-tuning, user feedback collection, and segmentation. Now let's talk about something that actually makes a big difference in production systems—building specialized search indices for different types of content.</p>
-<h3 id="building-on-the-foundation">Building on the Foundation</h3>
-<ul>
-<li><strong><a href="../chapter1/">Chapter 1</a></strong>: Evaluation metrics for each specialized retriever</li>
-<li><strong><a href="../chapter2/">Chapter 2</a></strong>: Fine-tuning embeddings for specific domains</li>
-<li><strong><a href="../chapter3-1/">Chapter 3</a></strong>: Collecting feedback on retrieval quality</li>
-<li><strong><a href="../chapter4-2/">Chapter 4</a></strong>: Identifying which capabilities need specialization</li>
-</ul>
-<p>The basic idea is straightforward: different types of queries need different retrieval approaches. A search for a specific product number works differently than a search for "durable power tools" or "items under 50 pounds". Once you accept this, the path forward becomes clearer.</p>
-<h2 id="why-specialization-works">Why Specialization Works</h2>
-<h3 id="beyond-the-monolithic-approach">Beyond the Monolithic Approach</h3>
-<p>Most RAG systems start with one big index that tries to handle everything. This works until it doesn't—usually when you realize your users are asking wildly different types of questions that need different handling.</p>
-<p><strong>Example: Diverse Query Needs</strong></p>
-<h3 id="the-hardware-store-walkthrough">The Hardware Store Walkthrough</h3>
-<p>Let's walk through a concrete example with a hardware store's knowledge base to understand how different query types need different retrieval approaches:</p>
-<p><strong>Query Type 1: Exact Product Lookup</strong>
-- <em>User asks</em>: "Do you have DeWalt DCD771C2 in stock?"
-- <em>Best approach</em>: <strong>Lexical search</strong> - exact string matching on product codes
-- <em>Why</em>: Product numbers, SKUs, and model numbers need precise matching, not semantic understanding</p>
-<p><strong>Query Type 2: Conceptual Search</strong> 
-- <em>User asks</em>: "What's the most durable power drill for heavy construction work?"
-- <em>Best approach</em>: <strong>Semantic search</strong> - understanding concepts like "durable," "heavy-duty," "construction"
-- <em>Why</em>: This requires understanding relationships between concepts, not exact matches</p>
-<p><strong>Query Type 3: Attribute Filtering</strong>
-- <em>User asks</em>: "Show me all drills under 5 pounds with at least 18V battery"
-- <em>Best approach</em>: <strong>Structured query</strong> - filtering on weight and voltage attributes
-- <em>Why</em>: This needs precise numerical filtering and structured data operations</p>
-<p>Each of these queries hits the same hardware store database, but they need fundamentally different search approaches. A single "one-size-fits-all" system would handle all three poorly.</p>
-<h3 id="learning-from-googles-search-evolution">Learning from Google's Search Evolution</h3>
-<p>The best way to understand this is to look at Google's evolution. Originally, Google was just web search—one massive index trying to handle everything. But over time, they recognized that different content types needed fundamentally different approaches:</p>
-<ul>
-<li><strong>Google Maps</strong> = Specialized for locations, routes, and geographical queries</li>
-<li><strong>Google Images</strong> = Optimized for visual content with computer vision</li>
-<li><strong>YouTube</strong> = Built for video with engagement signals and temporal understanding  </li>
-<li><strong>Google Shopping</strong> = Designed for products with pricing, availability, and commerce</li>
-<li><strong>Google Scholar</strong> = Tailored for academic papers with citation networks</li>
-</ul>
-<p>Each system isn't just "Google search filtered by type"—they use completely different algorithms, ranking signals, and user interfaces optimized for their specific content.</p>
-<p><strong>The crucial insight</strong>: Google didn't abandon general web search. They built specialized tools and then developed routing logic to automatically send queries to the right system. Search "pizza near me" and you get Maps. Search "how to make pizza" and you might get YouTube videos.</p>
-<p>The real breakthrough came when they figured out how to automatically route queries to the right specialized tool. We can apply this exact same pattern to RAG systems.</p>
-<blockquote>
-<p>"I've been building separate indices for years without realizing that's what I was doing. This framework just helps me do it more systematically."</p>
-<p>— Previous Cohort Participant</p>
-</blockquote>
-<h3 id="the-mathematics-of-specialization">The Mathematics of Specialization</h3>
-<p>The math backs this up: when you have distinct query types, specialized models beat general-purpose ones. You see this pattern everywhere in ML—mixture of experts, task decomposition, modular systems. It's not just theory; it's how things actually work better.</p>
-<div class="highlight"><pre><span></span><code>graph TD
-    A[Monolithic Approach] --&gt; B[One-size-fits-all]
-    C[Specialized Approach] --&gt; D[Domain-specific Models]
-
-    B --&gt;|Limited Performance| E[General Coverage]
-    D --&gt;|Optimized Performance| F[Targeted Coverage]
-
-    F --&gt; G[Better Overall Results]
-    E --&gt; G
-
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style C fill:#bbf,stroke:#333,stroke-width:2px
-</code></pre></div>
-<p>Specialized indices also make your life easier organizationally:</p>
-<ul>
-<li>Teams can work on specific problems without breaking everything else</li>
-<li>You can add new capabilities without rebuilding the whole system</li>
-<li>Different teams can optimize their piece without coordination overhead</li>
-</ul>
-<blockquote>
-<p>"Building specialized indices isn't just about performance—it's about creating a sustainable path for continuous improvement."</p>
-<p>— Industry Perspective</p>
-</blockquote>
-<h2 id="two-paths-to-better-retrieval">Two Paths to Better Retrieval</h2>
-<p>When improving retrieval capabilities for RAG applications, two complementary strategies emerge. Think of them as opposite sides of the same coin—one extracting structure from the unstructured, the other creating retrieval-optimized representations of structured data.</p>
-<p>Here's the core idea: both strategies create AI-processed views of your data—either by extracting structure from text or by rewriting structured data as searchable text.</p>
-<h3 id="the-materialized-view-concept">The "Materialized View" Concept</h3>
-<p>Think of specialized indices as <strong>materialized views</strong> of your existing data, but processed by AI rather than traditional SQL operations. Just like database materialized views precompute complex queries for faster access, specialized AI indices preprocess your data into forms optimized for specific types of retrieval.</p>
-<p><strong>Traditional Materialized View:</strong>
-- SQL precomputes complex joins and aggregations
-- Trades storage space for query speed
-- Updates when source data changes</p>
-<p><strong>AI Materialized View:</strong>
-- AI precomputes structured extractions or synthetic representations<br />
-- Trades processing time and storage for retrieval accuracy
-- Updates when source documents change or AI models improve</p>
-<p>This framing is powerful because it helps you think systematically about what views to create and maintain. You wouldn't create a database materialized view without understanding what queries it optimizes for—the same logic applies to specialized AI indices.</p>
-<h3 id="strategy-1-extracting-metadata">Strategy 1: Extracting Metadata</h3>
-<p>First approach: pull structured data out of your text. Instead of treating everything as a blob of text, identify the structured information hiding in there that would make search work better.</p>
-<p><strong>Metadata Extraction Examples:</strong></p>
-<ul>
-<li>In finance applications, distinguishing between fiscal years and calendar years</li>
-<li>For legal document systems, classifying contracts as signed or unsigned and extracting payment dates and terms</li>
-<li>When processing call transcripts, categorizing them by type (job interviews, stand-ups, design reviews)</li>
-<li>For product documentation, identifying specifications, compatibility information, and warranty details</li>
-</ul>
-<p>Ask yourself: what structured data is buried in this text that users actually want to filter by? Once you extract it, you can use regular databases for filtering—way more powerful than vector search alone.</p>
-<p><strong>Practical Application:</strong> When consulting with financial clients, we discovered that simply being able to distinguish between fiscal years and calendar years dramatically improved search accuracy for financial metrics. Similarly, for legal teams, identifying whether a contract was signed or unsigned allowed for immediate filtering that saved hours of manual review.</p>
-<div class="admonition example">
-<p class="admonition-title">Financial Metadata Model</p>
-</div>
-<div class="highlight"><pre><span></span><code>```python
-from pydantic import BaseModel
-from datetime import date
-from typing import Optional, List
-
-class FinancialStatement(BaseModel):
-    &quot;&quot;&quot;Structured representation of a financial statement document.&quot;&quot;&quot;
-    company: str
-    period_ending: date
-    revenue: float
-    net_income: float
-    earnings_per_share: float
-    fiscal_year: bool = True  # Is this fiscal year (vs calendar year)?
-    # Additional fields that might be valuable:
-    sector: Optional[str] = None
-    currency: str = &quot;USD&quot;
-    restated: bool = False  # Has this statement been restated?
-
-def extract_financial_data(document_text: str) -&gt; FinancialStatement:
-    &quot;&quot;&quot;
-    Extract structured financial data from document text using LLM.
-
-    Args:
-        document_text: Raw text from financial document
-
-    Returns:
-        Structured FinancialStatement object with extracted data
-    &quot;&quot;&quot;
-    # Define a structured extraction prompt
-    system_prompt = &quot;&quot;&quot;
-    Extract the following financial information from the document:
-    - Company name
-    - Period end date
-    - Whether this is a fiscal year report (vs calendar year)
-    - Revenue amount (with currency)
-    - Net income amount
-    - Earnings per share
-    - Business sector
-    - Whether this statement has been restated
-
-    Format your response as a JSON object with these fields.
-    &quot;&quot;&quot;
-
-    # Use LLM to extract the structured information
-    # Implementation depends on your LLM framework
-    extracted_json = call_llm(system_prompt, document_text)
-
-    # Parse the extracted JSON into our Pydantic model
-    return FinancialStatement.parse_raw(extracted_json)
-```
-</code></pre></div>
-<p>By extracting these structured elements from quarterly reports, organizations can enable precise filtering and comparison that would have been impossible with text-only search. For instance, you can easily query "Show me all companies in the tech sector with revenue growth over 10% in fiscal year 2024" or "Find all restated financial statements from the last quarter."</p>
-<h3 id="strategy-2-building-synthetic-text-chunks">Strategy 2: Building Synthetic Text Chunks</h3>
-<p>Second approach: take your data (structured or not) and generate text chunks specifically designed to match how people search. These synthetic chunks act as better search targets that point back to your original content.</p>
-<p><strong>Synthetic Text Applications:</strong></p>
-<ul>
-<li>For image collections: Generate detailed descriptions capturing searchable aspects</li>
-<li>For research interviews: Extract common questions and answers to form an easily searchable FAQ</li>
-<li>For numerical data: Create natural language descriptions of key trends and outliers</li>
-<li>For product documentation: Generate comprehensive feature summaries that anticipate user queries</li>
-<li>For customer service transcripts: Create problem-solution pairs that capture resolution patterns</li>
-</ul>
-<p>The synthetic chunks work as a bridge—they're easier to search than your original content but point back to the source when you need the full details. Done right, you get better search without losing information.</p>
-<h3 id="strategy-3-raptor-for-long-documents">Strategy 3: RAPTOR for Long Documents</h3>
-<p>When dealing with extremely long documents (1,500-2,000+ pages), traditional chunking strategies often fail to capture information that spans multiple sections. The RAPTOR (Recursive Abstractive Processing for Tree-Organized Retrieval) approach offers a sophisticated solution.</p>
-<p><strong>Production Insight:</strong> From office hours: "For documents with 1,500-2,000 pages, the RAPTOR approach with clustering and summarization shows significant promise. After chunking documents, recluster the chunks to identify concepts that span multiple pages, then summarize those clusters for retrieval."</p>
-<h4 id="the-raptor-process">The RAPTOR Process</h4>
-<ol>
-<li><strong>Initial Chunking</strong>: Start with page-level or section-level chunks</li>
-<li><strong>Embedding &amp; Clustering</strong>: Embed chunks and cluster semantically similar content</li>
-<li><strong>Hierarchical Summarization</strong>: Create summaries at multiple levels of abstraction</li>
-<li><strong>Tree Structure</strong>: Build a retrieval tree from detailed chunks to high-level summaries</li>
-</ol>
-<div class="admonition example">
-<p class="admonition-title">Legal Document Processing</p>
-<p>A tax law firm implemented RAPTOR for their regulatory documents:</p>
-<ul>
-<li>Laws on pages 1-30, exemptions scattered throughout pages 50-200</li>
-<li>Clustering identified related exemptions across different sections</li>
-<li>Summaries linked laws with all relevant exemptions</li>
-<li>One-time processing cost: $10 in LLM calls per document</li>
-<li>Result: 85% improvement in finding complete legal information</li>
-</ul>
-</div>
-<h4 id="implementation-considerations">Implementation Considerations</h4>
-<p><strong>When to Use RAPTOR:</strong></p>
-<ul>
-<li>Documents where related information is scattered across many pages</li>
-<li>Content with hierarchical structure (laws/exemptions, rules/exceptions)</li>
-<li>Long-form documents that don't change frequently (worth the preprocessing cost)</li>
-<li>Cases where missing related information has high consequences</li>
-</ul>
-<p><strong>Cost-Benefit Analysis:</strong></p>
-<ul>
-<li><strong>Upfront Cost</strong>: $5-20 in LLM calls per document for clustering and summarization</li>
-<li><strong>Processing Time</strong>: 10-30 minutes per document depending on length</li>
-<li><strong>Benefit</strong>: Dramatically improved recall for cross-document concepts</li>
-<li><strong>ROI</strong>: Justified for documents accessed frequently or with high-value queries</li>
-</ul>
-<h3 id="implementation-tips">Implementation Tips</h3>
-<ol>
-<li>Test on a subset first to validate clustering quality</li>
-<li>Store cluster relationships for explainability</li>
-<li>Consider incremental updates for living documents</li>
-<li>Monitor which summary levels get used most</li>
-</ol>
-<h4 id="practical-example">Practical Example</h4>
-<p>For a construction company's specification documents:</p>
-<div class="highlight"><pre><span></span><code>Original Structure:
-- General requirements (pages 1-50)
-- Specific materials (pages 51-300)
-- Installation procedures (pages 301-500)
-- Exceptions and special cases (scattered throughout)
-
-After RAPTOR Processing:
-- Clustered related materials with their installation procedures
-- Linked all exceptions to their base requirements
-- Created summaries at project, section, and detail levels
-- Reduced average retrieval attempts from 5.2 to 1.3 per query
-</code></pre></div>
-<p>RAPTOR basically turns long document search into a hierarchy problem. Yes, it costs more upfront to process documents this way, but for complex queries that span multiple sections, the improvement in retrieval accuracy is worth it.</p>
-<p>For implementation details, see:</p>
-<ul>
-<li><a href="https://arxiv.org/abs/2401.18059">Original RAPTOR paper</a></li>
-<li><a href="https://docs.llamaindex.ai/en/stable/examples/retrievers/raptor.html">LlamaIndex RAPTOR implementation</a></li>
-</ul>
-<h2 id="measuring-what-matters">Measuring What Matters</h2>
-<p>With specialized indices, you need to measure two things:</p>
-<h3 id="two-level-measurement-framework">Two-Level Measurement Framework</h3>
-<div class="highlight"><pre><span></span><code>1. Are we selecting the right retrieval method for each query?
-2. Is each retrieval method finding the right information?
-</code></pre></div>
-<p>Your overall success rate is just multiplication:</p>
-<p><strong>Performance Formula:</strong></p>
-<p>P(finding correct data) = P(selecting correct retriever) × P(finding correct data | correct retriever)</p>
-<p>This formula is incredibly powerful for systematic debugging and optimization. When your overall performance is low, the multiplication helps you diagnose exactly where the problem lies:</p>
-<p><strong>Debugging Scenarios:</strong></p>
-<ul>
-<li><strong>High routing accuracy (90%) × Low retrieval accuracy (40%) = 36% overall</strong></li>
-<li><em>Problem</em>: The router works well, but individual retrievers need improvement</li>
-<li>
-<p><em>Solution</em>: Focus on fine-tuning embeddings, improving chunks, or expanding training data for specific retrievers</p>
-</li>
-<li>
-<p><strong>Low routing accuracy (50%) × High retrieval accuracy (90%) = 45% overall</strong>  </p>
-</li>
-<li><em>Problem</em>: Retrievers work when called, but the router makes poor choices</li>
-<li>
-<p><em>Solution</em>: Improve router training, add more few-shot examples, or clarify tool descriptions</p>
-</li>
-<li>
-<p><strong>Medium performance on both (70% × 70%) = 49% overall</strong></p>
-</li>
-<li><em>Problem</em>: System-wide issues affecting both components</li>
-<li><em>Solution</em>: May need fundamental architecture changes or better query understanding</li>
-</ul>
-<p>The key insight is that these problems require completely different solutions. Without this breakdown, you'd waste time optimizing the wrong component.</p>
-<div class="admonition tip">
-<p class="admonition-title">Diagnostic Example</p>
-</div>
-<p>If you find that your system correctly routes 95% of queries to the appropriate retriever, but those retrievers only find relevant information 60% of the time, your priority should be improving retrieval quality rather than router accuracy.</p>
-<p>Measuring both levels tells you where to focus your efforts.</p>
-<div class="admonition tip">
-<p class="admonition-title">Next Steps</p>
-</div>
-<p>In <a href="../chapter6-1/">Chapter 6</a>, we'll explore how to bring these specialized components together through intelligent routing, creating a unified system that seamlessly directs queries to the appropriate retrievers.</p>
+<h1 id="chapter-6-slides-function-calling-done-right">Chapter 6 Slides: Function Calling Done Right</h1>
+<p><em>Session 6 of Systematically Improving RAG Applications</em></p>
+<p><strong>Jason Liu (@jxnlco) - jxnl.co</strong></p>
 <hr />
+<h2 id="session-overview">Session Overview</h2>
+<p><strong>Today's Focus: Combining Search Indices into a Cohesive Application</strong></p>
+<ul>
+<li><strong>Query routing vs. retrieval indices</strong></li>
+<li><strong>Query routing main challenges and solutions</strong> </li>
+<li><strong>Testing and evaluation strategies</strong></li>
+<li><strong>UI considerations for human-AI interaction</strong></li>
+<li><strong>Food for thought and practical applications</strong></li>
+<li><strong>Course conclusion and key takeaways</strong></li>
+</ul>
+<p><strong>Goal:</strong> Move from individual search indices to a unified system that intelligently routes queries to the right tools.</p>
+<hr />
+<h2 id="building-on-previous-sessions">Building on Previous Sessions</h2>
+<p><strong>What we've learned so far:</strong>
+- Sessions 4-5: Building individual search indices (documents, images, text-to-SQL)
+- Two main improvement strategies:
+  1. <strong>Structured Data Extraction</strong>: Turn chunk data into structured data
+  2. <strong>Text Summaries</strong>: Create comprehensive summaries for full-text/embedding search</p>
+<p><strong>Today:</strong> How to combine these indices into a cohesive application through intelligent query routing.</p>
+<hr />
+<h2 id="case-study-blueprint-search-index">Case Study: Blueprint Search Index</h2>
+<p><strong>Hypothetical scenario:</strong> Construction company needs to search blueprint images</p>
+<h3 id="step-1-extract-into-index">Step 1: Extract into Index</h3>
+<ul>
+<li><strong>Blueprint Extractor</strong>: Extracts description and date from OCR'd blueprint images</li>
+<li><strong>Database Storage</strong>: Structured data with searchable fields</li>
+<li><strong>New Database</strong>: Now we can query blueprints systematically</li>
+</ul>
+<h3 id="step-2-define-the-search-tool">Step 2: Define the Search Tool</h3>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">SearchBlueprint</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">description</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">start_date</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">end_date</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">query</span> <span class="o">=</span> <span class="n">blueprint_table</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">description</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">start_date</span><span class="p">:</span>
+            <span class="n">query</span> <span class="o">=</span> <span class="n">query</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">date</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">start_date</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">end_date</span><span class="p">:</span>
+            <span class="n">query</span> <span class="o">=</span> <span class="n">query</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">date</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">end_date</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">query</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="core-philosophy-you-are-a-framework-developer">Core Philosophy: You Are a Framework Developer</h2>
+<p><strong>Key Insight:</strong> Each retrieval method should feel like a REST API method, not direct database access.</p>
+<p><strong>Why this matters:</strong>
+- <strong>Modularity</strong>: Multiple APIs can query the same database in different ways
+- <strong>Team Scalability</strong>: Individual teams can work on specific APIs (emails vs blueprints vs schedules)
+- <strong>Separation of Concerns</strong>: Clean boundaries between interface, implementation, and routing</p>
+<blockquote>
+<p>"You are effectively a framework developer for the language model" - Jason Liu</p>
+</blockquote>
+<p>From experience building microservices for retrieval, this approach scales to larger distributed teams.</p>
+<hr />
+<h2 id="the-three-layer-architecture">The Three-Layer Architecture</h2>
+<h3 id="1-interface-layer-defining-tools">1. Interface Layer: Defining Tools</h3>
+<p><strong>Example: Text Search Tool</strong>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">SearchText</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">search_query</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">filter_by_type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;contracts&quot;</span><span class="p">,</span> <span class="s2">&quot;proposals&quot;</span><span class="p">,</span> <span class="s2">&quot;bids&quot;</span><span class="p">,</span> <span class="s2">&quot;all&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;all&quot;</span>
+
+    <span class="c1"># Tool description and examples go here</span>
+</code></pre></div></p>
+<p><em>Discovered through data analysis and segmentation - contracts, proposals, and bids were the most important filter categories.</em></p>
+<h3 id="2-implementation-layer-backend-logic">2. Implementation Layer: Backend Logic</h3>
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">q</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">search_query</span><span class="p">)</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">filter_by_type</span> <span class="o">!=</span> <span class="s2">&quot;all&quot;</span><span class="p">:</span>
+        <span class="n">q</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">filter_by_type</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">q</span><span class="o">.</span><span class="n">select</span><span class="p">([</span><span class="s2">&quot;title&quot;</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+</code></pre></div>
+<p><em>Database-agnostic: Works with LanceDB, ChromaDB, Turbopuffer, or PostgreSQL</em></p>
+<h3 id="3-gateway-layer-router-and-orchestration">3. Gateway Layer: Router and Orchestration</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># System prompt with parallel tool calling</span>
+<span class="n">tools</span> <span class="o">=</span> <span class="p">[</span><span class="n">SearchBlueprint</span><span class="p">,</span> <span class="n">SearchText</span><span class="p">,</span> <span class="n">AnswerQuery</span><span class="p">,</span> <span class="n">ClarifyQuestion</span><span class="p">]</span>
+<span class="c1"># Route user query to appropriate tools</span>
+<span class="c1"># Gather results and synthesize final response</span>
+</code></pre></div>
+<h2 id="team-organization-benefits">Team Organization Benefits</h2>
+<p><strong>How these boundaries help split teams and resources:</strong></p>
+<h3 id="interface-team">Interface Team</h3>
+<ul>
+<li><strong>Focus</strong>: Tool segmentation and interface design</li>
+<li><strong>Tasks</strong>: What tools should exist? What parameters do they need?</li>
+<li><strong>Experiments</strong>: A/B testing different tool configurations</li>
+</ul>
+<h3 id="implementation-team">Implementation Team</h3>
+<ul>
+<li><strong>Focus</strong>: Per-tool performance improvement</li>
+<li><strong>Tasks</strong>: Optimize individual tool recall and precision</li>
+<li><strong>Experiments</strong>: Better embeddings, filtering, ranking models</li>
+</ul>
+<h3 id="gateway-team">Gateway Team</h3>
+<ul>
+<li><strong>Focus</strong>: Tool routing and orchestration</li>
+<li><strong>Tasks</strong>: Which tools to call when? How to combine results?</li>
+<li><strong>Experiments</strong>: Prompt engineering, few-shot examples, model selection</li>
+</ul>
+<p><em>This mirrors Sessions 4-5 focus on the first two layers.</em></p>
+<hr />
+<h2 id="leveraging-parallel-tool-calling">Leveraging Parallel Tool Calling</h2>
+<p><strong>Why parallel tools are powerful:</strong>
+- <strong>Speed</strong>: Multiple searches can run concurrently
+- <strong>Comprehensiveness</strong>: Can search blueprints AND text simultaneously
+- <strong>Composability</strong>: Tools can include clarification, answer synthesis, and follow-ups</p>
+<p><strong>Complete Tool Suite Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">ToolSuite</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">search_blueprints</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">SearchBlueprint</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">search_text</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">SearchText</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>  
+    <span class="n">clarify_question</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ClarifyQuestion</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">answer_with_citations</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">AnswerQuery</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+</code></pre></div></p>
+<p><strong>Initial Setup Process:</strong>
+1. <strong>Precision/Recall Testing</strong>: Are we calling the right tools?
+2. <strong>Continuous Improvement</strong>: Better prompting and argument handling
+3. <strong>Available</strong>: LlamaIndex and LangChain have implementations</p>
+<h2 id="the-systematic-approach-same-process-applied-again">The Systematic Approach: Same Process, Applied Again</h2>
+<p><strong>Reminder:</strong> This course teaches the same systematic improvement process repeatedly across different RAG components.</p>
+<h3 id="step-1-create-test-dataset">Step 1: Create Test Dataset</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create query -&gt; expected_tools mapping</span>
+<span class="n">example_queries</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">&quot;Find blueprints for city hall from 2010&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;search_blueprints&quot;</span><span class="p">]),</span>
+    <span class="p">(</span><span class="s2">&quot;Show me contract proposals&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;search_text&quot;</span><span class="p">]),</span>  
+    <span class="p">(</span><span class="s2">&quot;What are the building plans for 123 Main St built in 2015?&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;search_blueprints&quot;</span><span class="p">]),</span>
+<span class="p">]</span>
+
+<span class="k">for</span> <span class="n">query</span><span class="p">,</span> <span class="n">expected_tools</span> <span class="ow">in</span> <span class="n">example_queries</span><span class="p">:</span>
+    <span class="n">predicted_tools</span> <span class="o">=</span> <span class="n">route_query</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">tool</span> <span class="ow">in</span> <span class="n">predicted_tools</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="n">tool</span><span class="o">.</span><span class="n">name</span> <span class="ow">in</span> <span class="n">expected_tools</span>
+</code></pre></div>
+<h3 id="step-2-focus-on-recall-metrics">Step 2: Focus on Recall Metrics</h3>
+<p><strong>Why recall matters more than precision initially:</strong>
+- <strong>Data is crucial</strong> for evaluating tool performance
+- <strong>Precision matters later</strong> - don't want wasted compute
+- <strong>Tool selection</strong> is the limiting factor</p>
+<p><strong>Synthetic Data Generation:</strong> If you have good tool descriptions, you can randomly sample them to create test queries. If you can't generate good synthetic data, your tool descriptions aren't detailed enough.</p>
+<hr />
+<h2 id="dynamic-few-shot-example-system">Dynamic Few-Shot Example System</h2>
+<p><strong>Evolution from static to dynamic examples:</strong></p>
+<h3 id="v0-hard-coded-examples-10-40-examples-per-tool">V0: Hard-coded Examples (10-40 examples per tool)</h3>
+<div class="highlight"><pre><span></span><code><span class="n">search_blueprint_examples</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;Find blueprints for city hall built in 2010 -&gt; SearchBlueprint(description=&#39;city hall&#39;, start_date=&#39;2010-01-01&#39;, end_date=&#39;2010-12-31&#39;)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Show me school building plans from 2015 -&gt; SearchBlueprint(description=&#39;school building&#39;, start_date=&#39;2015-01-01&#39;, end_date=&#39;2015-12-31&#39;)&quot;</span>
+<span class="p">]</span>
+</code></pre></div>
+<h3 id="advanced-search-based-example-retrieval">Advanced: Search-Based Example Retrieval</h3>
+<p>Similar to Text2SQL approach:
+1. <strong>Build Example Database</strong>: Store successful query -&gt; tool mappings
+2. <strong>Runtime Retrieval</strong>: For each user query, find most relevant historical examples
+3. <strong>Dynamic Prompting</strong>: Inject retrieved examples into few-shot prompt
+4. <strong>Continuous Improvement</strong>: More users = more examples = better performance</p>
+<p><strong>Data Flywheel:</strong> Product generates better evaluations → Better evaluations improve the product → Better product generates even better evaluations</p>
+<h2 id="the-complete-rag-improvement-system">The Complete RAG Improvement System</h2>
+<p><strong>The same systematic process we've used throughout this course:</strong></p>
+<h3 id="1-synthetic-data-flywheel">1. Synthetic Data Flywheel</h3>
+<ul>
+<li><strong>Generate</strong>: Query-to-tool or tool-to-query datasets</li>
+<li><strong>Purpose</strong>: Create evaluation foundation</li>
+<li><strong>Scale</strong>: Start with dozens, grow to hundreds/thousands</li>
+</ul>
+<h3 id="2-establish-recall-metrics">2. Establish Recall Metrics</h3>
+<ul>
+<li><strong>Per-tool evaluation</strong>: Treat each tool as a classification class</li>
+<li><strong>System-wide metrics</strong>: Overall routing accuracy</li>
+<li><strong>Segmentation</strong>: Identify which tools are underperforming</li>
+</ul>
+<h3 id="3-iterate-on-few-shot-examples">3. Iterate on Few-Shot Examples</h3>
+<ul>
+<li><strong>Static Phase</strong>: Hard-code 10-40 examples per tool</li>
+<li><strong>Dynamic Phase</strong>: Search-based example retrieval</li>
+<li><strong>Include</strong>: Query → Tool argument mappings</li>
+<li><strong>Cover</strong>: Individual tools AND tool combinations</li>
+</ul>
+<h3 id="4-build-example-search-system">4. Build Example Search System</h3>
+<ul>
+<li><strong>Database</strong>: Store successful query → tool mappings  </li>
+<li><strong>Retrieval</strong>: Find optimal examples per user query</li>
+<li><strong>Similar to</strong>: Summary index, but for query mappings instead of summaries</li>
+<li><strong>Source</strong>: Initial dataset + production data</li>
+</ul>
+<p><strong>Key Insight:</strong> Don't be surprised if you need 10-40 examples per tool. Prompt caching makes this very tractable, and production systems often use hundreds of examples.</p>
+<hr />
+<h1 id="query-routing-challenges-solutions">Query Routing Challenges &amp; Solutions</h1>
+<h2 id="challenge-1-low-per-class-recall">Challenge 1: Low Per-Class Recall</h2>
+<p><strong>Problem:</strong> Overall system recall looks decent (65%), but individual tools are failing</p>
+<p><strong>Root Cause Analysis:</strong>
+- <strong>Tool-Level Segmentation</strong>: Treat each tool as a classification class
+- <strong>Per-Tool Metrics</strong>: Evaluate recall for each tool individually<br />
+- <strong>Hidden Problems</strong>: System recall can be misleading</p>
+<p><strong>Example Analysis:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Expected Tools</th>
+<th>Predicted Tools</th>
+<th>Correct?</th>
+<th>Score</th>
+<th>Issue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[search_text; search_blueprints]</td>
+<td>[search_text]</td>
+<td>❌ No</td>
+<td>1/2</td>
+<td>Missing blueprints</td>
+</tr>
+<tr>
+<td>[search_text]</td>
+<td>[search_text]</td>
+<td>✅ Yes</td>
+<td>1/1</td>
+<td>Perfect</td>
+</tr>
+<tr>
+<td>[search_blueprints]</td>
+<td>[search_text]</td>
+<td>❌ No</td>
+<td>0/1</td>
+<td>Wrong tool</td>
+</tr>
+<tr>
+<td>[search_text]</td>
+<td>[search_text]</td>
+<td>✅ Yes</td>
+<td>1/1</td>
+<td>Perfect</td>
+</tr>
+<tr>
+<td>[search_text]</td>
+<td>[search_text]</td>
+<td>✅ Yes</td>
+<td>1/1</td>
+<td>Perfect</td>
+</tr>
+<tr>
+<td>[search_blueprints; search_text]</td>
+<td>[search_text]</td>
+<td>❌ No</td>
+<td>1/2</td>
+<td>Missing blueprints</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Insight:</strong> 65% overall recall masks the fact that <code>search_blueprints</code> has 0% recall!</p>
+<p><strong>Solutions:</strong>
+- <strong>Better Tool Descriptions</strong>: More specific, detailed descriptions
+- <strong>Targeted Few-Shot Examples</strong>: Focus examples on failing tools
+- <strong>Class Imbalance</strong>: Address training data distribution</p>
+<h2 id="challenge-2-tool-confusion-matrix-analysis">Challenge 2: Tool Confusion Matrix Analysis</h2>
+<p><strong>Use confusion matrices to understand tool misclassification patterns:</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Predicted: search_blueprints</th>
+<th>Predicted: search_text</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Actual: search_blueprints</strong></td>
+<td>5 (True Negative)</td>
+<td>4 (False Positive)</td>
+</tr>
+<tr>
+<td><strong>Actual: search_text</strong></td>
+<td>0 (False Negative)</td>
+<td>9 (True Positive)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Analysis:</strong> <code>search_blueprints</code> is consistently misclassified as <code>search_text</code></p>
+<h3 id="systematic-debugging-process">Systematic Debugging Process</h3>
+<ol>
+<li><strong>Filter for Failures</strong>: Extract misclassified examples from your database</li>
+<li><strong>Pattern Analysis</strong>: Look for common themes in confused examples  </li>
+<li><strong>Delineation Examples</strong>: Create examples that clearly separate tool usage</li>
+<li><strong>Positive/Negative Examples</strong>: </li>
+<li>More positive examples for underperforming tools</li>
+<li>Explicit negative examples showing when NOT to use each tool</li>
+<li><strong>Edge Case Coverage</strong>: Include confusing examples in few-shot prompts</li>
+<li><strong>Last Resort</strong>: Merge tools if confusion persists</li>
+</ol>
+<h3 id="targeted-intervention-strategy">Targeted Intervention Strategy</h3>
+<p><strong>Now that we know the problem:</strong> Focus specifically on <code>search_blueprints</code> examples
+- Why are blueprint queries being routed to text search?
+- What keywords or patterns distinguish blueprint vs text queries?
+- Add explicit examples: "This is blueprints, NOT text search"</p>
+<hr />
+<h2 id="warning-data-leakage-prevention">⚠️ Warning: Data Leakage Prevention</h2>
+<p><strong>Critical Issue:</strong> Teams often accidentally include test examples in few-shot prompts!</p>
+<p><strong>Why this happens:</strong>
+- <strong>Limited Data</strong>: Starting with only dozens of examples
+- <strong>Overlap Risk</strong>: Same examples in training and test sets<br />
+- <strong>Synthetic Data</strong>: Generated examples may be too similar</p>
+<p><strong>Consequences:</strong>
+- <strong>Overestimated Performance</strong>: Dramatically inflated accuracy metrics
+- <strong>Production Embarrassment</strong>: Users see exact few-shot examples as answers
+- <strong>False Confidence</strong>: System fails when real users ask different questions</p>
+<p><strong>Prevention:</strong>
+- <strong>Strict Train/Test Split</strong>: Never let test examples into prompts
+- <strong>Example Retrieval Caution</strong>: Especially important with dynamic few-shot systems
+- <strong>Production Monitoring</strong>: Watch for users getting few-shot examples as responses</p>
+<hr />
+<h2 id="further-testing">Further Testing</h2>
+<h3 id="how-do-we-measure-the-quality-of-the-retrieval-subsystem">How do we measure the quality of the retrieval subsystem?</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Session 4, 5</th>
+<th>Session 6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P(Correct chunk found)</strong></td>
+<td>P(Correct chunk found | correct retriever)</td>
+<td>P(correct retriever)</td>
+</tr>
+<tr>
+<td></td>
+<td>Does a single search method find the correct chunks?</td>
+<td>Does the LLM choose the correct search method?</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key takeaway:</strong></p>
+<p>This equation can help identify the limiting factor of the system:
+- Not using the right retriever (query not routed to the right retriever)
+- The retriever itself is bad</p>
+<p><strong>To improve P(correct retriever), continue to experiment on:</strong>
+- Precision vs. Recall trade-off
+- If precision didn't matter, we can get 100% recall by calling every tool if we don't care about latency
+- Examples and prompts for tool selection
+- Examples and prompts for arguments
+- LLM models used</p>
+<hr />
+<h2 id="interpreting-the-formula-extended">Interpreting the Formula (Extended)</h2>
+<div class="highlight"><pre><span></span><code>P(success) = P(correct tool selected | query) * P(success | correct tool selected) * P(query)
+</code></pre></div>
+<p><strong>Where:</strong>
+- <code>P(query)</code> = UI, Education
+- <code>P(success)</code> = Quality of application
+- <code>P(success | correct tool selected)</code> = Retrieval Quality &amp; Generation
+- <code>P(correct tool selected | query)</code> = Router Quality</p>
+<hr />
+<h2 id="ui-considerations">UI Considerations</h2>
+<h3 id="thinking-about-ui">Thinking about UI</h3>
+<ul>
+<li>As we build more tools, each one can be fully specified as a JSON schema, which can be used to model forms</li>
+<li>There are also opportunities to allow either the tool spec to represent forms that the user can review and correct.</li>
+</ul>
+<h3 id="google-maps-example">Google Maps Example</h3>
+<p><em>[Examples of Google Maps interface]</em></p>
+<h3 id="build-for-both-humans-and-ai">Build for both Humans and AI</h3>
+<p>When I want directions, I open maps, if I want videos I visit youtube, don't force users to 'chat with x' when they don't have to</p>
+<hr />
+<h2 id="food-for-thought-for-this-session">Food for Thought for This Session</h2>
+<h3 id="try-this-at-work-or-in-your-own-projects">Try this at work or in your own projects</h3>
+<h3 id="work-on-food-for-thought-from-last-few-sessions">Work on Food for thought from last few sessions:</h3>
+<ul>
+<li>Generate synthetic data to test your system</li>
+<li>Analyze user queries through topic modeling and use this to inform inventory or capabilities issues</li>
+<li>Implement user feedback mechanisms</li>
+<li>Focus on building more robust retrieval indices based on entity types (e.g., documents, images, text-to-SQL)</li>
+</ul>
+<h3 id="focus-on-query-routing">Focus on query routing:</h3>
+<ul>
+<li>Ask yourself: if you assume your search methods work well, which search methods would you want to work?</li>
+<li>Should any of these tools be explicitly exposed to the user?</li>
+<li>Can our tools be executed in parallel?</li>
+</ul>
+<h3 id="additional-resources">Additional resources:</h3>
+<ul>
+<li>https://python.useinstructor.com/examples/search</li>
+<li>https://python.useinstructor.com/examples/planning-tasks/</li>
+</ul>
+<hr />
+<h2 id="overview">Overview</h2>
+<h3 id="focus-for-past-two-sessions">Focus for past two sessions:</h3>
+<ul>
+<li>The importance of segmentation and topic modeling, understanding where there may be a lack of inventory vs. lack of capabilities</li>
+<li>Review how to extract and improve each specific type of retrieval index (e.g., documents, images, text-to-SQL)</li>
+<li>Discuss the importance of query routing and how to separate out the query routing step vs. the retrieval index</li>
+</ul>
+<h3 id="focus-for-this-session">Focus for this session:</h3>
+<ul>
+<li>Outline tools and example approaches to building a simple query routing and corresponding metrics</li>
+<li>Review how to use the RAG playbook steps (e.g., generate synthetic data, focus on recall-precision metrics) to tackle the query routing sub-problem while improving RAG applications</li>
+</ul>
+<hr />
+<h2 id="course-conclusion">Course Conclusion</h2>
+<h3 id="what-i-hope-to-distill-into-you">What I hope to distill into you</h3>
+<ul>
+<li><strong>Evaluations are what you need to understand how to improve.</strong></li>
+<li>Evaluations are a dataset that can inform your decisions.</li>
+<li>They power few-shot examples, which can be used with retrieval to improve performance.</li>
+<li>
+<p>They are also the finetuning datasets... (Train vs. Test Split)</p>
+</li>
+<li>
+<p><strong>Synthetic data with large language models and customer feedback from engagement are two sides of the same coin</strong></p>
+</li>
+<li>
+<p>It's all data and data augmentation.</p>
+</li>
+<li>
+<p><strong>These are the fundamental building blocks of creating successful machine learning products.</strong></p>
+</li>
+<li>If you refuse to believe this, you're condemning yourself to being lost and confused in this hyped landscape.</li>
+</ul>
+<h3 id="the-process">The process:</h3>
+<ul>
+<li>A good product generates better evaluations (with strong UX)</li>
+<li>Better evaluations allow you to train / finetune models to create an even better product.</li>
+<li>Data analysis over segments of your evaluations tells you where to focus your product development efforts.</li>
+</ul>
+<p><strong>This marks the end of our course.</strong></p>
+<p>Please don't hesitate to give any feedback.</p>
+<p>My goal is to convey to folks the importance of having strong fundamentals. If you think there's any way this course can be made better for future iterations, please let me know.</p>
+<hr />
+<p><em>maven.com/applied-llms/rag-playbook</em></p>
 
 
 
@@ -3613,44 +3555,6 @@ After RAPTOR Processing:
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../chapter4-2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Prioritization">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                Prioritization
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../chapter5-2/" class="md-footer__link md-footer__link--next" aria-label="Next: Implementation">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Implementation
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">

@@ -1,0 +1,5284 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://567-labs.github.io/systematically-improving-rag/workshops/chapter4-slides/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Chapter4 Slides - Systematically Improving RAG Applications</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config",""),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Chapter4 Slides - Systematically Improving RAG Applications" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="https://567-labs.github.io/systematically-improving-rag/assets/images/social/workshops/chapter4-slides.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://567-labs.github.io/systematically-improving-rag/workshops/chapter4-slides/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Chapter4 Slides - Systematically Improving RAG Applications" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="https://567-labs.github.io/systematically-improving-rag/assets/images/social/workshops/chapter4-slides.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="black">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter4-slides" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+              <button class="md-banner__button md-icon" aria-label="Don't show this again">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+              </button>
+            
+            
+<p>
+  This material is supported by
+  <a
+    href="https://maven.com/applied-llms/rag-playbook?promoCode=EBOOK"
+    target="_blank"
+    ><strong>Applied LLMs on Maven</strong></a
+  >. Readers get 20% off. Not ready? Check out the
+  <a href="https://fivesixseven.ck.page/rag-crash-course" target="_blank"
+    ><strong>free email course</strong></a
+  >.
+</p>
+
+          </div>
+          
+            <script>var el=document.querySelector("[data-md-component=announce]");if(el){var content=el.querySelector(".md-typeset");__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0)}</script>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Systematically Improving RAG Applications" class="md-header__button md-logo" aria-label="Systematically Improving RAG Applications" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Systematically Improving RAG Applications
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter4 Slides
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="black"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Workshops
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../office-hours/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Office Hours
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../talks/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Talks
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Systematically Improving RAG Applications" class="md-nav__button md-logo" aria-label="Systematically Improving RAG Applications" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Systematically Improving RAG Applications
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Workshops
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Workshops
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Chapter 1: Starting the Flywheel
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Chapter 1: Starting the Flywheel
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Chapter 2: From Evaluation to Enhancement
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapter 2: From Evaluation to Enhancement
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Chapter 3: User Experience
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Chapter 3: User Experience
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter3-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Design Principles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter3-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Feedback Collection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter3-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Iterative Improvement
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Chapter 4: Topic Modeling
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Chapter 4: Topic Modeling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter4-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Analysis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter4-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prioritization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Chapter 5: Multimodal Capabilities
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            Chapter 5: Multimodal Capabilities
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter5-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Understanding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter5-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Implementation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Chapter 6: Architecture
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            Chapter 6: Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter6-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Routing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter6-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter6-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Improvement
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../office-hours/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Office Hours
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Office Hours
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../office-hours/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Chapter 1: Starting the Flywheel
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Chapter 1: Starting the Flywheel
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../office-hours/cohort2/week1-summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cohort 2 - Week 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../office-hours/cohort3/week-1-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cohort 3 - Session 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../office-hours/cohort3/week-1-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cohort 3 - Session 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Chapter 2: From Evaluation to Enhancement
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapter 2: From Evaluation to Enhancement
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../office-hours/cohort2/week2-summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cohort 2 - Week 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../office-hours/cohort3/week-2-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cohort 3 - Session 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../office-hours/cohort3/week-2-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cohort 3 - Session 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Chapter 3: User Experience
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Chapter 3: User Experience
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../office-hours/cohort2/week3-summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cohort 2 - Week 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../office-hours/cohort3/week-3-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cohort 3 - Session 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Chapter 4: Topic Modeling
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Chapter 4: Topic Modeling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../office-hours/cohort2/week4-summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cohort 2 - Week 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../office-hours/cohort3/week-4-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cohort 3 - Session 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../office-hours/cohort3/week-4-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cohort 3 - Session 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Chapter 5: Multimodal Capabilities
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            Chapter 5: Multimodal Capabilities
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../office-hours/cohort2/week5-summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cohort 2 - Week 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../office-hours/cohort3/week-5-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cohort 3 - Session 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../office-hours/cohort3/week-5-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cohort 3 - Session 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Chapter 6: Architecture
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            Chapter 6: Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../office-hours/cohort2/week6-summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cohort 2 - Week 6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../talks/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Talks
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Talks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Search / Indexing / Chunking
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Search / Indexing / Chunking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../talks/chromadb-anton-chunking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Text Chunking Strategies (Anton, ChromaDB)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../talks/john-lexical-search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lexical Search in RAG Applications (John Berryman)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../talks/query-routing-anton/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Query Routing for RAG Systems (Anton, ChromaDB)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../talks/semantic-search-exa-will-bryk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Why Google Search Sucks for AI (Will Bryk, Exa)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../talks/rag-without-apis-browser-michael-struwig/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How OpenBB Ditched APIs and Put RAG in the Browser (Michael Struwig)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Finetuning
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Finetuning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../talks/glean-manav/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Building Custom Embedding Models Per Customer (Manav, Glean)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../talks/fine-tuning-rerankers-embeddings-ayush-lancedb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The 12% RAG Performance Boost You're Missing (Ayush, LanceDB)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../talks/embedding-performance-generative-evals-kelly-hong/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stop Trusting MTEB Rankings (Kelly Hong, Chroma)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Monitoring
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Monitoring
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../talks/online-evals-production-monitoring-ben-sidhant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Why Your AI Is Failing in Production (Ben & Sidhant)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../talks/rag-antipatterns-skylar-payne/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The RAG Mistakes That Are Killing Your AI (Skylar Payne)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../talks/zapier-vitor-evals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Zapier 4x'd Their AI Feedback Collection (Vitor)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../talks/chris-lovejoy-domain-expert-vertical-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domain Experts: The Lever for Vertical AI (Chris Lovejoy, Anterior)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Coding Agents
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Coding Agents
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../talks/rag-is-dead-cline-nik/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Why Cline Ditched RAG for Direct Code Reading (Nik Pash)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../talks/colin-rag-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Grep Beat Embeddings on SWE-Bench (Colin Flaherty, Augment)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../talks/sourcegraph-agentic-code-agent-rag/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agentic RAG from first principles (Beyang Liu, Sourcegraph)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../talks/devin-cognition-multi-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Why Devin does not use multi-agents (Walden Yan)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Document Processing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Document Processing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../talks/reducto-docs-adit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Why Most Document Parsing Sucks (Adit, Reducto)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../talks/superlinked-encoder-stacking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Encoder Stacking and Multi-Modal Retrieval (Daniel, Superlinked)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../talks/extend-document-automation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Extend Achieves 95%+ Document Automation (Eli Badgio)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jxnlco" class="md-nav__link">
+    <span class="md-ellipsis">
+      jxnl.co
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systematically-improving-rag-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Systematically Improving RAG Applications
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-rag-flywheel" class="md-nav__link">
+    <span class="md-ellipsis">
+      The RAG Flywheel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-rag-flywheel_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      The RAG Flywheel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-segmentation-in-marketing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Segmentation in marketing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-segmentation-in-marketing_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Segmentation in marketing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#situation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Situation:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complication:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      Approach:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Impact:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-segmentation-in-marketing_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Segmentation in marketing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#situation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Situation:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complication_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complication:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#approach_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Approach:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#impact_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Impact:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demographics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Demographics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demographics_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Demographics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#psychographics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Psychographics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-segmentation-supports-decision-making" class="md-nav__link">
+    <span class="md-ellipsis">
+      How segmentation supports decision making
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-would-we-do-with-our-segments" class="md-nav__link">
+    <span class="md-ellipsis">
+      What would we do with our segments?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-would-we-do-with-our-segments_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      What would we do with our segments?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-would-we-do-with-our-segments_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      What would we do with our segments?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key takeaway:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-we-do-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do we do this?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-would-we-do-with-our-segments_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      What would we do with our segments?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaway_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key takeaway:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-we-do-this_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do we do this?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jxnlco-jxnlco" class="md-nav__link">
+    <span class="md-ellipsis">
+      @jxnlco @jxnlco
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-real-challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      The real challenge:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-feedback-as-a-proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      User feedback as a proxy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#you-can-start-to-gather-user-feedback-early-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      You can start to gather user feedback early on*
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-feedback-as-a-proxy_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      User feedback as a proxy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#you-can-start-to-gather-user-feedback-early-on_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      You can start to gather user feedback early on*
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#did-we-answer-your-question" class="md-nav__link">
+    <span class="md-ellipsis">
+      Did we answer your question?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-feedback-as-a-proxy_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      User feedback as a proxy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#you-can-start-to-gather-user-feedback-early-on_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      You can start to gather user feedback early on*
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#did-we-answer-your-question_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Did we answer your question?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#you-can-also-allow-users-to" class="md-nav__link">
+    <span class="md-ellipsis">
+      You can also allow users to:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-do-we-about-different-user-segments" class="md-nav__link">
+    <span class="md-ellipsis">
+      What do we about different user segments?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintain
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-do-we-about-different-user-segments_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      What do we about different user segments?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#above-average" class="md-nav__link">
+    <span class="md-ellipsis">
+      Above average
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-volume" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query volume
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-roi" class="md-nav__link">
+    <span class="md-ellipsis">
+      High ROI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintain_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintain
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-do-we-about-different-user-segments_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      What do we about different user segments?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#above-average_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Above average
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-volume_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query volume
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#low-roi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Low ROI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-roi_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      High ROI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintain_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintain
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-do-we-about-different-user-segments_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      What do we about different user segments?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#above-average_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Above average
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#danger-zone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Danger Zone
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#low-roi_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Low ROI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-volume_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query volume
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintain_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintain
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-roi_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      High ROI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-study-project-management-for-construction-company" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case study: Project Management for Construction Company
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#situation_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Situation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-study-project-management-for-construction-company_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case study: Project Management for Construction Company
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#situation_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Situation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complication_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complication
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-study-project-management-for-construction-company_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case study: Project Management for Construction Company
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#situation_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Situation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complication_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complication
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#approach_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Approach
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-study-project-management-for-construction-company_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case study: Project Management for Construction Company
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#situation_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Situation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complication_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complication
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#approach_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Approach
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaway_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key takeaway:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#impact_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Impact
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-study-project-management-for-construction-company_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case study: Project Management for Construction Company
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lesson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lesson:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#its-not-going-to-just-work-because-its-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      It's not going to 'just work because it's AI'
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-rag-actually-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      What RAG actually is:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#its-not-going-to-just-work-because-its-ai_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      It's not going to 'just work because it's AI'
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-rag-actually-is_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      What RAG actually is:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-distinguish-between-the-two-types-of-issue-segments" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to distinguish between the two types of issue segments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-distinguish-between-the-two-types-of-issue-segments_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to distinguish between the two types of issue segments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-distinguish-between-the-two-types-of-issue-segments_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to distinguish between the two types of issue segments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jxnlco-jxnlco_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      @jxnlco @jxnlco
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-is-this-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why is this important?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lack-of-inventory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lack of inventory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lack-of-inventory-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lack of inventory examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lack-of-inventory-examples_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lack of inventory examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lack-of-inventory-examples_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lack of inventory examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proxies-for-poor-inventory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proxies for poor inventory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lack-of-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lack of capabilities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lack-of-capabilities-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lack of capabilities examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lack-of-capabilities-examples_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lack of capabilities examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lack-of-capabilities-examples_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lack of capabilities examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-but-fixable-capabilities-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common (but fixable!) capabilities issues
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-but-fixable-capabilities-issues_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common (but fixable!) capabilities issues
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lack-of-capabilities-examples_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lack of capabilities examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-fix-a-lack-of-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to fix a lack of capabilities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#call-out" class="md-nav__link">
+    <span class="md-ellipsis">
+      Call out:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploratory-data-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploratory Data analysis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classification-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classification example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consider-classifying-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consider classifying on :
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classification-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classification example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anthropic-recently-also-did-data-analysis-on-their-queries-to-uncover-segments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anthropic recently also did data analysis on their queries to uncover segments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploration-and-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploration and Monitoring
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#title-if-you-dont-have-user-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Title If you don't have user data…
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploration-and-monitoring_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploration and Monitoring
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#title-if-you-dont-have-user-data_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Title If you don't have user data…
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#if-you-do-have-user-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      If you do have user data…
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uncovered-topic-example-customer-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uncovered topic example: customer support
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#positive-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Positive examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uncovered-topic-example-customer-support_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uncovered topic example: customer support
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uncovered-topic-example-customer-support_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uncovered topic example: customer support
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#current-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Current performance:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#potential-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Potential solutions:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#call-out_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Call out:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-monitor-topics-online" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why monitor topics online?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-monitor-topics-online_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why monitor topics online?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instructions-for-online-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions for Online Monitoring
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-monitor-topics-online_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why monitor topics online?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      For example:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concept-drift-visualization-across-multiple-dimensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concept Drift Visualization across Multiple Dimensions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#session-4-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Session 4: Key takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#food-for-thought-for-this-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      Food for thought for this session
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#food-for-thought-try-this-at-work-or-in-your-own-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Food for thought: try this at work or in your own projects
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implement-audit-feedback-mechanisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implement audit feedback mechanisms:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sneak-peak-for-rest-of-course" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sneak peak for rest of course
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sneak-peek-for-rest-of-course" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sneak peek for rest of course
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#focus-for-next-2-sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Focus for next 2 sessions:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chapter4-slides">Chapter4 Slides</h1>
+<p><em>Extracted from PDF slides using docling</em></p>
+<hr />
+<h2 id="jxnlco">jxnl.co</h2>
+<p>@jxnlco</p>
+<h2 id="systematically-improving-rag-applications">Systematically Improving RAG Applications</h2>
+<p>Session 4</p>
+<p>Split: When to double down vs. when to fold</p>
+<p>Jason Liu</p>
+<h2 id="the-rag-flywheel">The RAG Flywheel</h2>
+<!-- image -->
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th>Step Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Start with a basic RAG system</td>
+<td>Step Description</td>
+</tr>
+<tr>
+<td>2 Synthetic data generation</td>
+<td>Create synthetic questions to test the system's retrieval abilities</td>
+<td>Step Description</td>
+</tr>
+<tr>
+<td>3 Fast evaluations</td>
+<td>Conduct quick, unit test-like evaluations to assess basic retrieval capabilities (e.g., precision, recall, mean reciprocal rank), and explain why each matters</td>
+<td>Step Description</td>
+</tr>
+<tr>
+<td>4 Real-world data collection</td>
+<td>Gather real user queries and interactions. Ensure feedback is aligned with business outcomes or correlated with important qualities that predict customer satisfaction</td>
+<td>Step Description</td>
+</tr>
+</tbody>
+</table>
+<!-- image -->
+
+<!-- image -->
+
+<!-- image -->
+
+<!-- image -->
+
+<!-- image -->
+
+<!-- image -->
+
+<h2 id="the-rag-flywheel_1">The RAG Flywheel</h2>
+<!-- image -->
+
+<table>
+<thead>
+<tr>
+<th>Thesis: The principles we've applied Step</th>
+<th>Thesis: The principles we've applied Step</th>
+<th>in search are highly relevant to what we want to do with RAG Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 Initial</td>
+<td>Start with a basic RAG system setup</td>
+<td></td>
+</tr>
+<tr>
+<td>2 Synthetic data generation</td>
+<td>Create synthetic questions to test the system's retrieval abilities</td>
+<td></td>
+</tr>
+<tr>
+<td>3 Fast evaluations</td>
+<td>Conduct quick, unit test-like evaluations to assess basic retrieval capabilities (e.g., precision, recall, mean reciprocal rank), and explain why each matters</td>
+<td></td>
+</tr>
+<tr>
+<td>4 Real-world data collection</td>
+<td>Gather real user queries and interactions. Ensure feedback is aligned with business outcomes or correlated with important qualities that predict customer satisfaction</td>
+<td></td>
+</tr>
+<tr>
+<td>5 Classification and analysis</td>
+<td>Categorize and analyze user questions to identify patterns and gaps</td>
+<td></td>
+</tr>
+<tr>
+<td>6 System improvements</td>
+<td>Based on analysis, make targeted improvements to the system</td>
+<td></td>
+</tr>
+<tr>
+<td>7 Production monitoring</td>
+<td>Implement ongoing monitoring to track system performance</td>
+<td></td>
+</tr>
+<tr>
+<td>User feedback integration 8</td>
+<td>Continuously incorporate user feedback into the system</td>
+<td></td>
+</tr>
+<tr>
+<td>@jxnlco @jxnlco maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</td>
+<td>@jxnlco @jxnlco maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</td>
+<td>@jxnlco @jxnlco maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</td>
+</tr>
+</tbody>
+</table>
+<!-- image -->
+
+<!-- image -->
+
+<!-- image -->
+
+<!-- image -->
+
+<!-- image -->
+
+<!-- image -->
+
+<!-- image -->
+
+<!-- image -->
+
+<!-- image -->
+
+<p>Why does segmentation matter</p>
+<p>Why does segmentation matter</p>
+<h2 id="example-segmentation-in-marketing">Example: Segmentation in marketing</h2>
+<p>How segmentation supports decision making</p>
+<p>How segmentation supports decision making</p>
+<p>Two types of segments</p>
+<p>Two types of segments</p>
+<p>Food for thought for this session</p>
+<p>Food for thought for this session</p>
+<p>Sneak peak for rest of course</p>
+<p>Sneak peak for rest of course</p>
+<h2 id="example-segmentation-in-marketing_1">Example: Segmentation in marketing</h2>
+<h2 id="situation">Situation:</h2>
+<ul>
+<li>· You sell a consumer product and run a marketing campaign to boost sales</li>
+</ul>
+<h2 id="complication">Complication:</h2>
+<ul>
+<li>· As a result of your efforts, you discover that there is an 80% boost in sales…but you don't know what is causing the boost</li>
+<li>· Alternatively, you could also have an 80% drop in sales…and you don't know what is causing the drop</li>
+</ul>
+<h2 id="approach">Approach:</h2>
+<ul>
+<li>· You dig through your sales data, looking across different customer segments and realize that 60% of the sales increase (or drop) are coming from Segment 1: 30 -45-year-old women living in the Midwest</li>
+</ul>
+<h2 id="impact">Impact:</h2>
+<ul>
+<li>· With this information, your team can decide:</li>
+<li>· If this is an audience that we want to invest more in</li>
+<li>· How better to target this audience (e.g., not running Super Bowl ads)</li>
+</ul>
+<!-- image -->
+
+<h2 id="example-segmentation-in-marketing_2">Example: Segmentation in marketing</h2>
+<h2 id="situation_1">Situation:</h2>
+<ul>
+<li>· You sell a consumer product and run a marketing campaign to boost sales</li>
+</ul>
+<h2 id="complication_1">Complication:</h2>
+<ul>
+<li>· As a result of your efforts, you discover that there is an 80% boost in sales…but you don't know what is causing the boost</li>
+<li>· Alternatively, you could also have an 80% drop in sales…and you don't know what is causing the drop</li>
+</ul>
+<h2 id="approach_1">Approach:</h2>
+<ul>
+<li>· You dig through your sales data, looking across different customer segments and realize that 60% of the sales increase (or drop) are coming from Segment 1: 30 -45-year-old women living in the Midwest</li>
+</ul>
+<h2 id="impact_1">Impact:</h2>
+<ul>
+<li>· With this information, your team can decide:</li>
+<li>· If this is an audience that we want to invest more in</li>
+<li>· How better to target this audience (e.g., not running Super Bowl ads)</li>
+</ul>
+<!-- image -->
+
+<p>If you can properly identify the demographics and psychographics of the inputs of your system, your team will have multiple levers to experiment with and allocate resources and start to explore vs. exploit our system</p>
+<!-- image -->
+
+<p>maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
+<h2 id="demographics">Demographics</h2>
+<p>The quantifiable characteristics (observable traits) of a given population:</p>
+<ul>
+<li>· Role</li>
+<li>· Organization ID</li>
+<li>· Cohort</li>
+<li>· Life stage</li>
+</ul>
+<p>•</p>
+<p>...</p>
+<!-- image -->
+
+<h2 id="demographics_1">Demographics</h2>
+<p>The quantifiable characteristics (observable traits) of a given population:</p>
+<ul>
+<li>· Role</li>
+<li>· Organization ID</li>
+<li>· Cohort</li>
+<li>· Life stage</li>
+</ul>
+<p>•</p>
+<p>...</p>
+<!-- image -->
+
+<h2 id="psychographics">Psychographics</h2>
+<p>The psychological aspects of consumer/user behavior and preferences:</p>
+<ul>
+<li>· Attitudes</li>
+<li>· Values</li>
+<li>· Interests</li>
+<li>· Writing style</li>
+<li>· Preferred response style</li>
+</ul>
+<div class="highlight"><pre><span></span><code>{ }
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;query&quot;: &quot;What was the difference between the 2022 and 2023 budgets?&quot;, &quot;average_similarity&quot;: 0.6, &quot;average_cohere_score&quot;: 0.8, &quot;customer_rating&quot;: 1, &quot;query_types&quot;: [ &quot;TIME_FILTER&quot;, &quot;MULTIPLE_QUERIES&quot;, &quot;FINANCIAL_QUERY&quot; ]
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>@jxnlco maven.com/applied-llms/rag-playbook
+</code></pre></div>
+<!-- image -->
+
+<!-- image -->
+
+<p>Why does segmentation matter</p>
+<p>Why does segmentation matter</p>
+<p>Example: Segmentation in marketing</p>
+<p>Example: Segmentation in marketing</p>
+<h2 id="how-segmentation-supports-decision-making">How segmentation supports decision making</h2>
+<p>Two types of segments</p>
+<p>Two types of segments</p>
+<p>Food for thought for this session</p>
+<p>Food for thought for this session</p>
+<p>Sneak peak for rest of course</p>
+<p>Sneak peak for rest of course</p>
+<h2 id="what-would-we-do-with-our-segments">What would we do with our segments?</h2>
+<!-- image -->
+
+<!-- image -->
+
+<h2 id="what-would-we-do-with-our-segments_1">What would we do with our segments?</h2>
+<!-- image -->
+
+<!-- image -->
+
+<h2 id="what-would-we-do-with-our-segments_2">What would we do with our segments?</h2>
+<!-- image -->
+
+<h2 id="key-takeaway">Key takeaway:</h2>
+<h2 id="how-do-we-do-this">How do we do this?</h2>
+<p>If we can label query types we can build specialized systems to maximize impact or p(success)</p>
+<ul>
+<li>· Leveraging clustering methods and few shot classifiers, we can domain model our way into building prompts that can classify and segment queries</li>
+<li>· Then we can batch offline and also monitor online in production</li>
+</ul>
+<h2 id="what-would-we-do-with-our-segments_3">What would we do with our segments?</h2>
+<!-- image -->
+
+<h2 id="key-takeaway_1">Key takeaway:</h2>
+<h2 id="how-do-we-do-this_1">How do we do this?</h2>
+<p>If we can label query types we can build specialized systems to maximize impact or p(success)</p>
+<h2 id="jxnlco-jxnlco">@jxnlco @jxnlco</h2>
+<ul>
+<li>· Leveraging clustering methods and few shot classifiers, we can domain model our way into building prompts that can classify and segment queries</li>
+<li>· Then we can batch offline and also monitor online in production</li>
+</ul>
+<h2 id="the-real-challenge">The real challenge:</h2>
+<ul>
+<li>· Estimate Impact (User Research)</li>
+<li>· Measuring Likelihood of success (Collecting User feedback)</li>
+<li>· Controlling Query Volume</li>
+</ul>
+<h2 id="user-feedback-as-a-proxy">User feedback as a proxy</h2>
+<h2 id="you-can-start-to-gather-user-feedback-early-on">You can start to gather user feedback early on*</h2>
+<!-- image -->
+
+<ul>
+<li>We don't recommend a 5-star system</li>
+</ul>
+<!-- image -->
+
+<p>maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
+<h2 id="user-feedback-as-a-proxy_1">User feedback as a proxy</h2>
+<h2 id="you-can-start-to-gather-user-feedback-early-on_1">You can start to gather user feedback early on*</h2>
+<!-- image -->
+
+<ul>
+<li>We don't recommend a 5-star system</li>
+</ul>
+<p>Make sure users understand what the buttons correspond to through your copy</p>
+<p>How did we do? Uncorrelated with customer satisfaction</p>
+<!-- image -->
+
+<h2 id="did-we-answer-your-question">Did we answer your question?</h2>
+<p>Highly correlated with satisfaction and correctness maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
+<h2 id="user-feedback-as-a-proxy_2">User feedback as a proxy</h2>
+<h2 id="you-can-start-to-gather-user-feedback-early-on_2">You can start to gather user feedback early on*</h2>
+<!-- image -->
+
+<ul>
+<li>We don't recommend a 5-star system</li>
+</ul>
+<p>Make sure users understand what the buttons correspond to through your copy</p>
+<p>How did we do? Uncorrelated with customer satisfaction</p>
+<h2 id="did-we-answer-your-question_1">Did we answer your question?</h2>
+<p>Highly correlated with satisfaction and correctness</p>
+<p>Its important to do both UX to collect feedback but also to do user research to understand the impact of questions</p>
+<!-- image -->
+
+<h2 id="you-can-also-allow-users-to">You can also allow users to:</h2>
+<ul>
+<li>· Rate / Delete sources</li>
+<li>· Copy Snippets</li>
+<li>· Share</li>
+<li>· Publish</li>
+<li>· Save</li>
+<li>· Etc.</li>
+</ul>
+<p>maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
+<h2 id="what-do-we-about-different-user-segments">What do we about different user segments?</h2>
+<p>Above average</p>
+<p>Below average</p>
+<p>Query  volume</p>
+<h2 id="maintain">Maintain</h2>
+<p>Below average</p>
+<p>Above average</p>
+<ul>
+<li>
+<p>• Continuously monitor and review performance metrics to ensure quality</p>
+</li>
+<li>
+<p>• If this section very high, consider trying to break down this segment even farther</p>
+</li>
+</ul>
+<p>User satisfaction</p>
+<!-- image -->
+
+<h2 id="what-do-we-about-different-user-segments_1">What do we about different user segments?</h2>
+<h2 id="above-average">Above average</h2>
+<p>Below average</p>
+<h2 id="query-volume">Query  volume</h2>
+<h2 id="high-roi">High ROI</h2>
+<h2 id="maintain_1">Maintain</h2>
+<p>Below average</p>
+<p>Above average</p>
+<ul>
+<li>
+<p>• Continuously monitor and review performance metrics to ensure quality</p>
+</li>
+<li>
+<p>• If this section very high, consider trying to break down this segment even farther</p>
+</li>
+<li>
+<p>• Promote or highlight capabilities to users!</p>
+</li>
+<li>
+<p>• Identify if high impact w/ user research</p>
+</li>
+<li>
+<p>• Identify if sampling bias (Example)</p>
+</li>
+<li>
+<p>• Experiment with UI changes to boost usage and visibility</p>
+</li>
+</ul>
+<p>User satisfaction</p>
+<!-- image -->
+
+<h2 id="what-do-we-about-different-user-segments_2">What do we about different user segments?</h2>
+<h2 id="above-average_1">Above average</h2>
+<p>Below average</p>
+<h2 id="query-volume_1">Query  volume</h2>
+<h2 id="low-roi">Low ROI</h2>
+<h2 id="high-roi_1">High ROI</h2>
+<h2 id="maintain_2">Maintain</h2>
+<p>Below average</p>
+<p>Above average</p>
+<ul>
+<li>
+<p>• Continuously monitor and review performance metrics to ensure quality</p>
+</li>
+<li>
+<p>• If this section very high, consider trying to break down this segment even farther</p>
+</li>
+<li>
+<p>• Perform a cost-benefit analysis to determine the value of continued efforts</p>
+</li>
+<li>
+<p>• Adjust the UI to set clear expectations</p>
+</li>
+<li>
+<p>• Consider phasing out or overhauling if not essential</p>
+</li>
+<li>
+<p>• Promote or highlight capabilities to users!</p>
+</li>
+<li>
+<p>• Identify if high impact w/ user research</p>
+</li>
+<li>
+<p>• Identify if sampling bias (Example)</p>
+</li>
+<li>
+<p>• Experiment with UI changes to boost usage and visibility</p>
+</li>
+</ul>
+<p>User satisfaction</p>
+<!-- image -->
+
+<h2 id="what-do-we-about-different-user-segments_3">What do we about different user segments?</h2>
+<h2 id="above-average_2">Above average</h2>
+<h2 id="danger-zone">Danger Zone</h2>
+<ul>
+<li>· Conduct in-depth user surveys and focus groups to identify pain points</li>
+<li>· Prioritize and implement targeted improvements</li>
+<li>· Try to identify subsegments that perform better</li>
+<li>· Is it 20% of queries fail or each query has a 20% success rate?</li>
+</ul>
+<h2 id="low-roi_1">Low ROI</h2>
+<ul>
+<li>· Perform a cost-benefit analysis to determine the value of continued efforts</li>
+<li>· Adjust the UI to set clear expectations</li>
+<li>· Consider phasing out or overhauling if not essential</li>
+</ul>
+<p>Below average</p>
+<h2 id="query-volume_2">Query  volume</h2>
+<p>Below average</p>
+<!-- image -->
+
+<h2 id="maintain_3">Maintain</h2>
+<ul>
+<li>· Continuously monitor and review performance metrics to ensure quality</li>
+<li>· If this section very high, consider trying to break down this segment even farther</li>
+</ul>
+<h2 id="high-roi_2">High ROI</h2>
+<ul>
+<li>· Promote or highlight capabilities to users!</li>
+<li>· Identify if high impact w/ user research</li>
+<li>· Identify if sampling bias (Example)</li>
+<li>· Experiment with UI changes to boost usage and visibility</li>
+</ul>
+<p>Above average</p>
+<p>User satisfaction</p>
+<h2 id="case-study-project-management-for-construction-company">Case study: Project Management for Construction Company</h2>
+<p>Personal anecdote about understanding user behavior and satisfaction</p>
+<h2 id="situation_2">Situation</h2>
+<ul>
+<li>· Product team hypothesized that scheduling was an important use case for the RAG app</li>
+<li>· However, the data showed that users were using the RAG app primarily for document search instead</li>
+<li>· &gt;50% queries were document search with ~70% user satisfaction</li>
+</ul>
+<!-- image -->
+
+<h2 id="case-study-project-management-for-construction-company_1">Case study: Project Management for Construction Company</h2>
+<p>Personal anecdote about understanding user behavior and satisfaction</p>
+<h2 id="situation_3">Situation</h2>
+<h2 id="complication_2">Complication</h2>
+<ul>
+<li>· Product team hypothesized that scheduling was an important use case for the RAG app</li>
+<li>· However, the data showed that users were using the RAG app primarily for document search instead</li>
+<li>· &gt;50% queries were document search with ~70% user satisfaction</li>
+<li>· By plotting query segments and satisfaction over time, team discovered that:</li>
+<li>· New users started with scheduling questions but had low satisfaction</li>
+<li>· As a result, users shifted to document searches (often related to scheduling)</li>
+<li>· High document search satisfaction masked poor schedule search performance</li>
+</ul>
+<!-- image -->
+
+<h2 id="case-study-project-management-for-construction-company_2">Case study: Project Management for Construction Company</h2>
+<p>Personal anecdote about understanding user behavior and satisfaction</p>
+<h2 id="situation_4">Situation</h2>
+<h2 id="complication_3">Complication</h2>
+<h2 id="approach_2">Approach</h2>
+<ul>
+<li>· Product team hypothesized that scheduling was an important use case for the RAG app</li>
+<li>· However, the data showed that users were using the RAG app primarily for document search instead</li>
+<li>· &gt;50% queries were document search with ~70% user satisfaction</li>
+<li>· By plotting query segments and satisfaction over time, team discovered that:</li>
+<li>· New users started with scheduling questions but had low satisfaction</li>
+<li>· As a result, users shifted to document searches (often related to scheduling)</li>
+<li>· High document search satisfaction masked poor schedule search performance</li>
+<li>· Eng team shifted focus to systematically improve schedule search to better understand queries about</li>
+<li>· Due dates</li>
+<li>· Payment dates</li>
+<li>· All parties signed off by due date</li>
+<li>· Team communicated with clients about new schedule searching capabilities</li>
+</ul>
+<h2 id="case-study-project-management-for-construction-company_3">Case study: Project Management for Construction Company</h2>
+<p>Personal anecdote about understanding user behavior and satisfaction</p>
+<h2 id="situation_5">Situation</h2>
+<h2 id="complication_4">Complication</h2>
+<h2 id="approach_3">Approach</h2>
+<ul>
+<li>· Product team hypothesized that scheduling was an important use case for the RAG app</li>
+<li>· However, the data showed that users were using the RAG app primarily for document search instead</li>
+<li>· &gt;50% queries were document search with ~70% user satisfaction</li>
+<li>· By plotting query segments and satisfaction over time, team discovered that:</li>
+<li>· New users started with scheduling questions but had low satisfaction</li>
+<li>· As a result, users shifted to document searches (often related to scheduling)</li>
+<li>· High document search satisfaction masked poor schedule search performance</li>
+<li>· Eng team shifted focus to systematically improve schedule search to better understand queries about</li>
+<li>· Due dates</li>
+<li>· Payment dates</li>
+<li>· All parties signed off by due date</li>
+<li>· Team communicated with clients about new schedule searching capabilities</li>
+</ul>
+<h2 id="key-takeaway_2">Key takeaway:</h2>
+<ul>
+<li>· There may be key areas of improvement that are obfuscated by summary statistics (e.g., overall user satisfaction). Don't pat yourself on the back just yet</li>
+<li>· Users are savvy and may change their behavior based on the capabilities of your product. Additional research (e.g., focus groups) and analysis are essential to discover why</li>
+</ul>
+<h2 id="impact_2">Impact</h2>
+<p>[Next page]</p>
+<h2 id="case-study-project-management-for-construction-company_4">Case study: Project Management for Construction Company</h2>
+<p>Personal anecdote about understanding user behavior and satisfaction</p>
+<!-- image -->
+
+<p>maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
+<!-- image -->
+
+<h2 id="lesson">Lesson:</h2>
+<p>Summary statistics are not enough… and sometimes may fool you</p>
+<h2 id="its-not-going-to-just-work-because-its-ai">It's not going to 'just work because it's AI'</h2>
+<h2 id="what-rag-actually-is">What RAG actually is:</h2>
+<!-- image -->
+
+<p>maven.com/applied-llms/rag-playbook</p>
+<h2 id="its-not-going-to-just-work-because-its-ai_1">It's not going to 'just work because it's AI'</h2>
+<h2 id="what-rag-actually-is_1">What RAG actually is:</h2>
+<!-- image -->
+
+<h2 id="key-takeaways">Key takeaways</h2>
+<ul>
+<li>· We will need to revert to good old machine learning and data science</li>
+<li>· We need to conduct exploratory data analysis to find segments worth pursing</li>
+<li>· We need to:</li>
+<li>o Work with domain experts to do feature engineering</li>
+<li>o Identify specific candidate indices using additional metadata that improves performance in high impact segments</li>
+</ul>
+<p>maven.com/applied-llms/rag-playbook</p>
+<!-- image -->
+
+<!-- image -->
+
+<p>Why does segmentation matter</p>
+<p>Why does segmentation matter</p>
+<p>Two types of segments</p>
+<p>Two types of segments</p>
+<h2 id="overview">Overview</h2>
+<p>Lack of inventory</p>
+<p>Lack of inventory</p>
+<p>Lack of capabilities</p>
+<p>Lack of capabilities</p>
+<p>Sneak peak for rest of course</p>
+<p>Sneak peak for rest of course</p>
+<p>Food for thought for this session</p>
+<p>Food for thought for this session</p>
+<h2 id="how-to-distinguish-between-the-two-types-of-issue-segments">How to distinguish between the two types of issue segments</h2>
+<table>
+<thead>
+<tr>
+<th>Problems</th>
+<th>Lack of inventory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Origin of issue</td>
+<td>• Limited content in knowledge base</td>
+</tr>
+<tr>
+<td>How to address this issue`</td>
+<td>Expand inventory: • Expand the corpus of information • Improve ingestion and data connectors • Create more focused sub-systems for specific topics</td>
+</tr>
+</tbody>
+</table>
+<h2 id="how-to-distinguish-between-the-two-types-of-issue-segments_1">How to distinguish between the two types of issue segments</h2>
+<table>
+<thead>
+<tr>
+<th>Problems</th>
+<th>Lack of inventory</th>
+<th>Lack of capabilities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Origin of issue</td>
+<td>• Limited content in knowledge base</td>
+<td>• The system's functional abilities • Metadata may exist but not structured Anything that is not an inventory issue…</td>
+</tr>
+<tr>
+<td>How to address this issue`</td>
+<td>Expand inventory: • Expand the corpus of information • Improve ingestion and data connectors • Create more focused sub-systems for specific topics</td>
+<td>Technical improvements: • Enhance system's ability to understand • Extract additional meta data (e.g., project due date index from proposal docs, map calendar year based on industry) • Add new search features based on additional data • Create a new search index (e.g., CRM index, email index, calendar index)</td>
+</tr>
+</tbody>
+</table>
+<p>maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
+<h2 id="how-to-distinguish-between-the-two-types-of-issue-segments_2">How to distinguish between the two types of issue segments</h2>
+<table>
+<thead>
+<tr>
+<th>Problems</th>
+<th>Lack of inventory</th>
+<th>Lack of capabilities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Origin of issue</td>
+<td>• Limited content in knowledge base</td>
+<td>• The system's functional abilities • Metadata may exist but not structured Anything that is not an inventory issue…</td>
+</tr>
+<tr>
+<td>How to address this issue`</td>
+<td>Expand inventory: • Expand the corpus of information • Improve ingestion and data connectors • Create more focused sub-systems for specific topics</td>
+<td>Technical improvements: • Enhance system's ability to understand • Extract additional meta data (e.g., project due date index from proposal docs, map calendar year based on industry) • Add new search features based on additional data • Create a new search index (e.g., CRM index, email index, calendar index)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="jxnlco-jxnlco_1">@jxnlco @jxnlco</h2>
+<h2 id="why-is-this-important">Why is this important?</h2>
+<ul>
+<li>· By categorizing user queries into segments and identifying what is required to address them, developers can more effectively:</li>
+<li>· Prioritize system improvements more effectively</li>
+<li>· Identify gaps in knowledge and functionality</li>
+<li>· Develop specialized subsystems or features for specific use cases</li>
+<li>· Improve overall user experience by ensuring the system can handle a wide range of query types effectively</li>
+</ul>
+<p>maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
+<!-- image -->
+
+<!-- image -->
+
+<p>Why does segmentation matter</p>
+<p>Why does segmentation matter</p>
+<p>Two types of segments</p>
+<p>Two types of segments</p>
+<p>Overview</p>
+<p>Overview</p>
+<h2 id="lack-of-inventory">Lack of inventory</h2>
+<p>Lack of capabilities</p>
+<p>Lack of capabilities</p>
+<p>Sneak peak for rest of course</p>
+<p>Sneak peak for rest of course</p>
+<p>Food for thought for this session</p>
+<p>Food for thought for this session</p>
+<h2 id="lack-of-inventory-examples">Lack of inventory examples</h2>
+<!-- image -->
+
+<table>
+<thead>
+<tr>
+<th>Company</th>
+<th>Problem</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Text</td>
+<td>User query : 'batteries' or 'televisions' Early Amazon: No results for batteries or televisions, only results for books about batteries or televisions</td>
+<td>• Expand inventory to include batteries and televisions</td>
+</tr>
+</tbody>
+</table>
+<!-- image -->
+
+<h2 id="lack-of-inventory-examples_1">Lack of inventory examples</h2>
+<!-- image -->
+
+<!-- image -->
+
+<table>
+<thead>
+<tr>
+<th>Company</th>
+<th>Problem</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>User query : 'batteries' or 'televisions' Early Amazon: No results for batteries or televisions, only results for books about batteries or televisions •</td>
+<td>Text Expand</td>
+</tr>
+<tr>
+<td>User query: Spanish telenovelas Netflix: Limited relevant results</td>
+<td>• Produce more TV in different languages for different demographics • Improve subtitles</td>
+<td>Text</td>
+</tr>
+</tbody>
+</table>
+<!-- image -->
+
+<h2 id="lack-of-inventory-examples_2">Lack of inventory examples</h2>
+<!-- image -->
+
+<!-- image -->
+
+<!-- image -->
+
+<table>
+<thead>
+<tr>
+<th>Company</th>
+<th>Problem</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>User query : 'batteries' or 'televisions' Early Amazon: No results for batteries or televisions, only results for books about batteries or televisions</td>
+<td>Text • Expand</td>
+</tr>
+<tr>
+<td></td>
+<td>User query: Spanish telenovelas relevant results • Produce more TV in different languages different demographics • Improve subtitles</td>
+<td>Text</td>
+</tr>
+<tr>
+<td>Text</td>
+<td>User query : 'Greek restaurants near me' Doordash: Limited results</td>
+<td>• Reach out to more Greek restaurants (in specific zip codes) and get more Greek restaurants onto the platform • Buy resturants iPads to process online orders</td>
+</tr>
+</tbody>
+</table>
+<!-- image -->
+
+<h2 id="proxies-for-poor-inventory">Proxies for poor inventory</h2>
+<ul>
+<li>· Low cosine similarities as a proxy for low relevancy</li>
+<li>· Lexical Search returns 0 results</li>
+<li>· LLMs not answering questions due to missing data</li>
+<li>· LLMs not citing any chunks included in context when returning answers</li>
+<li>· Make sure logging</li>
+<li>· Product issues:</li>
+<li>· Problems with data pipeline and data improperly ingested</li>
+<li>· Broken configurations</li>
+<li>· Customers are not providing data which they said they would</li>
+</ul>
+<!-- image -->
+
+<!-- image -->
+
+<!-- image -->
+
+<p>Why does segmentation matter</p>
+<p>Why does segmentation matter</p>
+<p>Two types of segments</p>
+<p>Two types of segments</p>
+<p>Overview</p>
+<p>Overview</p>
+<p>Lack of inventory</p>
+<p>Lack of inventory</p>
+<h2 id="lack-of-capabilities">Lack of capabilities</h2>
+<p>Food for thought for this session</p>
+<p>Sneak peak for rest of course</p>
+<p>Sneak peak for rest of course</p>
+<p>Food for thought for this session</p>
+<h2 id="lack-of-capabilities-examples">Lack of capabilities examples</h2>
+<!-- image -->
+
+<table>
+<thead>
+<tr>
+<th>Company</th>
+<th>Problem</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Text</td>
+<td>User query : 'Affordable heels with less than 3 - inch heel' Amazon: Few relevant results</td>
+<td>• Identify additional feature meta-data and join on existing data • Filter on specific features based on product types</td>
+</tr>
+</tbody>
+</table>
+<h2 id="lack-of-capabilities-examples_1">Lack of capabilities examples</h2>
+<!-- image -->
+
+<!-- image -->
+
+<table>
+<thead>
+<tr>
+<th>Company</th>
+<th>Problem</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Text User query inch heel' Amazon:</td>
+<td>heels with less than 3 - results • Identify additional feature meta-data and join on existing data • Filter on specific features based on product types</td>
+<td>: 'Affordable</td>
+</tr>
+<tr>
+<td></td>
+<td>nominated films' results with movie titles or • Acquire additional meta-data for existing catalogue • Join on these datasets to better answer user queries</td>
+<td>Text User query : 'Oscar - Early Netflix: Returns</td>
+</tr>
+</tbody>
+</table>
+<h2 id="lack-of-capabilities-examples_2">Lack of capabilities examples</h2>
+<!-- image -->
+
+<!-- image -->
+
+<!-- image -->
+
+<table>
+<thead>
+<tr>
+<th>Company</th>
+<th>Problem</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>User query : 'Affordable heels with less than 3 - inch heel' Amazon: Few relevant results</td>
+<td>Text • Identify</td>
+</tr>
+<tr>
+<td>Text</td>
+<td>User query : 'Oscar - nominated films' Early Netflix: Returns results with movie titles characters which include 'Oscar'</td>
+<td>or • Acquire additional meta-data for existing • Join on these datasets to better answer queries</td>
+</tr>
+<tr>
+<td>Text</td>
+<td>User query : 'Chinese food' (it's after 9pm) Doordash: Limited conversion</td>
+<td>• Figure out how to get up-to-date availability data • Add an 'Open Now' button to specify restaurants • New features (e.g., allow users to schedule orders for when restaurants open)</td>
+</tr>
+</tbody>
+</table>
+<!-- image -->
+
+<h2 id="common-but-fixable-capabilities-issues">Common (but fixable!) capabilities issues</h2>
+<h2 id="problem">Problem</h2>
+<!-- image -->
+
+<!-- image -->
+
+<!-- image -->
+
+<!-- image -->
+
+<!-- image -->
+
+<table>
+<thead>
+<tr>
+<th>Datetime filter for 'what happened recently' or 'what's the latest on…'</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Comparisons</td>
+</tr>
+<tr>
+<td>Filters for Tabular Data in PDF</td>
+</tr>
+<tr>
+<td>Specific filters for stock tickers (before a document search)</td>
+</tr>
+<tr>
+<td>Understand document metadata</td>
+</tr>
+</tbody>
+</table>
+<!-- image -->
+
+<h2 id="common-but-fixable-capabilities-issues_1">Common (but fixable!) capabilities issues</h2>
+<!-- image -->
+
+<!-- image -->
+
+<!-- image -->
+
+<!-- image -->
+
+<!-- image -->
+
+<!-- image -->
+
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Solution</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Datetime filter for 'what happened recently' or 'what's the latest on…'</td>
+<td>• 'Recent' or 'Latest' is contextual based on the query, use few shots o 'Latest' emails != "Recent' physics research</td>
+</tr>
+<tr>
+<td></td>
+<td>Comparisons</td>
+<td>• Requires multiple search queries and a comparison between the two sets of results</td>
+</tr>
+<tr>
+<td></td>
+<td>Filters for Tabular Data in PDF</td>
+<td>• Users may want to answer questions over tables using SQL-like behavior • Users may want to search for rows or columns in large data tables like a spec sheet</td>
+</tr>
+<tr>
+<td></td>
+<td>Specific filters for stock tickers (before a document search)</td>
+<td>• Find specific ticket, quarter, document type to limit search and generate better results</td>
+</tr>
+<tr>
+<td>@jxnlco @jxnlco</td>
+<td>Understand document metadata</td>
+<td>maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook • Store meta data (e.g., modification history to understand who last modified the procurement form) • Find me contracts that are unsigned past their due date</td>
+</tr>
+</tbody>
+</table>
+<h2 id="lack-of-capabilities-examples_3">Lack of capabilities examples</h2>
+<h2 id="how-to-fix-a-lack-of-capabilities">How to fix a lack of capabilities</h2>
+<ul>
+<li>· Query routing: Run multiple searches in parallel and combine information</li>
+<li>· Extract metadata: Pre-process data and build new indices to search against, used to filter and sort queries</li>
+<li>· Long context: Conditionally use long context models rather than RAG when answers are found in short documents rather than many chunks</li>
+<li>· Generation prompt: Based on the document types change how we generate or render responses</li>
+</ul>
+<!-- image -->
+
+<h2 id="call-out">Call out:</h2>
+<p>Topic Modeling is only a tool to come up with explicit Classifications</p>
+<h2 id="exploratory-data-analysis">Exploratory Data analysis</h2>
+<ul>
+<li>· Test a variety of different hypotheses by running experiments</li>
+<li>· Determine new capabilities and user requirements: Work with domain experts, clustering methods and few shot classifiers to find and propose 'segments':</li>
+</ul>
+<h2 id="examples">Examples:</h2>
+<ul>
+<li> Searching for contact information (e.g., render contact cards when the query contains a person)</li>
+<li> Searching across files (e.g., determine if a file should be displayed or if audio data should be summarized)</li>
+<li> Searching across time (e.g., display a clock widget for time-related queries)</li>
+</ul>
+<!-- image -->
+
+<h2 id="classification-example">Classification example</h2>
+<!-- image -->
+
+<!-- image -->
+
+<h2 id="consider-classifying-on">Consider classifying on :</h2>
+<ul>
+<li>· Question types</li>
+<li>· Context recovered</li>
+<li>· Search indices hit</li>
+<li>· Format type and responses returned</li>
+</ul>
+<p>maven.com/applied-llms/rag-playbook</p>
+<h2 id="classification-example_1">Classification example</h2>
+<!-- image -->
+
+<p>@jxnlco @jxnlco</p>
+<p>For each job type, the percentage of relevant conversations with Claude is shown in orange compared to the percentage of workers in the U.S. economy with that job type (from the U.S. Department of Labor's O*NET categories) in gray.</p>
+<h2 id="anthropic-recently-also-did-data-analysis-on-their-queries-to-uncover-segments">Anthropic recently also did data analysis on their queries to uncover segments</h2>
+<ul>
+<li>· Computer and mathematical</li>
+</ul>
+<p>https://www.anthropic.com/n ews/the-anthropiceconomic-index maven.com/applied-llms/rag-playbook</p>
+<p>51 maven.com/applied-llms/rag-playbook maven.com/applied-llms/ragplaybook</p>
+<h2 id="exploration-and-monitoring">Exploration and Monitoring</h2>
+<h2 id="title-if-you-dont-have-user-data">Title If you don't have user data…</h2>
+<ul>
+<li>· A priori zero-shot or few-shot potential topics and capabilities users may have</li>
+<li>· Set up monitoring system as you roll out a production system</li>
+</ul>
+<!-- image -->
+
+<h2 id="exploration-and-monitoring_1">Exploration and Monitoring</h2>
+<h2 id="title-if-you-dont-have-user-data_1">Title If you don't have user data…</h2>
+<ul>
+<li>· A priori zero-shot or few-shot potential topics and capabilities users may have</li>
+<li>· Set up monitoring system as you roll out a production system</li>
+</ul>
+<!-- image -->
+
+<h2 id="if-you-do-have-user-data">If you do have user data…</h2>
+<ul>
+<li>· Run topic modeling and clustering</li>
+<li>· Present topics</li>
+<li>· Identify 5-10 example queries for both satisfied and unsatisfied clusters</li>
+<li>· Collaborate with domain experts and user researchers to analyze clusters</li>
+</ul>
+<h2 id="uncovered-topic-example-customer-support">Uncovered topic example: customer support</h2>
+<p>Through topic modeling, you discover that queries about customer support are frequent:</p>
+<h2 id="positive-examples">Positive examples</h2>
+<p>Show me the last 10 support tickets</p>
+<p>First 10 customer support tickets about battery life complaints</p>
+<p>Jason Liu's support tickets maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
+<h2 id="uncovered-topic-example-customer-support_1">Uncovered topic example: customer support</h2>
+<p>Through topic modeling, you discover that queries about customer support are frequent:</p>
+<table>
+<thead>
+<tr>
+<th>Positive examples</th>
+<th>Negative examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Show me the last 10 support tickets</td>
+<td>Is Jason a good customer service rep?</td>
+</tr>
+<tr>
+<td>First 10 customer support tickets about battery life complaints Jason Liu's support tickets</td>
+<td>Who is likely to churn and why? What do people complain about most?</td>
+</tr>
+</tbody>
+</table>
+<h2 id="uncovered-topic-example-customer-support_2">Uncovered topic example: customer support</h2>
+<p>Through topic modeling, you discover that queries about customer support are frequent:</p>
+<table>
+<thead>
+<tr>
+<th>Positive examples</th>
+<th>Negative examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Show me the last 10 support tickets</td>
+<td>Is Jason a good customer service rep?</td>
+</tr>
+<tr>
+<td>First 10 customer support tickets about battery life complaints Jason Liu's support tickets</td>
+<td>Who is likely to churn and why? What do people complain about most?</td>
+</tr>
+</tbody>
+</table>
+<h2 id="current-performance">Current performance:</h2>
+<ul>
+<li>· No issues: Finding support tickets</li>
+<li>· Significant issues: Reporting on Customer Service Rep Metrics</li>
+<li>· Major challenge: Churn prediction is nearly impossible to reason about for an LLM</li>
+</ul>
+<h2 id="potential-solutions">Potential solutions:</h2>
+<ul>
+<li>· Render support tickets in UI</li>
+<li>· Implement a tool that renders customer support rep metrics</li>
+<li>· Build a model to do sentiment analysis on individual customer service threads or topics</li>
+</ul>
+<p>maven.com/applied-llms/rag-playbook maven.com/applied-llms/rag-playbook</p>
+<h2 id="call-out_1">Call out:</h2>
+<p>Make sure to convert offline analysis to online analysis too</p>
+<!-- image -->
+
+<h2 id="why-monitor-topics-online">Why monitor topics online?</h2>
+<p>Automation Paradox: Automation saves you time, but issues will multiply if left unchecked, sampling production is the easiest way to understand what is going on.</p>
+<!-- image -->
+
+<h2 id="why-monitor-topics-online_1">Why monitor topics online?</h2>
+<p>Automation Paradox: Automation saves you time, but issues will multiply if left unchecked, sampling production is the easiest way to understand what is going on.</p>
+<h2 id="instructions-for-online-monitoring">Instructions for Online Monitoring</h2>
+<ul>
+<li>· Establish topic clusters / classifications you want to monitor and check against for when new topics emerge</li>
+<li>· Make sure to have an 'Other' category and monitor how this fluctuates as new customers are onboarded</li>
+<li>· Detect changes to the system after any product changes or new users</li>
+<li>· Build Dashboards:</li>
+<li>· Track Distributions of query types over time</li>
+<li>· Track % Other to detect drift in your systems</li>
+<li>· Track Satisfaction and Volume per Query Type</li>
+<li>· Track Average Relevance per Query Type</li>
+<li>· Track Metrics across Cohorts and Organizations</li>
+<li>· Conduct exploratory analysis when systems changes in an unexpected way</li>
+</ul>
+<h2 id="why-monitor-topics-online_2">Why monitor topics online?</h2>
+<p>After you attract new users, these users may use the app differently relative to your existing users because of</p>
+<ul>
+<li>· Demographics</li>
+<li>· Psychographics</li>
+</ul>
+<p>You can better detect and understand why satisfaction may drift.</p>
+<h2 id="for-example">For example:</h2>
+<ul>
+<li>· New users ask different kinds of questions that we need different inventory or capabilities</li>
+<li>· Seasonality, etc.</li>
+</ul>
+<h2 id="concept-drift-visualization-across-multiple-dimensions">Concept Drift Visualization across Multiple Dimensions</h2>
+<!-- image -->
+
+<h2 id="session-4-key-takeaways">Session 4: Key takeaways</h2>
+<ul>
+<li>Gain a holistic view of system performance and user engagement A</li>
+<li>B</li>
+<li>Identify specific areas (e.g., users, content, features) that need the most attention</li>
+<li>Tailor your interventions and improvements to address the most impactful issues C</li>
+<li>Proactively monitor your system to detect evolving user needs and behaviors D</li>
+</ul>
+<!-- image -->
+
+<!-- image -->
+
+<!-- image -->
+
+<p>The goal is not only to detect concept drift, but also to understand its nuances across all aspects of your system.</p>
+<p>This multi-dimensional approach enables more targeted and effective strategies to maintaining and improving your RAG system</p>
+<!-- image -->
+
+<!-- image -->
+
+<p>Why does segmentation matter</p>
+<p>Why does segmentation matter</p>
+<p>Two types of segments</p>
+<p>Two types of segments</p>
+<h2 id="food-for-thought-for-this-session">Food for thought for this session</h2>
+<p>Sneak peak for rest of course</p>
+<p>Sneak peak for rest of course</p>
+<h2 id="food-for-thought-try-this-at-work-or-in-your-own-projects">Food for thought: try this at work or in your own projects</h2>
+<!-- image -->
+
+<p>Analyze User Queries: Perform topic modeling or batch classification to identify inventory or capability issues</p>
+<!-- image -->
+
+<!-- image -->
+
+<p>Evaluate answer quality: Identify examples of good and bad responses to guide improvements. Use these examples to guide improvements in the system's response quality.</p>
+<h2 id="implement-audit-feedback-mechanisms">Implement audit feedback mechanisms:</h2>
+<ul>
+<li>· Implement user feedback UI</li>
+<li>· Assess how often users use the thumbs-up and thumbs-down buttons for feedback</li>
+<li>· Analyze if the feedback mechanism is effective and consider changes if necessary (e.g., larger buttons, repositioning).</li>
+</ul>
+<!-- image -->
+
+<!-- image -->
+
+<p>Make step-wise improvements: Discuss with your team where to make improvements</p>
+<ul>
+<li>· What Metadata is missing?</li>
+<li>· What filters are missing?</li>
+<li>· What indices are missing?</li>
+</ul>
+<!-- image -->
+
+<!-- image -->
+
+<p>Why does segmentation matter</p>
+<p>Why does segmentation matter</p>
+<p>Two types of segments</p>
+<p>Two types of segments</p>
+<p>Food for thought for this session</p>
+<p>Food for thought for this session</p>
+<h2 id="sneak-peak-for-rest-of-course">Sneak peak for rest of course</h2>
+<h2 id="sneak-peek-for-rest-of-course">Sneak peek for rest of course</h2>
+<ul>
+<li>· Focus for last session:</li>
+<li>· The Art of RAG UX: Subtle and obvious ways to build confidence and trust in your RAG app</li>
+<li>· Focus for this session:</li>
+<li>· Learned to about segmentation and how to distinguish between inventory and capabilities issues and how to approach solving them. We will need to invest a lot of time in extending our capabilities in specific rather than general ways (e.g., solving problems locally within certain segments)</li>
+<li>· Established the importance of production / online monitoring</li>
+</ul>
+<h2 id="focus-for-next-2-sessions">Focus for next 2 sessions:</h2>
+<ul>
+<li>· Focus on details of what kinds of capabilities to think about and what to watch out for:</li>
+<li>· Session 5: Map - Structured extraction and multimodality</li>
+<li>· Session 6: Apply - Routing queries and testing router accuracy</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://x.com/jxnlco" target="_blank" rel="noopener" title="x.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "navigation.instant", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.footer", "search.highlight", "search.share", "search.suggest", "toc.follow", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+    
+  </body>
+</html>

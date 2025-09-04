@@ -1200,6 +1200,24 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#team-organization-for-scalable-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team Organization for Scalable Development
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-structure-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Structure Works
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#moving-from-monolithic-to-modular" class="md-nav__link">
     <span class="md-ellipsis">
       Moving from Monolithic to Modular
@@ -3001,6 +3019,24 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#team-organization-for-scalable-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team Organization for Scalable Development
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-structure-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Structure Works
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#moving-from-monolithic-to-modular" class="md-nav__link">
     <span class="md-ellipsis">
       Moving from Monolithic to Modular
@@ -3072,14 +3108,38 @@
 <li><strong>Performance</strong>: Enable parallel execution</li>
 <li><strong>Team Structure</strong>: Different teams own different components</li>
 </ul>
+<h3 id="team-organization-for-scalable-development">Team Organization for Scalable Development</h3>
+<p>When building these systems at scale, team organization becomes critical. From my experience developing multiple microservices for retrieval at different companies, successful teams organize around these boundaries:</p>
 <div class="admonition example">
 <p class="admonition-title">Organizational Structure</p>
+<p><strong>Interface Team</strong> (Product/API Design)
+- Designs tool specifications based on user research
+- Defines the contracts between components<br />
+- Decides what capabilities to expose
+- Manages the user experience across tools</p>
+<p><strong>Implementation Teams</strong> (Engineering)
+- <strong>Search Team</strong>: Builds document and text retrievers
+- <strong>Vision Team</strong>: Handles blueprint and image search
+- <strong>Structured Data Team</strong>: Manages schedule and metadata search
+- Each team optimizes their specific retriever type</p>
+<p><strong>Router Team</strong> (ML Engineering)<br />
+- Builds and optimizes the query routing system
+- Manages few-shot examples and prompt engineering
+- Handles tool selection accuracy measurement</p>
+<p><strong>Evaluation Team</strong> (Data Science)
+- Tests end-to-end system performance
+- Identifies bottlenecks between routing and retrieval
+- Runs A/B tests and measures user satisfaction</p>
 </div>
-<p>One effective team structure:
-- <strong>Interface Team</strong>: Designs the API contracts and tool specifications based on user needs
-- <strong>Implementation Team</strong>: Builds and optimizes individual retrievers for specific content types
-- <strong>Router Team</strong>: Creates and optimizes the query routing system
-- <strong>Evaluation Team</strong>: Tests the performance of the entire system and identifies bottlenecks</p>
+<h3 id="why-this-structure-works">Why This Structure Works</h3>
+<p>This separation allows teams to work independently while maintaining system coherence:</p>
+<ul>
+<li><strong>Clear ownership</strong>: Each team owns specific metrics and outcomes</li>
+<li><strong>Parallel development</strong>: Teams can optimize their components simultaneously  </li>
+<li><strong>Scalable expertise</strong>: Teams develop deep knowledge in their domain</li>
+<li><strong>Clean interfaces</strong>: Teams coordinate through well-defined APIs</li>
+</ul>
+<p><strong>You're effectively becoming a framework developer for language models.</strong> Moving forward, building RAG systems will feel a lot like building distributed microservices, where each service specializes in a particular type of information retrieval.</p>
 <div class="highlight"><pre><span></span><code>graph TD
     A[User Query] --&gt; B[Query Router]
     B --&gt; C[Tool Selection]

@@ -1211,6 +1211,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Building a Blueprint Search Tool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-blueprint-extractor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Blueprint Extractor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-blueprint-search-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Blueprint Search Tool
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -3085,6 +3109,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Building a Blueprint Search Tool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-blueprint-extractor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Blueprint Extractor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-blueprint-search-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Blueprint Search Tool
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -3247,6 +3295,48 @@
 <li>Chapter 5: Specialized retrievers as tools</li>
 </ul>
 <h3 id="building-a-blueprint-search-tool">Building a Blueprint Search Tool</h3>
+<p>Let's start with a concrete example from a construction company that wants to search over images of different blueprints. The process involves two steps:</p>
+<ol>
+<li><strong>Blueprint Extractor</strong>: Extract structured data from blueprint images</li>
+<li><strong>Blueprint Search Tool</strong>: Query the extracted data</li>
+</ol>
+<h4 id="step-1-blueprint-extractor">Step 1: Blueprint Extractor</h4>
+<p>First, we need an extractor that processes blueprint images and saves structured data:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseModel</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Optional</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">BlueprintExtractor</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Extracts structured data from blueprint images using OCR and AI.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">extract_from_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Extract date and description from blueprint image.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict: Extracted blueprint metadata</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Use OCR and vision models to extract text</span>
+        <span class="n">ocr_text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_extract_text_from_image</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span>
+
+        <span class="c1"># Use LLM to structure the extracted text</span>
+        <span class="n">structured_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_structure_blueprint_data</span><span class="p">(</span><span class="n">ocr_text</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="n">structured_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;description&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">),</span>
+            <span class="s2">&quot;date&quot;</span><span class="p">:</span> <span class="n">structured_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+            <span class="s2">&quot;image_path&quot;</span><span class="p">:</span> <span class="n">image_path</span><span class="p">,</span>
+            <span class="s2">&quot;extracted_at&quot;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span>
+        <span class="p">}</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">save_to_database</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">blueprint_data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Save extracted blueprint data to database for searching.&quot;&quot;&quot;</span>
+        <span class="c1"># Implementation would depend on your database choice</span>
+        <span class="c1"># This creates the searchable index for our search tool</span>
+        <span class="k">pass</span>
+</code></pre></div>
+<h4 id="step-2-blueprint-search-tool">Step 2: Blueprint Search Tool</h4>
+<p>Now we can build a search tool that queries this structured data:</p>
 <p>Based on our analysis in Chapter 5, we've determined that users often search for blueprints by description and date range. We'll define a tool interface that captures this functionality:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseModel</span>
 

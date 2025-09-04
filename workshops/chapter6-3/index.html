@@ -1288,6 +1288,24 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#the-google-ecosystem-analogy" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Google Ecosystem Analogy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#dual-mode-ui-example" class="md-nav__link">
     <span class="md-ellipsis">
       Dual-Mode UI Example
@@ -1394,6 +1412,24 @@
   
     <nav class="md-nav" aria-label="Success Formula">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-role-of-pquery-in-product-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Role of P(query) in Product Strategy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategic-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strategic Framework
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#diagnostic-framework" class="md-nav__link">
@@ -3235,6 +3271,24 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#the-google-ecosystem-analogy" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Google Ecosystem Analogy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#dual-mode-ui-example" class="md-nav__link">
     <span class="md-ellipsis">
       Dual-Mode UI Example
@@ -3341,6 +3395,24 @@
   
     <nav class="md-nav" aria-label="Success Formula">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-role-of-pquery-in-product-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Role of P(query) in Product Strategy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategic-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strategic Framework
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#diagnostic-framework" class="md-nav__link">
@@ -3738,11 +3810,29 @@
 </ol>
 <p>This approach ensures comprehensive coverage of your router's decision space without requiring extensive manual labeling.</p>
 <h2 id="user-interfaces-direct-tool-access">User Interfaces: Direct Tool Access</h2>
-<p>One powerful insight from the routing architecture is that tools designed for language models can often be exposed directly to users as well. Just as Google offers specialized interfaces like Google Maps, YouTube, and Google Images alongside its main search, your RAG application can offer both:</p>
+<p>One powerful insight from the routing architecture is that tools designed for language models can often be exposed directly to users as well. </p>
+<h3 id="the-google-ecosystem-analogy">The Google Ecosystem Analogy</h3>
+<p>Think about how Google structures their search ecosystem:</p>
+<ul>
+<li><strong>YouTube</strong> = Google's video search index</li>
+<li><strong>Google Maps</strong> = Google's directions and location index  </li>
+<li><strong>Google Images</strong> = Google's image search index</li>
+<li><strong>LinkedIn</strong> (conceptually) = Professional network index</li>
+<li><strong>Google Search</strong> = Everything else</li>
+</ul>
+<p>Each interface is specialized for a particular type of content and query. But notice something important: when you search on regular Google and it thinks your query is about videos, it shows you YouTube results. When it thinks you want directions, it shows Maps results. <strong>Google is very opinionated about what kind of UI to show you based on your search request.</strong></p>
+<p>This same principle applies to RAG applications. Your system can offer both:</p>
 <ol>
 <li>A natural language interface using the router</li>
 <li>Direct access to specialized tools for specific needs</li>
 </ol>
+<h3 id="why-this-matters">Why This Matters</h3>
+<p>There's a huge opportunity to build UIs that let users naturally map their queries to the specialized tools we've built. In our construction example, we implemented:</p>
+<ul>
+<li>A <code>SearchText</code> tool with query and filter parameters  </li>
+<li>A <code>SearchBlueprint</code> tool with description and date parameters</li>
+</ul>
+<p>But here's the key insight: <strong>if we can expose these tools to a language model, why not expose them directly to users?</strong></p>
 <blockquote>
 <p>"When I know exactly what I need, a specialized tool is much faster than explaining it to a chatbot. But when I'm exploring new areas or have complex needs, the chat interface helps me discover what's possible."</p>
 <p><em>— Expert User Perspective</em></p>
@@ -3981,7 +4071,7 @@ To mitigate these biases:
 - Complement implicit feedback with explicit ratings
 </code></pre></div>
 <h2 id="success-formula">Success Formula</h2>
-<p>System success depends on two factors:</p>
+<p>System success depends on multiple factors that multiply together:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 P(\\text{success}) = P(\\text{find right document} \\mid \\text{right tool}) \\times P(\\text{right tool})
@@ -3990,10 +4080,49 @@ P(\\text{success}) = P(\\text{find right document} \\mid \\text{right tool}) \\t
 P(\\text{success}) = P(\\text{find right document} \\mid \\text{right tool}) \\times P(\\text{right tool})
 </script>
 </div>
+<p>But we can extend this formula to be even more useful:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+P(\\text{success}) = P(\\text{success} \\mid \\text{correct tool chosen}) \\times P(\\text{tool chosen} \\mid \\text{query}) \\times P(\\text{query})
+</div>
+<script type="math/tex; mode=display">
+P(\\text{success}) = P(\\text{success} \\mid \\text{correct tool chosen}) \\times P(\\text{tool chosen} \\mid \\text{query}) \\times P(\\text{query})
+</script>
+</div>
+<p>Where:
+- <strong>P(success | correct tool chosen)</strong> = Retrieval quality and generation quality
+- <strong>P(tool chosen | query)</strong> = Router accuracy for selecting the right tool
+- <strong>P(query)</strong> = Probability of this type of query happening</p>
+<h3 id="the-role-of-pquery-in-product-strategy">The Role of P(query) in Product Strategy</h3>
+<p>The <strong>P(query)</strong> component is actually a function of your UI design and user education:</p>
+<ul>
+<li><strong>UI Design</strong>: What queries do users naturally think to ask?</li>
+<li><strong>User Education</strong>: What capabilities do users know about?</li>
+<li><strong>Product Marketing</strong>: How do you teach users what's possible?</li>
+</ul>
+<p>This gives you control over the query distribution. If you're great at blueprint search but users don't know to ask blueprint questions, you can:</p>
+<ol>
+<li><strong>Promote the capability</strong>: Show example blueprint queries in your UI</li>
+<li><strong>Improve discoverability</strong>: Add a dedicated blueprint search interface  </li>
+<li><strong>Educational content</strong>: Help users understand what blueprint questions you can answer</li>
+</ol>
+<h3 id="strategic-framework">Strategic Framework</h3>
+<p>Using this extended formula, you can map your product and research roadmap:</p>
+<p><strong>High P(success | tool) × High P(tool | query) × High P(query)</strong><br />
+→ These are your <strong>product strengths</strong> to highlight and market</p>
+<p><strong>Low P(success | tool) × High P(tool | query) × High P(query)</strong><br />
+→ <strong>Research priority</strong>: Users want this capability, router works, but retrieval fails</p>
+<p><strong>High P(success | tool) × Low P(tool | query) × High P(query)</strong><br />
+→ <strong>Router improvement</strong>: Users want it, tool works, but routing fails</p>
+<p><strong>High P(success | tool) × High P(tool | query) × Low P(query)</strong><br />
+→ <strong>Product/UI focus</strong>: Great capability that users don't discover</p>
+<p><strong>Low across all dimensions</strong><br />
+→ <strong>Deprioritize or discontinue</strong>: May not be worth the investment</p>
 <p>This means:</p>
 <ol>
-<li>Each retriever must work well when selected</li>
+<li>Each retriever must work well when selected  </li>
 <li>The router must select the right retriever</li>
+<li>Users must know to ask questions that leverage your strengths</li>
 </ol>
 <h3 id="diagnostic-framework">Diagnostic Framework</h3>
 <p>This formula helps diagnose problems:</p>

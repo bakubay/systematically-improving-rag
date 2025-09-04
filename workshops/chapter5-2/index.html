@@ -1113,6 +1113,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#the-vlm-training-challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      The VLM Training Challenge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#additional-image-enhancement-approaches" class="md-nav__link">
     <span class="md-ellipsis">
       Additional Image Enhancement Approaches
@@ -1192,6 +1201,48 @@
       Key Points
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining-results-with-simple-routers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combining Results with Simple Routers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Combining Results with Simple Routers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#building-a-router-with-function-calling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building a Router with Function Calling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parallel-execution-and-result-combination" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parallel Execution and Result Combination
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#short-term-vs-long-term-combination-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Short-term vs Long-term Combination Strategies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3070,6 +3121,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#the-vlm-training-challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      The VLM Training Challenge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#additional-image-enhancement-approaches" class="md-nav__link">
     <span class="md-ellipsis">
       Additional Image Enhancement Approaches
@@ -3149,6 +3209,48 @@
       Key Points
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining-results-with-simple-routers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combining Results with Simple Routers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Combining Results with Simple Routers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#building-a-router-with-function-calling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building a Router with Function Calling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parallel-execution-and-result-combination" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parallel Execution and Result Combination
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#short-term-vs-long-term-combination-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Short-term vs Long-term Combination Strategies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3308,10 +3410,28 @@
 </code></pre></div>
 <h3 id="image-search-bridging-visual-and-textual-understanding">Image Search: Bridging Visual and Textual Understanding</h3>
 <p>Image search is tricky because vision models were trained on captions, but people don't search using caption-style language.</p>
+<h3 id="the-vlm-training-challenge">The VLM Training Challenge</h3>
+<p><strong>Why Vision-Language Models (VLMs) Struggle with Search:</strong></p>
+<p>Vision-Language Models were primarily trained on image-caption pairs from the web, which creates a fundamental mismatch with how people actually search:</p>
+<p><strong>Training Data Format:</strong>
+- <em>Image captions</em>: "A man in a blue shirt standing next to a car"
+- <em>Web descriptions</em>: "Photo shows person outdoors"
+- <em>Alt text</em>: "Stock photo of businessman"</p>
+<p><strong>How Users Actually Search:</strong><br />
+- <em>Conceptual</em>: "professional headshot"
+- <em>Contextual</em>: "team building activities" 
+- <em>Functional</em>: "office meeting setup"
+- <em>Emotional</em>: "confident leadership pose"</p>
+<p>This training gap means VLMs excel at generating accurate captions but struggle to understand the conceptual, contextual, and functional language that users naturally employ when searching.</p>
+<p><strong>Additional VLM Limitations:</strong>
+- <strong>Embedding space mismatch</strong>: Question embeddings and image caption embeddings exist in different semantic spaces
+- <strong>Training bias</strong>: Optimized for caption generation, not retrieval matching
+- <strong>Context loss</strong>: VLMs see isolated images without surrounding document context</p>
 <div class="admonition warning">
 <p class="admonition-title">Embedding Spaces Mismatch</p>
 </div>
 <p>The naive approach—applying the same embedding strategy used for text—often fails because question embeddings and image caption embeddings exist in fundamentally different semantic spaces. Simply embedding captions like "two people" will not retrieve well when users search for "business meeting" or "team collaboration."</p>
+<p><strong>Solution</strong>: Bridge this gap with chain-of-thought reasoning that explicitly connects visual elements to likely search terms.</p>
 <p><strong>When to Use Vision Language Models:</strong> According to Adit from Reducto, VLMs excel at "things that traditional OCR has always been horrible at" - handwriting, charts, figures, and diagrams. However, for clean structured information, traditional CV provides better precision and token efficiency. <a href="../../talks/reducto-docs-adit/">Learn about their hybrid approach →</a></p>
 <p>Here's how to make image search actually work:</p>
 <div class="admonition example">
@@ -3649,6 +3769,125 @@ def hybrid_search(query, k=10):
     I --&gt; J[User Response]
 </code></pre></div>
 <p>The nice thing is this approach scales. The same process—generate test data, segment queries, identify capabilities—works whether you're building your first retriever or your tenth.</p>
+<h2 id="combining-results-with-simple-routers">Combining Results with Simple Routers</h2>
+<p>Once you have multiple specialized retrievers, you need a way to decide which ones to use for each query. The good news is that building a basic router is straightforward with modern function calling capabilities.</p>
+<h3 id="building-a-router-with-function-calling">Building a Router with Function Calling</h3>
+<p>Here's how to build a simple router using Instructor for structured outputs:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseModel</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">List</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">instructor</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openai</span><span class="w"> </span><span class="kn">import</span> <span class="n">OpenAI</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">instructor</span><span class="o">.</span><span class="n">from_openai</span><span class="p">(</span><span class="n">OpenAI</span><span class="p">())</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">DocumentSearch</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Search through text documents and manuals&quot;&quot;&quot;</span>
+    <span class="n">query</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">ImageSearch</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Search through images and visual content&quot;&quot;&quot;</span>
+    <span class="n">query</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">TableSearch</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Search through structured data and tables&quot;&quot;&quot;</span>
+    <span class="n">query</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">SQLQuery</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Query structured databases with SQL&quot;&quot;&quot;</span>
+    <span class="n">query</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">route_query</span><span class="p">(</span><span class="n">user_query</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">BaseModel</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Route a query to appropriate retrieval tools using parallel function calling.&quot;&quot;&quot;</span>
+
+    <span class="k">return</span> <span class="n">client</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+        <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4o-mini&quot;</span><span class="p">,</span>
+        <span class="n">messages</span><span class="o">=</span><span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;system&quot;</span><span class="p">,</span> 
+                <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;You are a query router. Analyze the user&#39;s query and decide which retrieval tools to use.</span>
+
+<span class="s2">                You can call multiple tools if needed. Here are your available tools:</span>
+<span class="s2">                - DocumentSearch: For questions about procedures, policies, or text content</span>
+<span class="s2">                - ImageSearch: For questions about visual content, diagrams, or photos  </span>
+<span class="s2">                - TableSearch: For questions about data, comparisons, or structured information</span>
+<span class="s2">                - SQLQuery: For specific data queries requiring database operations</span>
+
+<span class="s2">                Examples:</span>
+<span class="s2">                - &quot;Show me the safety manual&quot; → DocumentSearch</span>
+<span class="s2">                - &quot;What does the circuit diagram look like?&quot; → ImageSearch  </span>
+<span class="s2">                - &quot;Compare Q1 vs Q2 revenue&quot; → TableSearch</span>
+<span class="s2">                - &quot;How many users signed up last month?&quot; → SQLQuery</span>
+<span class="s2">                &quot;&quot;&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">user_query</span><span class="p">}</span>
+        <span class="p">],</span>
+        <span class="n">response_model</span><span class="o">=</span><span class="n">List</span><span class="p">[</span><span class="n">DocumentSearch</span> <span class="o">|</span> <span class="n">ImageSearch</span> <span class="o">|</span> <span class="n">TableSearch</span> <span class="o">|</span> <span class="n">SQLQuery</span><span class="p">]</span>
+    <span class="p">)</span>
+</code></pre></div>
+<h3 id="parallel-execution-and-result-combination">Parallel Execution and Result Combination</h3>
+<p>The router can call multiple retrievers simultaneously using parallel function calling:</p>
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">execute_search</span><span class="p">(</span><span class="n">user_query</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Execute search across multiple retrievers in parallel.&quot;&quot;&quot;</span>
+
+    <span class="c1"># Step 1: Route the query</span>
+    <span class="n">selected_tools</span> <span class="o">=</span> <span class="n">route_query</span><span class="p">(</span><span class="n">user_query</span><span class="p">)</span>
+
+    <span class="c1"># Step 2: Execute all searches in parallel</span>
+    <span class="n">tasks</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">tool</span> <span class="ow">in</span> <span class="n">selected_tools</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tool</span><span class="p">,</span> <span class="n">DocumentSearch</span><span class="p">):</span>
+            <span class="n">tasks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">search_documents</span><span class="p">(</span><span class="n">tool</span><span class="o">.</span><span class="n">query</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tool</span><span class="p">,</span> <span class="n">ImageSearch</span><span class="p">):</span>
+            <span class="n">tasks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">search_images</span><span class="p">(</span><span class="n">tool</span><span class="o">.</span><span class="n">query</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tool</span><span class="p">,</span> <span class="n">TableSearch</span><span class="p">):</span>
+            <span class="n">tasks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">search_tables</span><span class="p">(</span><span class="n">tool</span><span class="o">.</span><span class="n">query</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tool</span><span class="p">,</span> <span class="n">SQLQuery</span><span class="p">):</span>
+            <span class="n">tasks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">execute_sql_query</span><span class="p">(</span><span class="n">tool</span><span class="o">.</span><span class="n">query</span><span class="p">))</span>
+
+    <span class="c1"># Wait for all searches to complete</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span><span class="o">*</span><span class="n">tasks</span><span class="p">)</span>
+
+    <span class="c1"># Step 3: Combine and rank results</span>
+    <span class="k">return</span> <span class="n">combine_and_rank_results</span><span class="p">(</span><span class="n">user_query</span><span class="p">,</span> <span class="n">results</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="short-term-vs-long-term-combination-strategies">Short-term vs Long-term Combination Strategies</h3>
+<p><strong>Short-term approach</strong> (implement first):
+- Concatenate results from different retrievers
+- Apply a re-ranker (like Cohere) to the combined results
+- Weight results by retriever confidence scores</p>
+<p><strong>Long-term approach</strong> (as you get more data):
+- Train dedicated ranking models using user feedback
+- Learn weights for different signal types (relevancy, recency, citations, authority)
+- Implement more sophisticated scoring that considers user context</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">combine_results_short_term</span><span class="p">(</span><span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">results_list</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">SearchResult</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">SearchResult</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Simple combination strategy using re-ranking.&quot;&quot;&quot;</span>
+
+    <span class="c1"># Concatenate all results</span>
+    <span class="n">all_results</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">results</span> <span class="ow">in</span> <span class="n">results_list</span><span class="p">:</span>
+        <span class="n">all_results</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+
+    <span class="c1"># Apply re-ranker for final ordering</span>
+    <span class="n">reranked</span> <span class="o">=</span> <span class="n">cohere_rerank</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">all_results</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">reranked</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>  <span class="c1"># Return top 10</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">combine_results_long_term</span><span class="p">(</span><span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">results_list</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">SearchResult</span><span class="p">],</span> <span class="n">user_context</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">SearchResult</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Advanced combination using learned weights.&quot;&quot;&quot;</span>
+
+    <span class="c1"># Calculate weighted scores considering multiple signals</span>
+    <span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">all_results</span><span class="p">:</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">final_score</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="mf">0.4</span> <span class="o">*</span> <span class="n">result</span><span class="o">.</span><span class="n">cosine_similarity</span> <span class="o">+</span>      <span class="c1"># Semantic relevance</span>
+            <span class="mf">0.3</span> <span class="o">*</span> <span class="n">result</span><span class="o">.</span><span class="n">cohere_rerank_score</span> <span class="o">+</span>    <span class="c1"># Re-ranking score  </span>
+            <span class="mf">0.2</span> <span class="o">*</span> <span class="n">result</span><span class="o">.</span><span class="n">recency_score</span> <span class="o">+</span>          <span class="c1"># How recent</span>
+            <span class="mf">0.1</span> <span class="o">*</span> <span class="n">result</span><span class="o">.</span><span class="n">authority_score</span>          <span class="c1"># Source authority</span>
+        <span class="p">)</span>
+
+    <span class="c1"># Sort by final score</span>
+    <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">all_results</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">final_score</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)[:</span><span class="mi">10</span><span class="p">]</span>
+</code></pre></div>
+<p>This router approach scales well—you can add new retriever types without changing the core logic, and the parallel execution keeps latency reasonable even with multiple retrievers.</p>
 <p><strong>How to actually do this:</strong></p>
 <ol>
 <li>Start with one or two specialized retrievers for your most common queries</li>
