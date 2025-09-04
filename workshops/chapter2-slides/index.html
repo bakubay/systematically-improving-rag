@@ -3436,6 +3436,10 @@
 <h2 id="systematically-improving-rag-applications">Systematically Improving RAG Applications</h2>
 <p><strong>Session 2:</strong> If You're Not Fine-Tuning, You're Blockbuster, Not Netflix</p>
 <p>Jason Liu</p>
+<!-- 
+Emphasize the urgency here - this is about seizing a competitive advantage while it still exists. The "Blockbuster vs Netflix" analogy is crucial - companies that don't adapt to new ML capabilities will be left behind. What used to require hundreds of thousands of dollars and large teams can now be done by individuals with a few hundred dollars of API calls. This window of opportunity won't last forever.
+-->
+
 <hr />
 <h2 id="todays-goals">Today's Goals</h2>
 <p><strong>From Measuring Relevancy to Building It</strong></p>
@@ -3447,6 +3451,10 @@
 <li>Start logging relevancy data for continuous improvement</li>
 </ul>
 <p><strong>Focus: Train models that understand YOUR definition of relevance</strong></p>
+<!-- 
+Key message: We're not fine-tuning language models (those are expensive and hard). We're fine-tuning embedding models - much easier and cheaper. The goal is to improve retrieval, not generation. This is the fundamental shift companies need to make.
+-->
+
 <hr />
 <h2 id="course-overview-reminder">Course Overview Reminder</h2>
 <h3 id="sessions-1-3-foundation-building">Sessions 1-3: Foundation Building</h3>
@@ -3462,6 +3470,10 @@
 <li><strong>Session 6:</strong> Query routing and system integration</li>
 </ul>
 <p><strong>Core Pattern:</strong> Synthetic data → Evaluations → Fine-tuning → Better products</p>
+<!-- 
+This is the foundation for everything. Sessions 1-3 build the core flywheel that makes everything else possible. Without this foundation, all the advanced techniques in sessions 4-6 won't work effectively. This pattern will repeat at different scales throughout the course.
+-->
+
 <hr />
 <h2 id="the-fundamental-problem-with-off-the-shelf-embeddings">The Fundamental Problem with Off-the-Shelf Embeddings</h2>
 <p><strong>The Big Assumption:</strong></p>
@@ -3475,6 +3487,10 @@
 - Same style, different colors? (crew neck vs v-neck)
 - Complementary items? (pants, shoes, bags for complete outfit)</p>
 <p><strong>All could be "correct" - depends on your business objective</strong></p>
+<!-- 
+This is the core insight Jason has been thinking about for 4 years from his image-based recommendation systems work. The key point: similarity is not objective - it depends entirely on your business objective. OpenAI embeddings were trained on web-scale text similarity, but that may not match your specific use case. This is why off-the-shelf embeddings fail.
+-->
+
 <hr />
 <h2 id="the-similarity-definition-problem">The Similarity Definition Problem</h2>
 <h3 id="rag-use-case-assumption">RAG Use Case Assumption</h3>
@@ -3490,6 +3506,10 @@
 <li><strong>User → Song:</strong> Will listen, will like, will save?</li>
 </ul>
 <p><strong>Issue:</strong> We're assuming what distance correlates with, without training for our specific objective</p>
+<!-- 
+This is the fundamental problem. We're making assumptions about what cosine distance means without actually training for our specific objective. Third-party embedding models bake in assumptions about similarity that may not match your use case. You need to decide what the objective function really is.
+-->
+
 <hr />
 <h2 id="real-world-example-dating-app-similarity">Real-World Example: Dating App Similarity</h2>
 <p><strong>Scenario:</strong> Two profiles with different coffee preferences</p>
@@ -3503,6 +3523,10 @@ Profile 2: &quot;I hate coffee&quot;
 <li><strong>Context-dependent:</strong> Coffee lover + tea lover might work</li>
 </ol>
 <p><strong>The Point:</strong> Linguistic similarity ≠ Business objective similarity</p>
+<!-- 
+This dating app example perfectly illustrates the problem. From a linguistic perspective, "I love coffee" and "I hate coffee" are opposites. But for a dating app, they might both indicate food/drink preferences, or coffee lovers might actually work well with tea lovers. The business objective determines what similarity means, not linguistic similarity.
+-->
+
 <hr />
 <h2 id="why-third-party-embeddings-fail">Why Third-Party Embeddings Fail</h2>
 <p><strong>The Core Issue:</strong>
@@ -3514,6 +3538,10 @@ Profile 2: &quot;I hate coffee&quot;
 - Technical docs: Version differences matter
 - Customer queries: Intent vs literal meaning</p>
 <p><strong>Solution:</strong> Train embeddings on YOUR definition of similarity</p>
+<!-- 
+Jason emphasizes this is about domain-specific relevance vs web-scale text similarity. Medical documents might confuse "neither" vs "nor", legal contracts care about signed vs unsigned, technical docs care about version differences. The solution is training embeddings that understand YOUR specific definition of similarity.
+-->
+
 <hr />
 <h2 id="the-data-collection-imperative">The Data Collection Imperative</h2>
 <blockquote>
@@ -3533,6 +3561,10 @@ Profile 2: &quot;I hate coffee&quot;
 <span class="c1"># Later: Fine-tune to move relevant items from position 20 → 5</span>
 <span class="c1"># Goal: More context efficient, better understanding of relevance</span>
 </code></pre></div></p>
+<!-- 
+Jason's personal experience: he's seen companies hire ML engineers only to realize they didn't start logging data. Now they wait 3-6 months for data collection. This is a critical mistake. Start logging TODAY - query, retrieved chunks, user interactions, citations. The key insight: move relevant content from position 20 to position 5 for better context efficiency.
+-->
+
 <hr />
 <h2 id="the-modern-fine-tuning-opportunity">The Modern Fine-Tuning Opportunity</h2>
 <p><strong>Historical Context:</strong>
@@ -3550,6 +3582,10 @@ Profile 2: &quot;I hate coffee&quot;
 - Before: Pay data labeling teams hundreds of thousands per year
 - Now: Couple hundred dollars of API calls
 - <strong>Seize this while it's still a competitive advantage</strong></p>
+<!-- 
+This is Jason's core message about urgency. What used to be accessible only to large companies with massive budgets is now available to small teams and individuals. This is the Netflix vs Blockbuster moment - seize this opportunity while it's still a competitive advantage. Many systems are at 70% performance, not 99%. Going from 70% → 85% → 90% is achievable with modest effort. Sentence Transformers can give 6-10% improvement with just 6,000 examples, fine-tuned on a laptop in 40 minutes.
+-->
+
 <hr />
 <h2 id="fine-tuning-fundamentals-contrastive-learning">Fine-Tuning Fundamentals: Contrastive Learning</h2>
 <p><strong>The Triplet Approach:</strong>
@@ -3565,6 +3601,10 @@ Negative: Unrelated deployment docs
 <strong>Use Cases:</strong> Tool selection, retrieval, any similarity-based system
 <strong>Reference:</strong> Check out Ramp's engineering article on this approach</p>
 <p><strong>Result:</strong> Model learns your specific definition of relevance</p>
+<!-- 
+The triplet approach is fundamental to contrastive learning. Pull together anchor + positive examples, push apart anchor + negative examples. This can be used for tool selection, retrieval, any similarity-based system. Reference Ramp's engineering article as a good case study of this approach in production.
+-->
+
 <hr />
 <h2 id="visual-before-and-after-fine-tuning">Visual: Before and After Fine-Tuning</h2>
 <h3 id="before-fine-tuning">Before Fine-Tuning</h3>
@@ -3578,6 +3618,10 @@ Negative: Unrelated deployment docs
 ├── Irrelevant (far): [0.9, 0.1, 0.1]    ← Fixed!
 </code></pre></div>
 <p><strong>Impact:</strong> Relevant content moves from position 20 → position 5</p>
+<!-- 
+This visual shows the core problem and solution. Before fine-tuning: irrelevant content is close, relevant content is far. After fine-tuning: relevant content is close, irrelevant content is far. This directly improves context efficiency and reduces hallucinations.
+-->
+
 <hr />
 <h2 id="types-of-training-data">Types of Training Data</h2>
 <h3 id="pairs-query-relevant-document">Pairs (Query → Relevant Document)</h3>
@@ -3599,6 +3643,10 @@ Negative: Unrelated deployment docs
 - Documents retrieved but not cited
 - Random sampling from corpus<br />
 - Hard negatives (similar but wrong)</p>
+<!-- 
+Negative selection is crucial. Documents retrieved but not cited make great negative examples. Hard negatives (similar but wrong) are particularly valuable for training robust models. The quality of negatives often determines training success.
+-->
+
 <hr />
 <h2 id="synthetic-data-for-fine-tuning">Synthetic Data for Fine-Tuning</h2>
 <p><strong>Same Principle from Session 1, New Application:</strong></p>
@@ -3623,6 +3671,10 @@ Expected Chunk: auth_docs_page_5
 - It's never "done" - it's just "better"
 - Continuous cycle of improvement
 - Same data serves multiple purposes as you scale</p>
+<!-- 
+This is the "Wax On, Wax Off" pattern Jason keeps referring to. The same synthetic data serves different purposes at different scales: 20 examples become evaluations, 200 examples become few-shot prompts, 2,000 examples become fine-tuning datasets. It's a continuous cycle - never "done", just "better". This pattern will repeat throughout the entire course.
+-->
+
 <hr />
 <h2 id="model-types-and-selection">Model Types and Selection</h2>
 <h3 id="bi-encoders-fast-retrieval">Bi-Encoders (Fast Retrieval)</h3>
@@ -3639,6 +3691,10 @@ Expected Chunk: auth_docs_page_5
 </code></pre></div>
 <strong>Examples:</strong> Cohere Rerank, MS Marco Cross-Encoders</p>
 <p><strong>Best Practice:</strong> Bi-encoder for retrieval + Cross-encoder for reranking</p>
+<!-- 
+Understand the tradeoff: Bi-encoders are fast (encode once, search many times) but less accurate. Cross-encoders are more accurate but slower (encode query+document pairs). Best practice is using bi-encoders for initial retrieval, then cross-encoders for reranking the top candidates.
+-->
+
 <hr />
 <h2 id="practical-fine-tuning-strategy">Practical Fine-Tuning Strategy</h2>
 <h3 id="step-1-start-with-reranking">Step 1: Start with Reranking</h3>
@@ -3669,6 +3725,10 @@ Expected Chunk: auth_docs_page_5
 - Single model handles multiple similarity types
 - Often leads to better results than task-specific models
 - Can eventually replace OpenAI embeddings entirely</p>
+<!-- 
+Jason's practical advice: Start with reranking because you don't need to re-embed existing data. If you already have lots of embedded data, it might not be worth fine-tuning embeddings - just retrieve more chunks and pass to a reranker. Multi-task training is powerful - don't train separate models for each task. One model can handle query-to-text, query-to-image-summary, query-to-table, etc. This often leads to better results than task-specific models.
+-->
+
 <hr />
 <h2 id="success-stories-and-benchmarks">Success Stories and Benchmarks</h2>
 <p><strong>Real-World Improvements:</strong>
@@ -3686,6 +3746,10 @@ Expected Chunk: auth_docs_page_5
 - MPNet-base-v2: Beats OpenAI at ~100 examples
 - BGE-base-1.5: Beats OpenAI at ~500 examples
 - Some models easier to train than others</p>
+<!-- 
+Jason emphasizes you don't need much data to get started. Some models are easier to train than others. MPNet-base-v2 can beat OpenAI with just 100 examples, BGE-base-1.5 needs about 500. The key insight: focus on high-quality training examples rather than massive datasets. Data beats models - focus on quality over quantity.
+-->
+
 <hr />
 <h2 id="modern-tools-and-resources">Modern Tools and Resources</h2>
 <h3 id="sentence-transformers">Sentence Transformers</h3>
@@ -3720,6 +3784,10 @@ Expected Chunk: auth_docs_page_5
 <li><strong>Training:</strong> Allocate 50 GPUs for 20 minutes, train 200 different parameter combinations</li>
 <li><strong>Pick the best:</strong> Drastically lower cost per experiment</li>
 </ul>
+<!-- 
+Jason's experience with Modal Labs shows the power of parallelization. Instead of testing embedding models sequentially (9 hours each), test 10-15 in parallel (15 minutes total). For training, allocate 50 GPUs for 20 minutes, train 200 different parameter combinations, pick the best. This drastically lowers the cost per experiment and speeds up iteration. This is how modern ML teams work.
+-->
+
 <hr />
 <h2 id="the-coffee-preference-example-resolved">The Coffee Preference Example Resolved</h2>
 <p><strong>Training Data Creation:</strong></p>
@@ -3740,6 +3808,10 @@ Expected Chunk: auth_docs_page_5
 <span class="p">]</span>
 </code></pre></div>
 <p><strong>Result:</strong> Model learns YOUR definition of compatibility</p>
+<!-- 
+This resolves the coffee preference example from earlier. You can explicitly define what similarity means for your use case. Approach 1: preference compatibility (love coffee + love tea are similar). Approach 2: category similarity (love coffee + hate coffee are similar because both are about coffee). The model learns YOUR definition of what matters.
+-->
+
 <hr />
 <h2 id="implementation-checklist">Implementation Checklist</h2>
 <h3 id="immediate-actions-this-week">Immediate Actions (This Week)</h3>
@@ -3760,6 +3832,10 @@ Expected Chunk: auth_docs_page_5
 <li><strong>Multi-task training:</strong> Combine multiple similarity definitions</li>
 <li><strong>Continuous improvement:</strong> Automated retraining pipeline</li>
 </ol>
+<!-- 
+This is the roadmap Jason recommends. Start immediately with logging, move to reranking within a month, then build towards custom embeddings and automated retraining. The key is starting NOW - don't wait for the perfect setup. The competitive advantage window is closing.
+-->
+
 <hr />
 <h2 id="common-pitfalls-to-avoid">Common Pitfalls to Avoid</h2>
 <h3 id="data-quality-issues">Data Quality Issues</h3>
@@ -3780,6 +3856,10 @@ Expected Chunk: auth_docs_page_5
 <li><strong>Maintenance:</strong> Not updating model with new data</li>
 <li><strong>Evaluation:</strong> Not measuring business impact</li>
 </ul>
+<!-- 
+Common pitfalls Jason has observed: synthetic data that's too easy (obviously correct) or too hard (impossible edge cases). Training issues include overfitting on small datasets and optimizing for wrong metrics. Production issues include adding latency for minimal improvement. Always measure business impact, not just technical metrics.
+-->
+
 <hr />
 <h2 id="the-wax-on-wax-off-pattern">The Wax On, Wax Off Pattern</h2>
 <p><strong>The Universal Pattern:</strong></p>
@@ -3796,6 +3876,10 @@ Production Model (Better relevance)
 More User Data → Repeat Cycle
 </code></pre></div>
 <p><strong>Key Insight:</strong> Same data, different applications at different scales</p>
+<!-- 
+This is the universal pattern that drives everything. The "Wax On, Wax Off" moment Jason keeps referencing. Synthetic data generation scales up through different applications: 20 examples for evaluation, 200 for few-shot, 2,000 for fine-tuning. Same data serves multiple purposes as you scale. This pattern repeats throughout the entire course and will be the foundation for all advanced techniques.
+-->
+
 <hr />
 <h2 id="next-week-preview-user-experience">Next Week Preview: User Experience</h2>
 <p><strong>Session 3 Focus:</strong>
@@ -3804,6 +3888,10 @@ More User Data → Repeat Cycle
 - User interaction patterns that improve models
 - Product decisions that enable better AI</p>
 <p><strong>Connection:</strong> Fine-tuned models enable better user experiences, which generate better training data</p>
+<!-- 
+This sets up the flywheel for Session 3. Better models create better user experiences, which generate better training data, which creates better models. This is the self-reinforcing cycle that separates great RAG systems from mediocre ones. The UX becomes a data collection mechanism.
+-->
+
 <hr />
 <h2 id="key-takeaways">Key Takeaways</h2>
 <h3 id="technical-insights">Technical Insights</h3>
@@ -3820,6 +3908,10 @@ More User Data → Repeat Cycle
 <li><strong>Small improvements matter</strong> - 10% recall improvement = better product</li>
 <li><strong>Continuous improvement</strong> - models should evolve with your product</li>
 </ol>
+<!-- 
+Jason's core strategic insights: start logging immediately, synthetic data works for generating quality training data, small improvements (10% recall) make a big product difference, and models must evolve with your product. The technical insights: similarity is subjective, start with reranking, use multi-task training, and focus on high-quality examples over massive datasets.
+-->
+
 <hr />
 <h2 id="this-weeks-homework">This Week's Homework</h2>
 <h3 id="technical-tasks">Technical Tasks</h3>
@@ -3835,6 +3927,10 @@ More User Data → Repeat Cycle
 <li><strong>Identify hard cases:</strong> Where do current embeddings fail most?</li>
 <li><strong>Plan data collection:</strong> How will users provide relevance feedback?</li>
 </ol>
+<!-- 
+This week's homework is designed to get you started on the data flywheel. The technical tasks build the foundation: logging, synthetic data generation, baseline comparisons, reranking experiments. The strategic tasks define your objectives: what does "relevant" mean for your use case? Where do current embeddings fail most? How will you collect user feedback?
+-->
+
 <hr />
 <h2 id="remember-the-modern-ml-advantage">Remember: The Modern ML Advantage</h2>
 <p><strong>Old World (Pre-LLM):</strong>
@@ -3852,6 +3948,10 @@ More User Data → Repeat Cycle
 <p><strong>Seize this opportunity while it's still a competitive advantage</strong>
 - What used to be accessible only to large companies is now available to small teams
 - Just need prompts, policy, and a for loop</p>
+<!-- 
+Jason's final call to action emphasizes the dramatic shift in accessibility. What used to require huge teams and budgets now just needs prompts, policy, and a for loop. This is the mindset shift: we used to build products with no AI just to collect data, then train models. Now we get products for free but forget to collect data for improvement. The key insight: seize this opportunity while it's still a competitive advantage. The window won't stay open forever.
+-->
+
 <hr />
 <h2 id="thank-you">Thank You</h2>
 <p><strong>Questions for office hours:</strong>
@@ -3861,6 +3961,9 @@ More User Data → Repeat Cycle
 - How to measure fine-tuning success?</p>
 <p><strong>Next week:</strong> Building user experiences that improve your models</p>
 <p><em>maven.com/applied-llms/rag-playbook</em></p>
+<!-- 
+End with Jason's key questions for office hours. These are the practical questions people should be asking: How to define similarity for your specific use case? What's the right amount of training data? Which model architecture fits your needs? How to measure fine-tuning success? Next week builds on this foundation with UX that improves models.
+-->
 
 
 
