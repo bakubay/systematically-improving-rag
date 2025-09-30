@@ -33,21 +33,42 @@ By the end of this chapter, you will be able to:
 
 These objectives build directly on the specialized retrieval capabilities from Chapter 5 and prepare you for the concrete implementation techniques in Chapter 6.2.
 
+## Chapter 6 Overview: Bringing It All Together
+
+This chapter ties everything together into a unified system:
+
+- **6.1: Query Understanding** (this chapter) - Deciding what to do
+- **6.2: Function Calling** - Executing the decision
+- **6.3: Unified Architecture** - Making it all work together
+
+Think of it as:
+- Query Understanding = **The Brain**
+- Function Calling = **The Hands**
+- Unified Architecture = **The Nervous System**
+
+## Building on Chapters 1-5
+
+You've built specialized retrievers. Now we need intelligent routing to connect them.
+
+**What You've Built:**
+- ✅ Evaluation framework (Chapter 1)
+- ✅ Fine-tuned embeddings (Chapter 2)
+- ✅ User feedback systems (Chapter 3)
+- ✅ Query segmentation and roadmap (Chapter 4)
+- ✅ Specialized retrievers (text, images, tables, code) (Chapter 5)
+
+**The Problem**: You have 5 specialized retrievers. Each works well for specific queries. How do you decide which one(s) to use?
+
+**The Solution (Chapter 6)**: Query routing that matches queries to the right tools.
+
+**Performance Equation**:
+```
+P(success) = P(selecting right retriever) × P(retriever finding data)
+```
+
+Even a perfect retriever (100% success) fails if routing sends queries to the wrong place (0% routing accuracy = 0% overall success).
+
 ## Introduction
-
-## What This Chapter Covers
-
-- Building unified RAG architectures with query routing
-- Designing tool interfaces for specialized retrievers
-- Implementing effective routing between components
-- Measuring system-level performance
-
-## Building on Previous Chapters
-
-**Connecting the RAG Improvement Journey:**
-
-- **[Chapter 1](chapter1.md)**: Use evaluation metrics from the RAG playbook to test router accuracy and tool selection performance
-- **[Chapter 2](chapter2.md)**: Apply fine-tuning techniques to improve individual tool performance once routing is working
 - **[Chapter 3](chapter3-1.md)**: Leverage user feedback collection methods to improve both routing decisions and tool effectiveness
 - **[Chapter 4](chapter4-1.md)**: Use query segmentation analysis to identify which specialized tools are needed
 - **[Chapter 5](chapter5-1.md)**: Convert specialized retrievers built in Chapter 5 into the tool interfaces we'll route between
@@ -114,6 +135,45 @@ When building these systems at scale, team organization becomes critical. From m
     - Tests end-to-end system performance
     - Identifies bottlenecks between routing and retrieval
     - Runs A/B tests and measures user satisfaction
+
+!!! warning "Single Agent vs Multi-Agent: Lessons from Cognition (Devin)"
+    **The Debate:** Should RAG systems use multiple specialized agents or a single intelligent agent with tools?
+
+    **From Walden Yan (Cognition/Devin co-founder):** Multi-agent systems often fail due to **context loss** - the "telephone game" problem where critical information gets lost between agents.
+
+    **Example:** Building Flappy Bird with two agents:
+
+    - Agent 1: Build background with green pipes and hitboxes
+    - Agent 2: Create bird asset
+    - **Result:** Agent 1 makes Mario-style environment, Agent 2 makes bird from different game
+    - **Why:** Each agent only knows what it was told, not full context
+
+    **The Fundamental Problem:**
+
+    - Multi-agent systems lose context between handoffs
+    - Parallel agents make conflicting implicit decisions (different APIs, styles, assumptions)
+    - Sequential agents hit context window limits as tasks grow
+    - Context compression loses critical details
+
+    **Why RAG Systems Should Use Single Agent + Tools (Not Multi-Agent):**
+
+    1. **Maintain full context** - Single agent sees all retrieval results, all previous queries, all user interactions
+    2. **Avoid conflicting decisions** - One decision-maker prevents tools from working at cross-purposes
+    3. **Present as coherent entity** - Users should feel they're talking to one system, not committee
+    4. **Tools as read-only** - RAG tools (search, lookup, filter) are naturally read-only operations that don't conflict
+
+    **How This Applies to RAG:**
+
+    - **Good:** Single router agent calling multiple specialized retrieval tools
+    - **Bad:** Multiple agents each doing retrieval and trying to coordinate results
+    - **Your tools** = specialized retrievers (document search, image search, SQL)
+    - **Your agent** = router that maintains context and calls appropriate tools
+
+    **User Experience Principle:** "Even if your system has subparts and tasks, it should feel to the user like a single agent, because the user has to feel like they're talking with one continuous decision maker, one continuous consciousness."
+
+    **Why tools-as-APIs works:** It's not multi-agent—it's single agent with specialized capabilities. The agent maintains context, the tools are stateless read operations.
+
+    Source: Walden Yan (Cognition) - Why Cognition does not use multi-agent systems
 
 ### Why This Structure Works
 

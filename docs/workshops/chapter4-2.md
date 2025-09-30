@@ -34,9 +34,25 @@ By the end of this chapter, you will be able to:
 
 These objectives build directly on the segmentation analysis from Chapter 4.1 and prepare you for building specialized retrievers in Chapter 5.
 
+## From Patterns to Action
+
+In Chapter 4.1, we identified high-value topics through clustering. We know WHAT users care about and WHERE the problems are.
+
+**Chapter 4.1 gave us strategic insights:**
+- Which query segments have high volume
+- Where satisfaction is low
+- What topics users care about most
+
+**Chapter 4.2 answers the tactical questions:**
+- Which segments should we fix FIRST?
+- Are these inventory or capability problems?
+- What's the roadmap for the next 3-6 months?
+
+Think of it this way: clustering shows you the battlefield, prioritization chooses which battles to fight.
+
 ## Introduction
 
-In Part 1, you learned to segment queries and identify patterns. Now we turn those insights into action. This chapter shows you how to prioritize which segments to fix first and build a systematic roadmap.
+Now we turn those insights into action. This chapter shows you how to prioritize which segments to fix first and build a systematic roadmap.
 
 As I've mentioned in previous chapters, RAG is really just a recommendation system squeezed between two LLMs. And like any recommendation system, different users need different retrievers. There's no global scoring function that works for everyone.
 
@@ -226,6 +242,28 @@ Where:
 Inventory issues typically have lower effort (3-4) since you're just adding data. Capability issues have higher effort (6-9) since you're building features.
 
 This formula makes decisions objective. A segment affecting 40% of queries with low effort beats a perfect solution for 5% of queries.
+
+!!! tip "Focus on Economic Value, Not Just Time Savings"
+    **Common Mistake:** Teams focus on "How much time will this save users?" when they should ask "What economic value does this create?"
+
+    **Real Example from Office Hours:** A restaurant AI system could suggest upsells. Analysis showed:
+
+    - **Current state**: 9% of orders include upsell attempts
+    - **Target state**: 40% of orders include upsell attempts
+    - **Average upsell value**: $15
+    - **Monthly orders**: 45,000
+
+    **Economic calculation:**
+
+    - Current monthly upsell revenue: 45,000 × 0.09 × $15 = $60,750
+    - Potential monthly revenue: 45,000 × 0.40 × $15 = $270,000
+    - **Additional revenue: $209,250/month = $2.5M annually**
+
+    This beats "save 30 seconds per order" by every measure. The AI doesn't just save time—it enables conversations that increase revenue.
+
+    **The Principle:** Focus on **better decisions** (economic value) rather than **faster processes** (time savings). RAG systems that help users make better choices (what to buy, which plan to choose, which treatment to consider) create more value than systems that just retrieve information faster.
+
+    Source: Office hours discussion on economic impact
 
 ### Real-World Prioritization Example
 

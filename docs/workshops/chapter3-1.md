@@ -27,19 +27,70 @@ By the end of this chapter, you will be able to:
 
 These objectives build directly on the evaluation framework from Chapter 1 and prepare you for the performance optimization techniques in upcoming sessions.
 
+## Quick Start: 5x Your Feedback in 1 Day
+
+**Hour 1: Change Your Copy**
+- Replace "How did we do?" with "Did we answer your question?"
+- Add three options: Yes / Somewhat / No
+- Result: Expect 5x more feedback immediately
+
+**Hour 2: Add Visibility**
+- Move feedback from hidden corner to directly after response
+- Make buttons large and obvious
+- Add "What was missing?" for "Somewhat" and "No"
+
+**Hour 3: Set Up Basic Logging**
+- Log every query + top 20 chunks retrieved
+- Log which chunks were cited in response
+- Log thumbs up/down (if you have it)
+
+**Day 1 Result:** You'll go from <10 feedback responses/day to 40+ responses/day
+
+**Ready to dive deeper?** [Skip to Feedback Visibility →](#feedback-visibility-make-it-impossible-to-miss)
+
+## Building on Chapters 1 & 2
+
+You've built the technical foundation. Now we need to collect real-world data to make it better.
+
+**What You've Built:**
+- ✅ Evaluation framework with synthetic data (Chapter 1)
+- ✅ Few-shot examples and logging infrastructure (Chapter 2)
+- ✅ Baseline metrics showing current performance
+
+**What We'll Add in Chapter 3:**
+- High-visibility feedback mechanisms (0.1% → 0.5% collection rate)
+- Implicit signals from user behavior
+- Streaming and perceived performance improvements
+- Quality-of-life features that drive engagement
+
+**The Gap**: You have 30 evaluation examples. You need thousands of real user examples. This chapter shows how to collect them at scale.
+
 ## Introduction
 
 RAG systems improve most when they collect feedback effectively. Many implementations focus exclusively on the technical details of retrieval and generation while neglecting the infrastructure needed to collect and utilize user feedback.
-
-**Building on What We've Done:**
-- **Chapter 1**: Remember that evaluation framework? Your synthetic data baseline? Now we make it real with user feedback
-- **Chapter 2**: Those fine-tuning techniques need feedback data to work - this chapter shows you how to collect it
 
 Remember that $100M company with 30 evals? Here's how you go from 30 examples to thousands through smart feedback collection.
 
 In this chapter, we'll explore how to build effective feedback mechanisms that turn your RAG application from a static implementation into a continuously improving system. This approach creates a feedback loop where user interactions provide the data needed to make the system better.
 
 ### The Invisible Feedback Problem
+
+!!! danger "Common Mistake: Vague Feedback Copy"
+    **The Problem:** Generic questions like "How did we do?" or "Rate your experience"
+
+    **Real Numbers:**
+    - "How did we do?" → 0.1% response rate
+    - "Did we answer your question?" → 0.5% response rate
+    - **That's 5x more feedback from changing 4 words**
+
+    **Why It Fails:** Users interpret "experience" as UI/UX, not content quality. They don't know what you're asking.
+
+    **The Fix:**
+    - ✅ "Did we answer your question?" (specific, clear)
+    - ✅ "Did we take the correct actions?" (for agent systems)
+    - ✅ "Was this information helpful?" (direct)
+    - ❌ "How did we do?" (vague, low response)
+    - ❌ "Rate your experience" (confusing)
 
 Many RAG implementations hide feedback mechanisms in obscure UI locations or use generic "thumbs up/down" buttons that provide minimal insight. Users interact with these minimal feedback options less than 0.1% of the time, providing insufficient data for meaningful improvements.
 
@@ -472,6 +523,32 @@ Effective feedback collection is essential for systematic improvement of RAG sys
     5. **Track query refinements** as implicit negative signals
 
     These changes can typically be implemented in 1-2 sprints and deliver immediate, measurable improvements.
+
+## Where to Go From Here
+
+**You've completed feedback collection. Next steps:**
+
+- **Stuck on low feedback rates?** Re-read [Feedback Visibility](#feedback-visibility-make-it-impossible-to-miss) and [The Power of Good Copy](#the-power-of-good-copy)
+- **Ready to analyze feedback patterns?** Continue to [Chapter 3-2: Synthetic Data Generation](chapter3-2.md)
+- **Want to build streaming UX?** Review [Streaming for Better UX](#streaming-for-better-ux)
+- **Need enterprise patterns?** Check [B2B Feedback Patterns](#b2b-feedback-patterns-slack-integration)
+
+**Checklist before moving on:**
+
+- ✅ Changed feedback copy to specific question format
+- ✅ Made feedback visible (not hidden)
+- ✅ Logging 40+ responses/day (vs <10 before)
+- ✅ Tracking implicit signals (query refinements, citations)
+- ✅ Set up basic analytics to review weekly
+
+**Stuck? Common issues:**
+
+- **"Still getting <10 responses/day"** → Feedback isn't visible enough. Move it directly after response, make buttons larger
+- **"Users leave vague comments"** → Add specific prompt like "What information was missing?" with examples
+- **"Don't know what to do with feedback"** → Start simple: create a spreadsheet, review weekly, identify top 3 recurring issues
+- **"Feedback is mostly positive"** → Good! But also check implicit signals (refinements, low dwell time) for hidden issues
+
+Ready to generate synthetic data from your feedback? Continue to [Chapter 3-2](chapter3-2.md).
 
 ## Additional Resources
 

@@ -32,16 +32,59 @@ By the end of this chapter, you will be able to:
 
 These objectives build directly on the roadmapping foundations from Chapter 4 and prepare you for the multimodal implementation techniques in Chapter 5.2.
 
+## Quick Start: Build Your First Specialized Index in 1 Day
+
+**Morning: Identify the Pattern**
+- Review Chapter 4's segments
+- Pick ONE high-volume failure pattern
+- Example: "Product SKU lookups failing"
+
+**Afternoon: Build Specialized Index**
+- Extract structured data (SKUs, prices, specs)
+- Create dedicated index with exact matching
+- Add lexical search for SKU patterns
+
+**End of Day: Add Router**
+- Simple regex: if query contains SKU pattern → use exact match index
+- Otherwise → use semantic index
+- Test with 20 examples
+
+**Result:** One specialized capability solving one specific problem
+
+**Example:**
+- **Before:** "What's the price of SKU-12345?" → 40% success (semantic search confuses SKUs)
+- **After:** Same query → 95% success (exact match on SKU index)
+
+**Ready to dive deeper?** [Skip to Why Specialization Works →](#why-specialization-works)
+
+## Building on Chapters 1-4
+
+You've identified WHERE to invest. Now we build the specialized capabilities.
+
+**Your Foundation:**
+- ✅ Evaluation framework to measure each specialized retriever (Chapter 1)
+- ✅ Fine-tuning techniques for domain-specific embeddings (Chapter 2)
+- ✅ Feedback collection showing what fails (Chapter 3)
+- ✅ Roadmap prioritizing which capabilities to build (Chapter 4)
+
+**What We'll Build in Chapter 5:**
+- Specialized retrievers for different query types
+- Multimodal search (images, tables, code)
+- Hierarchical summarization for long documents
+- Routing logic to direct queries to the right retriever
+
+**The Build Order - Don't Skip Steps:**
+
+1. **Weeks 1-2**: Nail core text search (Chapters 1-2)
+2. **Weeks 3-4**: Add user feedback (Chapter 3)
+3. **Weeks 5-6**: Identify top 3 needs (Chapter 4)
+4. **Weeks 7+**: Build specialized capabilities ONE AT A TIME
+
+Common mistake: Building all modalities before text search works well. Get the foundation solid first.
+
 ## Introduction
 
 We've covered the basics: the RAG playbook, synthetic data generation, fine-tuning, user feedback collection, and segmentation. Now let's talk about something that actually makes a big difference in production systems—building specialized search indices for different types of content.
-
-### Building on the Foundation
-
-- **[Chapter 1](chapter1.md)**: Evaluation metrics for each specialized retriever
-- **[Chapter 2](chapter2.md)**: Fine-tuning embeddings for specific domains
-- **[Chapter 3](chapter3-1.md)**: Collecting feedback on retrieval quality
-- **[Chapter 4](chapter4-2.md)**: Identifying which capabilities need specialization
 
 The basic idea is straightforward: different types of queries need different retrieval approaches. A search for a specific product number works differently than a search for "durable power tools" or "items under 50 pounds". Once you accept this, the path forward becomes clearer.
 
@@ -381,6 +424,32 @@ Measuring both levels tells you where to focus your efforts.
 - **Target**: 25-40% improvement in retrieval accuracy for your specialized capability
 - **Business Impact**: Reduced time-to-answer for users in your target segment
 - **System Health**: Clear separation between routing accuracy and individual retriever performance
+
+## Where to Go From Here
+
+**You've completed specialized retrieval fundamentals. Next steps:**
+
+- **Stuck on which strategy to use?** Re-read [Two Paths to Better Retrieval](#two-paths-to-better-retrieval) and match to your query patterns
+- **Ready to implement routing?** Continue to [Chapter 6-1: Query Routing](chapter6-1.md)
+- **Want multimodal examples?** Jump to [Chapter 5-2: Multimodal Implementation](chapter5-2.md)
+- **Need to identify segments first?** Go back to [Chapter 4-1: Topic Modeling](chapter4-1.md)
+
+**Checklist before moving on:**
+
+- ✅ Built at least one specialized index
+- ✅ Measured improvement (before/after recall numbers)
+- ✅ Documented what capability this index enables
+- ✅ Understand P(success) = P(right retriever) × P(finding data)
+- ✅ Have test queries for each specialized retriever
+
+**Stuck? Common issues:**
+
+- **"Don't know which strategy to use"** → Start with synthetic text (Strategy 2). It's more flexible and easier to test
+- **"No improvement in recall"** → Check if you're measuring the right segment. Specialized retrievers help specific query types, not everything
+- **"Too slow/expensive"** → Use write-time computation. Process once, query many times. Cache embeddings
+- **"RAPTOR too complex"** → Skip it unless you have 1,500+ page documents with scattered information. Most systems don't need it
+
+Ready to route queries intelligently? Continue to [Chapter 6-1](chapter6-1.md).
 
 !!! tip "Next Steps"
     In [Chapter 6](chapter6-1.md), we'll explore how to bring these specialized components together through intelligent routing, creating a unified system that seamlessly directs queries to the appropriate retrievers.

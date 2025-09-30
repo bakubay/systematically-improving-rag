@@ -164,6 +164,9 @@ Other tips that actually move the needle:
 
 Remember: if you're not going to act on a metric, don't track it. You're just creating dashboard noise.
 
+!!! note "Real-World Success: Zapier's 4x Feedback Improvement"
+    The team at Zapier increased feedback collection from 10 to 40+ submissions per day by asking "Did this run do what you expected?" instead of generic satisfaction questions. They discovered they were missing positive feedback entirely due to poor collection mechanisms. The lesson: specific, action-oriented questions dramatically outperform vague prompts.
+
 ## Why You Need a System (Not Just Good Intentions)
 
 A system is a structured approach to solving problems that guides how we think about and tackle challenges. For RAG applications, this includes:

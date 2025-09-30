@@ -34,18 +34,56 @@ By the end of this chapter, you will be able to:
 
 These objectives build directly on the feedback collection techniques from Chapter 3 and prepare you for the strategic roadmapping decisions in Chapter 4.2.
 
+## Quick Start: Find Your Top 3 Problems in 2 Hours
+
+**Hour 1: Cluster Your Queries**
+- Export last 1,000 queries
+- Use embeddings + K-means (k=10-15)
+- Label each cluster with dominant theme
+
+**Hour 2: Create 2x2 Matrix**
+- X-axis: Query volume (% of total)
+- Y-axis: Satisfaction (thumbs up %)
+- Plot your clusters
+- **Danger Zone = High volume + Low satisfaction**
+
+**Result:** You now know your top 3 problems worth fixing
+
+**Example Output:**
+- Cluster 5: "Pricing questions" - 22% volume, 45% satisfaction ⚠️ FIX THIS
+- Cluster 3: "Account setup" - 18% volume, 38% satisfaction ⚠️ FIX THIS
+- Cluster 8: "API docs" - 8% volume, 31% satisfaction ⚠️ MAYBE FIX
+
+**Ready to dive deeper?** [Skip to 2x2 Matrix →](#the-2x2-prioritization-matrix-volume-vs-satisfaction)
+
+## Building on Chapters 1-3
+
+You've collected the data. Now we need TWO complementary views to understand your users:
+
+**What You've Built:**
+- ✅ Evaluation framework with metrics (Chapter 1)
+- ✅ Fine-tuning and few-shot infrastructure (Chapter 2)
+- ✅ Feedback collection generating real user data (Chapter 3)
+
+**The Two Lenses We'll Add in Chapter 4:**
+
+1. **Query Clustering (Chapter 4.1 - this chapter)**
+   - Strategic view: What topics do users care about?
+   - Where are the opportunities?
+   - Which capabilities are missing?
+
+2. **Individual Query Analysis (Chapter 4.2)**
+   - Tactical view: What specifically failed?
+   - Why did it fail?
+   - How do we fix this type?
+
+Think of clustering as the **strategic view** (where to invest) and individual analysis as the **tactical view** (how to improve).
+
 ## Introduction
 
 Remember that feedback collection from Chapter 3? You've got all this data - thousands of queries, ratings, signals. Your manager asks "What should we improve next?" and suddenly you realize you have no idea.
 
-I've been there. We had tons of data but no systematic way to find patterns. Remember that $100M company with 30 evals from Chapter 1? This is what happens next - you collect the feedback, but then you need to make sense of it.
-
-**Where We've Been:**
-- **Chapter 1**: Built evaluation framework (your baseline)
-- **Chapter 2**: Turned evals into training data (the flywheel) 
-- **Chapter 3**: Collected real user feedback (the fuel)
-
-**Now What?** Topic modeling and clustering. Instead of reading feedback one by one, you group similar queries and find the real problems worth fixing.
+I've been there. We had tons of data but no systematic way to find patterns. This is what happens next - you collect the feedback, but then you need to make sense of it.
 
 Here's the thing: not all improvements matter equally. Some query types affect 80% of your users. Others might be rare but critical for your biggest customers. You need to know the difference.
 
@@ -413,9 +451,31 @@ This segmentation analysis feeds directly into:
 4. **Topic ≠ Capability** - Segment by both what users ask and what they want done
 5. **Monitor the "other" category** - Growing "other" means new patterns emerging
 
-## Next Steps
+## Where to Go From Here
 
-In [Chapter 4-2](chapter4-2.md), we'll dive into how to turn these segments into a strategic roadmap, distinguishing between inventory and capability issues, and building a systematic improvement plan.
+**You've completed query segmentation analysis. Next steps:**
+
+- **Stuck on clustering?** Re-read [Topic Modeling Step-by-Step](#topic-modeling-step-by-step) and try k=10-15 first
+- **Ready to prioritize segments?** Continue to [Chapter 4-2: Prioritization and Roadmapping](chapter4-2.md)
+- **Want to build specialized retrievers?** Skip ahead to [Chapter 5-1: Specialized Retrieval](chapter5-1.md)
+- **Need more feedback data?** Go back to [Chapter 3-1: Feedback Collection](chapter3-1.md)
+
+**Checklist before moving on:**
+
+- ✅ Clustered last 1,000 queries (or more)
+- ✅ Created 2x2 matrix (volume vs satisfaction)
+- ✅ Identified top 3 high-impact problem segments
+- ✅ Decided for each segment: inventory or capability issue?
+- ✅ Have concrete examples of queries in each segment
+
+**Stuck? Common issues:**
+
+- **"Clusters don't make sense"** → Try different k values. Start with k=10, increase to 15-20. Look for coherent patterns, not perfect clusters
+- **"Everything is low satisfaction"** → Good news: lots of opportunity. Focus on high-volume segments first for maximum impact
+- **"Can't tell inventory from capability"** → Review a few failed queries manually. Do you have the information (inventory) or need new features (capability)?
+- **"Segments keep changing"** → Normal as product evolves. Re-cluster quarterly to catch new patterns
+
+Ready to turn segments into a strategic roadmap? Continue to [Chapter 4-2](chapter4-2.md).
 
 ---
 

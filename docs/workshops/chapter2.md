@@ -53,18 +53,87 @@ By the end of this chapter, you will be able to:
 
 These objectives build directly on the evaluation foundation from Chapter 1 and prepare you for the feedback collection mechanisms in Chapter 3.
 
+## Quick Start: From 20 Examples to Fine-Tuning in 4 Weeks
+
+**Week 1: Few-Shot Examples (Have 20 evaluation examples)**
+- Pick your 5 best evaluation examples
+- Add them to your RAG prompts as examples
+- Measure improvement (typically 10-15%)
+
+**Week 2: Start Logging (While system runs)**
+- Log every query + retrieved chunks
+- Save top 20-40 chunks per query
+- Use LLM to mark relevance if needed
+
+**Week 3: Expand Examples (Have 100+ examples)**
+- Generate more diverse synthetic questions
+- Use prompt templates from this chapter
+- Test re-ranker (Cohere API is fast to try)
+
+**Week 4: Prepare for Fine-Tuning (Have 1,000+ examples)**
+- Create triplet datasets (anchor, positive, negative)
+- Focus on hard negatives
+- Ready for 40-minute laptop training session
+
+**Ready to dive deeper?** [Skip to Start Logging Now →](#start-logging-yesterday)
+
+## Building on Chapter 1
+
+In Chapter 1, you built an evaluation framework with synthetic data and established baseline metrics. Now we'll transform that foundation into training data:
+
+**What You Built in Chapter 1:**
+- ✅ 20-50 evaluation examples (questions + expected chunks)
+- ✅ Baseline precision and recall metrics
+- ✅ A process for running experiments
+
+**What We'll Do in Chapter 2:**
+- Transform evaluation data into few-shot examples
+- Create training datasets for fine-tuning embeddings
+- Improve domain-specific retrieval by 6-20%
+- Start logging data for continuous improvement
+
+This is the "wax on, wax off" moment: 20 examples become evals, 30 examples become few-shot prompts, 1,000 examples let you fine-tune. Everything starts with Chapter 1's evaluation foundation.
+
 ## Introduction
 
 Remember in Chapter 1 where we talked about that $100M company with only 30 evaluation examples? Well, here's the good news: once you have those evaluation examples, you can multiply their value. The synthetic data and evaluation framework from Chapter 1 becomes your training data in this chapter.
-
-**Building on Chapter 1's Foundation:**
-Your evaluation examples (synthetic questions + ground truth) now become few-shot examples and training data. We're turning that evaluation flywheel into a fine-tuning flywheel.
 
 Here's the thing: the data you collect for evaluation shouldn't just sit there. Every question, every relevance judgment, every piece of feedback—it can all be used to improve your system. That's what we'll cover here.
 
 **Key Philosophy:** "This is the "wax on, wax off" moment: 20 examples become evals (Chapter 1), 30 examples become few-shot prompts, 1,000 examples let you start fine-tuning. Remember that $100M company with 30 evals? Once you have that data, this is how you turn it into actual improvements. It's never done, just gets better."
 
 The process is straightforward: you start with evaluation examples, turn them into few-shot prompts, then eventually use them to fine-tune your embedding models and re-rankers. Each step builds on the last.
+
+## Start Logging Yesterday!
+
+!!! danger "Common Mistake: Not Logging Data Early"
+    **The Problem:** Teams hire ML engineers to fine-tune embeddings, then realize they have no data to train on.
+
+    **Real Impact:**
+    - 3-6 month delay waiting to collect enough data
+    - ML engineers idle while waiting for data pipeline
+    - Lost opportunity to improve during that time
+
+    **The Cost:** One team spent $150K on ML engineering before realizing they needed to wait 6 months for data. That's $25K/month burning while collecting what should have been collected from day 1.
+
+    **The Fix:** Start logging TODAY, even if you're not ready to use it yet.
+
+Before we dive into techniques, here's the most important action you can take today: **start logging relevance data now**.
+
+I've seen numerous companies hire machine learning engineers to fine-tune embedding models, only to realize they hadn't started logging relevance data. These teams then have to wait 3-6 months to collect enough data before they can begin the work they intended to do immediately.
+
+**What to Log Right Now:**
+
+1. **Every query** users submit
+2. **Top 20-40 chunks** retrieved for each query
+3. **Which chunks** were actually used in the response
+4. **User feedback** (thumbs up/down, citations clicked, etc.)
+
+Even if you're not ready to fine-tune, start this today. Use an LLM to mark relevance if human annotation isn't feasible. This data becomes invaluable in 3-6 months.
+
+**Real Story**: I watched a team build a great RAG app for internal docs. Six months later they wanted to fine-tune embeddings but had zero data because they never set up logging. Had to start from scratch with synthetic data. Don't do this.
+
+Now that you know what to collect, let's understand why you need it.
 
 ## Why Generic Embeddings Fall Short
 
@@ -101,6 +170,8 @@ When you use OpenAI or Cohere's embeddings, you're stuck with their definition o
 
 Provider embeddings aren't bad—they're great for general use. But your application probably isn't general. Fine-tuning with your own data fixes this mismatch.
 
+Understanding why generic embeddings fall short sets up the solution. But before you jump to fine-tuning (which requires 1,000+ examples), there's a faster win available right now.
+
 ## From Evaluation to Few-Shot Examples
 
 Before jumping into fine-tuning, there's something simpler you can try: few-shot examples. Let's talk about turning your evaluation data into prompts that actually work.
@@ -127,6 +198,43 @@ Don't just grab random examples from your evaluation set. I've watched teams do 
 - Aren't too weird or specific
 
 Remember the synthetic data generation techniques we explored in Chapter 1? You can use those same methods to generate examples specifically for few-shot learning. The key difference is that for few-shot examples, you need not just questions and answers, but also the reasoning process that connects them.
+
+### Should You Use DSPy for Prompt Optimization?
+
+Before manually building your few-shot library, you might wonder: should I use DSPy or similar prompt optimization tools?
+
+**TL;DR:** Use DSPy for well-defined tasks with clear metrics. For most RAG systems, manual prompt engineering teaches you more about your users and product.
+
+**When DSPy Works Well:**
+
+- **Specific classification tasks**: 35-class classification where you only care about accuracy
+- **LLM-as-judge optimization**: You've labeled 100+ examples and want to create a custom tonality or factuality judge
+- **Clear hill-climbing metrics**: When success = single number going up
+
+**When Manual Prompt Engineering is Better:**
+
+- **Ill-defined tasks**: "Extract sales insights from transcripts" - what even counts as an insight?
+- **Product learning**: Looking at failures teaches you about user expectations and product gaps
+- **System-level improvements**: Your product isn't just prompts—it's feedback collection, UI expectations, chunking strategy, and more
+
+**The Real Value of Looking at Data:**
+
+When you manually review few-shot examples, failures, and user queries, you build intuition about:
+
+- What customers are actually looking for
+- What mistakes the system makes systematically
+- Where the UI sets wrong expectations
+- How to represent chunks better in context
+
+DSPy optimizes prompts. You need to optimize the whole product.
+
+**From Office Hours:** "Most of the time you should spend time actually tweaking prompts yourself. The most valuable part of looking at data, few-shots, and examples is you building an intuition of what customers are looking for and what mistakes the system is making. Your product isn't just a prompt—it includes how you collect feedback, how you set expectations in the UI, how you think about data extraction, and how you represent chunks in the context."
+
+**Practical Recommendation:**
+
+1. Start with manual prompt engineering (builds product intuition)
+2. Once you understand your users deeply, consider DSPy for specific sub-tasks
+3. Use DSPy for creating custom evaluators (LLM judges) aligned with your grading
 
 ### Building Your Few-Shot Library
 
@@ -159,6 +267,8 @@ Question: [Actual User Query]
 ```
 
 Having an organized library means you can track what works, swap out examples that get stale, and keep improving based on what your users actually do.
+
+Few-shot examples give you quick wins (10-15% improvement) with minimal effort. But as you collect more data, you unlock the bigger opportunity: fine-tuning.
 
 ## Practical Implementation: Building the Data Flywheel for Fine-Tuning
 
@@ -277,6 +387,25 @@ Through many such examples, the model learns that queries about side effects sho
 
 ### The Challenge of Hard Negatives and How UX Can Help
 
+!!! warning "Common Mistake: Using Easy Negatives"
+    **The Problem:** Teams use random unrelated documents as negatives instead of hard negatives.
+
+    **Example of BAD negative:**
+    - Query: "What are the side effects of medication X?"
+    - Positive: Document about side effects
+    - **Bad negative:** Document about car maintenance ❌
+
+    **Why It Fails:** Model already knows car maintenance isn't relevant to medications. It learns nothing useful.
+
+    **Example of GOOD negative:**
+    - Query: "What are the side effects of medication X?"
+    - Positive: Document about side effects
+    - **Hard negative:** Document about medication X dosing instructions ✅
+
+    **Why It Works:** Both documents are about medication X. Model must learn the subtle difference between "side effects" vs "dosing" - this teaches useful discrimination.
+
+    **The Fix:** Hard negatives should be topically similar but contextually different. They should be documents that WOULD match on keywords but DON'T match on intent.
+
 Notice something subtle in that example? The negative document is still about the same medication—just not about side effects. That's a "hard negative": similar in some ways, different in the ways that matter.
 
 ### Hard Negative Mining Strategies
@@ -355,6 +484,13 @@ Use them together: embeddings grab candidates quickly, re-ranker sorts them prop
 
 **Re-Ranker Success Story:** One team I worked with was debating whether to invest in fine-tuning their embeddings or implementing a re-ranker. When they tested both approaches, they found that fine-tuning embeddings improved recall from 65% to 78%, while adding a re-ranker (even without fine-tuning) improved it to 82%. Combining both approaches pushed performance to 91%—a transformative improvement from where they started.
 
+!!! info "Re-Rankers: Low-Hanging Fruit"
+    Ayush from LanceDB found that re-rankers provide **12-20% retrieval improvement with minimal latency penalty**, making them "low-hanging fruit" for RAG optimization. Even small 6M parameter models show significant improvements. ColBERT architecture offers an effective middle ground between bi-encoders and cross-encoders, balancing speed and accuracy. The key insight: you often get better ROI from adding a re-ranker than from more complex retrieval strategies.
+
+    **Real-World Performance (from Office Hours):** Across legal documents, book Q&A, and financial documents, Cohere re-rankers typically improve performance by **6-12% while adding only 400-500ms latency**. They're building industry-specific rankers for financial text, medical text, and code that consistently beat OpenAI embeddings.
+
+    **Why re-rankers work:** They solve problems embeddings miss. "I love coffee" and "I hate coffee" look similar in embedding space (same words, similar context). But with cross-attention in a re-ranker, the model clearly distinguishes them. This matters more than you'd think—negation, subtle differences, and context-dependent meaning all benefit from re-rankers.
+
 ### Creating Training Data for Re-Rankers
 
 Re-rankers work better with graded relevance scores instead of just yes/no labels. Try this:
@@ -394,6 +530,9 @@ Fine-tune your embedding models when:
 
 !!! tip "Production Insight"
 From office hours: "With just 6,000 examples from your domain, you can train embedding models and cross-encoders that outperform general-purpose models on your specific tasks. This typically costs around $1.50 and takes about 40 minutes on a laptop."
+
+!!! success "Enterprise Success Story: Custom Models Per Customer"
+    Manav from Glean shared how they achieve 20% performance improvements over 6 months through continuous learning by training **custom embedding models for each customer**. Counter-intuitive insight: smaller, fine-tuned models often outperform larger general-purpose models for company-specific terminology. Each customer gets their own model that learns from user feedback. This approach transforms embedding models from static tools into adaptive systems that improve with usage.
 
 ### The Fine-Tuning Process
 
@@ -658,6 +797,30 @@ Do these things now:
 5. **Try domain-specific models** - They might already solve your problem
 
 If you do this right, every piece of data makes your system better. The improvements compound over time and affect everything—clustering, topic modeling, all of it.
+
+## Where to Go From Here
+
+**You've built the data flywheel. Next steps:**
+
+- **Just finished Chapter 1?** Start with few-shot examples (easiest win)
+- **Have 1,000+ examples?** Ready for [fine-tuning workflow](#practical-fine-tuning-workflow)
+- **Need more user data?** Continue to [Chapter 3: Feedback Collection](chapter3-1.md)
+- **Want to try re-rankers?** Check out [The Power of Re-Rankers](#the-power-of-re-rankers-in-rag-systems)
+
+**Checklist before Chapter 3:**
+
+- ✅ Started logging query + chunk + feedback data
+- ✅ Created 5-10 few-shot examples from best evals
+- ✅ Tested at least one domain-specific embedding model
+- ✅ Tried a re-ranker (even just the API)
+
+**Stuck? Common issues:**
+
+- **"Don't have 1,000 examples yet"** → Use few-shot prompts while collecting data
+- **"Hard negatives are confusing"** → Start with any negatives, refine later
+- **"Don't know what similarity means"** → Talk to users, see what they consider "related"
+
+Ready for user feedback? Continue to Chapter 3.
 
 ---
 
