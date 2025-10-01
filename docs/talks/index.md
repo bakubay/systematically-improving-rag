@@ -54,8 +54,11 @@ Trellis framework for managing AI systems with millions of users. Critical disco
 **[RAG Anti-patterns in the Wild](rag-antipatterns-skylar-payne.md)** - Skylar Payne  
 90% of teams adding complexity to RAG systems see worse performance when properly evaluated. Major discovery: silent failures in document processing can eliminate 20%+ of corpus without detection. Golden rule: teams who iterate fastest on data examination consistently outperform those focused on algorithmic sophistication.
 
-**[Domain Experts: The Lever for Vertical AI](chris-lovejoy-domain-expert-vertical-ai.md)** - Chris Lovejoy (Anterior)  
+**[Domain Experts: The Lever for Vertical AI](chris-lovejoy-domain-expert-vertical-ai.md)** - Chris Lovejoy (Anterior)
 How to make LLMs work in specialized industries: build domain‑expert review loops that generate failure‑mode datasets, prioritize fixes by impact, and dynamically augment prompts with expert knowledge. Trust requires transparent production metrics, secure data handling, and defenses against LLM‑specific threats.
+
+**[MCP Security Exploits and Defense Strategies](vitor-mcp-exploits.md)** - Vitor Balocco (Runlayer)
+Critical security vulnerabilities in MCP servers including prompt injection and supply chain attacks. Key insight: the "lethal trifecta" of private data access, untrusted content exposure, and external communication creates severe risks. Real-world exploits from Notion, Heroku, and GitLab demonstrate sophisticated attack vectors. Essential practice: treat LLMs as untrusted users, implement version pinning, and use centralized registries for enterprise deployments.
 
 ### Chapter 4: Query Analysis and Data Organization
 
