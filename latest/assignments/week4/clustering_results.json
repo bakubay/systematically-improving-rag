@@ -1,0 +1,182 @@
+{
+  "total_queries": 200,
+  "n_clusters": 8,
+  "prioritization": [
+    {
+      "cluster_id": 1,
+      "volume_pct": 21.5,
+      "avg_satisfaction": 0.622722104829009,
+      "quadrant": "PRIORITY",
+      "priority_score": 8.111474746176306,
+      "sample_queries": [
+        "When was logging created?",
+        "Why is logging not working?",
+        "What's the difference between RAG and monitoring?",
+        "logging error: how to fix?",
+        "What is monitoring?"
+      ],
+      "expected_value": 0.05051194627206261,
+      "adaptation_signals": {
+        "contains_please_help": 0,
+        "contains_error_terms": 2,
+        "very_short_queries": 1,
+        "many_question_marks": 0,
+        "total": 5
+      }
+    },
+    {
+      "cluster_id": 0,
+      "volume_pct": 16.5,
+      "avg_satisfaction": 0.6632834909430738,
+      "quadrant": "MAINTAIN",
+      "priority_score": 4.95,
+      "sample_queries": [
+        "Who invented security?",
+        "How do I optimization?",
+        "LLM error: how to fix?",
+        "How do I machine learning?",
+        "How to Docker step by step?"
+      ],
+      "expected_value": 0.036850852761598114,
+      "adaptation_signals": {
+        "contains_please_help": 0,
+        "contains_error_terms": 1,
+        "very_short_queries": 1,
+        "many_question_marks": 0,
+        "total": 5
+      }
+    },
+    {
+      "cluster_id": 3,
+      "volume_pct": 16.0,
+      "avg_satisfaction": 0.6264309827445774,
+      "quadrant": "MAINTAIN",
+      "priority_score": 4.8,
+      "sample_queries": [
+        "How do I embeddings?",
+        "What's the best way to embeddings?",
+        "Define vector database",
+        "vector database fails when I try to LLM",
+        "Define machine learning"
+      ],
+      "expected_value": 0.037442433056358464,
+      "adaptation_signals": {
+        "contains_please_help": 0,
+        "contains_error_terms": 1,
+        "very_short_queries": 2,
+        "many_question_marks": 0,
+        "total": 5
+      }
+    },
+    {
+      "cluster_id": 4,
+      "volume_pct": 11.5,
+      "avg_satisfaction": 0.6261250734075715,
+      "quadrant": "PRIORITY",
+      "priority_score": 4.299561655812927,
+      "sample_queries": [
+        "Kubernetes or optimization: which is better?",
+        "Kubernetes or embeddings: which is better?",
+        "What's the best way to Kubernetes?",
+        "When was Docker created?",
+        "What is Kubernetes?"
+      ],
+      "expected_value": 0.026920633573662492,
+      "adaptation_signals": {
+        "contains_please_help": 0,
+        "contains_error_terms": 0,
+        "very_short_queries": 1,
+        "many_question_marks": 0,
+        "total": 5
+      }
+    },
+    {
+      "cluster_id": 2,
+      "volume_pct": 10.5,
+      "avg_satisfaction": 0.6026500562586252,
+      "quadrant": "MONITOR",
+      "priority_score": 2.0860872046422174,
+      "sample_queries": [
+        "JavaScript fails when I try to embeddings",
+        "What's the difference between JavaScript and debugging?",
+        "Who invented caching?",
+        "Compare security vs caching",
+        "What is JavaScript?"
+      ],
+      "expected_value": 0.025143611424760612,
+      "adaptation_signals": {
+        "contains_please_help": 0,
+        "contains_error_terms": 1,
+        "very_short_queries": 2,
+        "many_question_marks": 0,
+        "total": 5
+      }
+    },
+    {
+      "cluster_id": 6,
+      "volume_pct": 6.5,
+      "avg_satisfaction": 0.5775677073291929,
+      "quadrant": "MONITOR",
+      "priority_score": 1.372904951180123,
+      "sample_queries": [
+        "What's the difference between Python and caching?",
+        "Compare machine learning vs Python",
+        "Problem with optimization: help needed",
+        "Where is Python located?",
+        "optimization or Python: which is better?"
+      ],
+      "expected_value": 0.015858911300680022,
+      "adaptation_signals": {
+        "contains_please_help": 1,
+        "contains_error_terms": 0,
+        "very_short_queries": 0,
+        "many_question_marks": 0,
+        "total": 5
+      }
+    },
+    {
+      "cluster_id": 7,
+      "volume_pct": 11.0,
+      "avg_satisfaction": 0.6340904404768304,
+      "quadrant": "NICHE",
+      "priority_score": 1.1,
+      "sample_queries": [
+        "API error: how to fix?",
+        "Why is API not working?",
+        "Where is API located?",
+        "What's the difference between security and API?",
+        "What's the difference between RAG and API?"
+      ],
+      "expected_value": 0.02552217291500026,
+      "adaptation_signals": {
+        "contains_please_help": 0,
+        "contains_error_terms": 2,
+        "very_short_queries": 0,
+        "many_question_marks": 0,
+        "total": 5
+      }
+    },
+    {
+      "cluster_id": 5,
+      "volume_pct": 6.5,
+      "avg_satisfaction": 0.6789590451096381,
+      "quadrant": "NICHE",
+      "priority_score": 0.65,
+      "sample_queries": [
+        "Where is deployment located?",
+        "Where is deployment located?",
+        "Why is deployment not working?",
+        "debugging or deployment: which is better?",
+        "Compare debugging vs deployment"
+      ],
+      "expected_value": 0.014168287911274025,
+      "adaptation_signals": {
+        "contains_please_help": 0,
+        "contains_error_terms": 1,
+        "very_short_queries": 0,
+        "many_question_marks": 0,
+        "total": 5
+      }
+    }
+  ]
+}

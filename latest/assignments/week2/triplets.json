@@ -1,0 +1,502 @@
+[
+  {
+    "anchor": "How to install Python?",
+    "positive": "Python is a high-level programming language. To install Python, download it from python.org.",
+    "negative": "Start with Python, learn math basics, then try scikit-learn and simple datasets."
+  },
+  {
+    "anchor": "How to install Python?",
+    "positive": "Python is a high-level programming language. To install Python, download it from python.org.",
+    "negative": "Popular ML frameworks include TensorFlow, PyTorch, scikit-learn, and XGBoost."
+  },
+  {
+    "anchor": "Python syntax basics",
+    "positive": "Python syntax uses indentation for code blocks. Variables don't need type declarations.",
+    "negative": "Popular Python libraries include NumPy, Pandas, TensorFlow, and Django."
+  },
+  {
+    "anchor": "Python syntax basics",
+    "positive": "Python syntax uses indentation for code blocks. Variables don't need type declarations.",
+    "negative": "Machine learning is a subset of AI where systems learn from data without explicit programming."
+  },
+  {
+    "anchor": "What is Python used for?",
+    "positive": "Python is used for web development, data science, AI, and automation.",
+    "negative": "Popular ML frameworks include TensorFlow, PyTorch, scikit-learn, and XGBoost."
+  },
+  {
+    "anchor": "What is Python used for?",
+    "positive": "Python is used for web development, data science, AI, and automation.",
+    "negative": "Machine learning is a subset of AI where systems learn from data without explicit programming."
+  },
+  {
+    "anchor": "Python vs JavaScript",
+    "positive": "Python is dynamically typed while JavaScript runs in browsers. Both are popular.",
+    "negative": "Popular ML frameworks include TensorFlow, PyTorch, scikit-learn, and XGBoost."
+  },
+  {
+    "anchor": "Python vs JavaScript",
+    "positive": "Python is dynamically typed while JavaScript runs in browsers. Both are popular.",
+    "negative": "Machine learning is a subset of AI where systems learn from data without explicit programming."
+  },
+  {
+    "anchor": "Best Python libraries",
+    "positive": "Popular Python libraries include NumPy, Pandas, TensorFlow, and Django.",
+    "negative": "Python syntax uses indentation for code blocks. Variables don't need type declarations."
+  },
+  {
+    "anchor": "Best Python libraries",
+    "positive": "Popular Python libraries include NumPy, Pandas, TensorFlow, and Django.",
+    "negative": "Start with Python, learn math basics, then try scikit-learn and simple datasets."
+  },
+  {
+    "anchor": "What is machine learning?",
+    "positive": "Machine learning is a subset of AI where systems learn from data without explicit programming.",
+    "negative": "PostgreSQL is an open-source relational database known for reliability and features."
+  },
+  {
+    "anchor": "What is machine learning?",
+    "positive": "Machine learning is a subset of AI where systems learn from data without explicit programming.",
+    "negative": "Popular Python libraries include NumPy, Pandas, TensorFlow, and Django."
+  },
+  {
+    "anchor": "Types of machine learning",
+    "positive": "There are three types: supervised, unsupervised, and reinforcement learning.",
+    "negative": "Start with Python, learn math basics, then try scikit-learn and simple datasets."
+  },
+  {
+    "anchor": "Types of machine learning",
+    "positive": "There are three types: supervised, unsupervised, and reinforcement learning.",
+    "negative": "Vector databases store embeddings for similarity search. Examples: Pinecone, Chroma, Weaviate."
+  },
+  {
+    "anchor": "How to start with ML?",
+    "positive": "Start with Python, learn math basics, then try scikit-learn and simple datasets.",
+    "negative": "Machine learning is a subset of AI where systems learn from data without explicit programming."
+  },
+  {
+    "anchor": "How to start with ML?",
+    "positive": "Start with Python, learn math basics, then try scikit-learn and simple datasets.",
+    "negative": "PostgreSQL is an open-source relational database known for reliability and features."
+  },
+  {
+    "anchor": "Machine learning vs AI",
+    "positive": "ML is a technique within AI. AI is broader and includes rule-based systems too.",
+    "negative": "Choose based on data structure, scale needs, consistency requirements, and team expertise."
+  },
+  {
+    "anchor": "Machine learning vs AI",
+    "positive": "ML is a technique within AI. AI is broader and includes rule-based systems too.",
+    "negative": "Python is dynamically typed while JavaScript runs in browsers. Both are popular."
+  },
+  {
+    "anchor": "Best ML frameworks",
+    "positive": "Popular ML frameworks include TensorFlow, PyTorch, scikit-learn, and XGBoost.",
+    "negative": "There are three types: supervised, unsupervised, and reinforcement learning."
+  },
+  {
+    "anchor": "Best ML frameworks",
+    "positive": "Popular ML frameworks include TensorFlow, PyTorch, scikit-learn, and XGBoost.",
+    "negative": "PostgreSQL is an open-source relational database known for reliability and features."
+  },
+  {
+    "anchor": "SQL vs NoSQL databases",
+    "positive": "SQL databases are relational with structured schemas. NoSQL is flexible and scales horizontally.",
+    "negative": "Vector databases store embeddings for similarity search. Examples: Pinecone, Chroma, Weaviate."
+  },
+  {
+    "anchor": "SQL vs NoSQL databases",
+    "positive": "SQL databases are relational with structured schemas. NoSQL is flexible and scales horizontally.",
+    "negative": "Popular Python libraries include NumPy, Pandas, TensorFlow, and Django."
+  },
+  {
+    "anchor": "How to choose a database?",
+    "positive": "Choose based on data structure, scale needs, consistency requirements, and team expertise.",
+    "negative": "There are three types: supervised, unsupervised, and reinforcement learning."
+  },
+  {
+    "anchor": "How to choose a database?",
+    "positive": "Choose based on data structure, scale needs, consistency requirements, and team expertise.",
+    "negative": "Vector databases store embeddings for similarity search. Examples: Pinecone, Chroma, Weaviate."
+  },
+  {
+    "anchor": "What is PostgreSQL?",
+    "positive": "PostgreSQL is an open-source relational database known for reliability and features.",
+    "negative": "Machine learning is a subset of AI where systems learn from data without explicit programming."
+  },
+  {
+    "anchor": "What is PostgreSQL?",
+    "positive": "PostgreSQL is an open-source relational database known for reliability and features.",
+    "negative": "Python is a high-level programming language. To install Python, download it from python.org."
+  },
+  {
+    "anchor": "Database indexing explained",
+    "positive": "Indexes speed up queries by creating data structures for faster lookups. B-trees are common.",
+    "negative": "Machine learning is a subset of AI where systems learn from data without explicit programming."
+  },
+  {
+    "anchor": "Database indexing explained",
+    "positive": "Indexes speed up queries by creating data structures for faster lookups. B-trees are common.",
+    "negative": "ML is a technique within AI. AI is broader and includes rule-based systems too."
+  },
+  {
+    "anchor": "Vector databases overview",
+    "positive": "Vector databases store embeddings for similarity search. Examples: Pinecone, Chroma, Weaviate.",
+    "negative": "Popular ML frameworks include TensorFlow, PyTorch, scikit-learn, and XGBoost."
+  },
+  {
+    "anchor": "Vector databases overview",
+    "positive": "Vector databases store embeddings for similarity search. Examples: Pinecone, Chroma, Weaviate.",
+    "negative": "Start with Python, learn math basics, then try scikit-learn and simple datasets."
+  },
+  {
+    "anchor": "SQL vs NoSQL databases please",
+    "positive": "SQL databases are relational with structured schemas. NoSQL is flexible and scales horizontally.",
+    "negative": "Popular Python libraries include NumPy, Pandas, TensorFlow, and Django."
+  },
+  {
+    "anchor": "SQL vs NoSQL databases please",
+    "positive": "SQL databases are relational with structured schemas. NoSQL is flexible and scales horizontally.",
+    "negative": "Vector databases store embeddings for similarity search. Examples: Pinecone, Chroma, Weaviate."
+  },
+  {
+    "anchor": "How to install Python? help",
+    "positive": "Python is a high-level programming language. To install Python, download it from python.org.",
+    "negative": "Start with Python, learn math basics, then try scikit-learn and simple datasets."
+  },
+  {
+    "anchor": "How to install Python? help",
+    "positive": "Python is a high-level programming language. To install Python, download it from python.org.",
+    "negative": "Popular ML frameworks include TensorFlow, PyTorch, scikit-learn, and XGBoost."
+  },
+  {
+    "anchor": "Best Python libraries please",
+    "positive": "Popular Python libraries include NumPy, Pandas, TensorFlow, and Django.",
+    "negative": "Start with Python, learn math basics, then try scikit-learn and simple datasets."
+  },
+  {
+    "anchor": "Best Python libraries please",
+    "positive": "Popular Python libraries include NumPy, Pandas, TensorFlow, and Django.",
+    "negative": "Python syntax uses indentation for code blocks. Variables don't need type declarations."
+  },
+  {
+    "anchor": "Python vs JavaScript please",
+    "positive": "Python is dynamically typed while JavaScript runs in browsers. Both are popular.",
+    "negative": "Popular ML frameworks include TensorFlow, PyTorch, scikit-learn, and XGBoost."
+  },
+  {
+    "anchor": "Python vs JavaScript please",
+    "positive": "Python is dynamically typed while JavaScript runs in browsers. Both are popular.",
+    "negative": "Start with Python, learn math basics, then try scikit-learn and simple datasets."
+  },
+  {
+    "anchor": "How to choose a database? please",
+    "positive": "Choose based on data structure, scale needs, consistency requirements, and team expertise.",
+    "negative": "There are three types: supervised, unsupervised, and reinforcement learning."
+  },
+  {
+    "anchor": "How to choose a database? please",
+    "positive": "Choose based on data structure, scale needs, consistency requirements, and team expertise.",
+    "negative": "Vector databases store embeddings for similarity search. Examples: Pinecone, Chroma, Weaviate."
+  },
+  {
+    "anchor": "SQL vs NoSQL databases help",
+    "positive": "SQL databases are relational with structured schemas. NoSQL is flexible and scales horizontally.",
+    "negative": "Vector databases store embeddings for similarity search. Examples: Pinecone, Chroma, Weaviate."
+  },
+  {
+    "anchor": "SQL vs NoSQL databases help",
+    "positive": "SQL databases are relational with structured schemas. NoSQL is flexible and scales horizontally.",
+    "negative": "Popular Python libraries include NumPy, Pandas, TensorFlow, and Django."
+  },
+  {
+    "anchor": "Vector databases overview help",
+    "positive": "Vector databases store embeddings for similarity search. Examples: Pinecone, Chroma, Weaviate.",
+    "negative": "There are three types: supervised, unsupervised, and reinforcement learning."
+  },
+  {
+    "anchor": "Vector databases overview help",
+    "positive": "Vector databases store embeddings for similarity search. Examples: Pinecone, Chroma, Weaviate.",
+    "negative": "Popular Python libraries include NumPy, Pandas, TensorFlow, and Django."
+  },
+  {
+    "anchor": "Python syntax basics help",
+    "positive": "Python syntax uses indentation for code blocks. Variables don't need type declarations.",
+    "negative": "Popular Python libraries include NumPy, Pandas, TensorFlow, and Django."
+  },
+  {
+    "anchor": "Python syntax basics help",
+    "positive": "Python syntax uses indentation for code blocks. Variables don't need type declarations.",
+    "negative": "Machine learning is a subset of AI where systems learn from data without explicit programming."
+  },
+  {
+    "anchor": "Types of machine learning please",
+    "positive": "There are three types: supervised, unsupervised, and reinforcement learning.",
+    "negative": "Start with Python, learn math basics, then try scikit-learn and simple datasets."
+  },
+  {
+    "anchor": "Types of machine learning please",
+    "positive": "There are three types: supervised, unsupervised, and reinforcement learning.",
+    "negative": "Vector databases store embeddings for similarity search. Examples: Pinecone, Chroma, Weaviate."
+  },
+  {
+    "anchor": "How to install Python? please",
+    "positive": "Python is a high-level programming language. To install Python, download it from python.org.",
+    "negative": "Start with Python, learn math basics, then try scikit-learn and simple datasets."
+  },
+  {
+    "anchor": "How to install Python? please",
+    "positive": "Python is a high-level programming language. To install Python, download it from python.org.",
+    "negative": "Popular ML frameworks include TensorFlow, PyTorch, scikit-learn, and XGBoost."
+  },
+  {
+    "anchor": "Python vs JavaScript please",
+    "positive": "Python is dynamically typed while JavaScript runs in browsers. Both are popular.",
+    "negative": "Popular ML frameworks include TensorFlow, PyTorch, scikit-learn, and XGBoost."
+  },
+  {
+    "anchor": "Python vs JavaScript please",
+    "positive": "Python is dynamically typed while JavaScript runs in browsers. Both are popular.",
+    "negative": "Start with Python, learn math basics, then try scikit-learn and simple datasets."
+  },
+  {
+    "anchor": "Machine learning vs AI help",
+    "positive": "ML is a technique within AI. AI is broader and includes rule-based systems too.",
+    "negative": "Choose based on data structure, scale needs, consistency requirements, and team expertise."
+  },
+  {
+    "anchor": "Machine learning vs AI help",
+    "positive": "ML is a technique within AI. AI is broader and includes rule-based systems too.",
+    "negative": "Start with Python, learn math basics, then try scikit-learn and simple datasets."
+  },
+  {
+    "anchor": "How to install Python? help",
+    "positive": "Python is a high-level programming language. To install Python, download it from python.org.",
+    "negative": "Start with Python, learn math basics, then try scikit-learn and simple datasets."
+  },
+  {
+    "anchor": "How to install Python? help",
+    "positive": "Python is a high-level programming language. To install Python, download it from python.org.",
+    "negative": "Popular ML frameworks include TensorFlow, PyTorch, scikit-learn, and XGBoost."
+  },
+  {
+    "anchor": "Python vs JavaScript help",
+    "positive": "Python is dynamically typed while JavaScript runs in browsers. Both are popular.",
+    "negative": "Popular ML frameworks include TensorFlow, PyTorch, scikit-learn, and XGBoost."
+  },
+  {
+    "anchor": "Python vs JavaScript help",
+    "positive": "Python is dynamically typed while JavaScript runs in browsers. Both are popular.",
+    "negative": "Start with Python, learn math basics, then try scikit-learn and simple datasets."
+  },
+  {
+    "anchor": "SQL vs NoSQL databases help",
+    "positive": "SQL databases are relational with structured schemas. NoSQL is flexible and scales horizontally.",
+    "negative": "Vector databases store embeddings for similarity search. Examples: Pinecone, Chroma, Weaviate."
+  },
+  {
+    "anchor": "SQL vs NoSQL databases help",
+    "positive": "SQL databases are relational with structured schemas. NoSQL is flexible and scales horizontally.",
+    "negative": "Popular Python libraries include NumPy, Pandas, TensorFlow, and Django."
+  },
+  {
+    "anchor": "Machine learning vs AI thanks",
+    "positive": "ML is a technique within AI. AI is broader and includes rule-based systems too.",
+    "negative": "Popular Python libraries include NumPy, Pandas, TensorFlow, and Django."
+  },
+  {
+    "anchor": "Machine learning vs AI thanks",
+    "positive": "ML is a technique within AI. AI is broader and includes rule-based systems too.",
+    "negative": "Choose based on data structure, scale needs, consistency requirements, and team expertise."
+  },
+  {
+    "anchor": "Python vs JavaScript thanks",
+    "positive": "Python is dynamically typed while JavaScript runs in browsers. Both are popular.",
+    "negative": "Popular ML frameworks include TensorFlow, PyTorch, scikit-learn, and XGBoost."
+  },
+  {
+    "anchor": "Python vs JavaScript thanks",
+    "positive": "Python is dynamically typed while JavaScript runs in browsers. Both are popular.",
+    "negative": "Machine learning is a subset of AI where systems learn from data without explicit programming."
+  },
+  {
+    "anchor": "Best ML frameworks thanks",
+    "positive": "Popular ML frameworks include TensorFlow, PyTorch, scikit-learn, and XGBoost.",
+    "negative": "PostgreSQL is an open-source relational database known for reliability and features."
+  },
+  {
+    "anchor": "Best ML frameworks thanks",
+    "positive": "Popular ML frameworks include TensorFlow, PyTorch, scikit-learn, and XGBoost.",
+    "negative": "Start with Python, learn math basics, then try scikit-learn and simple datasets."
+  },
+  {
+    "anchor": "What is PostgreSQL? please",
+    "positive": "PostgreSQL is an open-source relational database known for reliability and features.",
+    "negative": "There are three types: supervised, unsupervised, and reinforcement learning."
+  },
+  {
+    "anchor": "What is PostgreSQL? please",
+    "positive": "PostgreSQL is an open-source relational database known for reliability and features.",
+    "negative": "Machine learning is a subset of AI where systems learn from data without explicit programming."
+  },
+  {
+    "anchor": "What is PostgreSQL? please",
+    "positive": "PostgreSQL is an open-source relational database known for reliability and features.",
+    "negative": "There are three types: supervised, unsupervised, and reinforcement learning."
+  },
+  {
+    "anchor": "What is PostgreSQL? please",
+    "positive": "PostgreSQL is an open-source relational database known for reliability and features.",
+    "negative": "Machine learning is a subset of AI where systems learn from data without explicit programming."
+  },
+  {
+    "anchor": "How to choose a database? thanks",
+    "positive": "Choose based on data structure, scale needs, consistency requirements, and team expertise.",
+    "negative": "Vector databases store embeddings for similarity search. Examples: Pinecone, Chroma, Weaviate."
+  },
+  {
+    "anchor": "How to choose a database? thanks",
+    "positive": "Choose based on data structure, scale needs, consistency requirements, and team expertise.",
+    "negative": "There are three types: supervised, unsupervised, and reinforcement learning."
+  },
+  {
+    "anchor": "What is machine learning? thanks",
+    "positive": "Machine learning is a subset of AI where systems learn from data without explicit programming.",
+    "negative": "PostgreSQL is an open-source relational database known for reliability and features."
+  },
+  {
+    "anchor": "What is machine learning? thanks",
+    "positive": "Machine learning is a subset of AI where systems learn from data without explicit programming.",
+    "negative": "Popular Python libraries include NumPy, Pandas, TensorFlow, and Django."
+  },
+  {
+    "anchor": "What is Python used for? please",
+    "positive": "Python is used for web development, data science, AI, and automation.",
+    "negative": "Popular ML frameworks include TensorFlow, PyTorch, scikit-learn, and XGBoost."
+  },
+  {
+    "anchor": "What is Python used for? please",
+    "positive": "Python is used for web development, data science, AI, and automation.",
+    "negative": "Start with Python, learn math basics, then try scikit-learn and simple datasets."
+  },
+  {
+    "anchor": "What is PostgreSQL? thanks",
+    "positive": "PostgreSQL is an open-source relational database known for reliability and features.",
+    "negative": "Popular Python libraries include NumPy, Pandas, TensorFlow, and Django."
+  },
+  {
+    "anchor": "What is PostgreSQL? thanks",
+    "positive": "PostgreSQL is an open-source relational database known for reliability and features.",
+    "negative": "Python is a high-level programming language. To install Python, download it from python.org."
+  },
+  {
+    "anchor": "Python syntax basics please",
+    "positive": "Python syntax uses indentation for code blocks. Variables don't need type declarations.",
+    "negative": "Popular Python libraries include NumPy, Pandas, TensorFlow, and Django."
+  },
+  {
+    "anchor": "Python syntax basics please",
+    "positive": "Python syntax uses indentation for code blocks. Variables don't need type declarations.",
+    "negative": "Machine learning is a subset of AI where systems learn from data without explicit programming."
+  },
+  {
+    "anchor": "Types of machine learning please",
+    "positive": "There are three types: supervised, unsupervised, and reinforcement learning.",
+    "negative": "Start with Python, learn math basics, then try scikit-learn and simple datasets."
+  },
+  {
+    "anchor": "Types of machine learning please",
+    "positive": "There are three types: supervised, unsupervised, and reinforcement learning.",
+    "negative": "Vector databases store embeddings for similarity search. Examples: Pinecone, Chroma, Weaviate."
+  },
+  {
+    "anchor": "What is machine learning? thanks",
+    "positive": "Machine learning is a subset of AI where systems learn from data without explicit programming.",
+    "negative": "PostgreSQL is an open-source relational database known for reliability and features."
+  },
+  {
+    "anchor": "What is machine learning? thanks",
+    "positive": "Machine learning is a subset of AI where systems learn from data without explicit programming.",
+    "negative": "Popular Python libraries include NumPy, Pandas, TensorFlow, and Django."
+  },
+  {
+    "anchor": "Best ML frameworks thanks",
+    "positive": "Popular ML frameworks include TensorFlow, PyTorch, scikit-learn, and XGBoost.",
+    "negative": "PostgreSQL is an open-source relational database known for reliability and features."
+  },
+  {
+    "anchor": "Best ML frameworks thanks",
+    "positive": "Popular ML frameworks include TensorFlow, PyTorch, scikit-learn, and XGBoost.",
+    "negative": "Start with Python, learn math basics, then try scikit-learn and simple datasets."
+  },
+  {
+    "anchor": "What is PostgreSQL? please",
+    "positive": "PostgreSQL is an open-source relational database known for reliability and features.",
+    "negative": "There are three types: supervised, unsupervised, and reinforcement learning."
+  },
+  {
+    "anchor": "What is PostgreSQL? please",
+    "positive": "PostgreSQL is an open-source relational database known for reliability and features.",
+    "negative": "Machine learning is a subset of AI where systems learn from data without explicit programming."
+  },
+  {
+    "anchor": "How to choose a database? thanks",
+    "positive": "Choose based on data structure, scale needs, consistency requirements, and team expertise.",
+    "negative": "Vector databases store embeddings for similarity search. Examples: Pinecone, Chroma, Weaviate."
+  },
+  {
+    "anchor": "How to choose a database? thanks",
+    "positive": "Choose based on data structure, scale needs, consistency requirements, and team expertise.",
+    "negative": "There are three types: supervised, unsupervised, and reinforcement learning."
+  },
+  {
+    "anchor": "Machine learning vs AI please",
+    "positive": "ML is a technique within AI. AI is broader and includes rule-based systems too.",
+    "negative": "Choose based on data structure, scale needs, consistency requirements, and team expertise."
+  },
+  {
+    "anchor": "Machine learning vs AI please",
+    "positive": "ML is a technique within AI. AI is broader and includes rule-based systems too.",
+    "negative": "Start with Python, learn math basics, then try scikit-learn and simple datasets."
+  },
+  {
+    "anchor": "Vector databases overview thanks",
+    "positive": "Vector databases store embeddings for similarity search. Examples: Pinecone, Chroma, Weaviate.",
+    "negative": "Popular Python libraries include NumPy, Pandas, TensorFlow, and Django."
+  },
+  {
+    "anchor": "Vector databases overview thanks",
+    "positive": "Vector databases store embeddings for similarity search. Examples: Pinecone, Chroma, Weaviate.",
+    "negative": "Popular ML frameworks include TensorFlow, PyTorch, scikit-learn, and XGBoost."
+  },
+  {
+    "anchor": "Python syntax basics help",
+    "positive": "Python syntax uses indentation for code blocks. Variables don't need type declarations.",
+    "negative": "Popular Python libraries include NumPy, Pandas, TensorFlow, and Django."
+  },
+  {
+    "anchor": "Python syntax basics help",
+    "positive": "Python syntax uses indentation for code blocks. Variables don't need type declarations.",
+    "negative": "Machine learning is a subset of AI where systems learn from data without explicit programming."
+  },
+  {
+    "anchor": "Best Python libraries help",
+    "positive": "Popular Python libraries include NumPy, Pandas, TensorFlow, and Django.",
+    "negative": "Start with Python, learn math basics, then try scikit-learn and simple datasets."
+  },
+  {
+    "anchor": "Best Python libraries help",
+    "positive": "Popular Python libraries include NumPy, Pandas, TensorFlow, and Django.",
+    "negative": "Python syntax uses indentation for code blocks. Variables don't need type declarations."
+  },
+  {
+    "anchor": "Best ML frameworks thanks",
+    "positive": "Popular ML frameworks include TensorFlow, PyTorch, scikit-learn, and XGBoost.",
+    "negative": "PostgreSQL is an open-source relational database known for reliability and features."
+  },
+  {
+    "anchor": "Best ML frameworks thanks",
+    "positive": "Popular ML frameworks include TensorFlow, PyTorch, scikit-learn, and XGBoost.",
+    "negative": "Start with Python, learn math basics, then try scikit-learn and simple datasets."
+  }
+]
