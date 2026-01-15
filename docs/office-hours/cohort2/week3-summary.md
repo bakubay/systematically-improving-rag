@@ -22,12 +22,6 @@ topics:
 
 ---
 
-If you want to learn more about RAG systems, check out our RAG Playbook course. Here is a 20% discount code for readers.
-
-[RAG Playbook - 20% off for readers](https://maven.com/applied-llms/rag-playbook?promoCode=EBOOK){ .md-button }
-
----
-
 ## When gathering negative feedback from documents not being found, how do we use and validate the reliability of an LLM labeler?
 
 When it comes to getting negative feedback that documents were not found, I'd assume we're running into issues around low recall. This might manifest as low re-ranker scores or low cosine similarities with embedding models.

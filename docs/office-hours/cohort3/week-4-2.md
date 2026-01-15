@@ -25,10 +25,6 @@ I hosted an office hours session focused on advanced report generation with dyna
 
 ---
 
-If you want to learn more about RAG systems, check out our RAG Playbook course. Here is a 20% discount code for readers.
-
-[RAG Playbook - 20% off for readers](https://maven.com/applied-llms/rag-playbook?promoCode=EBOOK){ .md-button }
-
 ---
 
 ## How should I approach dynamic data visualization in AI-generated reports?

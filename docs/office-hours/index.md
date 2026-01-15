@@ -7,15 +7,6 @@ description: Summaries and key insights from weekly office hours sessions
 
 This section contains summaries and key insights from our weekly office hours sessions, where we discuss challenges, solutions, and best practices for RAG systems.
 
-!!! success "🎓 Get the Complete Course - 20% Off"
-    This content is from the [Systematically Improving RAG Applications](https://maven.com/applied-llms/rag-playbook?promoCode=EBOOK) course on Maven.
-    
-    **Readers can enroll for 20% off with code: `EBOOK`**
-    
-    Join 500+ engineers who've transformed their RAG systems from demos to production-ready applications.
-    
-    [Enroll in the RAG Playbook Course - 20% Off](https://maven.com/applied-llms/rag-playbook?promoCode=EBOOK){ .md-button .md-button--primary }
-
 Office hours are now organized by chapter, matching the structure of the main workshop curriculum. Each chapter contains all relevant sessions from both Cohort 2 and Cohort 3 for that topic/week.
 
 If you want to see all the questions and answers, you can find them in the [FAQ](faq.md) page.
@@ -69,14 +60,3 @@ Office hours cover a wide range of topics including:
 - Product development approaches
 
 ---
-
-## Stay Updated
-
-!!! success "🎓 Get the Complete Course - 20% Off"
-    This content is from the [Systematically Improving RAG Applications](https://maven.com/applied-llms/rag-playbook?promoCode=EBOOK) course on Maven.
-    
-    **Readers can enroll for 20% off with code: `EBOOK`**
-    
-    Join 500+ engineers who've transformed their RAG systems from demos to production-ready applications.
-    
-    [Enroll in the RAG Playbook Course - 20% Off](https://maven.com/applied-llms/rag-playbook?promoCode=EBOOK){ .md-button .md-button--primary }

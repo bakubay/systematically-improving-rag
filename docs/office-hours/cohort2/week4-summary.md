@@ -19,12 +19,6 @@ topics:
 
 ---
 
-If you want to learn more about RAG systems, check out our RAG Playbook course. Here is a 20% discount code for readers.
-
-[RAG Playbook - 20% off for readers](https://maven.com/applied-llms/rag-playbook?promoCode=EBOOK){ .md-button }
-
----
-
 ## What can "segments" mean beyond query volume and satisfaction values in a RAG system?
 
 Segmentation really depends on who your customers are and what they're trying to do. With a generic chatbot, it's hard to figure out what segmentation means. But if you think about intents of a specific application, you can uncover different patterns.

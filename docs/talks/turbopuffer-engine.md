@@ -21,12 +21,6 @@ I hosted a session with Simon, CEO of TurboPuffer, to explore how vector search 
 
 ---
 
-👉 If you want to learn more about RAG systems, check out our RAG Playbook course. Here is a 20% discount code for readers. 👈
-
-[RAG Playbook - 20% off for readers](https://maven.com/applied-llms/rag-playbook?promoCode=EBOOK){ .md-button .md-button--primary }
-
----
-
 ## Why is TurboPuffer different from traditional vector databases?
 
 TurboPuffer represents a fundamentally different approach to vector search by being the first completely object storage native database. This architecture emerged from two key ingredients needed for any successful new database:
@@ -246,11 +240,5 @@ Yes, TurboPuffer supports facets and aggregations, which are useful for both tra
 ## Is TurboPuffer suitable for small use cases?
 
 TurboPuffer currently has minimum spend requirements, making it more suitable for production-level applications rather than small experiments. The company maintains these requirements to ensure they can provide high-quality support and reliability. For very small use cases, alternatives like PGVector might be more appropriate. The TurboPuffer team plans to lower these requirements over time as they scale their support capabilities.
-
----
-
-👉 If you want to learn more about RAG systems, check out our RAG Playbook course. Here is a 20% discount code for readers. 👈
-
-[RAG Playbook - 20% off for readers](https://maven.com/applied-llms/rag-playbook?promoCode=EBOOK){ .md-button .md-button--primary }
 
 ---

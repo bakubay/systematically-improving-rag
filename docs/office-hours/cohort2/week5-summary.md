@@ -19,12 +19,6 @@ topics:
 
 ---
 
-If you want to learn more about RAG systems, check out our RAG Playbook course. Here is a 20% discount code for readers.
-
-[RAG Playbook - 20% off for readers](https://maven.com/applied-llms/rag-playbook?promoCode=EBOOK){ .md-button }
-
----
-
 ## How should we handle Excel files with multiple sheets and tables?
 
 Handling Excel files with multiple sheets and tables is challenging, and few companies have solved this problem well. Experience from companies like Zapier shows that connecting Excel spreadsheets to automation tools requires many controls to work properly.

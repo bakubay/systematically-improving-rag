@@ -19,12 +19,6 @@ topics:
 
 ---
 
-If you want to learn more about RAG systems, check out our RAG Playbook course. Here is a 20% discount code for readers.
-
-[RAG Playbook - 20% off for readers](https://maven.com/applied-llms/rag-playbook?promoCode=EBOOK){ .md-button }
-
----
-
 ## What is Deep Research and how does it relate to RAG?
 
 Deep Research is essentially a model fine-tuned for tool use that leverages RAG and iteration in a loop to produce reports. It can be viewed as RAG with solid data sources and strong reasoning capabilities on top. Deep Research is distinct from standard RAG applications because it typically produces more comprehensive outputs like reports rather than just answering specific questions.
