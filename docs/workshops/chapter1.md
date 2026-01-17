@@ -13,6 +13,15 @@ tags:
 
 # Kickstarting the Data Flywheel with Synthetic Data
 
+!!! abstract "Chapter at a Glance"
+    **Time**: 45 min reading + 2-3 hours hands-on | **Prerequisites**: Basic Python, familiarity with embeddings
+
+    **You will learn**: How to build evaluation frameworks using synthetic data, measure retrieval with precision/recall, and avoid common pitfalls like vague metrics and intervention bias.
+
+    **Key outcome**: An evaluation pipeline that lets you measure improvements objectively before you have real users.
+
+    **Case studies**: Consulting firm (50% → 90% recall), Blueprint search (27% → 85% in 4 days)
+
 ### Key Insight
 
 **You can't improve what you can't measure—and you can measure before you have users.** Synthetic data isn't just a stopgap until real users arrive. It's a powerful tool for establishing baselines, testing edge cases, and building the evaluation infrastructure that will power continuous improvement. Start with retrieval metrics (precision and recall), not generation quality, because they're faster, cheaper, and more objective.
@@ -372,6 +381,13 @@ Two examples demonstrate how focusing on retrieval metrics leads to rapid improv
 
 A consulting firm generates reports from user research interviews. Consultants conduct 15-30 interviews per project and need AI-generated summaries that capture all relevant insights.
 
+| Stage | Recall | Time | Key Change |
+|-------|--------|------|------------|
+| Baseline | 50% | - | Missing half of relevant quotes |
+| Iteration 1 | 70% | 1 week | Identified chunking issue |
+| Iteration 2 | 85% | 2 weeks | Fixed Q&A splitting |
+| Iteration 3 | 90% | 3 weeks | Added chunk overlap |
+
 **Problem**: Reports were missing critical quotes. A consultant knew 6 experts said something similar, but the report only cited 3. That 50% recall rate destroyed trust. Consultants started spending hours manually verifying reports, defeating the automation's purpose.
 
 **Investigation**: Built manual evaluation sets from problematic examples. The issues turned out to be surprisingly straightforward—text chunking was breaking mid-quote and splitting speaker attributions from their statements.
@@ -383,6 +399,12 @@ A consulting firm generates reports from user research interviews. Consultants c
 ### Case Study 2: Blueprint Search for Construction
 
 A construction technology company needed AI search for building blueprints. Workers asked questions like "Which rooms have north-facing windows?" or "Show me all electrical outlet locations in the second-floor bedrooms."
+
+| Stage | Recall | Time | Key Change |
+|-------|--------|------|------------|
+| Baseline | 27% | - | Text embeddings on blueprints |
+| Vision captions | 85% | 4 days | Added spatial descriptions |
+| Counting queries | 92% | +2 weeks | Bounding box detection |
 
 **Problem**: Only 27% recall when finding the right blueprint sections for questions. Workers would ask simple spatial questions and get completely unrelated blueprint segments. The system was essentially useless—workers abandoned it and went back to manually scrolling through PDFs.
 
@@ -834,6 +856,9 @@ Example: One team found 5 irrelevant documents (even marked as "potentially less
 - **[Prompttools](https://github.com/promptslab/prompttools)**: Toolkit for testing and evaluating LLM applications
 - **[MLflow for Experiment Tracking](https://mlflow.org/)**: Open-source platform for managing ML lifecycle
 
+!!! tip "Hands-On Practice"
+    For step-by-step exercises to apply these concepts, see [Exercises: Chapter 1](exercises.md#chapter-1-evaluation-foundations).
+
 ## This Week's Action Items
 
 Based on the content covered, here are your specific tasks:
@@ -894,6 +919,14 @@ Take a minute to think about:
 4. What experiment could you run this week to test an improvement hypothesis?
 5. How will you incorporate real user feedback as it comes in?
 
+!!! example "Hands-On Practice: WildChat Case Study"
+    Apply these concepts with the WildChat case study, which demonstrates the evaluation framework in action:
+
+    - **[Part 1: Data Exploration](../../latest/case_study/teaching/part01/README.md)** - Understand your dataset before building evaluations
+    - **[Part 2: The Alignment Problem](../../latest/case_study/teaching/part02/README.md)** - See how synthetic query generation (v1 vs v2) reveals system limitations
+
+    The case study shows a real example of going from 12% to 62% Recall@1 by understanding what you are actually measuring.
+
 ## Conclusion and Next Steps
 
 We've covered the foundation for systematic RAG improvement through proper evaluation. No more subjective judgments or random changes - you now have tools to measure progress objectively and make data-driven decisions.
@@ -917,3 +950,9 @@ The goal isn't chasing the latest AI techniques. It's building a flywheel of con
 As one client told me: "We spent three months trying to improve through prompt engineering and model switching. In two weeks with proper evaluations, we made more progress than all that time combined."
 
 ---
+
+## Navigation
+
+- **Previous**: [Introduction: Beyond Implementation to Improvement](chapter0.md) - The product mindset for RAG
+- **Next**: [Chapter 2: From Evaluation to Enhancement](chapter2.md) - Converting evaluations into training data
+- **Reference**: [Glossary](glossary.md) | [Quick Reference](quick-reference.md)

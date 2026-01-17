@@ -12,6 +12,15 @@ tags:
 
 # Query Routing Foundations: Building a Cohesive RAG System
 
+!!! abstract "Chapter at a Glance"
+    **Time**: 30 min reading + 1-2 hours implementation | **Prerequisites**: Chapters 1-5
+
+    **You will learn**: How to build query routing systems that direct queries to specialized retrievers, the two-level performance formula, and team organization patterns.
+
+    **Key outcome**: A routing architecture where P(success) = P(right retriever) × P(finding data | right retriever).
+
+    **Case study**: Construction company improved from 65% to 78% overall success with routing.
+
 ### Key Insight
 
 **The best retriever is multiple retrievers—success = P(selecting right retriever) × P(retriever finding data).** Query routing isn't about choosing one perfect system. It's about building a portfolio of specialized tools and letting a smart router decide. Start simple with few-shot classification, then evolve to fine-tuned models as you collect routing decisions.

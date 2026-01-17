@@ -85,10 +85,13 @@ The progression:
 4. **Learn from Users** (Ch 4): Find patterns, pick what to build
 5. **Go Deep** (Ch 5): Build specialized tools that excel
 6. **Tie It Together** (Ch 6): Make everything work as one system
+7. **Ship It** (Ch 7): Run reliably in production at scale
 
 ## Prerequisites
 
 You should know what RAG is and have at least played with it. If you're totally new, start with the [Introduction](chapter0.md).
+
+For guidance on different reading paths and time estimates, see [How to Use This Book](how-to-use.md).
 
 ## What You'll Have When Done
 
@@ -100,3 +103,9 @@ A RAG system that:
 - Makes improvement decisions based on data
 - Handles edge cases gracefully
 - Works in production, not just demos
+
+## Reference Materials
+
+- **[Glossary](glossary.md)** - Definitions of key terms like hard negatives, recall@K, and the data flywheel
+- **[Quick Reference](quick-reference.md)** - Formulas, decision trees, and checklists for quick lookup
+- **[How to Use This Book](how-to-use.md)** - Reading paths, prerequisites, and time estimates

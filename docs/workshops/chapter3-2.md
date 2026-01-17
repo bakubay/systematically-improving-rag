@@ -1,7 +1,13 @@
 ---
 title: "Chapter 3.2: Overcoming Latency"
 description: Techniques for enhancing both actual and perceived performance in RAG applications
-author: Jason Liu
+authors:
+  - Jason Liu
+date: 2025-03-21
+tags:
+  - latency
+  - streaming
+  - user-experience
 ---
 
 # Overcoming Latency: Streaming and Interstitials
@@ -605,3 +611,9 @@ Remember: If you only implement one improvement from this chapter, make it strea
 1. GitHub Repository: [React Skeleton Screens](https://github.com/danilowoz/react-content-loader) - Open-source library for implementing skeleton screens in React applications
 
 ---
+
+## Navigation
+
+- **Previous**: [Chapter 3.1: Feedback Collection](chapter3-1.md) - Getting users to actually give feedback
+- **Next**: [Chapter 3.3: Quality of Life](chapter3-3.md) - Citations, chain of thought, and validation patterns
+- **Reference**: [Glossary](glossary.md) | [Quick Reference](quick-reference.md)

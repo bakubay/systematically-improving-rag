@@ -1,10 +1,25 @@
 ---
 title: "Chapter 3.1: Feedback Collection"
 description: Building feedback flywheels into your RAG applications
-author: Jason Liu
+authors:
+  - Jason Liu
+date: 2025-03-21
+tags:
+  - feedback
+  - user-experience
+  - data-collection
 ---
 
 # Feedback Collection: Building Your Improvement Flywheel
+
+!!! abstract "Chapter at a Glance"
+    **Time**: 30 min reading + 1-2 hours implementation | **Prerequisites**: Basic web development
+
+    **You will learn**: How to design feedback mechanisms that collect 5x more data, mine implicit signals from user behavior, and build enterprise feedback loops with Slack integration.
+
+    **Key outcome**: A feedback system that generates training data from every user interaction.
+
+    **Case study**: Zapier increased feedback from 10 to 40 submissions/day with better copy and visibility.
 
 ### Key Insight
 
@@ -127,6 +142,7 @@ Best: "Did this run do what you expected it to do?"
 
 **What Actually Works:**
 
+```text
 "Did we answer your question? [Yes] [Somewhat] [No]"
 
 If "Somewhat" or "No":
@@ -135,13 +151,11 @@ If "Somewhat" or "No":
 - [ ] More detailed explanation
 - [ ] Different information needed
 - [ ] Information was wrong
+- [ ] Better formatting
+- [ ] Other: _______________
+```
 
 Remember: users perceive animated progress bars as **11% faster** even when wait times are identical. Good UX matters for feedback collection too.
-
-- [ ] Better formatting
-- [ ] Other: \***\*\_\_\_\_\*\***
-
-```
 
 The second approach not only makes feedback impossible to miss but also structures it in a way that provides more actionable insights. Data shows that visible feedback mechanisms can increase feedback rates from less than 1% to over 30%.
 
@@ -167,8 +181,8 @@ Claude's implementation of progress counters during response generation serves m
 - Creates natural moments for feedback collection
 
 **Implementation Pattern:**
-```
 
+```text
 Searching documents... [████░░░░░░] 40%
 Found 5 relevant sources
 Analyzing content... [████████░░] 80%
@@ -177,8 +191,7 @@ Generating response... [██████████] 100%
 [Response appears here]
 
 Did we find the right information? [Yes] [No]
-
-````
+```
 
 This pattern makes feedback feel like a natural continuation of the interaction rather than an interruption.
 
@@ -413,6 +426,9 @@ In the next chapter, explore how to reduce perceived latency through streaming a
 - **[Chapter 5](chapter5-1.md)**: User behavior patterns reveal which specialized retrievers to build
 - **[Chapter 6](chapter6-2.md)**: Feedback on router decisions improves tool selection
 
+!!! tip "Hands-On Practice"
+    For step-by-step exercises to apply these concepts, see [Exercises: Chapter 3](exercises.md#chapter-3-feedback-collection).
+
 ## This Week's Action Items
 
 Based on the content covered, here are your specific tasks for building effective feedback collection:
@@ -528,4 +544,9 @@ Effective feedback collection is essential for systematic improvement of RAG sys
 1. GitHub Repository: [RAG-Feedback-Collection](https://github.com/microsoft/rag-feedback-collection) - Templates and examples for implementing feedback mechanisms in RAG applications
 
 ---
-````
+
+## Navigation
+
+- **Previous**: [Chapter 2: From Evaluation to Enhancement](chapter2.md) - Converting evaluations into training data
+- **Next**: [Chapter 3.2: Overcoming Latency](chapter3-2.md) - Streaming and perceived performance
+- **Reference**: [Glossary](glossary.md) | [Quick Reference](quick-reference.md)

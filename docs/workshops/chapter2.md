@@ -133,7 +133,7 @@ Build a library of few-shot examples systematically:
 
 ### Structured Few-Shot Prompt Example
 
-```
+```text
 You are an assistant specialized in answering questions about [domain].
 
 Here are some examples of how to answer questions:
@@ -244,13 +244,13 @@ For RAG applications, there are several natural ways to create triplet datasets:
 
 Imagine a healthcare RAG application where a user asks:
 
-```
+```text
 What are the side effects of medication X?
 ```
 
 Our retrieval system might return several documents, including:
 
-```
+```text
 Document A: "Medication X may cause drowsiness, nausea, and in rare cases, allergic reactions."
 
 Document B: "Medication X is used to treat high blood pressure and should be taken with food."
@@ -605,33 +605,28 @@ Linear adapters add a small trainable layer on top of frozen embeddings: - Train
 ## Additional Resources
 
 !!! info "Tools and Libraries"
+    **Understanding Embedding Models**
 
-```
-### Understanding Embedding Models
+    1. **Sentence Transformers Library** ([https://www.sbert.net/](https://www.sbert.net/)): This library provides easy-to-use implementations for state-of-the-art embedding models, supporting both pairwise datasets and triplets for fine-tuning. It's my recommended starting point for most teams due to its balance of performance and ease of use.
 
-1. **Sentence Transformers Library** ([https://www.sbert.net/](https://www.sbert.net/)): This library provides easy-to-use implementations for state-of-the-art embedding models, supporting both pairwise datasets and triplets for fine-tuning. It's my recommended starting point for most teams due to its balance of performance and ease of use.
+    2. **Modern BERT** ([https://huggingface.co/sentence-transformers](https://huggingface.co/sentence-transformers)): These newer models offer 8,000 token sequence lengths and generally outperform classic BERT-based models. The BGE models in particular have shown excellent performance across many domains and are worth testing in your applications.
 
-2. **Modern BERT** ([https://huggingface.co/sentence-transformers](https://huggingface.co/sentence-transformers)): These newer models offer 8,000 token sequence lengths and generally outperform classic BERT-based models. The BGE models in particular have shown excellent performance across many domains and are worth testing in your applications.
+    3. **Cohere Re-ranking Models** ([https://cohere.com/rerank](https://cohere.com/rerank)): Cohere offers state-of-the-art re-ranking capabilities with a fine-tuning API that makes it relatively easy to customize for your specific needs. In my experience, even their base re-ranker without fine-tuning often provides substantial improvements to retrieval quality.
 
-3. **Cohere Re-ranking Models** ([https://cohere.com/rerank](https://cohere.com/rerank)): Cohere offers state-of-the-art re-ranking capabilities with a fine-tuning API that makes it relatively easy to customize for your specific needs. In my experience, even their base re-ranker without fine-tuning often provides substantial improvements to retrieval quality.
+    4. **Specialized Domains**: For specific domains like code, science, or legal documents, look for models pre-trained on related corpora. For example, CodeBERT for programming or SciBERT for scientific literature can provide better starting points than general models.
 
-4. **Specialized Domains**: For specific domains like code, science, or legal documents, look for models pre-trained on related corpora. For example, CodeBERT for programming or SciBERT for scientific literature can provide better starting points than general models.
-
-5. **Comparison to Data Labeling**: Everything we're doing today with fine-tuning embedding models is what I used to pay data labeling teams hundreds of thousands of dollars to do annually. The ML playbook that was once only accessible to large companies with significant budgets is now available to teams of all sizes thanks to advances in transfer learning and fine-tuning techniques.
-```
+    5. **Comparison to Data Labeling**: Everything we're doing today with fine-tuning embedding models is what I used to pay data labeling teams hundreds of thousands of dollars to do annually. The ML playbook that was once only accessible to large companies with significant budgets is now available to teams of all sizes thanks to advances in transfer learning and fine-tuning techniques.
 
 !!! info "Key Concepts"
+    **Contrastive Learning In-Depth**
 
-```
-#### Contrastive Learning In-Depth
+    Contrastive learning trains models to recognize similarities and differences between items by pushing and pulling examples in the embedding space:
 
-Contrastive learning trains models to recognize similarities and differences between items by pushing and pulling examples in the embedding space:
+    - **Triplet Loss**: Optimizes the distance between anchor-positive pairs relative to anchor-negative pairs
+    - **InfoNCE Loss**: Contrasts a positive pair against multiple negative examples
+    - **Multiple Negatives Ranking Loss**: Handles batches of queries with multiple negatives per query
 
-- **Triplet Loss**: Optimizes the distance between anchor-positive pairs relative to anchor-negative pairs
-- **InfoNCE Loss**: Contrasts a positive pair against multiple negative examples
-- **Multiple Negatives Ranking Loss**: Handles batches of queries with multiple negatives per query
-
-#### Scaling and Efficiency Considerations
+    **Scaling and Efficiency Considerations**
 
 For large datasets or production workloads:
 
@@ -702,6 +697,14 @@ Take a minute to think about:
 4. If you had to prioritize one retrieval improvement for your system, would it be embeddings, re-ranking, or something else? Why?
 5. What experiments could you run to test your hypotheses about improving retrieval quality?
 
+!!! example "Hands-On Practice: WildChat Case Study"
+    The case study demonstrates the alignment problem and how to solve it through better embeddings:
+
+    - **[Part 2: The Alignment Problem](../../latest/case_study/teaching/part02/README.md)** - See how v1 queries achieve 62% recall while v2 queries get only 12% on the same embeddings
+    - **[Part 3: Solving Through Summaries](../../latest/case_study/teaching/part03/README.md)** - Learn how changing what you embed (not just how you embed) can achieve 358% improvement
+
+    This demonstrates the core insight: alignment between queries and embeddings matters more than model sophistication.
+
 ## Conclusion and Next Steps
 
 We covered a lot:
@@ -740,4 +743,9 @@ Do these things now:
 If you do this right, every piece of data makes your system better. The improvements compound over time and affect everything—clustering, topic modeling, all of it.
 
 ---
-```
+
+## Navigation
+
+- **Previous**: [Chapter 1: Starting the Flywheel](chapter1.md) - Synthetic data and evaluation
+- **Next**: [Chapter 3.1: Feedback Collection](chapter3-1.md) - Getting users to actually give feedback
+- **Reference**: [Glossary](glossary.md) | [Quick Reference](quick-reference.md)
