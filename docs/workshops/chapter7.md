@@ -267,30 +267,32 @@ Graceful degradation strategies:
 
 The construction company from previous chapters maintained improvement velocity in production:
 
+| Metric | Month 1-2 | Month 3-6 | Month 7-12 |
+|--------|-----------|-----------|------------|
+| **Daily Queries** | 500 | 500 | 2,500 |
+| **Routing Accuracy** | 95% | 95% | 96% |
+| **Retrieval Accuracy** | 82% | 85% | 87% |
+| **Overall Success** | 78% | 81% | 84% |
+| **Daily Cost** | $45 | $32 | $98 |
+| **Cost per Query** | $0.09 | $0.064 | $0.04 |
+| **Feedback/Day** | 40 | 45 | 60 |
+
 **Month 1-2 (Initial Deploy)**:
 
-- Overall success: 78% (95% routing × 82% retrieval)
-- Daily queries: 500
-- Cost: $45/day
-- Feedback: 40 submissions/day
+- Baseline established with evaluation framework from Chapter 1
+- Feedback collection from Chapter 3 generating 40 submissions daily
 
 **Month 3-6 (First Improvement Cycle)**:
 
 - Used feedback to identify schedule search issues (dates parsed incorrectly)
 - Fine-tuned date extraction (Chapter 2 techniques)
-- Routing accuracy maintained at 95%
-- Retrieval improved: 82% → 85%
-- New overall success: 95% × 85% = 81%
-- Cost optimization: $45/day → $32/day (prompt caching)
+- Cost optimization through prompt caching: $45/day → $32/day
 
 **Month 7-12 (Sustained Improvement)**:
 
-- Daily queries scaled to 2,500 (5x growth)
+- 5x query growth while improving unit economics
 - Added new tool for permit search based on usage patterns
 - Updated routing with 60 examples per tool
-- Overall success: 96% × 87% = 84%
-- Cost: $98/day (linear scale with usage)
-- Unit economics improved: $0.09/query → $0.04/query
 
 **Key Insight**: Production success meant maintaining the improvement flywheel while managing costs and reliability. The evaluation framework from Chapter 1, feedback from Chapter 3, and routing from Chapter 6 all remained active in production—continuously measuring, collecting data, and improving.
 
@@ -394,3 +396,11 @@ For deeper dives into production topics:
 - [Designing Data-Intensive Applications](https://dataintensive.net/) - Scalability patterns
 
 Production readiness is an ongoing process of optimization, monitoring, and improvement - not a final destination.
+
+---
+
+## Navigation
+
+- **Previous**: [Chapter 6.3: Performance Measurement](chapter6-3.md) - Measuring and improving routers
+- **Start Over**: [Introduction](chapter0.md) | [How to Use This Book](how-to-use.md)
+- **Reference**: [Glossary](glossary.md) | [Quick Reference](quick-reference.md)

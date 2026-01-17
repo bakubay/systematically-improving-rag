@@ -427,5 +427,12 @@ Measuring both levels tells you where to focus your efforts.
 - **Business Impact**: Reduced time-to-answer for users in your target segment
 - **System Health**: Clear separation between routing accuracy and individual retriever performance
 
+!!! example "Hands-On Practice: WildChat Case Study"
+    The case study demonstrates specialization through different embedding strategies:
+
+    - **[Part 3: Solving Through Summaries](../../latest/case_study/teaching/part03/README.md)** - See how different summary techniques (v1 content-focused vs v4 pattern-focused) create specialized indices for different query types
+    
+    The key insight: v1 summaries excel at content queries (58% recall) while v4 summaries excel at pattern queries (42% recall). Building both and routing between them outperforms any single approach.
+
 !!! tip "Next Steps"
-In [Chapter 6](chapter6-1.md), explore how to bring these specialized components together through intelligent routing, creating a unified system that seamlessly directs queries to the appropriate retrievers.
+    In [Chapter 6](chapter6-1.md), explore how to bring these specialized components together through intelligent routing, creating a unified system that seamlessly directs queries to the appropriate retrievers.

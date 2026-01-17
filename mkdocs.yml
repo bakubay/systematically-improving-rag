@@ -39,15 +39,16 @@ nav:
   - "Home": "index.md"
   - "Workshops":
       - "Overview": "workshops/index.md"
+      - "How to Use This Book": "workshops/how-to-use.md"
       - "Introduction": "workshops/chapter0.md"
       - "Chapter 1: Starting the Flywheel":
           - "Overview": "workshops/chapter1.md"
       - "Chapter 2: From Evaluation to Enhancement":
           - "Overview": "workshops/chapter2.md"
       - "Chapter 3: User Experience":
-          - "Design Principles": "workshops/chapter3-1.md"
-          - "Feedback Collection": "workshops/chapter3-2.md"
-          - "Iterative Improvement": "workshops/chapter3-3.md"
+          - "Feedback Collection": "workshops/chapter3-1.md"
+          - "Overcoming Latency": "workshops/chapter3-2.md"
+          - "Quality of Life": "workshops/chapter3-3.md"
       - "Chapter 4: Topic Modeling":
           - "Analysis": "workshops/chapter4-1.md"
           - "Prioritization": "workshops/chapter4-2.md"
@@ -58,6 +59,12 @@ nav:
           - "Routing": "workshops/chapter6-1.md"
           - "Tools": "workshops/chapter6-2.md"
           - "Improvement": "workshops/chapter6-3.md"
+      - "Chapter 7: Production":
+          - "Overview": "workshops/chapter7.md"
+      - "Reference":
+          - "Glossary": "workshops/glossary.md"
+          - "Quick Reference": "workshops/quick-reference.md"
+          - "Exercises": "workshops/exercises.md"
   - "Office Hours":
       - "office-hours/index.md"
       - "FAQ": "office-hours/faq.md"

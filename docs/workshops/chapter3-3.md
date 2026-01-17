@@ -679,3 +679,11 @@ This completes our exploration of deployment and feedback collection. We've now 
 In Chapter 4, shift our focus to analyzing the wealth of data you're now collecting. Through topic modeling and clustering techniques, learn to identify patterns in user queries and system performance, revealing focused opportunities for improvement. This marks an exciting transition from building a great system to understanding how it's being used in the real world and systematically enhancing its capabilities based on that understanding.
 
 By implementing the techniques from all three parts of Chapter 3, you've built the foundation for a continuous improvement cycle driven by user feedback and data analysis—a system that doesn't just answer questions but gets better with every interaction.
+
+---
+
+## Navigation
+
+- **Previous**: [Chapter 3.2: Overcoming Latency](chapter3-2.md) - Streaming and perceived performance
+- **Next**: [Chapter 4.1: Topic Modeling](chapter4-1.md) - Finding patterns in user data
+- **Reference**: [Glossary](glossary.md) | [Quick Reference](quick-reference.md)

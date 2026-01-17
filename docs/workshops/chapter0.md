@@ -242,6 +242,14 @@ They added a simple feature: when someone asks that, the AI recommends the three
 
 Consider how this played out with a legal tech company building case law search:
 
+| Month | Focus | Overall Accuracy | Key Change |
+|-------|-------|-----------------|------------|
+| 1 | Baseline | 63% | Generated 200 test queries |
+| 2 | Chunking | 72% | Fixed legal citation splitting |
+| 3 | Deployment | 72% | Added feedback collection |
+| 4-5 | Discovery | 72% | Identified 3 query patterns |
+| 6 | Specialization | 87% | Built dedicated retrievers |
+
 **Month 1 - Baseline:** Basic RAG with standard embeddings. Lawyers complained it "never found the right cases." We generated 200 test queries from their actual case law. Baseline accuracy: 63%.
 
 **Month 2 - First Iteration:** Testing different approaches revealed that legal jargon broke standard chunking. Legal citations like "42 U.S.C. § 1983" were being split across chunks, destroying meaning. Fixed the chunking strategy to respect legal citation patterns. Accuracy improved to 72%.
@@ -250,9 +258,11 @@ Consider how this played out with a legal tech company building case law search:
 
 **Months 4-5 - Pattern Discovery:** After 2 months and 5,000 queries, three distinct patterns emerged:
 
-- Case citations: 40% of queries, 91% accuracy (worked great)
-- Legal definitions: 35% of queries, 78% accuracy (acceptable)
-- Procedural questions: 25% of queries, 34% accuracy (total failure)
+| Query Type | Volume | Accuracy | Status |
+|------------|--------|----------|--------|
+| Case citations | 40% | 91% | Working well |
+| Legal definitions | 35% | 78% | Acceptable |
+| Procedural questions | 25% | 34% | Failing |
 
 **Month 6 - Specialized Solutions:** Built dedicated retrieval strategies for each type. Case citations got exact matching on citation format. Definitions got a specialized glossary index. Procedural questions got a separate index built from court rules and practice guides. Overall accuracy jumped to 87%.
 
@@ -302,21 +312,39 @@ Learn how to overcome the cold-start problem through synthetic data generation, 
 
 Discover how to transform evaluation insights into concrete product improvements through fine-tuning, re-ranking, and targeted capability development.
 
-### [Chapter 3: The User Experience of AI](chapter3-1.md)
+### Chapter 3: The User Experience of AI
 
-Explore how to design interfaces that both delight users and gather valuable feedback, creating the virtuous cycle at the heart of the improvement flywheel.
+Explore how to design interfaces that both delight users and gather valuable feedback, creating the virtuous cycle at the heart of the improvement flywheel. This chapter has three parts:
 
-### [Chapter 4: Understanding Your Users](chapter4-1.md)
+- [Chapter 3.1: Feedback Collection](chapter3-1.md) - Getting users to actually give feedback
+- [Chapter 3.2: Overcoming Latency](chapter3-2.md) - Making RAG feel fast
+- [Chapter 3.3: Quality of Life](chapter3-3.md) - Small changes with big impact
+
+### Chapter 4: Understanding Your Users
 
 Learn techniques for segmenting users and queries to identify high-value opportunities and create prioritized improvement roadmaps.
 
-### [Chapter 5: Building Specialized Capabilities](chapter5-1.md)
+- [Chapter 4.1: Topic Modeling](chapter4-1.md) - Finding patterns in user data
+- [Chapter 4.2: Prioritization](chapter4-2.md) - Deciding what to build next
+
+### Chapter 5: Building Specialized Capabilities
 
 Develop purpose-built solutions for different user needs, spanning documents, images, tables, and structured data.
 
-### [Chapter 6: Unified Product Architecture](chapter6-1.md)
+- [Chapter 5.1: Understanding Specialization](chapter5-1.md) - When one size does not fit all
+- [Chapter 5.2: Implementation](chapter5-2.md) - Search beyond text
+
+### Chapter 6: Unified Product Architecture
 
 Create a cohesive product experience that intelligently routes to specialized components while maintaining a seamless user experience.
+
+- [Chapter 6.1: Query Routing](chapter6-1.md) - Routing basics
+- [Chapter 6.2: Tool Interfaces](chapter6-2.md) - Building the router
+- [Chapter 6.3: Measurement](chapter6-3.md) - Measuring and improving routers
+
+### [Chapter 7: Production Considerations](chapter7.md)
+
+Keep the improvement flywheel spinning at scale. Learn cost optimization strategies, monitoring approaches that connect back to your evaluation metrics, graceful degradation patterns, and how to maintain improvement velocity as usage grows from hundreds to thousands of daily queries.
 
 ## How You'll Know It's Working
 
@@ -351,3 +379,8 @@ Next up: we'll dive into the first step of the flywheel—creating synthetic dat
 _Note: This approach has been applied across legal, finance, healthcare, and e-commerce domains. The details change, but the core flywheel stays the same: focus on users, measure what matters, and improve based on data instead of hunches._
 
 ---
+
+## Navigation
+
+- **Next**: [Chapter 1: Starting the Flywheel](chapter1.md) - Synthetic data and evaluation
+- **Reference**: [Glossary](glossary.md) | [Quick Reference](quick-reference.md) | [How to Use This Book](how-to-use.md)
