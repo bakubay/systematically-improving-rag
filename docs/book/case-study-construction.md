@@ -542,4 +542,6 @@ Month 12: Overall 84%, Cost $0.04 (sustained improvement)
 
 ## Navigation
 
-[Back to Case Studies Index](index.md) | [Next: WildChat Case Study](case-study-wildchat.md)
+- **Next**: [WildChat Case Study](case-study-wildchat.md)
+- **Reference**: [Glossary](glossary.md) | [Quick Reference](quick-reference.md)
+- **Book Index**: [Book Overview](index.md)

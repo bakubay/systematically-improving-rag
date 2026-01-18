@@ -718,5 +718,5 @@ def sample_size_two_proportions(
 
 - **Previous**: [Chapter 9: Context Window Management](chapter9.md)
 - **Next**: [Appendix B: Algorithms Reference](appendix-algorithms.md)
-- **Related**: [Chapter 1: Evaluation-First Development](chapter1.md) | [Chapter 2: Training Data and Fine-Tuning](chapter2.md)
-- **Reference**: [Glossary](../workshops/glossary.md)
+- **Reference**: [Glossary](glossary.md) | [Quick Reference](quick-reference.md)
+- **Book Index**: [Book Overview](index.md)

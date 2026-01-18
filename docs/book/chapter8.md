@@ -1298,13 +1298,6 @@ for category, metrics in performance.items():
 
 ## Related Content
 
-### Source Materials
-
-This chapter synthesizes content from multiple sources:
-
-- **Workshop Content**: [Chapter 1 - Evaluation Framework](../workshops/chapter1.md) - Hybrid search mentions
-- **Expert Talk**: [Lexical Search - John Berryman](../talks/john-lexical-search.md) - Deep dive on lexical search fundamentals
-
 ### Expert Talks
 
 !!! info "Lexical Search in RAG Applications - John Berryman"
@@ -1451,11 +1444,7 @@ This chapter synthesizes content from multiple sources:
 
 ## Navigation
 
-**Previous**: [Chapter 7: Production Operations](chapter7.md) - Deploying and maintaining RAG systems at scale
-
-**Next**: [Chapter 9: Context Window Management](chapter9.md) - Managing context effectively for better generation
-
-**Reference Materials**:
-
-- Appendix A: Mathematical Foundations - BM25 formula derivation (coming soon)
-- Appendix B: Algorithms Reference - RRF algorithm details (coming soon)
+- **Previous**: [Chapter 7: Production Operations](chapter7.md) - Deploying and maintaining RAG systems at scale
+- **Next**: [Chapter 9: Context Window Management](chapter9.md) - Managing context effectively for better generation
+- **Reference**: [Glossary](glossary.md) | [Quick Reference](quick-reference.md)
+- **Book Index**: [Book Overview](index.md)

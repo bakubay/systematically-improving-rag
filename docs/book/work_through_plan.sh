@@ -55,7 +55,8 @@ Important: Only work on ONE section or part per iteration. Don't jump ahead. If 
     echo ""
     
     # Call the agent in exec mode (default) with --print for non-interactive use
-    agent --print --output-format text "$PROMPT"
+    # --force is required to actually execute commands and file modifications
+    agent --print --force --output-format text "$PROMPT"
     
     EXIT_CODE=$?
     

@@ -575,11 +575,7 @@ For thorough evaluation:
 
 ## Navigation
 
-**Previous**: [Appendix B: Algorithms Reference](appendix-algorithms.md) - Algorithm pseudocode and complexity
-
-**Next**: [Appendix D: Debugging RAG Systems](appendix-debugging.md) - Systematic debugging methodology
-
-**Related Chapters**:
-
-- [Chapter 1: Evaluation-First Development](chapter1.md) - Evaluation fundamentals
-- [Chapter 2: Training Data and Fine-Tuning](chapter2.md) - Measuring fine-tuning impact
+- **Previous**: [Appendix B: Algorithms Reference](appendix-algorithms.md) - Algorithm pseudocode and complexity
+- **Next**: [Appendix D: Debugging RAG Systems](appendix-debugging.md) - Systematic debugging methodology
+- **Reference**: [Glossary](glossary.md) | [Quick Reference](quick-reference.md)
+- **Book Index**: [Book Overview](index.md)

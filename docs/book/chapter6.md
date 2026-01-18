@@ -1286,13 +1286,6 @@ class FeedbackLoop:
 
 ## Related Content
 
-### Source Materials
-
-This chapter synthesizes content from multiple sources:
-
-- **Workshop Content**: [Chapter 6.1 - Query Routing Foundations](../workshops/chapter6-1.md), [Chapter 6.2 - Tool Interfaces and Implementation](../workshops/chapter6-2.md), [Chapter 6.3 - Performance Measurement](../workshops/chapter6-3.md)
-- **Transcript**: [Chapter 6 Lecture Transcript](../workshops/chapter6-transcript.txt) - Contains detailed walkthrough of routing implementation
-
 ### Expert Talks
 
 !!! info "Why I Stopped Using RAG for Coding Agents - Nik Pash, Cline"
@@ -1445,11 +1438,7 @@ This chapter synthesizes content from multiple sources:
 
 ## Navigation
 
-**Previous**: [Chapter 5: Specialized Retrieval Systems](chapter5.md) - Building specialized retrievers for different content types
-
-**Next**: [Chapter 7: Production Operations](chapter7.md) - Operating RAG systems at scale
-
-**Reference Materials**:
-
-- [Appendix A: Mathematical Foundations](appendix-math.md) - Performance formulas
-- [Appendix B: Algorithms Reference](appendix-algorithms.md) - Router algorithm details
+- **Previous**: [Chapter 5: Specialized Retrieval Systems](chapter5.md) - Building specialized retrievers for different content types
+- **Next**: [Chapter 7: Production Operations](chapter7.md) - Operating RAG systems at scale
+- **Reference**: [Glossary](glossary.md) | [Quick Reference](quick-reference.md)
+- **Book Index**: [Book Overview](index.md)

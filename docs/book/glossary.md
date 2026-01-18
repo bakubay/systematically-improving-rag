@@ -519,4 +519,7 @@ A fundamental architectural trade-off. Write-time computation (preprocessing) in
 
 ---
 
-*Return to [Chapter 0: Introduction](chapter0.md)*
+## Navigation
+
+- **Reference**: [Quick Reference](quick-reference.md) | [How to Use This Book](how-to-use.md)
+- **Book Index**: [Book Overview](index.md)

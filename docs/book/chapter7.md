@@ -1647,12 +1647,6 @@ class CostTracker:
 
 ## Related Content
 
-### Source Materials
-
-This chapter synthesizes content from multiple sources:
-
-- **Workshop Content**: [Chapter 7 - Production Considerations](../workshops/chapter7.md)
-
 ### Expert Talks
 
 !!! info "TurboPuffer: Object Storage-First Vector Database Architecture - Simon"
@@ -1808,11 +1802,7 @@ This chapter synthesizes content from multiple sources:
 
 ## Navigation
 
-**Previous**: [Chapter 6: Query Routing and Orchestration](chapter6.md) - Building intelligent routing systems
-
-**Next**: [Chapter 8: Hybrid Search](chapter8.md) - Combining semantic and lexical search
-
-**Reference Materials**:
-
-- [Appendix A: Mathematical Foundations](appendix-math.md) - Cost formulas
-- [Appendix D: Debugging RAG Systems](appendix-debugging.md) - Production debugging
+- **Previous**: [Chapter 6: Query Routing and Orchestration](chapter6.md) - Building intelligent routing systems
+- **Next**: [Chapter 8: Hybrid Search](chapter8.md) - Combining semantic and lexical search
+- **Reference**: [Glossary](glossary.md) | [Quick Reference](quick-reference.md)
+- **Book Index**: [Book Overview](index.md)

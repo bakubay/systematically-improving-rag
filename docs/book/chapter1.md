@@ -1148,9 +1148,7 @@ def run_evaluation_gate():
 
 ## Related Content
 
-### Transcript
-
-The full lecture transcript is available at `docs/workshops/chapter1-transcript.txt`. Key insights from the lecture:
+### Key Insights from the Course
 
 - "You cannot improve what you cannot measure—and you can measure before you have users."
 - "Over 90% of complexity additions to RAG systems perform worse than simpler approaches when properly evaluated."
@@ -1263,4 +1261,4 @@ Relevant office hours sessions:
 - **Previous**: [Chapter 0: Introduction - The Product Mindset for RAG](chapter0.md) - Foundational concepts and the improvement flywheel
 - **Next**: [Chapter 2: Training Data and Fine-Tuning](chapter2.md) - Converting evaluations into training data
 - **Reference**: [Glossary](glossary.md) | [Quick Reference](quick-reference.md)
-- **Book Index**: [Book 1: Foundations](book1-index.md)
+- **Book Index**: [Book Overview](index.md)

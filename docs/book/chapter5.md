@@ -1162,13 +1162,6 @@ async def route_query(user_query: str) -> List[BaseModel]:
 
 ## Related Content
 
-### Source Materials
-
-This chapter synthesizes content from multiple sources:
-
-- **Workshop Content**: [Chapter 5.1 - Understanding Specialized Retrieval](../workshops/chapter5-1.md), [Chapter 5.2 - Implementing Multimodal Search](../workshops/chapter5-2.md)
-- **Transcript**: [Chapter 5 Lecture Transcript](../workshops/chapter5-transcript.txt) - Contains detailed walkthrough of building specialized indices and the materialized view concept
-
 ### Expert Talks
 
 !!! info "Lexical Search in RAG Applications - John Berryman"
@@ -1332,11 +1325,7 @@ This chapter synthesizes content from multiple sources:
 
 ## Navigation
 
-**Previous**: [Chapter 4: Query Understanding and Prioritization](chapter4.md) - Segmentation and prioritization frameworks
-
-**Next**: [Chapter 6: Query Routing and Orchestration](chapter6.md) - Combining specialized retrievers with intelligent routing
-
-**Reference Materials**:
-
-- [Appendix A: Mathematical Foundations](appendix-math.md) - Retrieval metrics formulas
-- [Appendix B: Algorithms Reference](appendix-algorithms.md) - RAPTOR pseudocode and complexity analysis
+- **Previous**: [Chapter 4: Query Understanding and Prioritization](chapter4.md) - Segmentation and prioritization frameworks
+- **Next**: [Chapter 6: Query Routing and Orchestration](chapter6.md) - Combining specialized retrievers with intelligent routing
+- **Reference**: [Glossary](glossary.md) | [Quick Reference](quick-reference.md)
+- **Book Index**: [Book Overview](index.md)

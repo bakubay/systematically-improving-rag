@@ -481,24 +481,5 @@ Ask specific follow-up:
 
 ## Navigation
 
-| Resource | Description |
-|----------|-------------|
-| [Chapter 0](chapter0.md) | Introduction and foundational concepts |
-| [Chapter 1](chapter1.md) | Evaluation-first development |
-| [Chapter 2](chapter2.md) | Training data and fine-tuning |
-| [Chapter 3](chapter3.md) | Feedback systems and UX |
-| [Chapter 4](chapter4.md) | Query understanding and prioritization |
-| [Chapter 5](chapter5.md) | Specialized retrieval systems |
-| [Chapter 6](chapter6.md) | Query routing and orchestration |
-| [Chapter 7](chapter7.md) | Production operations |
-| [Chapter 8](chapter8.md) | Hybrid search |
-| [Chapter 9](chapter9.md) | Context window management |
-| [Appendix A](appendix-math.md) | Mathematical foundations |
-| Appendix B | Algorithms reference (planned) |
-| Appendix C | Benchmarking guide (planned) |
-| [Appendix D](appendix-debugging.md) | Debugging guide |
-| [Glossary](glossary.md) | Term definitions |
-
----
-
-*Return to [Chapter 0: Introduction](chapter0.md) | See [Glossary](glossary.md) for term definitions*
+- **Reference**: [Glossary](glossary.md) | [How to Use This Book](how-to-use.md)
+- **Book Index**: [Book Overview](index.md)

@@ -1545,13 +1545,7 @@ def calculate_recall(answer: str, key_facts: list[str]) -> float:
 
 ## Navigation
 
-**Previous**: [Chapter 8: Hybrid Search](chapter8.md) - Combining semantic and lexical search for robust retrieval
-
-**Next**: Appendix A: Mathematical Foundations - Formulas and derivations for retrieval metrics (coming soon)
-
-**Related Chapters**:
-
-- [Chapter 1: Evaluation-First Development](chapter1.md) - Evaluation framework referenced throughout
-- [Chapter 5: Specialized Retrieval Systems](chapter5.md) - RAPTOR and summarization techniques
-- [Chapter 6: Query Routing and Orchestration](chapter6.md) - Query classification for dynamic context
-- [Chapter 7: Production Operations](chapter7.md) - Cost optimization strategies
+- **Previous**: [Chapter 8: Hybrid Search](chapter8.md) - Combining semantic and lexical search for robust retrieval
+- **Next**: [Appendix A: Mathematical Foundations](appendix-math.md) - Formulas and derivations for retrieval metrics
+- **Reference**: [Glossary](glossary.md) | [Quick Reference](quick-reference.md)
+- **Book Index**: [Book Overview](index.md)

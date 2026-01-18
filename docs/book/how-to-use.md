@@ -236,8 +236,9 @@ Each week: Read the chapters, implement the action items, discuss reflection que
 
 ## Navigation
 
-- **Previous**: [Book Overview](index.md)
 - **Next**: [Chapter 0: Introduction](chapter0.md)
+- **Reference**: [Glossary](glossary.md) | [Quick Reference](quick-reference.md)
+- **Book Index**: [Book Overview](index.md)
 
 ---
 

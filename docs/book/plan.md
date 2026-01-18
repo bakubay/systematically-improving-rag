@@ -1761,22 +1761,34 @@ Every chapter must include:
 
 **Tasks**:
 
-- [ ] Test navigation
-- [ ] Verify all links work
+- [x] Test navigation
+  - [x] Verified all files in mkdocs.yml exist
+  - [x] Verified navigation structure is correct
+- [x] Verify all links work
+  - [x] Fixed broken `book1-index.md` links in chapters 0, 1, 2
+  - [x] Removed workshop file links (per Content Linking Guidelines)
+  - [x] Removed transcript file references (per Content Linking Guidelines)
+  - [x] Fixed glossary link in appendix-math.md
 
 **Acceptance Criteria**:
 
-- Navigation functional
+- [x] Navigation functional
 
 ### Phase 3: Editorial
 
 **Tasks**:
 
-- [ ] Final formatting check
+- [x] Final formatting check
+  - [x] Standardized navigation format across all chapters (0-9)
+  - [x] Standardized navigation format across all appendices (A-D)
+  - [x] Standardized navigation format across all case studies
+  - [x] Standardized navigation format across supporting materials (how-to-use, glossary, quick-reference)
+  - [x] All navigation sections use consistent bullet point format
+  - [x] All navigation sections include Reference and Book Index links
 
 **Acceptance Criteria**:
 
-- Consistent formatting
+- [x] Consistent formatting
 
 ---
 
@@ -2141,3 +2153,18 @@ Use this checklist for every chapter and page to ensure consistency and complete
 - [ ] Formulas verified correct
 - [ ] Peer feedback incorporated (if applicable)
 - [ ] No links to inaccessible content (workshops, transcripts)
+
+---
+
+## Cleanup Tasks
+
+- [ ] Remove `docs/book/appendix-algorithms.md` and `docs/book/appendix-benchmarks.md` files
+- [ ] Remove all references to these files from:
+  - `mkdocs.yml` (navigation entries)
+  - `docs/book/index.md` (appendix table)
+  - `docs/book/chapter5.md` (navigation links)
+  - `docs/book/chapter6.md` (navigation links)
+  - `docs/book/glossary.md` (cross-references)
+  - `docs/book/appendix-debugging.md` (navigation links)
+  - `docs/book/appendix-math.md` (navigation links)
+  - `docs/book/case-study-wildchat.md` (reference links)

@@ -853,9 +853,7 @@ def cluster_queries(
 
 ## Related Content
 
-### Transcript
-
-The full lecture transcript is available at `docs/workshops/chapter0-transcript.txt`. Key insights from the lecture:
+### Key Insights from the Course
 
 - "The goal is not to build AGI—the goal is to create economically valuable work."
 - "Success is defined by doing the most obvious thing over and over again. Your only job is to apply consistent effort."
@@ -958,4 +956,4 @@ Relevant office hours sessions:
 
 - **Next**: [Chapter 1: Evaluation-First Development](chapter1.md) - Learn to measure before you optimize
 - **Reference**: [Glossary](glossary.md) | [Quick Reference](quick-reference.md)
-- **Book Index**: [Book 1: Foundations](book1-index.md)
+- **Book Index**: [Book Overview](index.md)

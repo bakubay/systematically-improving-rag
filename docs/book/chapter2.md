@@ -1340,9 +1340,7 @@ def compare_models(
 
 ## Related Content
 
-### Transcript
-
-The full lecture transcript is available at `docs/workshops/chapter2-transcript.txt`. Key insights from the lecture:
+### Key Insights from the Course
 
 - "If you're not fine-tuning, you're Blockbuster, not Netflix."
 - "The goal isn't to fine-tune a language model—those are pretty hard and expensive. The goal is to train and fine-tune embedding models."
@@ -1461,4 +1459,4 @@ Relevant office hours sessions:
 - **Previous**: [Chapter 1: Evaluation-First Development](chapter1.md) - Synthetic data and evaluation frameworks
 - **Next**: [Chapter 3: Feedback Systems and UX](chapter3.md) - Collecting user feedback and building fast interfaces
 - **Reference**: [Glossary](glossary.md) | [Quick Reference](quick-reference.md)
-- **Book Index**: [Book 1: Foundations](book1-index.md)
+- **Book Index**: [Book Overview](index.md)

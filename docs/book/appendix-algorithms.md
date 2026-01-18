@@ -582,12 +582,7 @@ Where d = embedding dimension, n = cache size, r = response size.
 
 ## Navigation
 
-**Previous**: [Appendix A: Mathematical Foundations](appendix-math.md) - Retrieval metrics and statistical methods
-
-**Next**: [Appendix C: Benchmarking Your RAG System](appendix-benchmarks.md) - Evaluation methodology and datasets
-
-**Related Chapters**:
-
-- [Chapter 5: Specialized Retrieval Systems](chapter5.md) - RAPTOR implementation
-- [Chapter 6: Query Routing and Orchestration](chapter6.md) - Router algorithms in practice
-- [Chapter 8: Hybrid Search](chapter8.md) - RRF for combining search methods
+- **Previous**: [Appendix A: Mathematical Foundations](appendix-math.md) - Retrieval metrics and statistical methods
+- **Next**: [Appendix C: Benchmarking Your RAG System](appendix-benchmarks.md) - Evaluation methodology and datasets
+- **Reference**: [Glossary](glossary.md) | [Quick Reference](quick-reference.md)
+- **Book Index**: [Book Overview](index.md)

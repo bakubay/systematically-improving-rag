@@ -1169,14 +1169,6 @@ async def generate_with_validation(
 
 ## Related Content
 
-### Transcript
-
-The workshop transcript (`docs/workshops/chapter3-transcript.txt`) provides additional context on:
-
-- Real-time demonstrations of streaming implementations
-- Discussion of Slack bot patterns with emoji reactions
-- Detailed walkthrough of monologue prompting for pricing quotes
-
 ### Talks
 
 **How Zapier 4x'd Their AI Feedback Collection (Vitor)**
@@ -1277,3 +1269,4 @@ Key insights:
 - **Previous**: [Chapter 2: Training Data and Fine-Tuning](chapter2.md) - Converting evaluations into training data
 - **Next**: [Chapter 4: Query Understanding and Prioritization](chapter4.md) - Finding patterns in user data
 - **Reference**: [Glossary](glossary.md) | [Quick Reference](quick-reference.md)
+- **Book Index**: [Book Overview](index.md)

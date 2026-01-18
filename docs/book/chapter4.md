@@ -1194,10 +1194,6 @@ async def generate_segment_report() -> dict:
 
 ## Related Content
 
-### Transcript
-
-- **Workshop Transcript**: `docs/workshops/chapter4-transcript.txt` - Full lecture content with examples and Q&A
-
 ### Talks
 
 - **Query Routing (Anton, ChromaDB)**: `docs/talks/query-routing-anton.md`
@@ -1331,11 +1327,7 @@ async def generate_segment_report() -> dict:
 
 ## Navigation
 
-**Previous**: [Chapter 3: Feedback Systems and UX](chapter3.md) - Building feedback collection infrastructure
-
-**Next**: [Chapter 5: Specialized Retrieval Systems](chapter5.md) - Building targeted retrievers for high-priority segments
-
-**Related**:
-
-- [Chapter 6: Query Routing and Orchestration](chapter6.md) - Routing queries to appropriate specialized systems
-- [Chapter 2: Training Data and Fine-Tuning](chapter2.md) - Creating training data for underperforming segments
+- **Previous**: [Chapter 3: Feedback Systems and UX](chapter3.md) - Building feedback collection infrastructure
+- **Next**: [Chapter 5: Specialized Retrieval Systems](chapter5.md) - Building targeted retrievers for high-priority segments
+- **Reference**: [Glossary](glossary.md) | [Quick Reference](quick-reference.md)
+- **Book Index**: [Book Overview](index.md)

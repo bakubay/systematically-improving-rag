@@ -447,4 +447,7 @@ The complete case study code is available in `latest/case_study/`. Here is how t
 
 ## Navigation
 
-[Previous: Construction Case Study](case-study-construction.md) | [Back to Case Studies Index](index.md) | [Next: Voice AI Case Study](case-study-voice-ai.md)
+- **Previous**: [Construction Case Study](case-study-construction.md)
+- **Next**: [Voice AI Case Study](case-study-voice-ai.md)
+- **Reference**: [Glossary](glossary.md) | [Quick Reference](quick-reference.md)
+- **Book Index**: [Book Overview](index.md)

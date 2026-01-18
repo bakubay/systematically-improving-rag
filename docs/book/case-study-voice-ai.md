@@ -421,4 +421,6 @@ This case study demonstrates a general pattern for finding high-value improvemen
 
 ## Navigation
 
-[Previous: WildChat Case Study](case-study-wildchat.md) | [Back to Case Studies Index](index.md)
+- **Previous**: [WildChat Case Study](case-study-wildchat.md)
+- **Reference**: [Glossary](glossary.md) | [Quick Reference](quick-reference.md)
+- **Book Index**: [Book Overview](index.md)

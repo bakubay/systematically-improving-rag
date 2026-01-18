@@ -1138,5 +1138,5 @@ The most common failures trace back to data quality issues (silent document loss
 ## Navigation
 
 - **Previous**: [Appendix C: Benchmarking Your RAG System](appendix-benchmarks.md)
-- **Next**: Appendix E: Graph vs SQL Decision Guide (planned)
-- **Reference**: Glossary (planned) | Quick Reference (planned)
+- **Reference**: [Glossary](glossary.md) | [Quick Reference](quick-reference.md)
+- **Book Index**: [Book Overview](index.md)
