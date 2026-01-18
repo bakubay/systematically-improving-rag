@@ -1819,12 +1819,12 @@ Every chapter must include:
   - [x] Error handling
   - [x] Documentation strings
 
-- [ ] Create `latest/examples/chapter4_clustering.py`
-  - [ ] Query clustering implementation
-  - [ ] K-means with embeddings
-  - [ ] Cluster labeling with LLM
-  - [ ] Visualization helpers
-  - [ ] Documentation strings
+- [x] Create `latest/examples/chapter4_clustering.py`
+  - [x] Query clustering implementation
+  - [x] K-means with embeddings
+  - [x] Cluster labeling with LLM
+  - [x] Visualization helpers
+  - [x] Documentation strings
 
 - [ ] Create `latest/examples/chapter5_specialized.py`
   - [ ] RAPTOR implementation
