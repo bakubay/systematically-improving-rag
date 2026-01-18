@@ -540,19 +540,19 @@ Strategic insights, business implications, and decision frameworks for product l
 Technical details, implementation guidance, and code examples for developers.
 
 !!! warning "PM Pitfall"
-Strategic mistakes that product teams commonly make.
+    Strategic mistakes that product teams commonly make.
 
 !!! warning "Engineering Pitfall"
-Technical mistakes that engineering teams commonly make.
+    Technical mistakes that engineering teams commonly make.
 
-!!! info
-General information relevant to all readers.
+!!! info "Info"
+    General information relevant to all readers.
 
-!!! example
-Concrete examples illustrating concepts.
+!!! example "Example"
+    Concrete examples illustrating concepts.
 
-!!! success
-Success stories and positive outcomes.
+!!! success "Success Story"
+    Success stories and positive outcomes.
 
 ### Navigation Guide
 
