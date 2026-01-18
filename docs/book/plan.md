@@ -1644,13 +1644,21 @@ Every chapter must include:
 
 **Tasks**:
 
-- [ ] Copy editing
-- [ ] Formatting check
+- [x] Copy editing
+  - [x] Grammar and spelling check
+  - [x] Clarity improvements
+  - [x] Consistency check (terminology, formatting)
+  - [x] Style compliance
+- [x] Formatting check
+  - [x] Front matter consistency
+  - [x] Heading hierarchy correct
+  - [x] Table formatting consistent
+  - [x] List formatting consistent
 
 **Acceptance Criteria**:
 
-- No errors
-- Consistent formatting
+- [x] No errors
+- [x] Consistent formatting
 
 ---
 
@@ -1660,49 +1668,68 @@ Every chapter must include:
 
 **Tasks**:
 
-- [ ] Create `docs/book/case-study-construction.md`
-  - [ ] Consolidate construction examples from chapters
-  - [ ] Add metrics timeline showing progression
-  - [ ] Include PM and Engineer perspectives
-  - [ ] Cross-reference from chapters
+- [x] Create `docs/book/case-study-construction.md`
+  - [x] Consolidate construction examples from chapters
+  - [x] Add metrics timeline showing progression
+  - [x] Include PM and Engineer perspectives
+  - [x] Cross-reference from chapters
 
-- [ ] Create `docs/book/case-study-wildchat.md`
-  - [ ] Link to existing case study in `latest/case_study/`
-  - [ ] Add chapter connections
-  - [ ] Include PM and Engineer perspectives
+- [x] Create `docs/book/case-study-wildchat.md`
+  - [x] Link to existing case study in `latest/case_study/`
+  - [x] Add chapter connections
+  - [x] Include PM and Engineer perspectives
 
-- [ ] Create `docs/book/case-study-voice-ai.md`
-  - [ ] Restaurant voice AI example
-  - [ ] Include PM and Engineer perspectives
-  - [ ] Add metrics and outcomes
+- [x] Create `docs/book/case-study-voice-ai.md`
+  - [x] Restaurant voice AI example
+  - [x] Include PM and Engineer perspectives
+  - [x] Add metrics and outcomes
 
 **Acceptance Criteria**:
 
-- All case studies consolidated
-- PM and Engineer perspectives included
+- [x] All case studies consolidated
+- [x] PM and Engineer perspectives included
 
 ### Phase 2: Review
 
 **Tasks**:
 
-- [ ] Verify metrics
+- [x] Verify metrics
+- [x] Audit unverified numerical claims
+  - [x] Identify all numerical claims in case studies (percentages, dollar amounts, counts, etc.)
+  - [x] Trace each claim to source material (workshops, transcripts, talks, office hours)
+  - [x] Verify calculations are correct (e.g., percentage improvements, cost reductions)
+  - [x] Flag claims without clear source or verification
+  - [x] Document verification status for each numerical claim
+  - [x] Update case studies to add citations or remove unverified claims
 - [ ] Peer review
 
 **Acceptance Criteria**:
 
-- All metrics verified
+- [x] All metrics verified
+- [x] All numerical claims traced to sources or marked as illustrative/examples
+- [x] No unverified numerical claims remain in published case studies (WildChat description fixed)
 
 ### Phase 3: Editorial
 
 **Tasks**:
 
-- [ ] Copy editing
-- [ ] Formatting check
+- [x] Copy editing
+  - [x] Grammar and spelling check
+  - [x] Clarity improvements
+  - [x] Consistency check (terminology, formatting)
+  - [x] Style compliance
+- [x] Formatting check
+  - [x] Front matter consistency
+  - [x] Heading hierarchy correct
+  - [x] Code block formatting consistent (fixed 2 issues)
+  - [x] Table formatting consistent
+  - [x] List formatting consistent
 
 **Acceptance Criteria**:
 
-- No errors
-- Consistent style
+- [x] No errors
+- [x] Consistent style
+- [x] All links functional (existing files verified; planned files noted as placeholders)
 
 ---
 
@@ -1713,17 +1740,17 @@ Every chapter must include:
 
 **Tasks**:
 
-- [ ] Update `mkdocs.yml` with new structure
-  - [ ] Create four-book structure
-  - [ ] Add book index pages
-  - [ ] Organize chapters under each book
-  - [ ] Add appendices section
-  - [ ] Add supporting materials section
+- [x] Update `mkdocs.yml` with new structure
+  - [x] Create four-book structure
+  - [x] Add book index pages
+  - [x] Organize chapters under each book
+  - [x] Add appendices section
+  - [x] Add supporting materials section
 
-- [ ] Create `docs/book/index.md` (if needed)
-  - [ ] Overview of book series
-  - [ ] Link to each book index
-  - [ ] Reading paths
+- [x] Create `docs/book/index.md` (if needed)
+  - [x] Overview of book series
+  - [x] Link to each book index
+  - [x] Reading paths
 
 **Acceptance Criteria**:
 
@@ -2019,6 +2046,14 @@ Use this checklist for every chapter and page to ensure consistency and complete
   - [ ] Foundational concepts introduced before use
   - [ ] References to other chapters accurate
   - [ ] Appendix references correct
+- [ ] **Numerical Claims Audit**
+  - [ ] Identify all numerical claims (percentages, dollar amounts, counts, metrics, etc.)
+  - [ ] Trace each claim to source material (workshops, transcripts, talks, office hours, case studies)
+  - [ ] Verify calculations are correct (e.g., percentage improvements, cost reductions, performance gains)
+  - [ ] Flag claims without clear source or verification
+  - [ ] Document verification status for each numerical claim
+  - [ ] Update content to add citations or mark as illustrative/examples where appropriate
+  - [ ] Ensure consistency of numerical claims across chapters (e.g., same case study metrics match)
 
 #### Peer Review
 
