@@ -1826,11 +1826,11 @@ Every chapter must include:
   - [x] Visualization helpers
   - [x] Documentation strings
 
-- [ ] Create `latest/examples/chapter5_specialized.py`
-  - [ ] RAPTOR implementation
-  - [ ] Multimodal retrieval example
-  - [ ] Metadata extraction pipeline
-  - [ ] Documentation strings
+- [x] Create `latest/examples/chapter5_specialized.py`
+  - [x] RAPTOR implementation
+  - [x] Multimodal retrieval example
+  - [x] Metadata extraction pipeline
+  - [x] Documentation strings
 
 - [ ] Create `latest/examples/chapter6_routing.py`
   - [ ] Router implementation
