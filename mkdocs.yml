@@ -156,7 +156,7 @@ nav:
 # --- Recommended Plugins ---
 plugins:
   - search
-  - social
+  - mermaid2
 
 # --- Markdown Extensions ---
 markdown_extensions:
@@ -206,9 +206,6 @@ extra_css:
   - stylesheets/extra.css
 
 extra:
-  social:
-    - icon: fontawesome/brands/twitter
-      link: https://x.com/jxnlco
   analytics:
     provider: google
     property: !ENV GOOGLE_ANALYTICS_KEY
