@@ -1812,12 +1812,12 @@ Every chapter must include:
   - [x] Error handling and logging
   - [x] Documentation strings
 
-- [ ] Create `latest/examples/chapter3_feedback.py`
-  - [ ] Feedback collection API
-  - [ ] Streaming implementation
-  - [ ] Database storage
-  - [ ] Error handling
-  - [ ] Documentation strings
+- [x] Create `latest/examples/chapter3_feedback.py`
+  - [x] Feedback collection API
+  - [x] Streaming implementation
+  - [x] Database storage
+  - [x] Error handling
+  - [x] Documentation strings
 
 - [ ] Create `latest/examples/chapter4_clustering.py`
   - [ ] Query clustering implementation
