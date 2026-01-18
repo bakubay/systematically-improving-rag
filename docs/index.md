@@ -14,6 +14,14 @@ Most RAG implementations struggle in production because teams focus on model sel
 
 This guide presents practical frameworks for building RAG systems that become more valuable over time through continuous learning and data-driven optimization.
 
+## Book vs Workshops
+
+This documentation is available in two formats:
+
+- **Book**: A comprehensive technical reference that synthesizes content from workshops, talks, and office hours into a structured format. The book is organized into four parts with separate guidance for Product Managers and Engineers.
+
+- **Workshops**: Original course materials that came directly from the course lectures. These follow the workshop progression and include practical exercises you can apply to your own RAG system.
+
 ## The Problem: Why Most RAG Systems Fail
 
 The failure pattern repeats across organizations:
