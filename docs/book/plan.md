@@ -1798,19 +1798,19 @@ Every chapter must include:
 
 **Tasks**:
 
-- [ ] Create `latest/examples/chapter1_evaluation.py`
-  - [ ] Evaluation pipeline class with type hints
-  - [ ] Precision/recall calculation functions
-  - [ ] Statistical significance testing
-  - [ ] Error handling and logging
-  - [ ] Documentation strings
+- [x] Create `latest/examples/chapter1_evaluation.py`
+  - [x] Evaluation pipeline class with type hints
+  - [x] Precision/recall calculation functions
+  - [x] Statistical significance testing
+  - [x] Error handling and logging
+  - [x] Documentation strings
 
-- [ ] Create `latest/examples/chapter2_finetuning.py`
-  - [ ] Fine-tuning script with type hints
-  - [ ] Data loading and preprocessing
-  - [ ] Training loop with checkpointing
-  - [ ] Error handling and logging
-  - [ ] Documentation strings
+- [x] Create `latest/examples/chapter2_finetuning.py`
+  - [x] Fine-tuning script with type hints
+  - [x] Data loading and preprocessing
+  - [x] Training loop with checkpointing
+  - [x] Error handling and logging
+  - [x] Documentation strings
 
 - [ ] Create `latest/examples/chapter3_feedback.py`
   - [ ] Feedback collection API
