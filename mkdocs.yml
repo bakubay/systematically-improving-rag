@@ -37,6 +37,35 @@ theme:
 
 nav:
   - "Home": "index.md"
+  - "Book":
+      - "Overview": "book/index.md"
+      - "Book 1: Foundations":
+          - "Chapter 0: Introduction": "book/chapter0.md"
+          - "Chapter 1: Evaluation-First Development": "book/chapter1.md"
+          - "Chapter 2: Training Data and Fine-Tuning": "book/chapter2.md"
+      - "Book 2: User-Centric Design":
+          - "Chapter 3: Feedback Systems and UX": "book/chapter3.md"
+          - "Chapter 4: Query Understanding": "book/chapter4.md"
+      - "Book 3: Architecture and Production":
+          - "Chapter 5: Specialized Retrieval": "book/chapter5.md"
+          - "Chapter 6: Query Routing": "book/chapter6.md"
+          - "Chapter 7: Production Operations": "book/chapter7.md"
+      - "Book 4: Advanced Topics":
+          - "Chapter 8: Hybrid Search": "book/chapter8.md"
+          - "Chapter 9: Context Window Management": "book/chapter9.md"
+      - "Appendices":
+          - "A: Mathematical Foundations": "book/appendix-math.md"
+          - "B: Algorithms Reference": "book/appendix-algorithms.md"
+          - "C: Benchmarking": "book/appendix-benchmarks.md"
+          - "D: Debugging RAG Systems": "book/appendix-debugging.md"
+      - "Supporting Materials":
+          - "How to Use This Book": "book/how-to-use.md"
+          - "Glossary": "book/glossary.md"
+          - "Quick Reference": "book/quick-reference.md"
+      - "Case Studies":
+          - "Construction Company": "book/case-study-construction.md"
+          - "Voice AI": "book/case-study-voice-ai.md"
+          - "WildChat": "book/case-study-wildchat.md"
   - "Workshops":
       - "Overview": "workshops/index.md"
       - "How to Use This Book": "workshops/how-to-use.md"
