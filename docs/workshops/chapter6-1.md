@@ -191,7 +191,7 @@ This is similar to building microservices, except the primary client is a langua
 When building these systems at scale, team organization becomes critical. From my experience developing multiple microservices for retrieval at different companies, successful teams organize around these boundaries:
 
 !!! example "Organizational Structure"
-**Interface Team** (Product/API Design) - Designs tool specifications based on user research - Defines the contracts between components
+    **Interface Team** (Product/API Design) - Designs tool specifications based on user research - Defines the contracts between components
 
 - Decides what capabilities to expose - Manages the user experience across tools
 
@@ -326,4 +326,4 @@ The key was treating each retriever as a service with a clear API contract.
 - **Performance Clarity**: Can identify whether bottlenecks are routing or retrieval issues
 
 !!! tip "Next Steps"
-In [Chapter 6-2](chapter6-2.md), implement the specific tool interfaces and routing logic that bring this architectural vision to life.
+    In [Chapter 6-2](chapter6-2.md), implement the specific tool interfaces and routing logic that bring this architectural vision to life.

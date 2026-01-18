@@ -338,29 +338,29 @@ This training gap means VLMs excel at generating accurate captions but struggle 
 - **Context loss**: VLMs see isolated images without surrounding document context
 
 !!! warning "Embedding Spaces Mismatch"
-The naive approach—applying the same embedding strategy used for text—often fails because question embeddings and image caption embeddings exist in fundamentally different semantic spaces. Simply embedding captions like "two people" will not retrieve well when users search for "business meeting" or "team collaboration."
+    The naive approach—applying the same embedding strategy used for text—often fails because question embeddings and image caption embeddings exist in fundamentally different semantic spaces. Simply embedding captions like "two people" will not retrieve well when users search for "business meeting" or "team collaboration."
 
-**Solution**: Bridge this gap with chain-of-thought reasoning that explicitly connects visual elements to likely search terms.
+    **Solution**: Bridge this gap with chain-of-thought reasoning that explicitly connects visual elements to likely search terms.
 
-**When to Use Vision Language Models:** According to Adit from Reducto, VLMs excel at "things that traditional OCR has always been horrible at" - handwriting, charts, figures, and diagrams. However, for clean structured information, traditional CV provides better precision and token efficiency. [Learn about their hybrid approach →](../talks/reducto-docs-adit.md)
+    **When to Use Vision Language Models:** According to Adit from Reducto, VLMs excel at "things that traditional OCR has always been horrible at" - handwriting, charts, figures, and diagrams. However, for clean structured information, traditional CV provides better precision and token efficiency. [Learn about their hybrid approach →](../talks/reducto-docs-adit.md)
 
-How to make image search actually work:
+    How to make image search actually work:
 
 !!! example "Advanced Image Description Techniques"
-**Rich Prompting**: Move beyond simple "what's in this image?" prompts to detailed instructions that anticipate likely queries. Compare:
+    **Rich Prompting**: Move beyond simple "what's in this image?" prompts to detailed instructions that anticipate likely queries. Compare:
 
-```text
-*Basic*: "Describe this image."
-→ Result: "Two people at a table."
+    ```text
+    *Basic*: "Describe this image."
+    → Result: "Two people at a table."
 
-*Better*: "Describe this image in detail, noting the number of people, their apparent relationship, the setting, lighting conditions, objects present, and any text visible in the image."
-→ Result: "Two people arguing across a dinner table in a dimly lit room. One person appears agitated while the other looks defensive. A knife is visible on the table."
+    *Better*: "Describe this image in detail, noting the number of people, their apparent relationship, the setting, lighting conditions, objects present, and any text visible in the image."
+    → Result: "Two people arguing across a dinner table in a dimly lit room. One person appears agitated while the other looks defensive. A knife is visible on the table."
 
-*Optimal*: "Analyze this image comprehensively as if you were making it searchable in a database. Include details about the people, their emotions, the environment, lighting, objects, potential context, and any visible text. Consider how someone might search for this specific image."
-→ Result: "This dramatic image shows two business professionals in a tense negotiation across a polished conference table in a corporate boardroom with floor-to-ceiling windows overlooking a city skyline. The older man in a gray suit appears frustrated, gesturing emphatically with papers in hand, while the younger woman in a black blazer maintains a composed but firm expression. Multiple financial reports and what appears to be a contract are spread across the table. The scene is captured in natural lighting with dramatic shadows, suggesting a high-stakes discussion or disagreement over business terms."
-```
+    *Optimal*: "Analyze this image comprehensively as if you were making it searchable in a database. Include details about the people, their emotions, the environment, lighting, objects, potential context, and any visible text. Consider how someone might search for this specific image."
+    → Result: "This dramatic image shows two business professionals in a tense negotiation across a polished conference table in a corporate boardroom with floor-to-ceiling windows overlooking a city skyline. The older man in a gray suit appears frustrated, gesturing emphatically with papers in hand, while the younger woman in a black blazer maintains a composed but firm expression. Multiple financial reports and what appears to be a contract are spread across the table. The scene is captured in natural lighting with dramatic shadows, suggesting a high-stakes discussion or disagreement over business terms."
+    ```
 
-In practice, the difference between basic and good image descriptions meant 40% better retrieval rates. The trick was figuring out how users actually describe what they're looking for.
+    In practice, the difference between basic and good image descriptions meant 40% better retrieval rates. The trick was figuring out how users actually describe what they're looking for.
 
 ### Additional Image Enhancement Approaches
 
@@ -630,13 +630,13 @@ The same question can mean different things. Take "Show me month-over-month reve
 - What about partial months?
 
 !!! example "Subjective Query Interpretations"
-| Question | Possible Interpretation 1 | Possible Interpretation 2 | Possible Interpretation 3 |
-|\----------|---------------------------|---------------------------|---------------------------|
-| "Monthly active users" | Users who logged in during calendar month | Users who performed an action in last 30 days | Users who made a purchase in billing cycle |
-| "Revenue by region" | Geographic sales regions | Product categories | Customer segments |
-| "Top performing products" | Highest revenue | Highest profit margin | Highest growth rate |
+    | Question | Possible Interpretation 1 | Possible Interpretation 2 | Possible Interpretation 3 |
+    |\----------|---------------------------|---------------------------|---------------------------|
+    | "Monthly active users" | Users who logged in during calendar month | Users who performed an action in last 30 days | Users who made a purchase in billing cycle |
+    | "Revenue by region" | Geographic sales regions | Product categories | Customer segments |
+    | "Top performing products" | Highest revenue | Highest profit margin | Highest growth rate |
 
-Models can't read your mind about business logic. But if you show them examples of how your company calculates these things, they'll follow that pattern.
+    Models can't read your mind about business logic. But if you show them examples of how your company calculates these things, they'll follow that pattern.
 
 ## Bringing It All Together
 
@@ -976,4 +976,4 @@ Remember: even as AI gets better, you're still responsible for retrieval. Knowin
 - **Overall System**: Clear performance measurement at both tool and routing levels
 
 !!! tip "Cross-Reference"
-In [Chapter 6](chapter6-1.md), explore how to bring these specialized components together through effective routing strategies, creating a unified system that seamlessly directs users to the appropriate retrievers based on their queries.
+    In [Chapter 6](chapter6-1.md), explore how to bring these specialized components together through effective routing strategies, creating a unified system that seamlessly directs users to the appropriate retrievers based on their queries.

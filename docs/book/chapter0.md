@@ -58,10 +58,10 @@ After a decade building AI systems, the same pattern repeats: teams ship a RAG s
 This book shows how to avoid that trap. The most successful RAG systems are not the ones with the fanciest embeddings or the biggest context windows—they are the ones that get better every week based on what users actually do with them. They treat deployment as the beginning of improvement, not the end of development.
 
 !!! tip "For Product Managers"
-    This chapter establishes the mental models you need to lead RAG initiatives effectively. Focus on the improvement flywheel, the inventory vs capability distinction, and how to measure success. You can skim the technical sections on embeddings and vector databases, but understanding the business implications of each concept will help you make better decisions.
+This chapter establishes the mental models you need to lead RAG initiatives effectively. Focus on the improvement flywheel, the inventory vs capability distinction, and how to measure success. You can skim the technical sections on embeddings and vector databases, but understanding the business implications of each concept will help you make better decisions.
 
 !!! tip "For Engineers"
-    This chapter provides foundational concepts you will use throughout the book. Pay special attention to the technical sections on embeddings, vector databases, and chunking. These concepts appear in every subsequent chapter, so building strong intuition here will pay dividends later.
+This chapter provides foundational concepts you will use throughout the book. Pay special attention to the technical sections on embeddings, vector databases, and chunking. These concepts appear in every subsequent chapter, so building strong intuition here will pay dividends later.
 
 ---
 
@@ -76,12 +76,12 @@ Before diving into improvement strategies, you need to understand the building b
 Embeddings are the foundation of modern RAG systems. They transform text into numerical representations that capture meaning.
 
 !!! tip "For Product Managers"
-    **What embeddings mean for your business**: Embeddings determine how well your system understands user intent. Poor embeddings mean users cannot find what they need, even when the answer exists in your knowledge base. When evaluating RAG vendors or approaches, ask: "How well do these embeddings capture the vocabulary and concepts specific to our domain?"
+**What embeddings mean for your business**: Embeddings determine how well your system understands user intent. Poor embeddings mean users cannot find what they need, even when the answer exists in your knowledge base. When evaluating RAG vendors or approaches, ask: "How well do these embeddings capture the vocabulary and concepts specific to our domain?"
 
     **Key decision point**: Off-the-shelf embeddings work well for general content. Domain-specific content (legal, medical, technical) often benefits from fine-tuned embeddings. The ROI of fine-tuning depends on how specialized your vocabulary is.
 
 !!! tip "For Engineers"
-    **How embeddings work**: An embedding model converts text into a dense vector (typically 384-1536 dimensions). Similar texts produce similar vectors, measured by cosine similarity.
+**How embeddings work**: An embedding model converts text into a dense vector (typically 384-1536 dimensions). Similar texts produce similar vectors, measured by cosine similarity.
 
     ```python
     from sentence_transformers import SentenceTransformer
@@ -123,14 +123,14 @@ graph LR
 Vector databases store embeddings and enable fast similarity search at scale.
 
 !!! tip "For Product Managers"
-    **Why vector databases matter**: Traditional databases find exact matches. Vector databases find similar matches. This is what enables semantic search—finding documents that mean the same thing as the query, even if they use different words.
+**Why vector databases matter**: Traditional databases find exact matches. Vector databases find similar matches. This is what enables semantic search—finding documents that mean the same thing as the query, even if they use different words.
 
     **Cost considerations**: Vector databases charge based on storage (number of vectors) and queries per second. For most applications, costs are modest ($50-500/month). Costs increase significantly at scale (millions of documents) or with high query volume.
 
-    **Key vendors**: Pinecone (managed, easy to start), Weaviate (open source, flexible), pgvector (PostgreSQL extension, good for existing Postgres users), LanceDB (open source, hybrid search support).
+    **Key vendors**: Pinecone (managed, easy to start), Weaviate (open source, flexible), pgvector (PostgreSQL extension, good for existing Postgres users), LanceDB (open source, hybrid search support), Chroma (simple Python API, great for prototyping), Turbopuffer (high-performance, fast at scale).
 
 !!! tip "For Engineers"
-    **How vector databases work**: They use Approximate Nearest Neighbor (ANN) algorithms to find similar vectors without comparing against every stored vector. Common algorithms include HNSW (Hierarchical Navigable Small World) and IVF (Inverted File Index).
+**How vector databases work**: They use Approximate Nearest Neighbor (ANN) algorithms to find similar vectors without comparing against every stored vector. Common algorithms include HNSW (Hierarchical Navigable Small World) and IVF (Inverted File Index).
 
     **Tradeoffs**:
 
@@ -165,14 +165,14 @@ Vector databases store embeddings and enable fast similarity search at scale.
 Understanding when to use semantic search versus lexical search is critical for RAG performance.
 
 !!! tip "For Product Managers"
-    **When semantic search wins**: Users describe what they want in their own words. "How do I cancel my subscription?" should match documentation titled "Account Termination Process."
+**When semantic search wins**: Users describe what they want in their own words. "How do I cancel my subscription?" should match documentation titled "Account Termination Process."
 
     **When lexical search wins**: Users search for specific terms, product codes, or exact phrases. "Error code E-4521" should match documents containing that exact string.
 
     **Business implication**: Most production systems need both. Hybrid search combines semantic and lexical approaches. The investment in hybrid search typically pays off when you have both natural language queries and exact-match requirements.
 
 !!! tip "For Engineers"
-    **Lexical search (BM25)**: Ranks documents by term frequency and inverse document frequency. Works well for exact matches, rare terms, and when users know the vocabulary.
+**Lexical search (BM25)**: Ranks documents by term frequency and inverse document frequency. Works well for exact matches, rare terms, and when users know the vocabulary.
 
     ```python
     # BM25 excels at exact matches
@@ -204,7 +204,7 @@ Understanding when to use semantic search versus lexical search is critical for 
 Chunking determines how documents are split for retrieval. Poor chunking is one of the most common causes of RAG failures.
 
 !!! tip "For Product Managers"
-    **Why chunking matters**: Chunks that are too small lose context. Chunks that are too large dilute relevance. The right chunking strategy depends on your content type and query patterns.
+**Why chunking matters**: Chunks that are too small lose context. Chunks that are too large dilute relevance. The right chunking strategy depends on your content type and query patterns.
 
     **Size considerations**:
 
@@ -215,7 +215,7 @@ Chunking determines how documents are split for retrieval. Poor chunking is one 
     **Key question to ask**: "When users ask questions, how much context do they need to get a useful answer?"
 
 !!! tip "For Engineers"
-    **Common chunking strategies**:
+**Common chunking strategies**:
 
     | Strategy | Best For | Tradeoffs |
     |----------|----------|-----------|
@@ -236,29 +236,29 @@ Chunking determines how documents are split for retrieval. Poor chunking is one 
     ) -> list[str]:
         """
         Split text recursively by separators, respecting chunk size and overlap.
-        
+
         Args:
             text: Text to split
             chunk_size: Maximum size of each chunk
             chunk_overlap: Number of characters to overlap between chunks
             separators: List of separators to try, in order of preference
-        
+
         Returns:
             List of text chunks
         """
         if len(text) <= chunk_size:
             return [text]
-        
+
         chunks = []
         start = 0
-        
+
         while start < len(text):
             end = start + chunk_size
-            
+
             if end >= len(text):
                 chunks.append(text[start:])
                 break
-            
+
             # Try to find a good split point using separators
             split_pos = end
             for separator in separators:
@@ -268,15 +268,15 @@ Chunking determines how documents are split for retrieval. Poor chunking is one 
                     if pos != -1:
                         split_pos = pos + len(separator)
                         break
-            
+
             chunk = text[start:split_pos]
             chunks.append(chunk)
-            
+
             # Move start forward with overlap
             start = split_pos - chunk_overlap
             if start < 0:
                 start = 0
-        
+
         return chunks
 
     # Usage: Split document with semantic boundaries and overlap
@@ -295,14 +295,14 @@ Chunking determines how documents are split for retrieval. Poor chunking is one 
 The alignment problem is one of the most overlooked causes of RAG failures.
 
 !!! tip "For Product Managers"
-    **What alignment means**: Your embeddings must align with how users search. If you embed product descriptions but users search by purchase patterns, retrieval will fail even with perfect embeddings.
+**What alignment means**: Your embeddings must align with how users search. If you embed product descriptions but users search by purchase patterns, retrieval will fail even with perfect embeddings.
 
     **Business impact**: Misalignment causes the frustrating situation where "the answer is in there somewhere" but the system cannot find it. Users lose trust quickly.
 
     **How to detect**: Compare what you embed (document content) with what users search for (query patterns). If they use different vocabulary or concepts, you have an alignment problem.
 
 !!! tip "For Engineers"
-    **Technical explanation**: Embedding models are trained on specific tasks. Most are trained for semantic similarity between similar texts. But RAG requires matching questions to answers—a different task.
+**Technical explanation**: Embedding models are trained on specific tasks. Most are trained for semantic similarity between similar texts. But RAG requires matching questions to answers—a different task.
 
     **Example of misalignment**:
 
@@ -327,7 +327,7 @@ The alignment problem is one of the most overlooked causes of RAG failures.
 Before optimizing your RAG system, determine whether you have an inventory problem or a capability problem.
 
 !!! tip "For Product Managers"
-    **Strategic distinction**: These problems require completely different solutions. Investing in better retrieval when you lack content wastes resources. Adding content when retrieval is broken wastes resources.
+**Strategic distinction**: These problems require completely different solutions. Investing in better retrieval when you lack content wastes resources. Adding content when retrieval is broken wastes resources.
 
     **Inventory problem**: The answer does not exist in your knowledge base
 
@@ -344,7 +344,7 @@ Before optimizing your RAG system, determine whether you have an inventory probl
     - **Solution**: Improve retrieval, understanding, or routing
 
 !!! tip "For Engineers"
-    **How to diagnose**:
+**How to diagnose**:
 
     ```python
     def diagnose_failure(query, expected_document):
@@ -374,12 +374,12 @@ When organizations implement RAG systems, they often approach it as a purely tec
 This approach inevitably leads to disappointment.
 
 !!! tip "For Product Managers"
-    **Why product thinking matters**: RAG systems serve users, not benchmarks. The teams that succeed are the ones that measure user outcomes, not just technical metrics. Your role is to ensure the team stays focused on user value, not technical elegance.
+**Why product thinking matters**: RAG systems serve users, not benchmarks. The teams that succeed are the ones that measure user outcomes, not just technical metrics. Your role is to ensure the team stays focused on user value, not technical elegance.
 
     **ROI of systematic improvement**: Teams with a systematic approach ship improvements weekly. Teams without one spend months debating what might work. The compound effect is dramatic—after six months, systematic teams are 10x better than ad-hoc teams.
 
 !!! tip "For Engineers"
-    **How to apply product thinking**: Every technical decision should connect to user outcomes. When evaluating a new embedding model, do not just look at benchmark scores—test it on your actual queries and measure user-facing metrics.
+**How to apply product thinking**: Every technical decision should connect to user outcomes. When evaluating a new embedding model, do not just look at benchmark scores—test it on your actual queries and measure user-facing metrics.
 
     **The mental shift**:
 
@@ -431,7 +431,7 @@ graph TD
 ```
 
 !!! tip "For Product Managers"
-    **Business value of the flywheel**: Each rotation makes the next one faster. More data leads to better insights, which lead to smarter improvements, which generate more engaged users who provide better data. After 3-4 rotations, teams report 50% reduction in time-to-improvement.
+**Business value of the flywheel**: Each rotation makes the next one faster. More data leads to better insights, which lead to smarter improvements, which generate more engaged users who provide better data. After 3-4 rotations, teams report 50% reduction in time-to-improvement.
 
     **Key metrics to track at each stage**:
 
@@ -443,7 +443,7 @@ graph TD
     | Optimization | Cost per query | Revenue impact |
 
 !!! tip "For Engineers"
-    **Technical implementation of the flywheel**:
+**Technical implementation of the flywheel**:
 
     **Stage 1 - Synthetic Data**: Generate questions from your content to bootstrap evaluation.
 
@@ -469,12 +469,12 @@ graph TD
 
 The flywheel solves real problems at each stage:
 
-| Phase | Business Challenge | Technical Challenge | Flywheel Solution |
-|-------|-------------------|--------------------|--------------------|
-| **Cold Start** | No data to guide design decisions | No examples to train or evaluate against | Generate synthetic questions from content, establish baseline metrics |
-| **Initial Deployment** | Understanding what users actually need | Learning what causes poor performance | Instrument application for data collection, implement feedback mechanisms |
-| **Growth** | Prioritizing improvements with limited resources | Addressing diverse query types effectively | Use topic modeling to segment questions, identify highest-impact opportunities |
-| **Optimization** | Maintaining quality as usage scales | Combining multiple specialized components | Create unified routing architecture, implement monitoring and alerts |
+| Phase                  | Business Challenge                               | Technical Challenge                        | Flywheel Solution                                                              |
+| ---------------------- | ------------------------------------------------ | ------------------------------------------ | ------------------------------------------------------------------------------ |
+| **Cold Start**         | No data to guide design decisions                | No examples to train or evaluate against   | Generate synthetic questions from content, establish baseline metrics          |
+| **Initial Deployment** | Understanding what users actually need           | Learning what causes poor performance      | Instrument application for data collection, implement feedback mechanisms      |
+| **Growth**             | Prioritizing improvements with limited resources | Addressing diverse query types effectively | Use topic modeling to segment questions, identify highest-impact opportunities |
+| **Optimization**       | Maintaining quality as usage scales              | Combining multiple specialized components  | Create unified routing architecture, implement monitoring and alerts           |
 
 ---
 
@@ -483,14 +483,14 @@ The flywheel solves real problems at each stage:
 Understanding why RAG systems fail helps you avoid the same mistakes.
 
 !!! warning "PM Pitfall"
-    **Treating RAG as a project, not a product**: The most common strategic mistake is declaring victory after launch. RAG systems decay without continuous improvement. Plan for ongoing investment from the start.
+**Treating RAG as a project, not a product**: The most common strategic mistake is declaring victory after launch. RAG systems decay without continuous improvement. Plan for ongoing investment from the start.
 
     **Optimizing the wrong metric**: Teams often optimize for retrieval metrics (precision, recall) while ignoring user outcomes (task completion, satisfaction). A system with 95% precision but 10% task completion is failing.
 
     **Ignoring the cold start**: Without evaluation data, you cannot measure improvement. Teams that skip synthetic data generation spend months guessing what might work.
 
 !!! warning "Engineering Pitfall"
-    **Silent data loss**: In one medical chatbot project, 21% of documents were silently dropped due to encoding issues. The team spent months debugging retrieval when the problem was missing data. Always monitor document counts at each pipeline stage.
+**Silent data loss**: In one medical chatbot project, 21% of documents were silently dropped due to encoding issues. The team spent months debugging retrieval when the problem was missing data. Always monitor document counts at each pipeline stage.
 
     **Chunking too small**: Many implementations use tiny chunks (200 characters) because they follow outdated tutorials. This dilutes context and causes hallucinations. Test chunk sizes on your actual queries.
 
@@ -534,25 +534,25 @@ This book is designed for two audiences: Product Managers and Engineers. Each ch
 Throughout this book, you will see these callout boxes:
 
 !!! tip "For Product Managers"
-    Strategic insights, business implications, and decision frameworks for product leaders.
+Strategic insights, business implications, and decision frameworks for product leaders.
 
 !!! tip "For Engineers"
-    Technical details, implementation guidance, and code examples for developers.
+Technical details, implementation guidance, and code examples for developers.
 
 !!! warning "PM Pitfall"
-    Strategic mistakes that product teams commonly make.
+Strategic mistakes that product teams commonly make.
 
 !!! warning "Engineering Pitfall"
-    Technical mistakes that engineering teams commonly make.
+Technical mistakes that engineering teams commonly make.
 
 !!! info
-    General information relevant to all readers.
+General information relevant to all readers.
 
 !!! example
-    Concrete examples illustrating concepts.
+Concrete examples illustrating concepts.
 
 !!! success
-    Success stories and positive outcomes.
+Success stories and positive outcomes.
 
 ### Navigation Guide
 
@@ -583,7 +583,7 @@ Each chapter follows the same structure:
 A legal tech company building case law search provides a concrete example of the improvement flywheel in action.
 
 !!! tip "For Product Managers"
-    **Business outcomes**:
+**Business outcomes**:
 
     - Research time reduced by 40%
     - Lawyers began using the system daily (vs. occasional use before)
@@ -598,7 +598,7 @@ A legal tech company building case law search provides a concrete example of the
     4. Built specialized retrievers for distinct query types
 
 !!! tip "For Engineers"
-    **Technical implementation timeline**:
+**Technical implementation timeline**:
 
     **Month 1 - Baseline**: Basic RAG with standard embeddings. Generated 200 test queries from case law. Baseline accuracy: 63%.
 
@@ -794,7 +794,7 @@ def cluster_queries(
 ### PM Pitfalls
 
 !!! warning "PM Pitfall: Declaring Victory Too Early"
-    **The mistake**: Celebrating launch and moving the team to other projects.
+**The mistake**: Celebrating launch and moving the team to other projects.
 
     **Why it happens**: RAG demos well. Stakeholders see impressive results and assume the work is done.
 
@@ -803,7 +803,7 @@ def cluster_queries(
     **How to avoid**: Plan for ongoing investment from the start. Budget engineering time for continuous improvement, not just initial development.
 
 !!! warning "PM Pitfall: Optimizing Vanity Metrics"
-    **The mistake**: Focusing on retrieval metrics (precision, recall) while ignoring user outcomes.
+**The mistake**: Focusing on retrieval metrics (precision, recall) while ignoring user outcomes.
 
     **Why it happens**: Retrieval metrics are easy to measure. User outcomes require more instrumentation.
 
@@ -812,7 +812,7 @@ def cluster_queries(
     **How to avoid**: Always connect technical metrics to user outcomes. If precision improves but task completion does not, something is wrong.
 
 !!! warning "PM Pitfall: Skipping the Cold Start"
-    **The mistake**: Deploying without evaluation data, planning to "learn from users."
+**The mistake**: Deploying without evaluation data, planning to "learn from users."
 
     **Why it happens**: Generating synthetic data feels like extra work before launch.
 
@@ -823,7 +823,7 @@ def cluster_queries(
 ### Engineering Pitfalls
 
 !!! warning "Engineering Pitfall: Silent Data Loss"
-    **The mistake**: Not monitoring document counts through the ingestion pipeline.
+**The mistake**: Not monitoring document counts through the ingestion pipeline.
 
     **Why it happens**: Errors are caught and logged, but not aggregated or alerted on.
 
@@ -832,7 +832,7 @@ def cluster_queries(
     **How to avoid**: Track document counts at each pipeline stage. Alert when counts drop unexpectedly. In one case, 21% of documents were silently dropped due to encoding issues.
 
 !!! warning "Engineering Pitfall: Following Outdated Tutorials"
-    **The mistake**: Using tiny chunks (200 characters) because a tutorial said so.
+**The mistake**: Using tiny chunks (200 characters) because a tutorial said so.
 
     **Why it happens**: Many tutorials were written for models with limited context windows.
 
@@ -841,7 +841,7 @@ def cluster_queries(
     **How to avoid**: Test chunk sizes on your actual queries. Modern models handle larger chunks well.
 
 !!! warning "Engineering Pitfall: Ignoring the Alignment Problem"
-    **The mistake**: Assuming standard embeddings will work for your domain.
+**The mistake**: Assuming standard embeddings will work for your domain.
 
     **Why it happens**: Embeddings work well on benchmarks, so they should work everywhere.
 

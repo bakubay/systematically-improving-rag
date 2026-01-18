@@ -24,9 +24,9 @@ We’ll break everything down in a systematic, user-centric way. If you’re tir
 RAG stands for **Retrieval-Augmented Generation**. Think of it as your LLM plus an external knowledge source—documents, images, structured data, or anything else—so you're not just relying on the model's trained parameters. Instead, you fetch relevant data _on the fly_, embed it into prompts, and let the LLM do a specialized final answer.
 
 !!! tip "Workshop Deep Dive"
-For a comprehensive introduction to the product mindset and RAG improvement flywheel, see [Chapter 0: Introduction to Systematically Improving RAG](workshops/chapter0.md).
+    For a comprehensive introduction to the product mindset and RAG improvement flywheel, see [Chapter 0: Introduction to Systematically Improving RAG](workshops/chapter0.md).
 
-Why does everyone get excited about RAG?
+    Why does everyone get excited about RAG?
 
 - **Domain Specificity**  
   You can keep a smaller (cheaper) LLM but still get highly relevant outputs—like enterprise policy documents or niche scientific knowledge—because you feed it external context.
@@ -88,7 +88,7 @@ In most RAG contexts, recall is the bigger headache. You usually can’t answer 
 > _Tip_: This dataset can be simplistic (the LLM often paraphrases text), but it's enough for a first pass. Then, as you get real user traffic or real user questions, you blend them in for a more robust dataset.
 
 !!! info "Implementation Guide"
-[Chapter 1: Kickstarting with Synthetic Data and Evaluation](workshops/chapter1.md) provides detailed implementation with code examples, case studies showing 15-25% recall improvements, and production tips for chunk sizes and K values.
+    [Chapter 1: Kickstarting with Synthetic Data and Evaluation](workshops/chapter1.md) provides detailed implementation with code examples, case studies showing 15-25% recall improvements, and production tips for chunk sizes and K values.
 
 !!! quote "Expert Insights" - **[Text Chunking Strategies](talks/chromadb-anton-chunking.md)** - Anton (ChromaDB) reveals why chunking remains critical even with infinite context windows, and why default chunking strategies often produce terrible results - **[Understanding Embedding Performance](talks/embedding-performance-generative-evals-kelly-hong.md)** - Kelly Hong shows how custom benchmarks often contradict MTEB rankings, proving public benchmarks don't guarantee real-world success - **[RAG Anti-patterns in the Wild](talks/rag-antipatterns-skylar-payne.md)** - Skylar Payne's finding: 90% of teams adding complexity see worse performance when properly evaluated
 
@@ -121,7 +121,7 @@ Hence, **segmentation**. We group queries by topic, user type, complexity, or wh
 - Or do a quick LLM-based clustering: feed your queries to a clustering algorithm (like k-means or an LLM-based topic labeling) to see emergent groups.
 
 !!! example "Advanced Segmentation Techniques"
-[Chapter 4.1: Topic Modeling and Capability Analysis](workshops/chapter4-1.md) covers sophisticated segmentation strategies, prioritization frameworks, and how to move from feedback to actionable patterns. [Chapter 4.2: Data Understanding for Intelligent Systems](workshops/chapter4-2.md) dives deeper into roadmapping and resource allocation.
+    [Chapter 4.1: Topic Modeling and Capability Analysis](workshops/chapter4-1.md) covers sophisticated segmentation strategies, prioritization frameworks, and how to move from feedback to actionable patterns. [Chapter 4.2: Data Understanding for Intelligent Systems](workshops/chapter4-2.md) dives deeper into roadmapping and resource allocation.
 
 !!! quote "Real-World Insights" - **[Query Routing for RAG Systems](talks/query-routing-anton.md)** - Anton (ChromaDB) explains why the "big pile of records" approach reduces recall and how separate indexes per user/data source often outperform filtered large indexes
 
@@ -166,7 +166,7 @@ Many real-world RAG apps face blueprint or diagram queries. For example, in cons
 **Lesson**: Don't rely on the LLM alone to interpret an image on the fly. Pre-extract the data you need, verify it, measure recall again.
 
 !!! note "Multimodal Implementation"
-[Chapter 5.1: Specialization in Documents and Images](workshops/chapter5-1.md) provides detailed guidance on handling images, PDFs, and structured documents. [Chapter 5.2: Advanced Specialization Techniques](workshops/chapter5-2.md) covers tables, SQL generation, and RAPTOR hierarchical summarization.
+    [Chapter 5.1: Specialization in Documents and Images](workshops/chapter5-1.md) provides detailed guidance on handling images, PDFs, and structured documents. [Chapter 5.2: Advanced Specialization Techniques](workshops/chapter5-2.md) covers tables, SQL generation, and RAPTOR hierarchical summarization.
 
 !!! quote "Expert Approaches" - **[Better RAG Through Better Data](talks/reducto-docs-adit.md)** - Adit (Reducto) shows how hybrid computer vision + VLM pipelines outperform pure approaches, and why even 1-2 degree document skews can dramatically impact extraction quality - **[Encoder Stacking and Multi-Modal Retrieval](talks/superlinked-encoder-stacking.md)** - Daniel (Superlinked) explains why LLMs can't understand numerical relationships and advocates for specialized encoders for different data types - **[Lexical Search in RAG Applications](talks/john-lexical-search.md)** - John Berryman on why semantic search struggles with exact matching, product IDs, and specialized terminology - **[How Extend Achieves 95%+ Document Automation](talks/extend-document-automation.md)** - Eli Badgio (Extend) reveals why one-shot automation fails and how partial automation with human-in-the-loop achieves better results
 
@@ -205,7 +205,7 @@ Too many calls can slow your pipeline. So you’ll want to watch:
 It's almost the same retrieval logic, but at the "index selection" level. Having a confusion matrix for tool calls is super helpful. If you see that 90% of blueprint queries end up going to the text index incorrectly, you know you need better training examples or a short docstring clarifying: "Use the blueprint search if you see mention of diagrams, floors, or building references."
 
 !!! tip "Complete Routing Architecture"
-Our comprehensive three-part workshop series covers:
+    Our comprehensive three-part workshop series covers:
 
     - [Chapter 6.1: The API Mindset](workshops/chapter6-1.md) - Introducing tool interfaces and dynamic routing
     - [Chapter 6.2: Pydantic Models and Tool Design](workshops/chapter6-2.md) - Implementation patterns with code examples
@@ -234,7 +234,7 @@ Out-of-the-box embeddings (OpenAI, Cohere, etc.) might be generic. They’re tra
 You can see a 10-30% recall boost just by ensuring your embedding space aligns with how _you_ define "relevance." This drastically reduces "time wasted" on advanced prompt engineering that tries to fix a retrieval mismatch.
 
 !!! success "Fine-Tuning Deep Dive"
-[Chapter 2: Converting Evaluations to Training Data](workshops/chapter2.md) provides comprehensive coverage including cost comparisons (embedding vs LLM fine-tuning), contrastive learning techniques, hard negative mining, and when to use re-rankers vs fine-tuning.
+    [Chapter 2: Converting Evaluations to Training Data](workshops/chapter2.md) provides comprehensive coverage including cost comparisons (embedding vs LLM fine-tuning), contrastive learning techniques, hard negative mining, and when to use re-rankers vs fine-tuning.
 
 !!! quote "Production Success Stories" - **[Enterprise Search and Fine-tuning Embedding Models](talks/glean-manav.md)** - Manav (Glean) shares how custom embedding models achieve 20% performance improvements over 6 months through continuous learning, with each customer getting their own model - **[Fine-tuning Re-rankers and Embedding Models](talks/fine-tuning-rerankers-embeddings-ayush-lancedb.md)** - Ayush (LanceDB) reveals re-rankers provide 12-20% retrieval improvement with minimal latency penalty, calling them "low-hanging fruit" for RAG optimization
 
@@ -257,7 +257,7 @@ None of these improvements happen if you have no feedback. If your UI just spits
 Even subtle changes—like bigger thumbs-up/down buttons—multiply the feedback you get, which you feed back into your training sets for embeddings or re-rankers.
 
 !!! warning "5x Your Feedback Rate"
-[Chapter 3.1: User Feedback Collection](workshops/chapter3-1.md) reveals specific copy patterns that increase feedback rates by 5x, enterprise Slack integration patterns, and how to mine implicit feedback signals.
+    [Chapter 3.1: User Feedback Collection](workshops/chapter3-1.md) reveals specific copy patterns that increase feedback rates by 5x, enterprise Slack integration patterns, and how to mine implicit feedback signals.
 
 !!! quote "Proven Results" - **[Building Feedback Systems for AI Products](talks/zapier-vitor-evals.md)** - Vitor (Zapier) achieved 4x improvement in feedback collection (10 to 40+ submissions/day) with simple UX changes. Key insight: "Did this run do what you expected?" dramatically outperforms generic "How did we do?" prompts
 
@@ -270,7 +270,7 @@ Long queries or multi-step calls might mean you have 2-10 seconds of latency. Th
 - Even a skeleton screen or a progress bar lowers user impatience significantly.
 
 !!! info "Psychology of Performance"
-[Chapter 3.2: Response Streaming and Interstitials](workshops/chapter3-2.md) covers the psychology of waiting, platform-specific implementations, and Server-Sent Events technical details for perceived performance improvements.
+    [Chapter 3.2: Response Streaming and Interstitials](workshops/chapter3-2.md) covers the psychology of waiting, platform-specific implementations, and Server-Sent Events technical details for perceived performance improvements.
 
 ### 8.3 Chain-of-Thought
 
@@ -292,7 +292,7 @@ You can run a final validation step that checks your output for errors or certai
 When it fails these validations, you automatically do a second pass or show a disclaimer. That keeps your system from shipping nonsense, bridging the gap to near-zero hallucinations for critical fields.
 
 !!! example "Quality of Life Features"
-[Chapter 3.3: Structured Outputs and Post-Validation](workshops/chapter3-3.md) shows how to implement validation pipelines, structured output generation, and citation systems that build user trust.
+    [Chapter 3.3: Structured Outputs and Post-Validation](workshops/chapter3-3.md) shows how to implement validation pipelines, structured output generation, and citation systems that build user trust.
 
 !!! quote "Production Monitoring" - **[Online Evals and Production Monitoring](talks/online-evals-production-monitoring-ben-sidhant.md)** - Ben & Sidhant's Trellis framework for managing AI systems with millions of users. Critical insight: traditional error monitoring doesn't work for AI since there's no exception when models produce bad outputs - **[RAG Without APIs: Browser-Based Retrieval](talks/rag-without-apis-browser-michael-struwig.md)** - Michael (OpenBB) on using browser-as-data-layer for secure financial data access, solving compliance and security issues
 
@@ -303,7 +303,7 @@ When it fails these validations, you automatically do a second pass or show a di
 Learn from industry practitioners who have built and scaled RAG systems in production:
 
 !!! info "Complete Talk Series"
-Our talk series features experts from Zapier, ChromaDB, Glean, LanceDB, Reducto, Cline, and more, sharing battle-tested insights:
+    Our talk series features experts from Zapier, ChromaDB, Glean, LanceDB, Reducto, Cline, and more, sharing battle-tested insights:
 
     **Foundation & Anti-patterns**
     - [RAG Anti-patterns in the Wild](talks/rag-antipatterns-skylar-payne.md) - 90% of teams adding complexity see worse performance
@@ -341,7 +341,7 @@ Our talk series features experts from Zapier, ChromaDB, Glean, LanceDB, Reducto,
 For hands-on implementation of these concepts, check out our comprehensive workshop series:
 
 !!! success "Complete RAG Workshop Curriculum"
-Our workshop series provides deep, practical implementation guidance for every aspect of RAG improvement:
+    Our workshop series provides deep, practical implementation guidance for every aspect of RAG improvement:
 
     **Foundation & Mindset**
     - [Chapter 0: Introduction to Systematically Improving RAG](workshops/chapter0.md) - Product mindset, improvement flywheel, and organizational considerations
@@ -420,7 +420,7 @@ After analyzing dozens of production RAG systems, here are the most critical les
 Based on hundreds of office hours with practitioners, here are battle-tested recommendations:
 
 !!! tip "Technology Selection"
-**Vector Database**: Start with LanceDB for experimentation (one-line hybrid search), PostgreSQL + pgvector for <1M vectors, or pgvector-scale for exhaustive search needs
+    **Vector Database**: Start with LanceDB for experimentation (one-line hybrid search), PostgreSQL + pgvector for <1M vectors, or pgvector-scale for exhaustive search needs
 
     **Embeddings**: Modern BERT models with 8K context outperform most alternatives. With just 6,000 examples, custom embeddings beat generic models (costs ~$1.50, 40 min on laptop)
 
@@ -439,13 +439,13 @@ Based on hundreds of office hours with practitioners, here are battle-tested rec
 From our office hours, here are answers to the most common RAG implementation questions:
 
 !!! question "Should I use a graph database for RAG?"
-Almost never. Even Facebook uses MySQL. Graph databases are only valuable when you need complex multi-hop traversals. For most RAG use cases, vector databases with good metadata filtering are sufficient.
+    Almost never. Even Facebook uses MySQL. Graph databases are only valuable when you need complex multi-hop traversals. For most RAG use cases, vector databases with good metadata filtering are sufficient.
 
 !!! question "How do I handle time-based queries?"
-Use structured extraction to identify dates, then filter at the database level. PostgreSQL with pgvector-scale (not just pgvector) handles this well. Extract start/end dates from documents and use SQL WHERE clauses.
+    Use structured extraction to identify dates, then filter at the database level. PostgreSQL with pgvector-scale (not just pgvector) handles this well. Extract start/end dates from documents and use SQL WHERE clauses.
 
 !!! question "When should I fine-tune vs use re-rankers?"
-Start with re-rankers - they're "low-hanging fruit" providing 6-12% improvement. Fine-tune embeddings only after collecting 6,000+ query-document pairs. Re-rankers cost $0.02/1000 queries vs $1.50 for fine-tuning.
+    Start with re-rankers - they're "low-hanging fruit" providing 6-12% improvement. Fine-tune embeddings only after collecting 6,000+ query-document pairs. Re-rankers cost $0.02/1000 queries vs $1.50 for fine-tuning.
 
 !!! question "How do I improve perceived latency?" 1. Stream thinking tokens (45% faster perception) 2. Show retrieval animations before answers 3. Add "Think harder" buttons for complex queries 4. Use interstitials: "Searching documents... Analyzing... Generating answer..."
 

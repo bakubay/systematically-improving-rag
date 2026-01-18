@@ -58,23 +58,23 @@ To evaluate tool selection, we need a test dataset with queries annotated with t
 1. **Per-Tool Recall**: How often each specific tool is correctly selected when it should be
 
 !!! warning "Data Leakage Risk"
-When creating test datasets for router evaluation, be vigilant about data leakage. If your few-shot examples appear in your test set, get artificially high performance that won't generalize to real queries. Always maintain separate development and test sets with distinct query patterns.
+    When creating test datasets for router evaluation, be vigilant about data leakage. If your few-shot examples appear in your test set, get artificially high performance that won't generalize to real queries. Always maintain separate development and test sets with distinct query patterns.
 
-Here's a sample evaluation for a construction information system's query router:
+    Here's a sample evaluation for a construction information system's query router:
 
-| Query ID | Query Text                                                          | Expected Tools                                            | Realized Tools                              | Precision | Recall |
-| -------- | ------------------------------------------------------------------- | --------------------------------------------------------- | ------------------------------------------- | --------- | ------ |
-| 1        | Retrieve blueprints for the museum expansion                        | SearchBlueprint                                           | SearchBlueprint                             | 100%      | 1/1    |
-| 2        | Find schedule and documents for the library renovation              | SearchSchedule, SearchText                                | SearchSchedule                              | 100%      | 1/2    |
-| 3        | Get both blueprints and schedule for campus construction            | SearchBlueprint, SearchSchedule                           | SearchBlueprint, SearchSchedule             | 100%      | 2/2    |
-| 4        | Show me contract details and permit requirements for the new office | SearchText, SearchBlueprint                               | SearchText, SearchBlueprint, SearchSchedule | 67%       | 2/2    |
-| 5        | Identify materials and design specs for the downtown skyscraper     | SearchText, SearchBlueprint                               | SearchBlueprint, SearchText                 | 100%      | 2/2    |
-| 6        | Get full details on industrial park planning                        | SearchBlueprint, SearchText, SearchSchedule               | SearchText, SearchInvoice, SearchPermit     | 33%       | 1/3    |
-| 7        | Find emergency repair guidelines for the abandoned warehouse        | SearchRepair, SearchBlueprint                             | SearchText                                  | 0%        | 0/2    |
-| 8        | Obtain comprehensive analysis for the urban redevelopment project   | SearchBlueprint, SearchText, SearchSchedule, SearchPermit | SearchBlueprint                             | 100%      | 1/4    |
-| 9        | Explain zoning regulations for the new industrial area              | SearchZoning                                              | SearchBlueprint, SearchText                 | 0%        | 0/1    |
+    | Query ID | Query Text                                                          | Expected Tools                                            | Realized Tools                              | Precision | Recall |
+    | -------- | ------------------------------------------------------------------- | --------------------------------------------------------- | ------------------------------------------- | --------- | ------ |
+    | 1        | Retrieve blueprints for the museum expansion                        | SearchBlueprint                                           | SearchBlueprint                             | 100%      | 1/1    |
+    | 2        | Find schedule and documents for the library renovation              | SearchSchedule, SearchText                                | SearchSchedule                              | 100%      | 1/2    |
+    | 3        | Get both blueprints and schedule for campus construction            | SearchBlueprint, SearchSchedule                           | SearchBlueprint, SearchSchedule             | 100%      | 2/2    |
+    | 4        | Show me contract details and permit requirements for the new office | SearchText, SearchBlueprint                               | SearchText, SearchBlueprint, SearchSchedule | 67%       | 2/2    |
+    | 5        | Identify materials and design specs for the downtown skyscraper     | SearchText, SearchBlueprint                               | SearchBlueprint, SearchText                 | 100%      | 2/2    |
+    | 6        | Get full details on industrial park planning                        | SearchBlueprint, SearchText, SearchSchedule               | SearchText, SearchInvoice, SearchPermit     | 33%       | 1/3    |
+    | 7        | Find emergency repair guidelines for the abandoned warehouse        | SearchRepair, SearchBlueprint                             | SearchText                                  | 0%        | 0/2    |
+    | 8        | Obtain comprehensive analysis for the urban redevelopment project   | SearchBlueprint, SearchText, SearchSchedule, SearchPermit | SearchBlueprint                             | 100%      | 1/4    |
+    | 9        | Explain zoning regulations for the new industrial area              | SearchZoning                                              | SearchBlueprint, SearchText                 | 0%        | 0/1    |
 
-Looking at overall metrics, this system achieves:
+    Looking at overall metrics, this system achieves:
 
 - Average Precision: 67%
 - Average Recall: 56%
@@ -527,9 +527,9 @@ def update_few_shot_examples(router_examples, max_examples_per_tool=5):
 This creates another improvement flywheel: as users interact with the system, it collects data that makes both retrieval and routing better, which leads to higher user satisfaction and more interactions.
 
 !!! warning "Feedback Biases"
-Be aware of potential biases in user feedback:
+    Be aware of potential biases in user feedback:
 
-```
+    ```
 1. **Position bias**: Users tend to click on top results regardless of relevance
 2. **Interface bias**: Different interfaces encourage different interaction patterns
 3. **User expertise bias**: Expert users interact differently than novices
@@ -792,4 +792,4 @@ By the end of this chapter implementation, you should have:
 - Clear strategic framework for ongoing development priorities
 
 !!! tip "Course Completion"
-Congratulations! You've now implemented a complete systematically improving RAG application that uses evaluation-driven improvement, specialized capabilities, intelligent routing, and continuous learning. The principles and processes you've learned will remain valuable even as specific technologies evolve.
+    Congratulations! You've now implemented a complete systematically improving RAG application that uses evaluation-driven improvement, specialized capabilities, intelligent routing, and continuous learning. The principles and processes you've learned will remain valuable even as specific technologies evolve.

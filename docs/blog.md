@@ -106,9 +106,9 @@ This will give you a baseline to work with and help you identify areas for impro
 
     State-of-the-art coding agents have reached the top of SWE-Bench leaderboards using simple grep and find tools instead of sophisticated embeddings. Why? Agent persistence compensates for less sophisticated tools - they'll keep trying different approaches until they find what they need. This means traditional component-level metrics (like embedding quality) may not translate to end-to-end performance in agent-based systems.
 
-This doesn't mean that we need an agentic rag for everything. Inventing search is cheap and can be seen as a cost-saving factor, both in terms of maintenance, implementation, and complexity. What Semantic Search could do with one API call, Agentic Rag could do with 15 if you give it simpler tools. Again, we're making trade-offs along a continuum.
+    This doesn't mean that we need an agentic rag for everything. Inventing search is cheap and can be seen as a cost-saving factor, both in terms of maintenance, implementation, and complexity. What Semantic Search could do with one API call, Agentic Rag could do with 15 if you give it simpler tools. Again, we're making trade-offs along a continuum.
 
-But the benefit is - if you have a number to set a goal against, you can always trade off your recall, your latency, and your performance.
+    But the benefit is - if you have a number to set a goal against, you can always trade off your recall, your latency, and your performance.
 
 ## 2) Utilize Metadata
 
@@ -219,15 +219,15 @@ The key is running experiments systematically. Test changes on real data, measur
 This could include tweaking search parameters, adding metadata, or trying different embedding models. Measure the impact on precision and recall to see if the changes are worthwhile.
 
 !!! quote "Start with Vibe Checks, Not Just Metrics"
-"Start with 5-10 examples and do end-to-end vibe checks before moving to quantitative evaluation. With natural language systems, you can learn so much just from looking at a few examples." This is especially important for agent-based systems where improving individual components (like embeddings) might not improve end-to-end performance.
+    "Start with 5-10 examples and do end-to-end vibe checks before moving to quantitative evaluation. With natural language systems, you can learn so much just from looking at a few examples." This is especially important for agent-based systems where improving individual components (like embeddings) might not improve end-to-end performance.
 
-Once you now have these questions in place, you have your synthetic data set and a bunch of user data with ratings. This is where the real work begins when it comes to systematically improving your RAG.
+    Once you now have these questions in place, you have your synthetic data set and a bunch of user data with ratings. This is where the real work begins when it comes to systematically improving your RAG.
 
-The system will be running many clusters of topic modeling around the questions, modeling that against the thumbs up and thumbs down ratings to figure out what clusters are underperforming. It will then determine the count and probability of user dissatisfaction for each cluster.
+    The system will be running many clusters of topic modeling around the questions, modeling that against the thumbs up and thumbs down ratings to figure out what clusters are underperforming. It will then determine the count and probability of user dissatisfaction for each cluster.
 
-The system will be doing this on a regular cadence, figuring out for what volume of questions and user satisfaction levels it should focus on improving these specific use cases.
+    The system will be doing this on a regular cadence, figuring out for what volume of questions and user satisfaction levels it should focus on improving these specific use cases.
 
-What might happen is you onboard a new organization, and all of a sudden, those distributions shift because their use cases are different. That's when you can go in and say, "We onboarded these new clients, and they very much care about deadlines. We knew we decided not to service deadlines, but now we know this is a priority, as it went from 2% of questions asking about deadlines to 80%." You can then determine what kind of education or improvements can be done around that.
+    What might happen is you onboard a new organization, and all of a sudden, those distributions shift because their use cases are different. That's when you can go in and say, "We onboarded these new clients, and they very much care about deadlines. We knew we decided not to service deadlines, but now we know this is a priority, as it went from 2% of questions asking about deadlines to 80%." You can then determine what kind of education or improvements can be done around that.
 
 ## 7) Balance Latency and Performance
 
@@ -238,17 +238,17 @@ Every improvement comes with a cost. Better recall might mean slower responses. 
 The key is measuring the impact of each change and making informed decisions about what matters most for your users.
 
 !!! tip "Agentic Systems Change the Equation"
-In agentic systems, the trade-offs shift. Agents are persistent - they'll eventually find what they need even with suboptimal tools. This means you might accept higher latency for better end-to-end outcomes, since agents can iterate and course-correct. The best approach often combines both: expose your high-quality embeddings as tools to agents, getting persistence AND efficiency.
+    In agentic systems, the trade-offs shift. Agents are persistent - they'll eventually find what they need even with suboptimal tools. This means you might accept higher latency for better end-to-end outcomes, since agents can iterate and course-correct. The best approach often combines both: expose your high-quality embeddings as tools to agents, getting persistence AND efficiency.
 
-Here, this is where having the synthetic questions that test against will effectively answer that question. Because what we'll do is we'll run the query with and without this parent document retriever, and we will have a recall with and without that feature and the latency improvement of that feature.
+    Here, this is where having the synthetic questions that test against will effectively answer that question. Because what we'll do is we'll run the query with and without this parent document retriever, and we will have a recall with and without that feature and the latency improvement of that feature.
 
-And so now we'll be able to say, okay. Well, recall doubles. The latency increases by 20%, then a conversation can happen. Or, is that worth the investment? But if latency goes up double and the recall goes up 1%, again, it depends on, okay.
+    And so now we'll be able to say, okay. Well, recall doubles. The latency increases by 20%, then a conversation can happen. Or, is that worth the investment? But if latency goes up double and the recall goes up 1%, again, it depends on, okay.
 
-Well, if this is a medical diagnostic, maybe I do care that the 1% is included because the stakes are so high. But if it's for a doc page, maybe the increased latency will reduce in churn.
+    Well, if this is a medical diagnostic, maybe I do care that the 1% is included because the stakes are so high. But if it's for a doc page, maybe the increased latency will reduce in churn.
 
-If you can improve recall by 1%, and the system is too complex, it's not worth deploying it in the future as well.
+    If you can improve recall by 1%, and the system is too complex, it's not worth deploying it in the future as well.
 
-For example, if you're building a medical diagnostic tool, a slight increase in latency might be worth it for better recall. But if you're building a general-purpose search tool, faster results might be more important.
+    For example, if you're building a medical diagnostic tool, a slight increase in latency might be worth it for better recall. But if you're building a general-purpose search tool, faster results might be more important.
 
 ## Wrapping Up
 

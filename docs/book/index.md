@@ -30,7 +30,7 @@ The content is designed for two audiences:
 Throughout the book, content is clearly marked for each audience using admonitions. You can read the full book or focus on the sections most relevant to your role.
 
 !!! note "Book vs Workshops"
-This book is a different draft from the workshops. While the workshops came directly from the course lectures, this book synthesizes content from workshops, transcripts, talks, and office hours into a comprehensive technical reference organized for both Product Managers and Engineers.
+    This book is a different draft from the workshops. While the workshops came directly from the course lectures, this book synthesizes content from workshops, transcripts, talks, and office hours into a comprehensive technical reference organized for both Product Managers and Engineers.
 
 ---
 
@@ -152,22 +152,22 @@ Read chapters in order for the complete picture. Each chapter builds on previous
 Throughout the book, content is marked for specific audiences:
 
 !!! tip "For Product Managers"
-Business context, decision frameworks, ROI analysis, success metrics.
+    Business context, decision frameworks, ROI analysis, success metrics.
 
 !!! tip "For Engineers"
-Implementation details, code examples, algorithms, technical tradeoffs.
+    Implementation details, code examples, algorithms, technical tradeoffs.
 
 !!! warning "PM Pitfall"
-Strategic mistakes to avoid.
+    Strategic mistakes to avoid.
 
 !!! warning "Engineering Pitfall"
-Technical mistakes to avoid.
+    Technical mistakes to avoid.
 
 !!! example "Example"
-Concrete examples and case studies.
+    Concrete examples and case studies.
 
 !!! info "Info"
-General information and context.
+    General information and context.
 
 ---
 

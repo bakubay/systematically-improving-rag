@@ -8,7 +8,7 @@ description: Hands-on workshops for building self-improving RAG systems
 These workshops walk you through building RAG systems that get better over time through systematic measurement and improvement.
 
 !!! note "Workshops vs Book"
-These workshops came directly from the course lectures. For a comprehensive technical reference that synthesizes this content along with talks and office hours, see the [Book](../book/index.md).
+    These workshops came directly from the course lectures. For a comprehensive technical reference that synthesizes this content along with talks and office hours, see the [Book](../book/index.md).
 
 ## What's Covered
 

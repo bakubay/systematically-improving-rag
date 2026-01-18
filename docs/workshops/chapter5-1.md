@@ -203,13 +203,13 @@ Ask yourself: what structured data is buried in this text that users actually wa
 
 !!! example "Financial Metadata Model"
 
-````
-```python
-from pydantic import BaseModel
-from datetime import date
-from typing import Optional, List
+    ````
+    ```python
+    from pydantic import BaseModel
+    from datetime import date
+    from typing import Optional, List
 
-class FinancialStatement(BaseModel):
+    class FinancialStatement(BaseModel):
     """Structured representation of a financial statement document."""
     company: str
     period_ending: date
@@ -222,7 +222,7 @@ class FinancialStatement(BaseModel):
     currency: str = "USD"
     restated: bool = False  # Has this statement been restated?
 
-def extract_financial_data(document_text: str) -> FinancialStatement:
+    def extract_financial_data(document_text: str) -> FinancialStatement:
     """
     Extract structured financial data from document text using LLM.
 
@@ -253,10 +253,10 @@ def extract_financial_data(document_text: str) -> FinancialStatement:
 
     # Parse the extracted JSON into our Pydantic model
     return FinancialStatement.parse_raw(extracted_json)
-```
-````
+    ```
+    ````
 
-By extracting these structured elements from quarterly reports, organizations can enable precise filtering and comparison that would have been impossible with text-only search. For instance, you can easily query "Show me all companies in the tech sector with revenue growth over 10% in fiscal year 2024" or "Find all restated financial statements from the last quarter."
+    By extracting these structured elements from quarterly reports, organizations can enable precise filtering and comparison that would have been impossible with text-only search. For instance, you can easily query "Show me all companies in the tech sector with revenue growth over 10% in fiscal year 2024" or "Find all restated financial statements from the last quarter."
 
 ### Strategy 2: Building Synthetic Text Chunks
 
@@ -286,7 +286,7 @@ When dealing with extremely long documents (1,500-2,000+ pages), traditional chu
 4. **Tree Structure**: Build a retrieval tree from detailed chunks to high-level summaries
 
 !!! example "Legal Document Processing"
-A tax law firm implemented RAPTOR for their regulatory documents:
+    A tax law firm implemented RAPTOR for their regulatory documents:
 
     - Laws on pages 1-30, exemptions scattered throughout pages 50-200
     - Clustering identified related exemptions across different sections
@@ -378,9 +378,9 @@ This formula is incredibly powerful for systematic debugging and optimization. W
 The key insight is that these problems require completely different solutions. Without this breakdown, you'd waste time optimizing the wrong component.
 
 !!! tip "Diagnostic Example"
-If you find that your system correctly routes 95% of queries to the appropriate retriever, but those retrievers only find relevant information 60% of the time, your priority should be improving retrieval quality rather than router accuracy.
+    If you find that your system correctly routes 95% of queries to the appropriate retriever, but those retrievers only find relevant information 60% of the time, your priority should be improving retrieval quality rather than router accuracy.
 
-Measuring both levels tells you where to focus your efforts.
+    Measuring both levels tells you where to focus your efforts.
 
 ## This Week's Action Items
 

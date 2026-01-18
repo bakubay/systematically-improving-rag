@@ -266,7 +266,7 @@ For each cluster, you need to understand:
 3. How big is this segment? (percentage of total)
 
 !!! tip "The 10-10 Rule"
-For each cluster, manually review: - 10 queries with positive feedback - 10 queries with negative feedback
+    For each cluster, manually review: - 10 queries with positive feedback - 10 queries with negative feedback
 
     This tells you what's working and what's broken in that segment.
 
@@ -375,7 +375,7 @@ Results:
 - Document search volume actually increased (users trusted the system more)
 
 !!! warning "User Adaptation Blindness"
-Users adapt to your system's limitations. High satisfaction in one area might be masking failures elsewhere. Always look at user journeys, not just aggregate metrics.
+    Users adapt to your system's limitations. High satisfaction in one area might be masking failures elsewhere. Always look at user journeys, not just aggregate metrics.
 
 ## Advanced Segmentation Techniques
 
@@ -461,7 +461,7 @@ Essential metrics to track for each segment:
 - **Escalation rate**: How often users contact support
 
 !!! example "Dashboard Implementation"
-Your dashboard should show: - Volume as percentage of total - Average satisfaction score - Retrieval quality distribution - Top 5 failure examples - Trend over time - Actionable recommendations - Alert conditions (performance drops)
+    Your dashboard should show: - Volume as percentage of total - Average satisfaction score - Retrieval quality distribution - Top 5 failure examples - Trend over time - Actionable recommendations - Alert conditions (performance drops)
 
 ## Common Patterns and Anti-Patterns
 
