@@ -1,22 +1,22 @@
 #!/bin/bash
 
-# Script to work through plan.md systematically using the Cursor agent
+# Script to work through docs/book/plan.md systematically using the Cursor agent
 # Each iteration works on the next unchecked section and commits to a git stack
 
 # Get the directory where this script is located
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # Get the repo root (two levels up from docs/book/)
 REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
-PLAN_FILE="$SCRIPT_DIR/plan.md"
+PLAN_FILE="docs/book/plan.md"
 MAX_ITERATIONS=50  # Safety limit to prevent infinite loops
 ITERATION=0
 
 # Change to repo root so agent works in the right context
 cd "$REPO_ROOT" || exit 1
 
-# Check if plan.md exists
-if [ ! -f "$PLAN_FILE" ]; then
-    echo "Error: $PLAN_FILE not found"
+# Check if docs/book/plan.md exists
+if [ ! -f "$REPO_ROOT/$PLAN_FILE" ]; then
+    echo "Error: $PLAN_FILE not found at $REPO_ROOT/$PLAN_FILE"
     exit 1
 fi
 
@@ -30,11 +30,11 @@ while [ $ITERATION -lt $MAX_ITERATIONS ]; do
     echo ""
     
     # Prompt for the agent
-    PROMPT="Read $PLAN_FILE and work through it systematically:
+    PROMPT="Read docs/book/plan.md and work through it systematically:
 
 1. Find the next unchecked section/item in the plan (look for sections without [x] or checkmarks)
 2. Work on completing that specific section only - do the immediate next thing
-3. When you finish the section, check it off in plan.md (mark with [x] or ✓)
+3. When you finish the section, check it off in docs/book/plan.md (mark with [x] or ✓)
 4. Phase notes and changelog:
    - For each phase you work on, create notes in docs/book/changelog/{phase_name}_notes.md
    - Phase names should be numbered like chapter-phase format: '1-2' (Chapter 1 Phase 2), '3-1' (Chapter 3 Phase 1), '0-3' (Chapter 0 Phase 3), etc.
@@ -46,7 +46,7 @@ while [ $ITERATION -lt $MAX_ITERATIONS ]; do
    - Keep iterating on the same graphite/git-stack branch for that stage/part - make multiple commits as you work through the section or part
    - Only create a new branch when moving to a completely different stage/section/part
    - Commit your changes frequently with clear messages describing what you completed
-   - Make sure to commit the updated plan.md when you check off a section or part
+   - Make sure to commit the updated docs/book/plan.md when you check off a section or part
    - Commit changelog files along with your work
 
 Important: Only work on ONE section or part per iteration. Don't jump ahead. If a section or part is already checked off, move to the next unchecked one. Keep iterating on the same graphite stack per stage/part until that stage/part is complete. Be thorough but focused."
@@ -67,8 +67,6 @@ Important: Only work on ONE section or part per iteration. Don't jump ahead. If 
     
     echo ""
     echo "Iteration $ITERATION completed"
-    echo "Press Enter to continue to next iteration, or Ctrl+C to stop"
-    read -r
 done
 
 echo ""

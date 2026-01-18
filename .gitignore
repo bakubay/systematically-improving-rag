@@ -64,3 +64,6 @@ nohup.out
 # Workshop files
 docs/workshops/*.pdf
 docs/workshops/*.txt
+
+# Book changelog notes
+docs/book/changelog/
