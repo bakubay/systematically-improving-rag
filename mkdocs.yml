@@ -1,5 +1,5 @@
 site_name: Systematically Improving RAG Applications
-site_url: https://567-labs.github.io/systematically-improving-rag/
+site_url: https://bakubay.github.io/systematically-improving-rag/
 theme:
   name: material
   custom_dir: docs/overrides
