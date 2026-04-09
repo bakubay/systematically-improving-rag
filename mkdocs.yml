@@ -161,7 +161,11 @@ plugins:
 # --- Markdown Extensions ---
 markdown_extensions:
   - pymdownx.highlight
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
   - pymdownx.caret # Insertions, deletions, highlights
   - pymdownx.snippets # Reusable markdown snippets
   - pymdownx.inlinehilite # Inline code highlighting
